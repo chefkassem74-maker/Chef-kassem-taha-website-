@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدونة واستشارات شيف قاسم | Chef Kassem</title>
+  <!-- Google Fonts: Cairo & Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg-dark: #0a0a0a; /* أسود أعمق */
+      --bg-light: #fff;
+      --gold: #c39d6d; /* ذهبي أهدأ وأكثر فخامة */
+      --gold-dark: #a17d50;
+      --text-main: #f5f5f5;
+      --text-dark: #222;
+      --text-muted: #888;
+      --border-light: #e0e0e0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; transition: .3s; }
+    ul { list-style: none; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* Buttons */
+    .btn { display: inline-block; padding: 10px 25px; border-radius: 4px; font-weight: 700; cursor: pointer; border: none; }
+    .btn-gold { background-color: var(--gold); color: #fff; }
+    .btn-gold:hover { background-color: var(--gold-dark); }
+    .btn-outline { border: 1px solid var(--gold); color: var(--gold); background: transparent; }
+    .btn-outline:hover { background: rgba(195, 157, 109, 0.1); }
+
+    /* --- SECTION 1: BLOG (White Background) --- */
+    .blog-section { background-color: var(--bg-light); color: var(--text-dark); padding: 60px 0; }
+    
+    /* Header (Black) */
+    .blog-header { background-color: var(--bg-dark); color: var(--text-main); padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .blog-header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); font-weight: 700; }
+    .nav-links { display: flex; gap: 20px; font-size: 14px; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* Blog Hero */
+    .blog-hero { display: flex; align-items: center; gap: 40px; padding: 50px 0; }
+    .blog-hero-content { flex: 1; }
+    .blog-hero-content .tag { color: var(--gold); font-size: 14px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; }
+    .blog-hero-content h1 { font-size: 42px; font-weight: 800; margin-bottom: 15px; color: var(--text-dark); }
+    .blog-hero-content p { color: #555; margin-bottom: 25px; max-width: 500px; }
+    
+    .blog-hero-image { flex: 1; text-align: left; }
+    .blog-hero-image img { width: 100%; max-width: 450px; border-radius: 8px; }
+
+    /* Icons Row */
+    .icon-features { display: flex; justify-content: space-between; margin: 40px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 20px 0; }
+    .icon-item { text-align: center; flex: 1; color: #555; }
+    .icon-item i { font-size: 30px; color: var(--gold); margin-bottom: 10px; }
+    .icon-item span { display: block; font-size: 14px; }
+
+    /* Blog Grid */
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+    .blog-card { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; transition: .3s; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .blog-card-image { height: 180px; overflow: hidden; }
+    .blog-card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .blog-card-content { padding: 20px; }
+    .blog-card-content h3 { font-size: 18px; margin-bottom: 10px; color: var(--text-dark); }
+    .blog-card-content p { font-size: 14px; color: #666; margin-bottom: 15px; }
+    .blog-card-meta { font-size: 12px; color: var(--text-muted); display: flex; justify-content: space-between; }
+
+    /* --- SECTION 2: CONSULTING (Dark Background) --- */
+    .consulting-section { background-color: #111; padding: 80px 0; }
+    .consulting-container { display: flex; gap: 50px; align-items: flex-start; }
+    
+    .consulting-content { flex: 1; text-align: right; }
+    .consulting-content .tag { color: var(--gold); font-size: 14px; margin-bottom: 10px; display: block; }
+    .consulting-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 15px; color: var(--text-main); }
+    .consulting-content p { color: var(--text-muted); margin-bottom: 30px; max-width: 500px; }
+    
+    .consulting-image { width: 100%; max-width: 400px; border-radius: 8px; margin-bottom: 20px; }
+    .phone-block { background: rgba(195, 157, 109, 0.1); border: 1px solid var(--gold); padding: 15px; border-radius: 4px; display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-weight: 700; font-size: 18px; direction: ltr; }
+    .phone-block i { font-size: 22px; }
+
+    /* Form */
+    .consulting-form { flex: 1; background-color: var(--bg-dark); padding: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; color: var(--text-muted); margin-bottom: 8px; font-size: 14px; }
+    .form-control { width: 100%; padding: 12px; background-color: #1a1a1a; border: 1px solid #333; color: var(--text-main); border-radius: 4px; }
+    .form-control:focus { border-color: var(--gold); outline: none; }
+
+    /* --- SECTION 3: FOOTER --- */
+    footer { background-color: var(--bg-dark); padding: 60px 0 20px 0; border-top: 1px solid rgba(255,255,255,0.05); }
+    .footer-content { display: flex; justify-content: space-between; gap: 40px; }
+    .footer-col { flex: 1; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 15px; font-weight: 700; }
+    .footer-about p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+    .social-links { display: flex; gap: 15px; }
+    .social-links a { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #333; display: flex; align-items: center; justify-content: center; color: var(--text-muted); }
+    .social-links a:hover { border-color: var(--gold); color: var(--gold); }
+    
+    .footer-contact h4 { color: var(--gold); margin-bottom: 15px; font-size: 18px; }
+    .contact-item { display: flex; align-items: center; gap: 10px; color: var(--text-muted); font-size: 14px; margin-bottom: 10px; }
+    .contact-item i { color: var(--gold); width: 20px; text-align: center; }
+
+    .footer-bottom { text-align: center; color: #444; font-size: 12px; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); }
+
+    @media (max-width: 768px) {
+      .blog-hero, .consulting-container, .footer-content { flex-direction: column; text-align: center; }
+      .blog-hero-image img, .consulting-image { max-width: 100%; }
+      .icon-features { flex-wrap: wrap; gap: 15px; }
+      .consulting-content p, .blog-hero-content p { max-width: 100%; }
+      .nav-links { display: none; } /* إخفاء القائمة في الجوال لتبسيط الكود */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- --- SECTION 1: BLOG (White) --- -->
+  <section class="blog-section">
+    <!-- Header inside Blog Section -->
+    <header class="blog-header">
+      <div class="container">
+        <div class="logo">CHEF KASSEM</div>
+        <nav class="nav-links">
+          <a href="#">الرئيسية</a>
+          <a href="#">من نحن</a>
+          <a href="#">خدماتنا</a>
+          <a href="#">الأكاديمية</a>
+          <a href="#">الوصفات</a>
+          <a href="#">الفرنشايز</a>
+        </nav>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <a href="#" class="btn-outline" style="font-size:12px; padding: 5px 15px;">EN</a>
+          <i class="fa fa-search" style="color:var(--gold); cursor:pointer;"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="blog-hero">
+        <div class="blog-hero-content">
+          <span class="tag">OUR BLOG</span>
+          <h1>مدونة شيف قاسم</h1>
+          <p>خبرات، نصائح، إلهام... مقالات متخصصة في عالم الطهي، إدارة المطابخ، سلامة الأغذية، وتطوير المشاريع. نشاركك معرفتنا لتساعدك على الابتكار والتميز.</p>
+          <div class="icon-features">
+            <div class="icon-item"><i class="fa fa-utensils"></i><span>وصفات حصرية</span></div>
+            <div class="icon-item"><i class="fa fa-lightbulb"></i><span>نصائح مهنية</span></div>
+            <div class="icon-item"><i class="fa fa-chart-line"></i><span>تطوير مشاريع</span></div>
+            <div class="icon-item"><i class="fa fa-shield-alt"></i><span>سلامة الغذاء</span></div>
+          </div>
+          <a href="#" class="btn btn-gold">عرض جميع المقالات</a>
+        </div>
+        <div class="blog-hero-image">
+          <!-- استبدل برابط الصورة الحقيقية -->
+          <img src="https://via.placeholder.com/450x500/eaeaea/666666?text=Chef+Image" alt="Chef Kassem">
+        </div>
+      </div>
+
+      <div class="blog-grid">
+        <!-- Card 1 -->
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="https://via.placeholder.com/300x180/eaeaea/666666?text=Blog+1" alt="Blog 1"></div>
+          <div class="blog-card-content">
+            <h3>أسرار الطهي الاحترافي: 5 خطوات</h3>
+            <p>دليلك الشامل لتعلم أساسيات الطهي الاحترافي وتحويل أطباقك...</p>
+            <div class="blog-card-meta"><span>15 مايو 2024</span><span><i class="fa fa-clock"></i> 5 دقائق</span></div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="https://via.placeholder.com/300x180/eaeaea/666666?text=Blog+2" alt="Blog 2"></div>
+          <div class="blog-card-content">
+            <h3>إدارة المطابخ الكبرى بكفاءة</h3>
+            <p>كيفية تنظيم فريق العمل، إدارة المخزون، وضمان الجودة...</p>
+            <div class="blog-card-meta"><span>10 مايو 2024</span><span><i class="fa fa-clock"></i> 7 دقائق</span></div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="blog-card">
+          <div class="blog-card-image"><img src="https://via.placeholder.com/300x180/eaeaea/666666?text=Blog+3" alt="Blog 3"></div>
+          <div class="blog-card-content">
+            <h3>مستقبل سلامة الأغذية وتحدياته</h3>
+            <p>نظرة على أحدث التقنيات والمعايير لضمان سلامة الغذاء...</p>
+            <div class="blog-card-meta"><span>5 مايو 2024</span><span><i class="fa fa-clock"></i> 6 دقائق</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 2: CONSULTING (Dark) --- -->
+  <section class="consulting-section">
+    <div class="container consulting-container">
+      <div class="consulting-content">
+        <span class="tag">OUR CONSULTING</span>
+        <h2>استشارات شيف قاسم</h2>
+        <p>نقدم استشارات متخصصة لمساعدتك على النجاح في مشروعك الطهوي، من تطوير القوائم إلى إدارة التشغيل، لضمان الكفاءة والربحية.</p>
+        <!-- استبدل برابط الصورة الحقيقية -->
+        <img src="https://via.placeholder.com/400x250/333/fff?text=Consulting+Chef" alt="Consulting Chef" class="consulting-image">
+        <br>
+        <div class="phone-block">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>+966 12 345 678</span>
+        </div>
+      </div>
+
+      <div class="consulting-form">
+        <h3 style="color:var(--gold); margin-bottom: 25px;">احجز استشارتك الآن</h3>
+        <form>
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" class="form-control" placeholder="أدخل اسمك">
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" class="form-control" placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label>نوع الاستشارة</label>
+            <select class="form-control">
+              <option>تطوير قائمة طعام</option>
+              <option>إدارة تشغيل</option>
+              <option>دراسة جدوى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>رسالتك (اختياري)</label>
+            <textarea class="form-control" rows="4" placeholder="اكتب تفاصيل مشروعك..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">إرسال الطلب</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- SECTION 3: FOOTER --- -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-col footer-about">
+        <div class="footer-logo">CHEF KASSEM</div>
+        <p>شيف قاسم، خبير طهي واستشاري متخصص في تطوير مشاريع الضيافة، نهدف لتقديم حلول مبتكرة تضمن النجاح والتميز.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>تواصل معنا</h4>
+        <div class="contact-item"><i class="fa fa-map-marker-alt"></i><span>الرياض، المملكة العربية السعودية</span></div>
+        <div class="contact-item"><i class="fa fa-phone"></i><span>+966 12 345 678</span></div>
+        <div class="contact-item"><i class="fa fa-envelope"></i><span>info@chefkassem.com</span></div>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>روابط سريعة</h4>
+        <div class="contact-item"><i class="fa fa-angle-left"></i><a href="#">الرئيسية</a></div>
+        <div class="contact-item"><i class="fa fa-angle-left"></i><a href="#">من نحن</a></div>
+        <div class="contact-item"><i class="fa fa-angle-left"></i><a href="#">خدماتنا</a></div>
+        <div class="contact-item"><i class="fa fa-angle-left"></i><a href="#">سياسة الخصوصية</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">جميع الحقوق محفوظة © 2024 شيف قاسم. تم التطوير بواسطة [اسم شركتك]</div>
+    </div>
+  </footer>
+
+</body>
+</html>
