@@ -1,0 +1,119 @@
+{
+  "site": {
+    "name": "Chef Kassem",
+    "domain": "chefkassemtaha.com",
+    "languages": ["ar", "en"],
+    "defaultLanguage": "ar",
+    "direction": {
+      "ar": "rtl",
+      "en": "ltr"
+    }
+  },
+
+  "design": {
+    "style": "Luxury Black & Gold",
+    "colors": {
+      "black": "#080808",
+      "dark": "#111111",
+      "gold": "#C6A16B",
+      "goldHover": "#D6B77E",
+      "white": "#FFFFFF",
+      "text": "#333333",
+      "muted": "#777777",
+      "border": "#D8C29D"
+    },
+    "fonts": {
+      "arabic": "Cairo",
+      "english": "Montserrat"
+    }
+  },
+
+  "navigation": [
+    {"id": "home", "ar": "الرئيسية", "en": "Home"},
+    {"id": "about", "ar": "من نحن", "en": "About"},
+    {"id": "services", "ar": "الخدمات", "en": "Services"},
+    {"id": "academy", "ar": "الأكاديمية", "en": "Academy"},
+    {"id": "recipes", "ar": "الوصفات", "en": "Recipes"},
+    {"id": "blog", "ar": "المدونة", "en": "Blog"},
+    {"id": "projects", "ar": "المشاريع", "en": "Projects"},
+    {"id": "store", "ar": "المتجر", "en": "Store"},
+    {"id": "contact", "ar": "تواصل معنا", "en": "Contact"}
+  ],
+
+  "pages": {
+    "home": {
+      "slug": "/",
+      "title_ar": "الشيف قاسم",
+      "title_en": "Chef Kassem",
+      "subtitle_ar": "خبرة في فنون الطهي، قيادة الضيافة وتطوير الأعمال",
+      "subtitle_en": "Culinary Expertise. Hospitality Leadership. Business Development.",
+      "description_ar": "منصة مهنية للاستشارات والتدريب وتطوير المطاعم والمطابخ والمشاريع في قطاع الضيافة.",
+      "description_en": "A professional platform for consulting, training, restaurant development, culinary projects and hospitality business development.",
+      "cta_ar": "تواصل معنا",
+      "cta_en": "Let's Connect",
+      "hero_image": "/assets/images/chef-kassem-home.webp"
+    },
+
+    "about": {
+      "slug": "/about",
+      "title_ar": "من هو الشيف قاسم",
+      "title_en": "About Chef Kassem",
+      "description_ar": "شيف تنفيذي ومستشار في قطاع الأغذية والضيافة بخبرة مهنية تمتد لأكثر من ثلاثة عقود في تشغيل وتطوير المطاعم والفنادق والمطابخ المركزية.",
+      "description_en": "Executive Chef and hospitality consultant with more than three decades of professional experience in restaurant, hotel and central kitchen operations and development.",
+      "expertise": [
+        "Restaurant Operations",
+        "Hotel Operations",
+        "Food & Beverage Management",
+        "Central Kitchens",
+        "Menu Development",
+        "Food Safety",
+        "Cost Control",
+        "Staff Training"
+      ],
+      "image": "/assets/images/chef-kassem-about.webp"
+    },
+
+    "services": {
+      "slug": "/services",
+      "title_ar": "خدماتنا",
+      "title_en": "Our Services",
+      "items": [
+        {
+          "ar": "تأسيس وتطوير المطاعم",
+          "en": "Restaurant Setup & Development"
+        },
+        {
+          "ar": "تصميم وتشغيل المطابخ المركزية",
+          "en": "Central Kitchen Design & Operations"
+        },
+        {
+          "ar": "تصميم وتطوير قوائم الطعام",
+          "en": "Menu Development"
+        },
+        {
+          "ar": "أنظمة التشغيل القياسية SOP",
+          "en": "Standard Operating Procedures (SOP)"
+        },
+        {
+          "ar": "سلامة الغذاء وHACCP",
+          "en": "Food Safety & HACCP"
+        },
+        {
+          "ar": "إدارة التكاليف",
+          "en": "Cost Control"
+        },
+        {
+          "ar": "المشتريات والمخازن",
+          "en": "Purchasing & Inventory"
+        },
+        {
+          "ar": "تدريب فرق العمل",
+          "en": "Staff Training"
+        },
+        {
+          "ar": "إعادة هيكلة المشاريع",
+          "en": "Business Turnaround"
+        },
+        {
+          "ar": "التموين والفعاليات",
+          "en": "
