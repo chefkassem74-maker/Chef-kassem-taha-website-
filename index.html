@@ -3,403 +3,773 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الشيف قاسم طه | Chef Kassem Taha</title>
+  <title>Chef Kassem Group | الشيف قاسم طه - استشارات الضيافة وفنون الطهي</title>
+  
+  <!-- خط Cairo المعتمد في التصاميم الفاخرة -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg-dark: #0a0a0a;
-      --card-bg: #141414;
-      --card-border: #262626;
-      --gold-primary: #c5a059;
-      --gold-light: #dfb76c;
-      --gold-hover: #9c7b39;
-      --text-main: #f5f5f5;
-      --text-muted: #999999;
+      --bg-dark: #0b0c0e;
+      --bg-surface: #14161a;
+      --bg-light: #faf9f6;
+      --gold-primary: #cba358;
+      --gold-hover: #b38b42;
+      --gold-gradient: linear-gradient(135deg, #dfba73 0%, #cba358 50%, #9e752d 100%);
+      --text-white: #ffffff;
+      --text-muted: #9aa0a6;
+      --text-dark: #22252a;
+      --border-dark: #23272f;
+      --border-gold: rgba(203, 163, 88, 0.3);
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; border-radius: 8px; }
 
-    /* الهيدر وقائمة التنقل */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
+    body { background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+
+    /* الهيدر وشريط التنقل العلوي */
     header {
       position: sticky; top: 0; z-index: 1000;
-      background: rgba(15, 15, 15, 0.95);
-      border-bottom: 1px solid var(--card-border);
-      padding: 15px 5%;
+      background: rgba(11, 12, 14, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 12px 5%;
       display: flex; justify-content: space-between; align-items: center;
     }
-    .brand { font-size: 1.4rem; font-weight: 800; color: var(--gold-primary); letter-spacing: 1px; }
-    nav { display: flex; gap: 8px; flex-wrap: wrap; }
+    .logo-box { display: flex; flex-direction: column; align-items: flex-start; }
+    .logo-main { font-size: 1.3rem; font-weight: 800; color: var(--gold-primary); letter-spacing: 1px; }
+    .logo-sub { font-size: 0.65rem; color: #888; letter-spacing: 3px; margin-top: -2px; }
+
+    nav { display: flex; gap: 6px; align-items: center; overflow-x: auto; max-width: 70%; padding: 4px 0; }
+    nav::-webkit-scrollbar { display: none; }
     .nav-btn {
-      background: none; border: none; color: var(--text-muted);
-      cursor: pointer; font-size: 0.9rem; font-weight: 600; padding: 6px 10px;
-      border-radius: 4px; transition: 0.3s;
+      background: none; border: none; color: #bbb;
+      cursor: pointer; font-size: 0.85rem; font-weight: 600; padding: 6px 12px;
+      border-radius: 4px; white-space: nowrap; transition: 0.25s ease;
     }
-    .nav-btn:hover, .nav-btn.active { color: var(--gold-primary); background: rgba(197, 160, 89, 0.1); }
-
-    /* حاوية المحتوى الرئيسي */
-    main { min-height: 80vh; padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
-    .page-section { display: none; }
-    .page-section.active { display: block; animation: fadeIn 0.4s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* التنسيقات المشتركة */
-    .hero-banner {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 30px; margin-bottom: 50px; background: linear-gradient(135deg, #181510 0%, #0a0a0a 100%);
-      padding: 40px; border-radius: 12px; border: 1px solid var(--card-border);
+    .nav-btn:hover, .nav-btn.active { color: var(--gold-primary); background: rgba(203, 163, 88, 0.12); }
+    .btn-connect {
+      background: var(--gold-gradient); color: #000; font-weight: 700;
+      padding: 7px 18px; border-radius: 4px; font-size: 0.85rem; border: none; cursor: pointer; white-space: nowrap;
     }
-    .hero-text { flex: 1; }
-    .hero-text h1 { font-size: 2.2rem; color: #fff; margin-bottom: 12px; }
-    .hero-text .subtitle { color: var(--gold-primary); font-size: 1.1rem; margin-bottom: 15px; font-weight: 600; }
-    .hero-text p { color: var(--text-muted); margin-bottom: 25px; }
-    .hero-img { flex: 0.8; text-align: center; }
-    .hero-img img { width: 300px; height: 300px; object-fit: cover; border-radius: 50%; border: 3px solid var(--gold-primary); }
 
-    .btn-gold {
-      display: inline-block; background: var(--gold-primary); color: #000;
-      padding: 10px 24px; border-radius: 6px; font-weight: 700; cursor: pointer; border: none;
+    /* بنية التبديل بين الصفحات */
+    main { min-height: 85vh; }
+    .page-view { display: none; opacity: 0; transition: opacity 0.3s ease; }
+    .page-view.active { display: block; opacity: 1; }
+
+    /* القسم العلوي الداكن الفاخر (Dark Hero) */
+    .hero-luxury {
+      position: relative; padding: 60px 6% 40px;
+      background: radial-gradient(circle at 75% 30%, #201a12 0%, #0b0c0e 70%);
+      border-bottom: 1px solid var(--border-dark);
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
     }
-    .btn-gold:hover { background: var(--gold-light); }
-
-    /* شبكات العرض */
-    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .card {
-      background: var(--card-bg); border: 1px solid var(--card-border);
-      padding: 24px; border-radius: 10px; transition: 0.3s;
+    .hero-content { flex: 1.2; z-index: 2; }
+    .badge-gold {
+      display: inline-block; font-size: 0.75rem; letter-spacing: 2px;
+      color: var(--gold-primary); text-transform: uppercase; margin-bottom: 12px; font-weight: 700;
     }
-    .card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
-    .card img { width: 100%; height: 180px; object-fit: cover; margin-bottom: 15px; }
-    .card h3 { color: var(--gold-primary); margin-bottom: 10px; font-size: 1.2rem; }
-    .card p { color: var(--text-muted); font-size: 0.9rem; }
-
-    /* نموذج التواصل */
-    .form-box { background: var(--card-bg); padding: 35px; border-radius: 10px; border: 1px solid var(--card-border); max-width: 600px; margin: 0 auto; }
-    .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; margin-bottom: 8px; color: var(--gold-primary); font-size: 0.95rem; }
-    .form-group input, .form-group textarea {
-      width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid var(--card-border);
-      color: #fff; border-radius: 6px; font-size: 0.95rem;
+    .hero-title { font-size: 2.8rem; font-weight: 900; line-height: 1.2; margin-bottom: 15px; }
+    .hero-title span { color: var(--gold-primary); }
+    .hero-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 580px; margin-bottom: 30px; }
+    
+    .hero-actions { display: flex; gap: 15px; margin-bottom: 35px; flex-wrap: wrap; }
+    .btn-gold-solid {
+      background: var(--gold-gradient); color: #000; font-weight: 700;
+      padding: 12px 28px; border-radius: 5px; cursor: pointer; border: none; font-size: 0.95rem;
     }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--gold-primary); outline: none; }
+    .btn-gold-outline {
+      background: transparent; color: var(--gold-primary); font-weight: 700;
+      padding: 12px 26px; border-radius: 5px; cursor: pointer; border: 1px solid var(--gold-primary); font-size: 0.95rem;
+    }
 
-    /* التذييل (Footer) */
+    /* عداد الأرقام والإنجازات */
+    .stats-row {
+      display: flex; gap: 25px; border-top: 1px solid var(--border-dark);
+      padding-top: 25px; flex-wrap: wrap;
+    }
+    .stat-item h3 { font-size: 1.6rem; color: var(--gold-primary); font-weight: 800; margin-bottom: 2px; }
+    .stat-item p { font-size: 0.8rem; color: #888; }
+
+    .hero-image-wrap { flex: 0.9; text-align: center; position: relative; }
+    .hero-image-wrap img {
+      width: 100%; max-width: 420px; height: auto; object-fit: cover;
+      border-radius: 12px; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
+    }
+
+    /* شريط الحلول المتكاملة */
+    .solutions-bar {
+      background: #0e1013; padding: 25px 6%;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .solution-item {
+      background: #14171d; border: 1px solid #1f232b; border-radius: 6px;
+      padding: 15px; text-align: center; transition: 0.3s; cursor: pointer;
+    }
+    .solution-item:hover { border-color: var(--gold-primary); transform: translateY(-3px); }
+    .solution-item .icon { font-size: 1.4rem; color: var(--gold-primary); margin-bottom: 6px; }
+    .solution-item h4 { font-size: 0.85rem; color: #eee; font-weight: 600; }
+
+    /* القسم الأبيض / العاجي النظيف (Clean White Section) */
+    .section-light {
+      background-color: var(--bg-light); color: var(--text-dark);
+      padding: 60px 6%;
+    }
+    .section-header-center { text-align: center; margin-bottom: 40px; }
+    .section-header-center .sub { color: var(--gold-hover); font-weight: 700; font-size: 0.85rem; letter-spacing: 2px; }
+    .section-header-center h2 { font-size: 2rem; font-weight: 800; color: #1a1a1a; margin-top: 5px; }
+
+    /* فلاتر التصنيفات */
+    .filter-pills { display: flex; justify-content: center; gap: 10px; margin-bottom: 35px; flex-wrap: wrap; }
+    .pill {
+      background: #eee; border: 1px solid #ddd; padding: 6px 16px;
+      border-radius: 20px; font-size: 0.85rem; font-weight: 600; cursor: pointer; color: #555;
+    }
+    .pill.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+
+    /* الكروت في القسم الفاتح */
+    .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+    .card-item {
+      background: #fff; border-radius: 10px; overflow: hidden;
+      box-shadow: var(--shadow-card); border: 1px solid #eaeaea; transition: 0.3s ease;
+      display: flex; flex-direction: column;
+    }
+    .card-item:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+    .card-item img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .card-body h3 { font-size: 1.1rem; color: #1a1a1a; margin-bottom: 8px; font-weight: 700; }
+    .card-body p { font-size: 0.85rem; color: #666; margin-bottom: 15px; }
+    .card-link { color: var(--gold-hover); font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 5px; }
+
+    /* شريط الشركاء */
+    .partners-row {
+      background: #f0eee9; padding: 25px 6%; text-align: center;
+      border-top: 1px solid #e2ded5; border-bottom: 1px solid #e2ded5;
+    }
+    .partners-logos {
+      display: flex; justify-content: center; align-items: center;
+      gap: 35px; flex-wrap: wrap; margin-top: 15px; font-weight: 700; color: #777; font-size: 1rem;
+    }
+
+    /* صندوق الاستشارة والنموذج */
+    .consult-box {
+      background: var(--bg-surface); border: 1px solid var(--border-dark);
+      padding: 40px; border-radius: 12px; margin: 50px auto; max-width: 800px;
+    }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .form-full { grid-column: 1 / -1; }
+    .form-control {
+      width: 100%; padding: 12px; background: #0b0c0e; border: 1px solid var(--border-dark);
+      color: #fff; border-radius: 6px; font-size: 0.9rem;
+    }
+    .form-control:focus { border-color: var(--gold-primary); outline: none; }
+
+    /* التذييل الفاخر */
     footer {
-      background: #080808; border-top: 1px solid var(--card-border);
-      padding: 40px 5% 20px; text-align: center; color: var(--text-muted);
+      background: #070809; border-top: 1px solid var(--border-dark);
+      padding: 50px 6% 25px; color: var(--text-muted); font-size: 0.9rem;
     }
-    .footer-contacts { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
-    .footer-contacts div { color: var(--gold-primary); font-size: 0.95rem; }
+    .footer-top {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px; margin-bottom: 40px;
+    }
+    .footer-col h4 { color: var(--gold-primary); margin-bottom: 15px; font-size: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+    .footer-col ul li a:hover { color: var(--gold-primary); }
+    .footer-bottom {
+      border-top: 1px solid #191b20; padding-top: 20px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; font-size: 0.8rem;
+    }
 
     @media (max-width: 768px) {
-      .hero-banner { flex-direction: column-reverse; text-align: center; }
-      nav { justify-content: center; }
+      .hero-luxury { flex-direction: column-reverse; text-align: center; padding: 40px 5%; }
+      .hero-title { font-size: 2.1rem; }
+      .hero-desc { margin: 0 auto 25px; }
+      .hero-actions { justify-content: center; }
+      .stats-row { justify-content: center; }
+      .form-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- الهيدر وقائمة التنقل بين الصفحات الـ 10 -->
+  <!-- شريط التنقل العلوي -->
   <header>
-    <div class="brand">CHEF KASSEM TAHA</div>
+    <div class="logo-box">
+      <div class="logo-main">CHEF KASSEM</div>
+      <div class="logo-sub">G R O U P</div>
+    </div>
     <nav>
-      <button class="nav-btn active" onclick="showPage('home')">الرئيسية</button>
-      <button class="nav-btn" onclick="showPage('about')">من نحن</button>
-      <button class="nav-btn" onclick="showPage('services')">خدماتنا</button>
-      <button class="nav-btn" onclick="showPage('academy')">أكاديميتنا</button>
-      <button class="nav-btn" onclick="showPage('recipes')">الوصفات</button>
-      <button class="nav-btn" onclick="showPage('blog')">المدونة</button>
-      <button class="nav-btn" onclick="showPage('projects')">المشاريع</button>
-      <button class="nav-btn" onclick="showPage('store')">المتجر</button>
-      <button class="nav-btn" onclick="showPage('contact')">تواصل معنا</button>
+      <button class="nav-btn active" onclick="navigateTo('home')">الرئيسية</button>
+      <button class="nav-btn" onclick="navigateTo('about')">من نحن</button>
+      <button class="nav-btn" onclick="navigateTo('services')">خدماتنا</button>
+      <button class="nav-btn" onclick="navigateTo('academy')">أكاديميتنا</button>
+      <button class="nav-btn" onclick="navigateTo('projects')">مشاريعنا</button>
+      <button class="nav-btn" onclick="navigateTo('franchise')">الفرنشايز</button>
+      <button class="nav-btn" onclick="navigateTo('recipes')">الوصفات</button>
+      <button class="nav-btn" onclick="navigateTo('content')">المحتوى</button>
+      <button class="nav-btn" onclick="navigateTo('blog')">المدونة</button>
+      <button class="nav-btn" onclick="navigateTo('contact')">تواصل معنا</button>
     </nav>
+    <button class="btn-connect" onclick="navigateTo('contact')">احجز استشارة</button>
   </header>
 
   <main>
-    <!-- 1. الرئيسية (Home Page) -->
-    <section id="home" class="page-section active">
-      <div class="hero-banner">
-        <div class="hero-text">
-          <h1>مدونة وخبرات الشيف قاسم</h1>
-          <div class="subtitle">خبرات • نصائح • أسرار الطهي الاحترافي</div>
-          <p>رحلة شغف وريادة تمتد لأكثر من 22 عاماً في تأسيس وتشغيل كبرى المطابخ العالمية وإدارة الضيافة الفندقية الفاخرة.</p>
-          <button class="btn-gold" onclick="showPage('services')">استكشف خدماتنا</button>
-        </div>
-        <div class="hero-img">
-          <img src="chef-white.jpg" alt="Chef Kassem Taha" onerror="this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80'">
-        </div>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <h3>استشارات المطاعم</h3>
-          <p>تخطيط مساحات المطابخ، هندسة القوائم، وخفض تكاليف التشغيل لتحقيق أعلى ربحية ممكنة.</p>
-        </div>
-        <div class="card">
-          <h3>أكاديمية التدريب</h3>
-          <p>برامج مكثفة لتأهيل الكوادر الفندقية وفق معايير سلامة الأغذية العالمية HACCP.</p>
-        </div>
-        <div class="card">
-          <h3>الوصفات والمشاريع</h3>
-          <p>ابتكار أطباق فاخرة وتطوير مشاريع ضيافة متكاملة مبنية على أسس تشغيلية متينة.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. من هو الشيف قاسم (About Page) -->
-    <section id="about" class="page-section">
-      <div class="hero-banner">
-        <div class="hero-text">
-          <h1>من هو الشيف قاسم طه؟</h1>
-          <div class="subtitle">خبرة 22 عاماً في عالم الضيافة والطهي الدولي</div>
-          <p>شيف استشاري دولي ومطور مشاريع غذائية، قاد العديد من المطابخ الفندقية والمطاعم الراقية، واختص في تأهيل فرق الطهي وتأسيس المشاريع الناجحة من الصفر.</p>
-          <button class="btn-gold" onclick="showPage('contact')">تواصل المباشر مع الشيف</button>
-        </div>
-        <div class="hero-img">
-          <img src="chef-black.jpg" alt="Chef Kassem Bio" onerror="this.src='https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80'">
-        </div>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <h3>رسالتنا</h3>
-          <p>تمكين أصحاب المطاعم والطهاة الصاعدين من المعرفة الفنية والإدارية لتطبيق أرقى معايير الضيافة.</p>
-        </div>
-        <div class="card">
-          <h3>رؤيتنا</h3>
-          <p>أن نكون المرجع الاستشاري والتدريبي الأول لتطوير قطاع المطاعم والمطابخ في الشرق الأوسط.</p>
-        </div>
-        <div class="card">
-          <h3>قيمنا المهنية</h3>
-          <p>الجودة المطلقة، السلامة الغذائية الصارمة، والابتكار المستمر في الجمع بين التقاليد والحداثة.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. خدماتنا (Services Page) -->
-    <section id="services" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">خدماتنا الاستشارية</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">حلول شاملة مصممة لضمان كفاءة وربحية مشروعك الغذائي</p>
-      <div class="grid-3">
-        <div class="card">
-          <img src="food-hero.jpg" alt="Consulting" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80'">
-          <h3>تأسيس وتجهيز المطاعم</h3>
-          <p>تخطيط خطوط الإنتاج بالمطابخ، اختيار المعدات الاحترافية، وتجهيز نظم التشغيل اليومي.</p>
-        </div>
-        <div class="card">
-          <img src="food-1.jpg" alt="Menu Development" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80'">
-          <h3>هندسة وتطوير قوائم الطعام</h3>
-          <p>تصميم قوائم مبتكرة وتحديد نسب التكاليف (Food Cost) لتعظيم العائد المادي لكل طبق.</p>
-        </div>
-        <div class="card">
-          <img src="academy-1.jpg" alt="Training" onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=80'">
-          <h3>التدريب الميداني والتشغيلي</h3>
-          <p>تدريب فرق العمل على سرعة الإنجاز، معايير التقديم العالي، وضبط جودة النكهات.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. أكاديميتنا (Academy Page) -->
-    <section id="academy" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">أكاديمية الشيف قاسم</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">دورات مهنية معتمدة لنقل الخبرة الفندقية المباشرة</p>
-      <div class="grid-3">
-        <div class="card">
-          <img src="academy-2.jpg" alt="HACCP" onerror="this.src='https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=500&q=80'">
-          <h3>سلامة الغذاء ونظام HACCP</h3>
-          <p>تطبيق أحدث البروتوكولات للوقاية وضمان سلامة السلسلة الغذائية في بيئة العمل الفندقية.</p>
-        </div>
-        <div class="card">
-          <img src="academy-3.jpg" alt="Management" onerror="this.src='https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=500&q=80'">
-          <h3>إدارة وتوجيه المطابخ</h3>
-          <p>تطوير مهارات القيادة، تنظيم الورديات، إدارة المخازن، والحد من الهدر الغذائي.</p>
-        </div>
-        <div class="card">
-          <img src="academy-1.jpg" alt="Culinary Skills" onerror="this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&q=80'">
-          <h3>فنون الطهي المتقدم والصلصات</h3>
-          <p>ورش عملية لإتقان أسرار فنون الطهي الدولي وإعداد مختلف الصلصات الكلاسيكية والحديثة.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. الوصفات (Recipes Page) -->
-    <section id="recipes" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">أحدث الوصفات الفاخرة</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">أسرار النكهات العالمية مقدمة خطوة بخطوة</p>
-      <div class="grid-3">
-        <div class="card">
-          <img src="food-1.jpg" alt="Recipe 1" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80'">
-          <h3>لحم التندرلوين بصلصة التوابل</h3>
-          <p>تقنيات التسوية المثالية للحوم الفاخرة مع توليفة الأعشاب البرية والصلصة الخاصة.</p>
-        </div>
-        <div class="card">
-          <img src="food-2.jpg" alt="Recipe 2" onerror="this.src='https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80'">
-          <h3>سلطة الكينوا بالأفوكادو والخضار</h3>
-          <p>طبق صحي متكامل يجمع الانتعاش بالقيمة الغذائية العالية مع تتبيلة الحمضيات وزيت الزيتون.</p>
-        </div>
-        <div class="card">
-          <img src="food-3.jpg" alt="Recipe 3" onerror="this.src='https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80'">
-          <h3>حلوى التشيز كيك الكلاسيكية بالتوت</h3>
-          <p>قوام مخبوز غني ومتوازن يعكس الطريقة الفندقية في تحضير الحلويات الأوروبية الفاخرة.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. المدونة (Blog Page) -->
-    <section id="blog" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">مدونة ومقالات الشيف</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">مقالات متخصصة في إدارة الضيافة وأسرار الطهي</p>
-      <div class="grid-3">
-        <div class="card">
-          <img src="food-hero.jpg" alt="Blog 1" onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=80'">
-          <h3>كيف تدير مطبخاً ناجحاً في 10 خطوات؟</h3>
-          <p>أبرز المعايير التشغيلية التي تضمن سرعة التحضير وتجنب الأخطاء في ساعات الذروة.</p>
-        </div>
-        <div class="card">
-          <img src="academy-2.jpg" alt="Blog 2" onerror="this.src='https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=500&q=80'">
-          <h3>معايير التغذية الصحية في المطاعم</h3>
-          <p>كيفية تصميم وجبات متوازنة صحياً تلبي تطلعات الزبائن العصريين دون التنازل عن المذاق.</p>
-        </div>
-        <div class="card">
-          <img src="project-1.jpg" alt="Blog 3" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80'">
-          <h3>دراسة جدوى تأسيس مطعمك الأول</h3>
-          <p>عناصر التخطيط المالي والتسويقي التي تجنب المستثمرين الوقوع في فخ التعثر الأولي.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7. المشاريع (Projects Page) -->
-    <section id="projects" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">مشاريعنا وقصص النجاح</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">نماذج من المطاعم والمنشآت التي أشرفنا على تأسيسها وتطويرها</p>
-      <div class="grid-3">
-        <div class="card">
-          <img src="project-1.jpg" alt="Project 1" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80'">
-          <h3>تأسيس مطابخ الفنادق الفاخرة</h3>
-          <p>تخطيط متكامل لشبكات التجهيز المركزي لمطابخ فندقية تخدم آلاف النزلاء يومياً.</p>
-        </div>
-        <div class="card">
-          <img src="project-2.jpg" alt="Project 2" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80'">
-          <h3>تطوير سلاسل مطاعم اللحوم</h3>
-          <p>إعادة هيكلة سلاسل التوريد وتدريب الكوادر الميدانية لرفع معدلات الجودة وسرعة التقديم.</p>
-        </div>
-        <div class="card">
-          <img src="food-hero.jpg" alt="Project 3" onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=80'">
-          <h3>تأسيس الكافيهات ومفاهيم المخبوزات</h3>
-          <p>ابتكار خطوط إنتاج للحلويات والمخبوزات الفاخرة وتحديد آليات التسعير والتشغيل.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 8. المتجر (Store Page) -->
-    <section id="store" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">متجر الشيف قاسم</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">مجموعة مختارة من الأدوات والمنتجات الاحترافية الخاصة بالشيف</p>
-      <div class="grid-4">
-        <div class="card" style="text-align: center;">
-          <img src="food-1.jpg" alt="Knives" onerror="this.src='https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=400&q=80'">
-          <h3>طقم سكاكين الشيف الفاخر</h3>
-          <p style="color: var(--gold-light); font-weight: bold; margin: 10px 0;">$240</p>
-          <button class="btn-gold" style="padding: 6px 14px; font-size: 0.85rem;" onclick="showPage('contact')">طلب المنتج</button>
-        </div>
-        <div class="card" style="text-align: center;">
-          <img src="food-2.jpg" alt="Book" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=400&q=80'">
-          <h3>كتاب أسرار فنون الطهي</h3>
-          <p style="color: var(--gold-light); font-weight: bold; margin: 10px 0;">$45</p>
-          <button class="btn-gold" style="padding: 6px 14px; font-size: 0.85rem;" onclick="showPage('contact')">طلب المنتج</button>
-        </div>
-        <div class="card" style="text-align: center;">
-          <img src="food-3.jpg" alt="Spices" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80'">
-          <h3>توليفة البهارات الملكية</h3>
-          <p style="color: var(--gold-light); font-weight: bold; margin: 10px 0;">$25</p>
-          <button class="btn-gold" style="padding: 6px 14px; font-size: 0.85rem;" onclick="showPage('contact')">طلب المنتج</button>
-        </div>
-        <div class="card" style="text-align: center;">
-          <img src="food-hero.jpg" alt="Apron" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80'">
-          <h3>مريلة الشيف الرسمية المطرزة</h3>
-          <p style="color: var(--gold-light); font-weight: bold; margin: 10px 0;">$35</p>
-          <button class="btn-gold" style="padding: 6px 14px; font-size: 0.85rem;" onclick="showPage('contact')">طلب المنتج</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- 9. تواصل معنا (Contact Page) -->
-    <section id="contact" class="page-section">
-      <h2 style="color: var(--gold-primary); text-align: center; margin-bottom: 10px;">تواصل معنا</h2>
-      <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">نحن جاهزون لمساعدتك في استشارات تأسيس المطاعم أو التدريب</p>
-      <div class="form-box">
-        <form onsubmit="handleFormSubmit(event)">
-          <div class="form-group">
-            <label>الاسم الكريم</label>
-            <input type="text" required placeholder="أدخل اسمك بالكامل">
+    <!-- ================= 1. الصفحة الرئيسية (HOME) ================= -->
+    <section id="page-home" class="page-view active">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">EXECUTIVE CHEF & F&B CONSULTANT</div>
+          <h1 class="hero-title">الشيف <span>قاسم طه</span></h1>
+          <p class="hero-desc">خبرة دولية تتجاوز 33 عاماً في فنون الطهي وإدارة وتطوير قطاع الأغذية والمشروبات (F&B) في الشرق الأوسط وحول العالم.</p>
+          <div class="hero-actions">
+            <button class="btn-gold-solid" onclick="navigateTo('contact')">احجز استشارتك الآن</button>
+            <button class="btn-gold-outline" onclick="navigateTo('services')">استكشف كافة الخدمات</button>
           </div>
-          <div class="form-group">
-            <label>البريد الإلكتروني</label>
-            <input type="email" required placeholder="name@example.com">
+          <div class="stats-row">
+            <div class="stat-item"><h3>+33</h3><p>عاماً من الخبرة</p></div>
+            <div class="stat-item"><h3>+5</h3><p>دول حول العالم</p></div>
+            <div class="stat-item"><h3>+100</h3><p>مشروع تم إنجازه</p></div>
+            <div class="stat-item"><h3>+1000</h3><p>شيف تم تدريبهم</p></div>
           </div>
-          <div class="form-group">
-            <label>رقم الهاتف / واتساب</label>
-            <input type="tel" required placeholder="+971 ...">
+        </div>
+        <div class="hero-image-wrap">
+          <img src="chef-black.jpg" alt="Chef Kassem Taha" onerror="this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80'">
+        </div>
+      </div>
+
+      <!-- حلول متكاملة -->
+      <div class="solutions-bar">
+        <div class="solution-item" onclick="navigateTo('services')"><div class="icon">🏛️</div><h4>الاستشارات الفندقية</h4></div>
+        <div class="solution-item" onclick="navigateTo('academy')"><div class="icon">🎓</div><h4>أكاديمية التدريب</h4></div>
+        <div class="solution-item" onclick="navigateTo('projects')"><div class="icon">🍽️</div><h4>تأسيس المطاعم</h4></div>
+        <div class="solution-item" onclick="navigateTo('franchise')"><div class="icon">📜</div><h4>امتياز الفرنشايز</h4></div>
+        <div class="solution-item" onclick="navigateTo('content')"><div class="icon">🎥</div><h4>المحتوى التعليمي</h4></div>
+        <div class="solution-item" onclick="navigateTo('services')"><div class="icon">🛎️</div><h4>إدارة الفعاليات والتموين</h4></div>
+      </div>
+
+      <!-- نبذة منتقاة -->
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">COMPLETE F&B SOLUTIONS</div>
+          <h2>من الفكرة إلى النجاح التشغيلي الكامل</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="food-hero.jpg" alt="Consulting" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>تأسيس وهندسة المطابخ</h3>
+              <p>تخطيط مساحات المطابخ واختيار المعدات وتجهيز خطوط الإنتاج بما يضمن أعلى درجات الانسيابية والأمان.</p>
+              <a href="javascript:void(0)" onclick="navigateTo('services')" class="card-link">المزيد عن الخدمة ←</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label>نوع الخدمة أو الاستشارة المطلوبة</label>
-            <input type="text" placeholder="استشارة تشغيل، تدريب طهاة، طلب منتج...">
+          <div class="card-item">
+            <img src="food-1.jpg" alt="Menu Engineering" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>هندسة وتطوير قوائم الطعام</h3>
+              <p>ابتكار الوصفات وحساب دقيق لتكلفة الأغذية مع تطبيق معايير التوازن الغذائي لتعظيم الربحية.</p>
+              <a href="javascript:void(0)" onclick="navigateTo('recipes')" class="card-link">عرض الوصفات ←</a>
+            </div>
           </div>
-          <div class="form-group">
-            <label>تفاصيل الرسالة</label>
-            <textarea rows="4" placeholder="اكتب استفسارك بالتفصيل هنا..."></textarea>
+          <div class="card-item">
+            <img src="academy-1.jpg" alt="Training" onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>برامج التدريب الفندقي والميداني</h3>
+              <p>تأهيل الكوادر وفرق الطهي وصالات الضيافة وفق برامج HACCP المعتمدة دولياً لسلامة الغذاء.</p>
+              <a href="javascript:void(0)" onclick="navigateTo('academy')" class="card-link">برامج الأكاديمية ←</a>
+            </div>
           </div>
-          <button type="submit" class="btn-gold" style="width: 100%; padding: 12px;">إرسال الطلب الآن</button>
-        </form>
+        </div>
+      </div>
+
+      <!-- شركاء النجاح -->
+      <div class="partners-row">
+        <div style="font-size: 0.8rem; color: #888; letter-spacing: 2px;">TRUSTED BY LEADING BRANDS</div>
+        <div class="partners-logos">
+          <span>JUMEIRAH</span>
+          <span>ROTANA</span>
+          <span>HILTON</span>
+          <span>ACCOR</span>
+          <span>LIVELY</span>
+          <span>MÖVENPICK</span>
+        </div>
       </div>
     </section>
 
-    <!-- 10. شكراً لتواصلك معنا (Thank You Page) -->
-    <section id="thankyou" class="page-section">
-      <div class="card" style="max-width: 600px; margin: 60px auto; text-align: center; padding: 50px;">
+    <!-- ================= 2. من نحن (ABOUT) ================= -->
+    <section id="page-about" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">ABOUT CHEF KASSEM</div>
+          <h1 class="hero-title">شغف بالطهي.. <span>ورسالة للجميع</span></h1>
+          <p class="hero-desc">بدأت الرحلة منذ أكثر من 33 عاماً من شغف عميق بتفاصيل المطبخ الفندقي، لتتحول إلى مسيرة دولية رائدة في تأسيس أرقى المطاعم والمراكز الغذائية المتخصصة حول العالم.</p>
+          <div class="hero-actions">
+            <button class="btn-gold-solid" onclick="navigateTo('contact')">تواصل مع الشيف</button>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="chef-white.jpg" alt="Chef Kassem Story" onerror="this.src='https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80'">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">MY PHILOSOPHY & JOURNEY</div>
+          <h2>المحطات المهنية والرؤية</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">الريادة في التغذية الصحية</h3>
+              <p>مؤسس أحد أول وأكبر مراكز التغذية الصحية المتخصصة في الشرق الأوسط (Lively) مع مطبخ مركزي متقدم يخدم آلاف العملاء يومياً.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">الخبرة الدولية العريضة</h3>
+              <p>قيادة تنفيذية في كبرى سلاسل الضيافة في الإمارات، السعودية، الأردن، كمبوديا، ماليزيا، وغيرها من الدول.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">إعادة هيكلة المنشآت</h3>
+              <p>سجل حافل في إنقاذ وإعادة هيكلة المشاريع الغذائية المتعثرة وتحويلها إلى كيانات رابحة ومستقرة تشغيلياً.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. خدماتنا (SERVICES) ================= -->
+    <section id="page-services" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">OUR SERVICES</div>
+          <h1 class="hero-title">خدماتنا <span>الاحترافية</span></h1>
+          <p class="hero-desc">حلول متكاملة لنجاح أعمالك واستثماراتك في مجال الضيافة والأغذية؛ بدءاً من التخطيط الأولي وصولاً إلى التشغيل الكامل.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="food-hero.jpg" alt="Services" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80'">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">AREAS OF EXPERTISE</div>
+          <h2>مجالات خدماتنا الاستشارية</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="project-1.jpg" alt="Restaurant Setup" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>تأسيس المطاعم والفنادق</h3>
+              <p>تصميم وتجهيز المطابخ المركزية وسلاسل الإمداد من الصفر حتى الافتتاح الناجح.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="academy-2.jpg" alt="Food Safety" onerror="this.src='https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>السلامة والجودة الغذائية</h3>
+              <p>تطبيق معايير HACCP الدولية والتحكم الصارم في نقاط الخطر لضمان جودة الأغذية.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-2.jpg" alt="Financial" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80'">
+            <div class="card-body">
+              <h3>دراسات الجدوى والتحليل المالي</h3>
+              <p>تحليل تكاليف التشغيل ونسب الهدر وتحديد نقطة التعادل لتحقيق أقصى ربحية ممكنة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. الأكاديمية (ACADEMY) ================= -->
+    <section id="page-academy" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">CHEF KASSEM ACADEMY</div>
+          <h1 class="hero-title">نصنع <span>الطهاة والقادة</span></h1>
+          <p class="hero-desc">برامج تدريبية متخصصة ومكثفة تركز على الجانب العملي والتطبيقي الفندقي لتأهيل الكوادر الإدارية والتنفيذية في المطابخ العالمية.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="academy-1.jpg" alt="Academy" onerror="this.src='https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=500&q=80'">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">TRAINING PROGRAMS</div>
+          <h2>برامجنا التدريبية المعتمدة</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="academy-2.jpg" alt="Culinary Arts">
+            <div class="card-body">
+              <h3>فنون الطهي الفندقي الاحترافي</h3>
+              <p>إتقان تقنيات التقطيع، طهي اللحوم، تحضير المرق والصلصات الأم الكلاسيكية والحديثة.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="academy-3.jpg" alt="Kitchen Management">
+            <div class="card-body">
+              <h3>إدارة المطابخ والمطاعم</h3>
+              <p>قيادة فرق العمل، تنظيم جداول التشغيل، التحكم بالمخزون، والحد من الهدر الغذائي.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-1.jpg" alt="TOT Training">
+            <div class="card-body">
+              <h3>تدريب المدربين (TOT)</h3>
+              <p>تأهيل رؤساء الأقسام لنقل الخبرات والمعايير التشغيلية للفرق المستجدة بكفاءة عالية.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. مشاريعنا (PROJECTS) ================= -->
+    <section id="page-projects" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">OUR PROJECTS</div>
+          <h1 class="hero-title">مشاريعنا <span>وإنجازاتنا</span></h1>
+          <p class="hero-desc">سجل حافل بالإشراف على تأسيس وتطوير كبرى المنشآت الفندقية والمطاعم في المملكة العربية السعودية، الإمارات، وغيرها.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="project-1.jpg" alt="Projects" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80'">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">PORTFOLIO</div>
+          <h2>أبرز المشاريع التي قمنا بتطويرها</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="project-1.jpg" alt="Central Kitchen">
+            <div class="card-body">
+              <h3>مطبخ لايفلي المركزي - الرياض</h3>
+              <p>أول وأكبر مطبخ مركزي متخصص في الوجبات الصحية بسعة إنتاجية تفوق 10,000 وجبة يومياً.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="project-2.jpg" alt="Luxury Hotel">
+            <div class="card-body">
+              <h3>فندق ومنتجع أنغكور - كمبوديا</h3>
+              <p>إدارة وتطوير قسم الأغذية والمشروبات وإعادة هيكلة قوائم الطعام بنكهات عالمية فاخرة.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-hero.jpg" alt="Restaurant Chain">
+            <div class="card-body">
+              <h3>سلسلة مطاعم لايفلي دايت</h3>
+              <p>تأسيس وتشغيل أكثر من 20 فرعاً للوجبات الصحية في المملكة العربية السعودية والأردن.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. الفرنشايز (FRANCHISE) ================= -->
+    <section id="page-franchise" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">GLOBAL FRANCHISE</div>
+          <h1 class="hero-title">فرص <span>فرنشايز عالمية</span></h1>
+          <p class="hero-desc">انضم إلى علامة تجارية ناجحة ومجربة في قطاع الضيافة مع دليل تشغيلي كامل وتدريب شامل يضمن نجاح استثمارك.</p>
+          <div class="hero-actions">
+            <button class="btn-gold-solid" onclick="navigateTo('contact')">طلب ملف الامتياز التجاري</button>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="chef-black.jpg" alt="Franchise">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">FRANCHISE STEPS</div>
+          <h2>رحلة الاستثمار والحصول على الامتياز</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">1. دراسة الطلب والموقع</h3>
+              <p>تقييم الجدوى الاقتصادية واختيار الموقع الأنسب للفرع لضمان تدفق العملاء.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">2. التجهيز والتدريب الميداني</h3>
+              <p>تزويدكم بالمخططات الهندسية وتدريب طاقم العمل على الوصفات ومعايير التشغيل.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-body">
+              <h3 style="color: var(--gold-hover);">3. الافتتاح والدعم المستمر</h3>
+              <p>مرافقة كاملة في يوم الافتتاح مع إشراف دوري على الجودة وتطوير مستمر للمبيعات.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. الوصفات (RECIPES) ================= -->
+    <section id="page-recipes" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">OUR RECIPES</div>
+          <h1 class="hero-title">وصفات عالمية <span>مبتكرة</span></h1>
+          <p class="hero-desc">اكتشف أسرار أطباق الشيف قاسم المحضرة بأعلى معايير المطاعم العالمية خطوة بخطوة.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="food-1.jpg" alt="Recipes">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="filter-pills">
+          <span class="pill active">الكل</span>
+          <span class="pill">أطباق رئيسية</span>
+          <span class="pill">أطباق صحية</span>
+          <span class="pill">مقبلات وصلصات</span>
+          <span class="pill">حلويات فاخرة</span>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="food-1.jpg" alt="Salmon">
+            <div class="card-body">
+              <h3>سلمون مشوي بالأعشاب والليمون</h3>
+              <p>سمك سلمون طازج بتتبيلة إكليل الجبل وزيت الزيتون البكر مع خضار سوتيه مقرمشة.</p>
+              <a href="javascript:void(0)" class="card-link">عرض تفاصيل الوصفة ←</a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-2.jpg" alt="Pasta">
+            <div class="card-body">
+              <h3>باستا كريمة الدجاج والمشروم</h3>
+              <p>مكرونة فيتوتشيني غنية بصلصة الكريمة الفندقية مع صدور الدجاج والمشروم الطازج.</p>
+              <a href="javascript:void(0)" class="card-link">عرض تفاصيل الوصفة ←</a>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-3.jpg" alt="Dessert">
+            <div class="card-body">
+              <h3>كيك الشوكولاتة الذائبة (Molten)</h3>
+              <p>حلوى كلاسيكية بقوام مخملي دافئ تقدم مع آيس كريم الفانيليا الطبيعية.</p>
+              <a href="javascript:void(0)" class="card-link">عرض تفاصيل الوصفة ←</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. المحتوى والفيديو (CONTENT) ================= -->
+    <section id="page-content" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">DIGITAL CONTENT & VIDEOS</div>
+          <h1 class="hero-title">محتوى ملهم.. <span>من المطبخ للعالم</span></h1>
+          <p class="hero-desc">فيديوهات تعليمية، كواليس المطابخ الفندقية، وأسرار نجاح المشاريع وإدارة فرق العمل.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="chef-white.jpg" alt="Content">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="section-header-center">
+          <div class="sub">LATEST EPISODES</div>
+          <h2>أحدث مقاطع الفيديو والدروس</h2>
+        </div>
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="academy-1.jpg" alt="Video 1">
+            <div class="card-body">
+              <h3>أسرار التتبيل والطهي المثالي للستيك</h3>
+              <p>كيف تصل لدرجة الاستواء المثالية مع الاحتفاظ بعصارة ونكهة اللحم الأصلية.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="food-hero.jpg" alt="Video 2">
+            <div class="card-body">
+              <h3>كيف تدير مطبخاً مركزياً ناجحاً؟</h3>
+              <p>خطوات تنظيم خطوط الإنتاج والتحكم بنظافة وجودة الأغذية أثناء ساعات الضغط.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="project-2.jpg" alt="Video 3">
+            <div class="card-body">
+              <h3>طريقة تقديم الأطباق بأسلوب الفنادق</h3>
+              <p>فنون التقديم (Food Plating) التي ترفع من جاذبية وقيمة الطبق لدى العميل.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. المدونة (BLOG) ================= -->
+    <section id="page-blog" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">OUR BLOG</div>
+          <h1 class="hero-title">مدونة <span>الشيف قاسم</span></h1>
+          <p class="hero-desc">مقالات ورؤى استراتيجية لصناع الضيافة والمستثمرين ومحبي فنون الطهي الراقي.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="project-1.jpg" alt="Blog">
+        </div>
+      </div>
+      <div class="section-light">
+        <div class="grid-cards">
+          <div class="card-item">
+            <img src="food-hero.jpg" alt="Blog 1">
+            <div class="card-body">
+              <h3>10 أسرار لخفض تكاليف الأغذية (Food Cost)</h3>
+              <p>طرق عملية لتقليل الهدر المالي في المطاعم دون التأثير على جودة ومذاق الأطباق.</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="academy-2.jpg" alt="Blog 2">
+            <div class="card-body">
+              <h3>أهمية معايير HACCP في سمعة مطعمك</h3>
+              <p>لماذا تشكل السلامة الغذائية خط الدفاع الأول لاستمرارية ونجاح علامتك التجارية؟</p>
+            </div>
+          </div>
+          <div class="card-item">
+            <img src="project-2.jpg" alt="Blog 3">
+            <div class="card-body">
+              <h3>دراسة جدوى تأسيس مطعم سحابي (Cloud Kitchen)</h3>
+              <p>المزايا والتحديات التشغيلية للمطابخ السحابية مقارنة بالمطاعم التقليدية.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. تواصل معنا (CONTACT) ================= -->
+    <section id="page-contact" class="page-view">
+      <div class="hero-luxury">
+        <div class="hero-content">
+          <div class="badge-gold">GET IN TOUCH</div>
+          <h1 class="hero-title">تواصل معنا.. <span>لنبدأ قصة نجاحك</span></h1>
+          <p class="hero-desc">سواء كنت ترغب في تأسيس مطعم جديد، تدريب فريق عملك، أو طلب استشارة لتطوير مشروعك القائم، نحن هنا لخدمتك.</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="chef-black.jpg" alt="Contact">
+        </div>
+      </div>
+      <div style="padding: 20px 6%;">
+        <div class="consult-box">
+          <h3 style="color: var(--gold-primary); text-align: center; margin-bottom: 25px; font-size: 1.4rem;">نموذج طلب الاستشارة والتدريب</h3>
+          <form onsubmit="handleForm(event)" class="form-grid">
+            <div>
+              <label style="color: #bbb; font-size: 0.85rem; margin-bottom: 5px; display: block;">الاسم الكريم</label>
+              <input type="text" required placeholder="أدخل اسمك بالكامل" class="form-control">
+            </div>
+            <div>
+              <label style="color: #bbb; font-size: 0.85rem; margin-bottom: 5px; display: block;">البريد الإلكتروني</label>
+              <input type="email" required placeholder="name@example.com" class="form-control">
+            </div>
+            <div>
+              <label style="color: #bbb; font-size: 0.85rem; margin-bottom: 5px; display: block;">رقم الهاتف / واتساب</label>
+              <input type="tel" required placeholder="+971 ... / +966 ..." class="form-control">
+            </div>
+            <div>
+              <label style="color: #bbb; font-size: 0.85rem; margin-bottom: 5px; display: block;">نوع الاستشارة المطلوبة</label>
+              <select class="form-control">
+                <option>تأسيس مطعم جديد</option>
+                <option>تطوير قائمة طعام وهندسة تكاليف</option>
+                <option>تدريب وتأهيل طواقم الطهي</option>
+                <option>طلب امتياز تجاري (Franchise)</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+            <div class="form-full">
+              <label style="color: #bbb; font-size: 0.85rem; margin-bottom: 5px; display: block;">تفاصيل المشروع أو الاستفسار</label>
+              <textarea rows="4" placeholder="اكتب نبذة عن مشروعك أو استفسارك..." class="form-control"></textarea>
+            </div>
+            <div class="form-full">
+              <button type="submit" class="btn-gold-solid" style="width: 100%; padding: 14px; font-size: 1rem;">إرسال طلب الاستشارة الآن</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- صفحة الشكر عند الإرسال -->
+    <section id="page-thankyou" class="page-view">
+      <div style="padding: 100px 6%; text-align: center; max-width: 600px; margin: 0 auto;">
         <div style="font-size: 4rem; color: var(--gold-primary); margin-bottom: 20px;">✓</div>
-        <h2 style="color: #fff; margin-bottom: 15px;">شكراً لتواصلك معنا</h2>
-        <p style="color: var(--text-muted); margin-bottom: 30px;">تم استلام رسالتك بنجاح. سيقوم الشيف قاسم أو فريق الاستشارات بالرد عليك في أقرب وقت.</p>
-        <button class="btn-gold" onclick="showPage('home')">العودة إلى الرئيسية</button>
+        <h2 style="font-size: 2.2rem; color: #fff; margin-bottom: 15px;">شكراً لتواصلكم معنا</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">تم استلام طلبكم بنجاح. سيقوم الشيف قاسم أو فريق الاستشارات بالتواصل معكم خلال 24 ساعة عمل.</p>
+        <button class="btn-gold-solid" onclick="navigateTo('home')">العودة إلى الصفحة الرئيسية</button>
       </div>
     </section>
   </main>
 
   <!-- الفوتر الموحد -->
   <footer>
-    <div class="footer-contacts">
-      <div>📞 هاتف / واتساب: +971 50 778 4185</div>
-      <div>✉️ البريد الإلكتروني: info@chefkassemtaha.com</div>
-      <div>🌐 الموقع: www.chefkassemtaha.com</div>
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="logo-main" style="margin-bottom: 10px;">CHEF KASSEM GROUP</div>
+        <p style="font-size: 0.85rem; line-height: 1.8;">مؤسسة رائدة في تقديم استشارات الضيافة وتأسيس وتشغيل المطاعم الفاخرة وتأهيل الطهاة وفق أرفع المعايير الدولية.</p>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="navigateTo('home')">الرئيسية</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('about')">من نحن</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('services')">خدماتنا</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('academy')">الأكاديمية</a></li>
+          <li><a href="javascript:void(0)" onclick="navigateTo('projects')">مشاريعنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>معلومات التواصل</h4>
+        <ul>
+          <li>📞 واتساب / هاتف: +971 50 778 4185</li>
+          <li>✉️ البريد: info@chefkassemtaha.com</li>
+          <li>🌐 النطاق: www.chefkassemtaha.com</li>
+          <li>📍 المقر: دبي، الإمارات العربية المتحدة</li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 موقع الشيف قاسم طه - جميع الحقوق محفوظة | Chef Kassem Taha Official Website</p>
+    <div class="footer-bottom">
+      <div>© 2026 جميع الحقوق محفوظة | Chef Kassem Group</div>
+      <div style="color: var(--gold-primary);">تصميم وتنفيذ استشاري فاخر</div>
+    </div>
   </footer>
 
+  <!-- جافاسكريبت للتنقل الفوري والسلس بين الصفحات -->
   <script>
-    function showPage(pageId) {
-      const sections = document.querySelectorAll('.page-section');
-      sections.forEach(sec => sec.classList.remove('active'));
+    function navigateTo(pageId) {
+      // إخفاء جميع الصفحات
+      const pages = document.querySelectorAll('.page-view');
+      pages.forEach(p => p.classList.remove('active'));
 
-      const target = document.getElementById(pageId);
-      if (target) {
-        target.classList.add('active');
+      // إظهار الصفحة المطلوبة
+      const targetPage = document.getElementById('page-' + pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
       }
 
+      // تحديث حالة أزرار التنقل
       const buttons = document.querySelectorAll('.nav-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
-      const activeBtn = Array.from(buttons).find(btn => btn.getAttribute('onclick')?.includes(pageId));
+      const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick')?.includes(pageId));
       if (activeBtn) {
         activeBtn.classList.add('active');
       }
 
+      // الصعود بسلاسة لأعلى الصفحة
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      showPage('thankyou');
+    function handleForm(e) {
+      e.preventDefault();
+      navigateTo('thankyou');
     }
   </script>
 </body>
