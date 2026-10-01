@@ -1,22 +1,983 @@
+/* =========================================================
+   CHEF KASSEM — MASTER STYLE
+   Black & Gold Luxury Website
+   Responsive / Arabic + English / High Quality Images
+   ========================================================= */
 
-:root{--bg:#050809;--bg2:#0b0f10;--card:#101415;--gold:#d9a441;--gold2:#f2c65d;--text:#f5f1e8;--muted:#c9c4ba;--line:#b98427;--paper:#f6f2e9;--ink:#171717}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{text-decoration:none;color:inherit}.wrap{width:min(1180px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(5,8,9,.97);border-bottom:1px solid #3a2b18}
-.nav{min-height:72px;display:flex;align-items:center;gap:22px}.brand{font:700 25px Georgia,serif;color:var(--gold);margin-inline-end:auto}.menu{display:flex;gap:16px;align-items:center}.menu a{font-size:13px;color:#ddd}.menu a:hover,.menu a.active{color:var(--gold2)}
-.lang,.menuBtn,.btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:10px 15px;cursor:pointer}.menuBtn{display:none;font-size:20px}
-.hero{background:radial-gradient(circle at 20% 20%,#3a2b17 0,transparent 30%),linear-gradient(135deg,#050505,#111);padding:70px 0}.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
-.kicker{color:var(--gold);font-weight:700;letter-spacing:2px}.hero h1,.head h1{font:700 clamp(42px,6vw,72px)/1.06 Georgia,serif;margin:12px 0}.hero h2{color:var(--gold);font-size:clamp(21px,3vw,32px)}.hero p{color:#ddd;font-size:18px}.goldline{width:100px;height:3px;background:var(--gold);margin:24px 0}
-.heroPhoto{min-height:430px;border:1px solid #6d522b;background:#0d0d0d center/cover no-repeat;position:relative}.heroPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),transparent)}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;background:var(--gold);color:#111;font-weight:700}.btn.alt{background:transparent;color:var(--gold)}
-.paper{background:var(--paper);color:var(--ink);padding:65px 0}.dark{padding:65px 0}.sectionTitle{text-align:center;margin-bottom:34px}.sectionTitle small{color:var(--gold);font-weight:700;letter-spacing:2px}.sectionTitle h2{font:700 clamp(30px,4vw,44px) Georgia,serif;margin:8px 0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;color:#222;border:1px solid #ded5c6;padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.08)}.card.darkCard{background:var(--card);color:var(--text);border-color:#3c2c19}.card h3{color:#b47b1e;margin:5px 0 10px}.card img{width:100%;height:180px;object-fit:cover;margin-bottom:12px}.icon{font-size:28px;color:var(--gold)}
-.head{padding:65px 0;background:linear-gradient(135deg,#050505,#17130d);text-align:center}.head p{max-width:760px;margin:auto;color:#ccc}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.portrait{width:100%;max-height:480px;object-fit:cover;border:1px solid var(--gold)}
-.list{display:grid;gap:12px}.list div{padding:14px;border-inline-start:3px solid var(--gold);background:#fff;color:#222}
-.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}.contactBox{background:#0d0d0d;border:1px solid #3d2c18;padding:30px}.contactBox b{color:var(--gold)}
-input,textarea,select{width:100%;padding:13px;margin-bottom:12px;border:1px solid #d8cfbf;background:#fff;font:inherit}textarea{min-height:130px}
-footer{border-top:1px solid #352815;background:#030303;padding:28px 0;text-align:center;color:#aaa}.footBrand{color:var(--gold);font:700 23px Georgia,serif}
-.note{background:#fff4d6;color:#5a4219;border:1px solid #d9a441;padding:12px 15px;margin:18px 0}
-@media(max-width:850px){.menuBtn{display:block}.menu{display:none;position:absolute;top:72px;left:0;right:0;background:#070707;padding:18px;flex-direction:column}.menu.open{display:flex}.heroGrid,.split,.contact{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.heroPhoto{min-height:360px}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.hero{padding:45px 0}.heroPhoto{min-height:320px}.brand{font-size:20px}}
+:root {
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --black-card: #101010;
+
+    --gold: #c9973f;
+    --gold-light: #edc56e;
+    --gold-dark: #94671f;
+
+    --cream: #f5f0e6;
+    --white: #ffffff;
+    --text-light: #e9e9e9;
+    --text-muted: #bdb7ad;
+    --text-dark: #1c1c1c;
+
+    --border-gold: rgba(201, 151, 63, 0.45);
+
+    --container: 1200px;
+}
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: Arial, Tahoma, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+html[dir="rtl"] body {
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================
+   IMAGE QUALITY
+   ========================= */
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    /* Prevent browser from applying unwanted stretching */
+    object-fit: cover;
+
+    /* Better rendering */
+    image-rendering: auto;
+
+    /* GPU rendering helps scaling */
+    transform: translateZ(0);
+
+    backface-visibility: hidden;
+}
+
+/*
+   IMPORTANT:
+   Never force a small image beyond the space available.
+*/
+
+.hero-photo,
+.about-photo,
+.page-photo,
+.card-photo {
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Chef portrait keeps head and upper body visible */
+
+.chef-photo {
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* Food images stay centered */
+
+.food-photo {
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+.container {
+    width: min(var(--container), 92%);
+    margin-inline: auto;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.gold-light {
+    color: var(--gold-light);
+}
+
+.section {
+    padding: 85px 0;
+}
+
+.section-dark {
+    background: var(--black);
+}
+
+.section-black-soft {
+    background: var(--black-soft);
+}
+
+.section-cream {
+    background: var(--cream);
+    color: var(--text-dark);
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.96);
+
+    border-bottom: 1px solid var(--border-gold);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.logo {
+    margin-inline-end: auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    color: var(--gold-light);
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: var(--white);
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+}
+
+.main-nav a {
+    position: relative;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #efefef;
+
+    transition: 0.25s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold-light);
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    right: 50%;
+    bottom: -8px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: 0.25s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    left: 0;
+    right: 0;
+}
+
+
+/* =========================
+   LANGUAGE / MENU BUTTONS
+   ========================= */
+
+.language-btn,
+.menu-btn {
+    border: 1px solid var(--gold);
+
+    background: transparent;
+
+    color: var(--gold-light);
+
+    padding: 8px 13px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.language-btn:hover,
+.menu-btn:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+.menu-btn {
+    display: none;
+
+    font-size: 22px;
+
+    padding: 5px 11px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 11px 23px;
+
+    border: 1px solid var(--gold);
+
+    background: linear-gradient(
+        135deg,
+        var(--gold-dark),
+        var(--gold-light)
+    );
+
+    color: #111;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(201, 151, 63, 0.25);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--gold-light);
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+
+/* =========================
+   HOME HERO
+   ========================= */
+
+.hero {
+    position: relative;
+
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(201, 151, 63, 0.17),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #030303 0%,
+            #0c0c0c 55%,
+            #050505 100%
+        );
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -180px;
+
+    border: 1px solid rgba(201, 151, 63, 0.15);
+
+    border-radius: 50%;
+}
+
+.hero-grid {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 55px;
+
+    align-items: center;
+
+    padding: 65px 0;
+}
+
+.hero-kicker {
+    color: var(--gold-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.hero-title {
+    margin-top: 13px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 6vw, 82px);
+
+    line-height: 1.04;
+
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    margin-top: 18px;
+
+    color: var(--gold-light);
+
+    font-size: clamp(21px, 2.6vw, 33px);
+
+    line-height: 1.35;
+}
+
+.gold-line {
+    width: 90px;
+    height: 3px;
+
+    margin: 27px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-dark),
+            var(--gold-light)
+        );
+}
+
+.hero-description {
+    max-width: 720px;
+
+    color: #d6d6d6;
+
+    font-size: 17px;
+}
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   HERO IMAGE
+   ========================= */
+
+.hero-image-wrapper {
+    position: relative;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(201, 151, 63, 0.65);
+
+    background: #111;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+.hero-image-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.3),
+            transparent 35%
+        );
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+
+    min-height: 560px;
+
+    object-fit: cover;
+
+    /*
+      Keeps Chef Kassem's face/head from being cropped.
+    */
+    object-position: center top;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+   ========================= */
+
+.section-heading {
+    max-width: 800px;
+
+    margin:
+        0 auto
+        45px;
+
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(32px, 4vw, 50px);
+
+    line-height: 1.2;
+}
+
+.section-heading p {
+    margin-top: 12px;
+
+    color: #756f66;
+}
+
+.section-dark .section-heading p,
+.section-black-soft .section-heading p {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   SERVICE CARDS
+   ========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    color: var(--text-dark);
+
+    border:
+        1px solid #ded3c1;
+
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-icon {
+    color: var(--gold);
+
+    font-size: 29px;
+}
+
+.card h3 {
+    margin: 8px 0;
+
+    color: #a9721d;
+
+    font-size: 21px;
+}
+
+.card p {
+    color: #666;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   CARD IMAGES
+   ========================= */
+
+.card-photo-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #161616;
+}
+
+.card-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-photo {
+    transform: scale(1.035);
+}
+
+
+/* =========================
+   STATS
+   ========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 1px;
+
+    margin-top: 50px;
+
+    border:
+        1px solid var(--border-gold);
+
+    background: var(--border-gold);
+}
+
+.stat {
+    padding: 25px 15px;
+
+    background: #080808;
+
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-family: Georgia, serif;
+
+    font-size: 31px;
+}
+
+.stat span {
+    color: #c9c9c9;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta {
+    padding: 40px 0;
+
+    background:
+        linear-gradient(
+            110deg,
+            #9b6a20,
+            #e2ba64,
+            #ad7929
+        );
+
+    color: #111;
+}
+
+.cta-inner {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(27px, 4vw, 40px);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    padding: 45px 0 30px;
+
+    background: #020202;
+
+    border-top:
+        1px solid var(--border-gold);
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+.footer-logo {
+    color: var(--gold-light);
+
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.copyright {
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 10px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        padding: 22px;
+
+        flex-direction: column;
+
+        background: rgba(5, 5, 5, 0.99);
+
+        border-bottom:
+            1px solid var(--border-gold);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+
+        padding: 9px;
+
+        text-align: center;
+
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        padding: 55px 0;
+    }
+
+    .hero-image-wrapper,
+    .hero-photo {
+        min-height: 500px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 91%;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .main-nav {
+        top: 68px;
+    }
+
+    .section {
+        padding: 58px 0;
+    }
+
+    .hero-grid {
+        padding: 42px 0;
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 12vw, 59px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /*
+      Mobile portrait:
+      taller instead of stretching the image horizontally.
+    */
+
+    .hero-image-wrapper {
+        min-height: 460px;
+    }
+
+    .hero-photo {
+        min-height: 460px;
+
+        object-fit: cover;
+
+        object-position: center top;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cta-inner {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL SCREENS
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .language-btn {
+        padding: 6px 9px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+}
