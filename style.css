@@ -1,1376 +1,738 @@
-/* =========================================================
-   CHEF KASSEM TAHA
-   FINAL BLACK & GOLD WEBSITE
-   ========================================================= */
-
-:root {
-  --black: #050505;
-  --black-soft: #0b0b0b;
-  --panel: #10100f;
-  --panel-2: #15130f;
-
-  --gold: #d6a84b;
-  --gold-light: #f2d184;
-  --gold-dark: #8e6827;
-
-  --white: #f8f5ee;
-  --text: #e8e1d3;
-  --muted: #aaa397;
-
-  --border: rgba(214,168,75,.48);
-  --shadow: 0 18px 45px rgba(0,0,0,.55);
-
-  --max: 1240px;
+:root{
+  --black:#050505;
+  --black2:#0b0b0b;
+  --gold:#d7a536;
+  --gold2:#f0c75e;
+  --white:#f5f1e8;
+  --muted:#c5bfb4;
+  --line:rgba(215,165,54,.55);
 }
 
-
-/* =========================================================
-   RESET
-   ========================================================= */
-
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
+body{
+  margin:0;
+  background:#050505;
+  color:var(--white);
+  font-family:Arial,Tahoma,sans-serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+.container{
+  width:min(96%,1400px);
+  margin:auto;
+}
+
+/* HEADER */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(3,3,3,.97);
+  border-bottom:1px solid var(--gold);
+}
+
+.header-inner{
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:235px;
+}
+
+.logo-mark{
+  width:58px;
+  height:58px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.logo-text strong{
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:19px;
+}
+
+.logo-text span{
+  font-size:9px;
+  letter-spacing:1px;
+}
+
+.logo-text small{
+  color:var(--gold2);
+  margin-top:4px;
+}
+
+.main-nav{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:17px;
+}
+
+.main-nav a{
+  text-align:center;
+  font-size:12px;
+  transition:.2s;
+}
+
+.main-nav a small{
+  display:block;
+  margin-top:4px;
+  font-size:10px;
+  color:#ddd;
+}
+
+.main-nav a:hover,
+.main-nav a.active{
+  color:var(--gold2);
+}
+
+.header-actions{
+  display:flex;
+  gap:8px;
+}
+
+.language-btn,
+.menu-btn{
+  border:1px solid var(--gold);
+  background:#090909;
+  color:var(--gold2);
+  min-height:42px;
+  padding:0 12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.menu-btn{
+  width:44px;
+  font-size:20px;
+  display:none;
+}
+
+/* HERO */
+
+.home-hero{
+  border-bottom:1px solid var(--gold);
   background:
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(214,168,75,.08),
-      transparent 25%
-    ),
+    radial-gradient(circle at 75% 35%,rgba(213,156,40,.20),transparent 25%),
+    linear-gradient(90deg,#030303,#0b0804 55%,#120c04);
+}
+
+.hero-grid{
+  min-height:640px;
+  display:grid;
+  grid-template-columns:47% 53%;
+  align-items:stretch;
+}
+
+.hero-content{
+  padding:75px 40px 60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.gold-label{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.hero-content h1{
+  margin:12px 0 5px;
+  font-family:Georgia,serif;
+  font-size:clamp(48px,6vw,86px);
+  line-height:.95;
+  font-weight:400;
+}
+
+.hero-content h1 strong{
+  display:block;
+  color:var(--gold2);
+}
+
+.hero-content h2{
+  margin:18px 0;
+  color:var(--gold2);
+  font-family:Tahoma,Arial,sans-serif;
+  font-size:clamp(35px,4vw,57px);
+  line-height:1.3;
+}
+
+.hero-description{
+  max-width:650px;
+  color:#eee8dd;
+  font-size:16px;
+  line-height:1.65;
+  margin:7px 0;
+}
+
+.arabic{
+  direction:rtl;
+  text-align:left;
+  font-family:Tahoma,Arial,sans-serif;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  margin-top:27px;
+}
+
+.gold-btn,
+.card-btn{
+  background:linear-gradient(135deg,#c28b24,#f0c75e,#bd8320);
+  color:#090909;
+  border:1px solid #f2ca68;
+  font-weight:bold;
+  padding:14px 23px;
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.gold-btn span,
+.card-btn span{
+  font-size:11px;
+  margin-top:3px;
+}
+
+.dark-btn{
+  border:1px solid var(--gold);
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+}
+
+.dark-btn small{
+  color:var(--gold2);
+}
+
+.play{
+  width:36px;
+  height:36px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold);
+}
+
+.hero-photo{
+  min-height:640px;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at center,rgba(220,160,40,.18),transparent 45%),
+    #090806;
+}
+
+.photo-frame{
+  width:100%;
+  height:100%;
+}
+
+.photo-frame img{
+  width:100%;
+  height:640px;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.hero-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,#050505 0%,transparent 20%,transparent 85%,rgba(0,0,0,.35));
+  pointer-events:none;
+}
+
+.signature{
+  position:absolute;
+  z-index:3;
+  right:30px;
+  bottom:25px;
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:26px;
+  text-align:right;
+}
+
+.signature span{
+  display:block;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  margin-top:7px;
+}
+
+/* EXPERTISE */
+
+.expertise{
+  background:#050505;
+  border-bottom:1px solid var(--gold);
+}
+
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+}
+
+.expertise-item{
+  padding:19px 9px;
+  text-align:center;
+  border-right:1px solid rgba(215,165,54,.3);
+}
+
+.expertise-icon{
+  color:var(--gold2);
+  font-size:27px;
+  margin-bottom:7px;
+}
+
+.expertise-item strong{
+  display:block;
+  font-size:11px;
+}
+
+.expertise-item span{
+  display:block;
+  color:#d6d0c5;
+  font-size:10px;
+  margin-top:4px;
+}
+
+/* CARDS */
+
+.home-sections{
+  padding:18px 0 28px;
+  background:
+    radial-gradient(circle at 50% 100%,rgba(203,143,28,.15),transparent 35%),
     #050505;
-
-  color: var(--text);
-
-  font-family:
-    Arial,
-    Tahoma,
-    sans-serif;
-
-  line-height: 1.65;
-
-  overflow-x: hidden;
 }
 
-body[dir="rtl"] {
-  font-family:
-    Tahoma,
-    Arial,
-    sans-serif;
+.home-card-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
+.home-card{
+  border:2px solid var(--gold);
+  border-radius:8px;
+  overflow:hidden;
+  background:#080808;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.card-image{
+  height:235px;
+  position:relative;
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid var(--gold);
 }
 
-button {
-  font: inherit;
-}
-
-.wrap {
-  width: min(92%, var(--max));
-  margin-inline: auto;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
+.food-image{
   background:
-    rgba(5,5,5,.96);
-
-  backdrop-filter: blur(12px);
-
-  border-bottom:
-    1px solid rgba(214,168,75,.30);
+    linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.05)),
+    url("food-hero.jpg") center/cover;
 }
 
-.nav {
-  min-height: 82px;
-
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-
-
-/* BRAND */
-
-.brand {
-  color: var(--gold-light);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  line-height: 1.05;
-
-  white-space: nowrap;
-
-  text-shadow:
-    0 0 20px rgba(214,168,75,.12);
-}
-
-.brand small {
-  display: block;
-
-  margin-top: 8px;
-
-  color: #fff;
-
-  font-family:
-    Arial,
-    sans-serif;
-
-  font-size: 8px;
-  font-weight: 700;
-
-  letter-spacing: 3px;
-}
-
-
-/* NAVIGATION */
-
-.links {
-  margin-left: auto;
-
-  display: flex;
-  align-items: center;
-
-  gap: 15px;
-}
-
-html[dir="rtl"] .links {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.links a {
-  position: relative;
-
-  color: #ded7ca;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  padding: 10px 0;
-
-  transition:
-    color .25s ease;
-}
-
-.links a::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  bottom: 3px;
-
-  width: 0;
-  height: 1px;
-
+.academy-image{
   background:
-    linear-gradient(
-      90deg,
-      var(--gold-dark),
-      var(--gold-light)
-    );
-
-  transition:
-    width .25s ease;
+    linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.05)),
+    url("academy-1.jpg") center/cover;
 }
 
-.links a:hover {
-  color: var(--gold-light);
-}
-
-.links a:hover::after {
-  width: 100%;
-}
-
-
-/* LANGUAGE BUTTON */
-
-.lang,
-.menu {
-  border:
-    1px solid var(--gold-dark);
-
+.recipe-image{
   background:
-    #0b0b0b;
-
-  color:
-    var(--gold-light);
-
-  min-width: 46px;
-  height: 44px;
-
-  cursor: pointer;
-
-  font-weight: 700;
-
-  transition:
-    .25s ease;
+    linear-gradient(0deg,rgba(0,0,0,.3),rgba(0,0,0,.05)),
+    url("food-1.jpg") center/cover;
 }
 
-.lang:hover,
-.menu:hover {
+.video-image{
   background:
-    var(--gold);
-
-  color:
-    #050505;
+    linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.1)),
+    url("food-2.jpg") center/cover;
 }
 
-.menu {
-  display: none;
-
-  font-size: 22px;
+.card-heading{
+  position:absolute;
+  left:15px;
+  top:12px;
+  text-shadow:0 2px 8px #000;
 }
 
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  min-height:
-    calc(100vh - 82px);
-
-  display: grid;
-
-  grid-template-columns:
-    1.02fr .98fr;
-
-  align-items: center;
-
-  gap: 48px;
-
-  padding-top: 48px;
-  padding-bottom: 35px;
-
-  position: relative;
+.card-heading h3{
+  margin:0;
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:30px;
 }
 
-
-/* GOLD BACKGROUND GLOW */
-
-.hero::before {
-  content: "";
-
-  position: absolute;
-
-  width: 520px;
-  height: 520px;
-
-  right: -150px;
-  top: 80px;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(214,168,75,.16),
-      transparent 68%
-    );
-
-  pointer-events: none;
-
-  z-index: -1;
+.card-heading h4{
+  margin:2px 0;
+  color:var(--gold2);
+  font-size:24px;
 }
 
-
-.eyebrow {
-  color:
-    var(--gold);
-
-  letter-spacing:
-    5px;
-
-  font-size:
-    12px;
-
-  font-weight:
-    700;
-
-  margin-bottom:
-    18px;
+.card-body{
+  padding:15px;
 }
 
-
-/* MAIN TITLE */
-
-.hero h1 {
-  margin:
-    0 0 22px;
-
-  color:
-    var(--white);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(48px, 6vw, 88px);
-
-  line-height:
-    .98;
-
-  font-weight:
-    600;
-
-  letter-spacing:
-    -2px;
-
-  text-shadow:
-    0 10px 35px
-    rgba(0,0,0,.65);
+.card-body p{
+  min-height:47px;
+  margin:4px 0 8px;
+  font-size:13px;
+  line-height:1.45;
 }
 
-
-/* GOLD PART OF HEADING */
-
-.hero h1::after {
-  content: "";
-
-  display: block;
-
-  width: 90px;
-  height: 3px;
-
-  margin-top: 26px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--gold-dark),
-      var(--gold-light)
-    );
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  margin:13px 0;
 }
 
-
-html[dir="rtl"] .hero h1 {
-  font-family:
-    Tahoma,
-    Arial,
-    sans-serif;
-
-  font-size:
-    clamp(42px, 6vw, 76px);
-
-  line-height:
-    1.15;
-
-  letter-spacing:
-    0;
+.mini-grid div{
+  border:1px solid var(--gold);
+  padding:8px 3px;
+  text-align:center;
+  font-size:9px;
 }
 
-
-.lead {
-  max-width:
-    650px;
-
-  margin:
-    0 0 30px;
-
-  color:
-    #c8c0b4;
-
-  font-size:
-    17px;
-
-  line-height:
-    1.85;
+.mini-grid span{
+  color:#d8d1c4;
 }
 
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.actions {
-  display:
-    flex;
-
-  flex-wrap:
-    wrap;
-
-  gap:
-    14px;
+.card-btn{
+  width:100%;
+  padding:10px;
 }
 
+/* JOURNEY */
 
-.btn {
-  display:
-    inline-flex;
-
-  justify-content:
-    center;
-
-  align-items:
-    center;
-
-  min-height:
-    50px;
-
-  padding:
-    0 24px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #9d722a,
-      #e5b85c,
-      #b17d2d
-    );
-
-  color:
-    #080808;
-
-  border:
-    1px solid #e6bd69;
-
-  font-size:
-    13px;
-
-  font-weight:
-    800;
-
-  letter-spacing:
-    .3px;
-
-  box-shadow:
-    0 8px 24px
-    rgba(214,168,75,.12);
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
+.journey{
+  border-top:1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
+  background:#070707;
 }
 
-
-.btn:hover {
-  transform:
-    translateY(-2px);
-
-  box-shadow:
-    0 14px 32px
-    rgba(214,168,75,.20);
+.journey-grid{
+  display:grid;
+  grid-template-columns:1.6fr repeat(4,.75fr) 1.6fr;
 }
 
-
-.btn.outline {
-  color:
-    var(--gold-light);
-
-  background:
-    transparent;
-
-  border:
-    1px solid var(--gold-dark);
+.journey-grid > div{
+  min-height:230px;
+  padding:27px 20px;
+  border-right:1px solid rgba(215,165,54,.25);
 }
 
-
-.btn.outline:hover {
-  background:
-    rgba(214,168,75,.08);
+.journey-text h2{
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  margin:0 0 10px;
+  font-size:30px;
 }
 
-
-/* =========================================================
-   CHEF PORTRAIT
-   ========================================================= */
-
-.portrait {
-  position:
-    relative;
-
-  min-height:
-    610px;
-
-  display:
-    flex;
-
-  align-items:
-    flex-end;
-
-  justify-content:
-    center;
-
-  overflow:
-    hidden;
-
-  border:
-    1px solid rgba(214,168,75,.45);
-
-  background:
-    linear-gradient(
-      150deg,
-      #17130d,
-      #080808 58%,
-      #050505
-    );
-
-  box-shadow:
-    var(--shadow);
+.journey-text h2 span{
+  display:block;
+  font-family:Tahoma,sans-serif;
 }
 
-
-/* decorative frame */
-
-.portrait::before {
-  content: "";
-
-  position:
-    absolute;
-
-  inset:
-    14px;
-
-  border:
-    1px solid
-    rgba(214,168,75,.22);
-
-  pointer-events:
-    none;
-
-  z-index:
-    2;
+.journey-text p{
+  font-size:13px;
 }
 
-
-.portrait::after {
-  content: "";
-
-  position:
-    absolute;
-
-  width:
-    380px;
-
-  height:
-    380px;
-
-  top:
-    60px;
-
-  right:
-    -70px;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(221,174,79,.18),
-      transparent 65%
-    );
-
-  pointer-events:
-    none;
+.journey-stat{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
-
-/*
-IMPORTANT:
-No blur.
-No opacity.
-No filters.
-Original portrait quality is preserved.
-*/
-
-.portrait img {
-  position:
-    relative;
-
-  z-index:
-    1;
-
-  width:
-    100%;
-
-  height:
-    610px;
-
-  object-fit:
-    cover;
-
-  object-position:
-    center top;
-
-  filter:
-    none;
-
-  opacity:
-    1;
-
-  image-rendering:
-    auto;
+.journey-stat strong{
+  color:var(--gold2);
+  font-family:Georgia,serif;
+  font-size:34px;
 }
 
-
-/* =========================================================
-   FEATURE STRIP
-   ========================================================= */
-
-.feature-strip {
-  border-top:
-    1px solid var(--border);
-
-  border-bottom:
-    1px solid var(--border);
-
-  background:
-    linear-gradient(
-      180deg,
-      #0b0b0a,
-      #070707
-    );
+.journey-stat span{
+  font-size:11px;
 }
 
-
-.features {
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(5,1fr);
+.journey-stat small{
+  display:block;
+  margin-top:5px;
+  color:#ccc;
 }
 
-
-.feature {
-  min-height:
-    120px;
-
-  padding:
-    24px 18px;
-
-  display:
-    flex;
-
-  flex-direction:
-    column;
-
-  justify-content:
-    center;
-
-  text-align:
-    center;
-
-  border-right:
-    1px solid
-    rgba(214,168,75,.18);
+.journey-quote{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-
-.feature:last-child {
-  border-right:
-    0;
+.quote-mark{
+  color:var(--gold2);
+  font-size:60px;
+  height:45px;
 }
 
-
-.feature b {
-  color:
-    var(--gold-light);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    18px;
-
-  margin-bottom:
-    5px;
+.journey-quote p{
+  text-align:center;
+  font-size:13px;
 }
 
-
-.feature span {
-  color:
-    #aaa398;
-
-  font-size:
-    11px;
-
-  text-transform:
-    uppercase;
-
-  letter-spacing:
-    1px;
+.quote-signature{
+  color:var(--gold2);
+  text-align:right;
+  font-family:Georgia,serif;
+  font-size:20px;
 }
 
+/* FOOTER */
 
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-.section {
-  padding:
-    85px 0;
-
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(214,168,75,.04),
-      transparent 28%
-    );
+.site-footer{
+  background:#030303;
+  padding:22px 0 10px;
 }
 
-
-.section-head {
-  margin-bottom:
-    36px;
+.footer-grid{
+  display:flex;
+  align-items:center;
+  gap:40px;
 }
 
-
-.section-head::before {
-  content:
-    "CHEF KASSEM TAHA";
-
-  display:
-    block;
-
-  color:
-    var(--gold);
-
-  font-size:
-    10px;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    5px;
-
-  margin-bottom:
-    10px;
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:230px;
 }
 
-
-.section-head h2 {
-  margin:
-    0;
-
-  color:
-    var(--white);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(34px, 4vw, 54px);
-
-  font-weight:
-    500;
+.footer-brand strong{
+  display:block;
+  color:var(--gold2);
 }
 
-
-html[dir="rtl"] .section-head h2 {
-  font-family:
-    Tahoma,
-    Arial,
-    sans-serif;
+.footer-brand span,
+.footer-brand small{
+  display:block;
+  font-size:9px;
 }
 
-
-/* =========================================================
-   CARDS
-   ========================================================= */
-
-.grid {
-  display:
-    grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:
-    18px;
+.footer-links{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:7px;
 }
 
-
-.card {
-  position:
-    relative;
-
-  min-height:
-    220px;
-
-  padding:
-    30px;
-
-  overflow:
-    hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      #12110e,
-      #090909
-    );
-
-  border:
-    1px solid
-    rgba(214,168,75,.30);
-
-  box-shadow:
-    0 12px 30px
-    rgba(0,0,0,.25);
-
-  transition:
-    transform .25s ease,
-    border-color .25s ease;
+.footer-links a{
+  text-align:center;
+  font-size:10px;
 }
 
-
-.card::before {
-  content: "";
-
-  position:
-    absolute;
-
-  top:
-    0;
-
-  left:
-    0;
-
-  width:
-    65px;
-
-  height:
-    2px;
-
-  background:
-    var(--gold);
+.footer-links span{
+  color:#ccc;
 }
 
-
-.card:hover {
-  transform:
-    translateY(-5px);
-
-  border-color:
-    rgba(214,168,75,.70);
+.copyright{
+  text-align:center;
+  color:#8e877b;
+  font-size:10px;
+  padding-top:18px;
 }
 
+/* MOBILE */
 
-.card h3 {
-  color:
-    var(--gold-light);
+@media(max-width:1000px){
 
-  margin:
-    0 0 14px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    23px;
-
-  font-weight:
-    500;
-}
-
-
-html[dir="rtl"] .card h3 {
-  font-family:
-    Tahoma,
-    Arial,
-    sans-serif;
-}
-
-
-.card p {
-  margin:
-    0;
-
-  color:
-    #aaa398;
-
-  font-size:
-    14px;
-
-  line-height:
-    1.8;
-}
-
-
-/* =========================================================
-   LANGUAGE SYSTEM
-   ========================================================= */
-
-[data-lang="ar"] {
-  display:
-    none;
-}
-
-html[lang="ar"] [data-lang="ar"] {
-  display:
-    inline;
-}
-
-html[lang="ar"] [data-lang="en"] {
-  display:
-    none;
-}
-
-html[lang="en"] [data-lang="en"] {
-  display:
-    inline;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-  padding:
-    28px 20px;
-
-  text-align:
-    center;
-
-  background:
-    #030303;
-
-  border-top:
-    1px solid
-    rgba(214,168,75,.28);
-
-  color:
-    #817b70;
-
-  font-size:
-    12px;
-
-  letter-spacing:
-    .4px;
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1050px) {
-
-  .links {
-    position:
-      fixed;
-
-    top:
-      82px;
-
-    left:
-      0;
-
-    right:
-      0;
-
-    display:
-      none;
-
-    flex-direction:
-      column;
-
-    align-items:
-      stretch;
-
-    gap:
-      0;
-
-    padding:
-      15px 5% 25px;
-
-    background:
-      rgba(5,5,5,.98);
-
-    border-bottom:
-      1px solid var(--gold-dark);
-
-    box-shadow:
-      0 20px 40px
-      rgba(0,0,0,.55);
+  .header-inner{
+    min-height:72px;
   }
 
-
-  .links.open {
-    display:
-      flex;
+  .logo{
+    min-width:0;
+    flex:1;
   }
 
-
-  .links a {
-    padding:
-      13px 5px;
-
-    border-bottom:
-      1px solid
-      rgba(214,168,75,.10);
-
-    font-size:
-      14px;
+  .logo-mark{
+    width:46px;
+    height:46px;
+    font-size:17px;
   }
 
-
-  .menu {
-    display:
-      inline-flex;
-
-    align-items:
-      center;
-
-    justify-content:
-      center;
+  .logo-text strong{
+    font-size:16px;
   }
 
-
-  .lang {
-    margin-left:
-      auto;
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:#050505;
+    border-bottom:1px solid var(--gold);
+    padding:15px 5%;
+    grid-template-columns:1fr 1fr;
+    gap:0;
   }
 
-
-  html[dir="rtl"] .lang {
-    margin-left:
-      0;
-
-    margin-right:
-      auto;
+  .main-nav.open{
+    display:grid;
   }
 
-
-  .hero {
-    grid-template-columns:
-      1fr 1fr;
-
-    gap:
-      28px;
+  .main-nav a{
+    padding:13px;
+    border-bottom:1px solid rgba(215,165,54,.18);
+    text-align:left;
   }
 
-
-  .portrait,
-  .portrait img {
-    min-height:
-      520px;
-
-    height:
-      520px;
+  .menu-btn{
+    display:block;
   }
 
-
-  .features {
-    grid-template-columns:
-      repeat(3,1fr);
+  .hero-grid{
+    min-height:auto;
+    grid-template-columns:1fr;
   }
 
-
-  .grid {
-    grid-template-columns:
-      repeat(2,1fr);
+  .hero-content{
+    padding:45px 22px 30px;
   }
 
+  .hero-content h1{
+    font-size:55px;
+  }
+
+  .hero-content h2{
+    font-size:39px;
+  }
+
+  .hero-photo{
+    min-height:540px;
+  }
+
+  .photo-frame img{
+    height:540px;
+    object-position:center top;
+  }
+
+  .expertise-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .home-card-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card-image{
+    height:280px;
+  }
+
+  .journey-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .journey-text,
+  .journey-quote{
+    grid-column:1/-1;
+  }
+
+  .footer-grid{
+    display:block;
+  }
+
+  .footer-links{
+    grid-template-columns:repeat(2,1fr);
+    margin-top:20px;
+  }
 }
 
+@media(max-width:520px){
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 720px) {
-
-  .wrap {
-    width:
-      min(92%, 620px);
+  .container{
+    width:94%;
   }
 
-
-  .nav {
-    min-height:
-      72px;
-
-    gap:
-      10px;
+  .logo-text span{
+    display:none;
   }
 
-
-  .brand {
-    font-size:
-      20px;
+  .hero-content h1{
+    font-size:43px;
   }
 
-
-  .brand small {
-    font-size:
-      7px;
-
-    letter-spacing:
-      2px;
+  .hero-content h2{
+    font-size:32px;
   }
 
-
-  .links {
-    top:
-      72px;
+  .hero-description{
+    font-size:14px;
   }
 
-
-  .lang,
-  .menu {
-    min-width:
-      43px;
-
-    width:
-      43px;
-
-    height:
-      43px;
+  .hero-buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
   }
 
-
-  .hero {
-    min-height:
-      auto;
-
-    display:
-      flex;
-
-    flex-direction:
-      column;
-
-    gap:
-      26px;
-
-    padding-top:
-      35px;
-
-    padding-bottom:
-      35px;
+  .hero-photo,
+  .photo-frame img{
+    height:500px;
+    min-height:500px;
   }
 
-
-  .hero-copy {
-    width:
-      100%;
+  .signature{
+    right:15px;
+    bottom:15px;
+    font-size:21px;
   }
 
-
-  .eyebrow {
-    font-size:
-      9px;
-
-    letter-spacing:
-      3px;
+  .journey-grid{
+    grid-template-columns:1fr 1fr;
   }
-
-
-  .hero h1 {
-    font-size:
-      clamp(43px, 13vw, 64px);
-
-    line-height:
-      1.02;
-  }
-
-
-  html[dir="rtl"] .hero h1 {
-    font-size:
-      clamp(38px, 11vw, 58px);
-  }
-
-
-  .lead {
-    font-size:
-      15px;
-
-    line-height:
-      1.75;
-  }
-
-
-  .actions {
-    display:
-      grid;
-
-    grid-template-columns:
-      1fr 1fr;
-
-    width:
-      100%;
-  }
-
-
-  .btn {
-    padding:
-      0 14px;
-
-    font-size:
-      12px;
-  }
-
-
-  /*
-  MOBILE PORTRAIT:
-  Keep the chef's face sharp and visible.
-  */
-
-  .portrait {
-    width:
-      100%;
-
-    min-height:
-      510px;
-
-    height:
-      510px;
-  }
-
-
-  .portrait img {
-    width:
-      100%;
-
-    height:
-      510px;
-
-    object-fit:
-      cover;
-
-    object-position:
-      center top;
-  }
-
-
-  .features {
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-
-  .feature {
-    min-height:
-      105px;
-
-    border-bottom:
-      1px solid
-      rgba(214,168,75,.15);
-  }
-
-
-  .feature b {
-    font-size:
-      15px;
-  }
-
-
-  .feature span {
-    font-size:
-      9px;
-  }
-
-
-  .section {
-    padding:
-      58px 0;
-  }
-
-
-  .section-head h2 {
-    font-size:
-      34px;
-  }
-
-
-  .grid {
-    grid-template-columns:
-      1fr;
-  }
-
-
-  .card {
-    min-height:
-      auto;
-
-    padding:
-      25px;
-  }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 420px) {
-
-  .brand {
-    font-size:
-      17px;
-  }
-
-
-  .brand small {
-    letter-spacing:
-      1.4px;
-  }
-
-
-  .hero h1 {
-    font-size:
-      42px;
-  }
-
-
-  html[dir="rtl"] .hero h1 {
-    font-size:
-      37px;
-  }
-
-
-  .portrait,
-  .portrait img {
-    height:
-      470px;
-
-    min-height:
-      470px;
-  }
-
-
-  .features {
-    grid-template-columns:
-      1fr 1fr;
-  }
-
 }
