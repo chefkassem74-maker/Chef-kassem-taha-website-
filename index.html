@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Chef Kassem Taha</title>
+<title>Chef Kassem Taha | Executive Chef & Consultant</title>
 
 <style>
+
 :root{
   --black:#070707;
   --gold:#c88a19;
-  --gold2:#efb942;
+  --gold-light:#efb942;
   --white:#ffffff;
   --cream:#faf8f2;
-  --text:#181818;
+  --text:#171717;
 }
 
 *{
@@ -27,14 +28,20 @@ html{
 }
 
 body{
-  font-family:Arial,Tahoma,sans-serif;
+  margin:0;
   background:#fff;
   color:var(--text);
+  font-family:Arial,Tahoma,sans-serif;
 }
 
 a{
-  text-decoration:none;
   color:inherit;
+  text-decoration:none;
+}
+
+img{
+  display:block;
+  max-width:100%;
 }
 
 .container{
@@ -42,74 +49,79 @@ a{
   margin:auto;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
   background:#050505;
   color:#fff;
   border-bottom:3px solid var(--gold);
+  position:relative;
+  z-index:20;
 }
 
 .navbar{
-  min-height:86px;
+  min-height:82px;
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:22px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  min-width:300px;
+  gap:10px;
+  flex-shrink:0;
 }
 
 .logo{
-  width:58px;
-  height:58px;
-  border:2px solid var(--gold2);
-  color:var(--gold2);
+  width:56px;
+  height:56px;
+  border:2px solid var(--gold-light);
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
+  color:var(--gold-light);
   font-family:Georgia,serif;
   font-size:27px;
 }
 
 .brand-name{
-  color:var(--gold2);
+  color:var(--gold-light);
   font-family:Georgia,serif;
-  font-size:23px;
+  font-size:22px;
 }
 
 .brand-subtitle{
   display:block;
   margin-top:3px;
-  font-size:11px;
   color:#eee;
+  font-size:10px;
 }
 
 nav{
   margin-left:auto;
   display:flex;
   align-items:center;
-  gap:21px;
-  font-size:13px;
+  gap:17px;
+  font-size:12px;
 }
 
 nav a{
   color:#fff;
+  padding:8px 0;
 }
 
 nav a:hover,
 nav a.active{
-  color:var(--gold2);
+  color:var(--gold-light);
 }
 
 nav a.active{
-  border-bottom:2px solid var(--gold2);
-  padding-bottom:8px;
+  border-bottom:2px solid var(--gold-light);
 }
 
 .languages{
@@ -119,88 +131,94 @@ nav a.active{
 
 .language{
   border:1px solid var(--gold);
-  padding:8px 12px;
+  color:var(--gold-light);
+  padding:8px 11px;
   border-radius:7px;
-  color:var(--gold2);
+  font-size:11px;
 }
 
 .menu-button{
   display:none;
-  margin-left:auto;
-  color:var(--gold2);
-  font-size:28px;
 }
 
-/* ================= HERO ================= */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+  overflow:hidden;
+
   background:
   linear-gradient(
     90deg,
-    #fff 0%,
-    #fff 43%,
-    #faf6ed 58%,
-    #ead7ae 100%
+    #ffffff 0%,
+    #ffffff 43%,
+    #faf5e9 60%,
+    #e7cf9f 100%
   );
 }
 
 .hero-grid{
   display:grid;
   grid-template-columns:54% 46%;
-  min-height:560px;
+  min-height:550px;
   align-items:center;
 }
 
 .hero-content{
-  padding:45px 20px 40px 0;
   position:relative;
   z-index:2;
+  padding:40px 15px 35px 0;
 }
 
 .welcome{
-  color:#a96d08;
-  font-size:12px;
-  letter-spacing:3px;
+  color:#a66a08;
+  font-size:11px;
+  letter-spacing:2.5px;
   text-transform:uppercase;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 
 .hero h1{
-  font-family:Georgia,serif;
-  font-size:61px;
-  line-height:1.02;
-  margin-bottom:10px;
   color:#111;
+  font-family:Georgia,serif;
+  font-size:59px;
+  line-height:1.02;
+  margin-bottom:11px;
 }
 
 .hero-arabic{
+  color:#a66a08;
+  font-size:33px;
+  font-weight:700;
   direction:rtl;
   text-align:left;
-  font-size:34px;
-  color:#a66a08;
-  font-weight:700;
-  margin-bottom:18px;
+  margin-bottom:17px;
 }
 
 .intro{
-  max-width:620px;
+  max-width:610px;
   font-family:Georgia,serif;
-  font-size:19px;
-  line-height:1.5;
+  font-size:18px;
+  line-height:1.48;
 }
 
-/* ================= HERO SERVICES ================= */
+
+/* =========================
+   HERO SERVICES
+========================= */
 
 .hero-services{
-  margin-top:30px;
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  max-width:670px;
+  max-width:680px;
+  margin-top:27px;
 }
 
 .hero-service{
   text-align:center;
-  padding:5px 9px;
+  padding:5px 8px;
   border-right:1px solid #ddd;
 }
 
@@ -210,211 +228,251 @@ nav a.active{
 
 .hero-icon{
   color:var(--gold);
-  font-size:29px;
-  margin-bottom:5px;
+  font-size:28px;
+  margin-bottom:4px;
 }
 
 .hero-service strong{
   display:block;
   font-family:Georgia,serif;
-  font-size:15px;
+  font-size:14px;
 }
 
 .hero-service small{
   display:block;
-  font-size:11px;
-  margin-top:3px;
+  margin-top:4px;
+  font-size:10px;
 }
 
-/* ================= BUTTONS ================= */
+
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons{
-  margin-top:25px;
   display:flex;
-  gap:13px;
+  gap:12px;
+  margin-top:23px;
 }
 
 .button{
   display:inline-flex;
   justify-content:center;
   align-items:center;
-  min-width:190px;
-  padding:16px 22px;
-  border-radius:8px;
+  padding:15px 21px;
+  min-width:180px;
+  border-radius:7px;
   font-weight:700;
+  font-size:14px;
 }
 
 .button-gold{
-  background:linear-gradient(
-    90deg,
-    #d7931e,
-    #ffd46d
-  );
   color:#111;
+  background:
+  linear-gradient(
+    90deg,
+    #d5911d,
+    #ffd36b
+  );
 }
 
 .button-black{
-  background:#050505;
   color:#fff;
+  background:#050505;
   border:1px solid var(--gold);
 }
 
-/* ================= PORTRAIT ================= */
+
+/* =========================
+   CHEF PHOTO
+========================= */
 
 .hero-photo{
-  height:560px;
+  height:550px;
   display:flex;
   justify-content:center;
   align-items:flex-end;
-  overflow:hidden;
   position:relative;
 }
 
 .hero-photo::before{
   content:"";
   position:absolute;
-  inset:20px;
+  inset:30px 0 0;
+
   background:
   radial-gradient(
     circle at 50% 35%,
-    rgba(244,184,70,.25),
-    transparent 55%
+    rgba(236,178,65,.28),
+    transparent 58%
   );
 }
 
 .hero-photo img{
   position:relative;
   z-index:1;
+
   width:100%;
   height:100%;
+
   object-fit:contain;
   object-position:center bottom;
 }
 
-/* ================= FOOD CARDS ================= */
 
-.food-section{
+/* =========================
+   CUISINE CARDS
+========================= */
+
+.cuisines{
+  padding:16px 0 26px;
   background:#fff;
-  padding:18px 0 28px;
 }
 
 .food-grid{
   display:grid;
   grid-template-columns:repeat(6,1fr);
-  gap:13px;
+  gap:12px;
 }
 
 .food-card{
-  border:1px solid #e2ded4;
-  border-radius:8px;
   overflow:hidden;
   text-align:center;
+
   background:#fff;
-  box-shadow:0 4px 15px rgba(0,0,0,.05);
+  border:1px solid #e4dfd5;
+  border-radius:7px;
+
+  box-shadow:
+  0 4px 15px rgba(0,0,0,.05);
 }
 
 .food-image{
   height:125px;
+
   display:flex;
-  align-items:center;
   justify-content:center;
-  font-size:52px;
+  align-items:center;
+
+  font-size:49px;
+
   background:
   linear-gradient(
     135deg,
-    #3a1e05,
-    #c78720
+    #321a05,
+    #c88927
   );
 }
 
 .food-card h3{
+  padding:9px 5px 3px;
+
   font-family:Georgia,serif;
-  font-size:16px;
-  padding:10px 7px 4px;
+  font-size:15px;
+}
+
+.arabic{
+  direction:rtl;
 }
 
 .food-card .arabic{
   color:#a66a08;
-  font-weight:bold;
-  direction:rtl;
+  font-size:14px;
+  font-weight:700;
 }
 
 .food-card p{
+  padding:7px 9px 14px;
+
   font-family:Georgia,serif;
-  font-size:13px;
+  font-size:12px;
   line-height:1.4;
-  padding:7px 10px 15px;
 }
 
-/* ================= STORY ================= */
+
+/* =========================
+   STORY
+========================= */
 
 .story{
-  background:#070707;
   color:#fff;
+  background:#070707;
+
   border-top:2px solid var(--gold);
   border-bottom:2px solid var(--gold);
 }
 
 .story-grid{
+  min-height:205px;
+
   display:grid;
   grid-template-columns:1fr .8fr 1fr;
-  min-height:215px;
+
   align-items:center;
-  gap:25px;
+  gap:20px;
 }
 
 .story-left{
-  padding:25px 0;
+  padding:22px 0;
 }
 
 .story-left h2{
-  color:var(--gold2);
+  color:var(--gold-light);
+
   font-family:Georgia,serif;
-  font-size:30px;
+  font-size:29px;
   line-height:1.15;
 }
 
 .story-left .arabic{
-  margin:8px 0 25px;
-  color:var(--gold2);
-  direction:rtl;
+  color:var(--gold-light);
+
+  margin:8px 0 20px;
+
+  font-size:22px;
+  font-weight:700;
+
   text-align:left;
-  font-size:24px;
-  font-weight:bold;
 }
 
 .story-photo{
-  height:215px;
+  height:205px;
+
   display:flex;
-  justify-content:center;
   align-items:flex-end;
+  justify-content:center;
+
   overflow:hidden;
 }
 
 .story-photo img{
-  height:210px;
-  max-width:100%;
+  height:205px;
   object-fit:contain;
 }
 
 .story-quote{
   font-family:Georgia,serif;
-  font-size:17px;
-  line-height:1.55;
+  font-size:16px;
+  line-height:1.5;
 }
 
 .signature{
-  color:var(--gold2);
-  font-family:Georgia,serif;
-  font-size:27px;
-  font-style:italic;
   margin-top:12px;
+
+  color:var(--gold-light);
+
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:26px;
 }
 
-/* ================= STATISTICS ================= */
+
+/* =========================
+   STATS
+========================= */
 
 .statistics{
-  padding:28px 0;
+  padding:25px 0;
   background:#fff;
 }
 
@@ -425,7 +483,8 @@ nav a.active{
 
 .stat{
   text-align:center;
-  padding:5px 20px;
+  padding:5px 17px;
+
   border-right:1px solid #ddd;
 }
 
@@ -435,98 +494,129 @@ nav a.active{
 
 .stat-icon{
   color:var(--gold);
-  font-size:35px;
+  font-size:32px;
 }
 
 .stat strong{
   display:block;
+
+  margin:3px 0;
+
   font-family:Georgia,serif;
-  font-size:29px;
-  margin:4px 0;
+  font-size:27px;
+}
+
+.stat-title{
+  font-size:13px;
 }
 
 .stat .arabic{
-  direction:rtl;
-  margin-top:5px;
+  margin-top:4px;
+  font-size:12px;
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  background:#050505;
+  padding:27px 0 15px;
+
   color:#fff;
+  background:#050505;
+
   border-top:3px solid var(--gold);
-  padding:30px 0 15px;
 }
 
 .footer-grid{
   display:grid;
-  grid-template-columns:1.25fr 1fr 1.3fr;
-  gap:40px;
-}
+  grid-template-columns:1.2fr .9fr 1.25fr;
 
-footer h3{
-  color:var(--gold2);
-  margin-bottom:12px;
+  gap:35px;
 }
 
 .footer-brand{
-  color:var(--gold2);
+  color:var(--gold-light);
+
   font-family:Georgia,serif;
-  font-size:25px;
+  font-size:23px;
 }
 
 .footer-text{
-  margin-top:12px;
+  margin-top:10px;
+
+  font-size:13px;
   line-height:1.7;
+}
+
+footer h3{
+  margin-bottom:11px;
+
+  color:var(--gold-light);
+  font-size:15px;
 }
 
 .quick-links{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:8px;
+
+  gap:7px;
+
+  font-size:12px;
 }
 
 .contact-line{
-  margin-bottom:10px;
+  margin-bottom:9px;
+  font-size:12px;
 }
 
 .gold-text{
-  color:var(--gold2);
+  color:var(--gold-light);
 }
 
 .copyright{
+  margin-top:22px;
+  padding-top:13px;
+
   border-top:1px solid #333;
-  margin-top:25px;
-  padding-top:15px;
-  font-size:12px;
+
   color:#aaa;
+  font-size:11px;
 }
 
-/* ================= MOBILE ================= */
+
+/* ==================================================
+   MOBILE — IMPORTANT
+================================================== */
 
 @media(max-width:800px){
 
   .container{
-    width:92%;
+    width:94%;
   }
+
+
+  /* HEADER */
 
   .navbar{
-    min-height:68px;
-  }
-
-  .brand{
-    min-width:auto;
+    min-height:62px;
+    gap:8px;
   }
 
   .logo{
-    width:44px;
-    height:44px;
-    font-size:21px;
+    width:42px;
+    height:42px;
+
+    font-size:20px;
+  }
+
+  .brand{
+    gap:7px;
   }
 
   .brand-name{
-    font-size:17px;
+    font-size:16px;
   }
 
   .brand-subtitle{
@@ -540,76 +630,374 @@ footer h3{
 
   .menu-button{
     display:block;
+
+    margin-left:auto;
+
+    color:var(--gold-light);
+
+    font-size:27px;
+  }
+
+
+  /* HERO */
+
+  .hero{
+    background:
+    linear-gradient(
+      90deg,
+      #fff 0%,
+      #fff 50%,
+      #f3e4c8 100%
+    );
   }
 
   .hero-grid{
-    grid-template-columns:1fr;
+    min-height:430px;
+
+    display:grid;
+
+    grid-template-columns:
+    minmax(0,55%)
+    minmax(0,45%);
+
+    align-items:end;
   }
+
 
   .hero-content{
-    padding:35px 0 10px;
+    padding:
+    25px 0
+    18px 0;
   }
+
+
+  .welcome{
+    font-size:7px;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:7px;
+  }
+
 
   .hero h1{
-    font-size:43px;
+    font-size:29px;
+    line-height:1.02;
+
+    margin-bottom:7px;
   }
+
 
   .hero-arabic{
-    font-size:27px;
-    text-align:right;
+    font-size:18px;
+
+    line-height:1.25;
+
+    margin-bottom:9px;
+
+    text-align:left;
   }
 
+
   .intro{
+    font-size:10px;
+    line-height:1.4;
+  }
+
+
+  /* PORTRAIT */
+
+  .hero-photo{
+    height:430px;
+
+    align-self:end;
+  }
+
+
+  .hero-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:center bottom;
+  }
+
+
+  /* SERVICES */
+
+  .hero-services{
+    width:181%;
+
+    margin-top:15px;
+
+    grid-template-columns:
+    repeat(5,1fr);
+  }
+
+
+  .hero-service{
+    padding:5px 2px;
+  }
+
+
+  .hero-icon{
     font-size:17px;
   }
 
-  .hero-services{
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
+
+  .hero-service strong{
+    font-size:9px;
   }
 
-  .hero-service{
-    border:1px solid #eee;
-    border-radius:7px;
-    padding:12px;
+
+  .hero-service small{
+    font-size:7px;
   }
+
+
+  /* BUTTONS */
 
   .buttons{
-    flex-direction:column;
+    width:181%;
+
+    margin-top:10px;
+
+    gap:6px;
   }
 
+
   .button{
-    width:100%;
+    min-width:0;
+
+    padding:10px 11px;
+
+    font-size:9px;
+  }
+
+
+  /* FOOD CARDS */
+
+  .cuisines{
+    padding:10px 0 15px;
+  }
+
+
+  .food-grid{
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:6px;
+  }
+
+
+  .food-image{
+    height:72px;
+
+    font-size:29px;
+  }
+
+
+  .food-card h3{
+    padding:
+    6px 3px 2px;
+
+    font-size:10px;
+  }
+
+
+  .food-card .arabic{
+    font-size:9px;
+  }
+
+
+  .food-card p{
+    padding:
+    4px 4px 8px;
+
+    font-size:7px;
+
+    line-height:1.35;
+  }
+
+
+  /* STORY */
+
+  .story-grid{
+    min-height:145px;
+
+    grid-template-columns:
+    39% 28% 33%;
+
+    gap:4px;
+  }
+
+
+  .story-left{
+    padding:12px 0;
+  }
+
+
+  .story-left h2{
+    font-size:16px;
+  }
+
+
+  .story-left .arabic{
+    margin:
+    4px 0 10px;
+
+    font-size:12px;
+  }
+
+
+  .story-left .button{
+    padding:7px 8px;
+
+    font-size:8px;
+  }
+
+
+  .story-photo{
+    height:145px;
+  }
+
+
+  .story-photo img{
+    height:145px;
+  }
+
+
+  .story-quote{
+    font-size:8px;
+
+    line-height:1.4;
+  }
+
+
+  .signature{
+    margin-top:6px;
+
+    font-size:14px;
+  }
+
+
+  /* STATISTICS */
+
+  .statistics{
+    padding:14px 0;
+  }
+
+
+  .stats-grid{
+    grid-template-columns:
+    repeat(4,1fr);
+  }
+
+
+  .stat{
+    padding:3px;
+
+    border-right:1px solid #ddd;
+  }
+
+
+  .stat-icon{
+    font-size:18px;
+  }
+
+
+  .stat strong{
+    font-size:14px;
+  }
+
+
+  .stat-title{
+    font-size:7px;
+  }
+
+
+  .stat .arabic{
+    font-size:7px;
+  }
+
+
+  /* FOOTER */
+
+  footer{
+    padding:
+    16px 0 10px;
+  }
+
+
+  .footer-grid{
+    grid-template-columns:
+    1.1fr .8fr 1.1fr;
+
+    gap:9px;
+  }
+
+
+  .footer-brand{
+    font-size:13px;
+  }
+
+
+  .footer-text{
+    font-size:7px;
+    line-height:1.5;
+  }
+
+
+  footer h3{
+    font-size:9px;
+
+    margin-bottom:6px;
+  }
+
+
+  .quick-links{
+    gap:4px;
+
+    font-size:7px;
+  }
+
+
+  .contact-line{
+    margin-bottom:5px;
+
+    font-size:7px;
+  }
+
+
+  .copyright{
+    margin-top:10px;
+
+    padding-top:8px;
+
+    font-size:7px;
+  }
+
+}
+
+
+/* EXTRA SMALL PHONE */
+
+@media(max-width:390px){
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .hero-arabic{
+    font-size:16px;
   }
 
   .hero-photo{
-    height:480px;
+    height:400px;
   }
 
-  .food-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .story-grid{
-    grid-template-columns:1fr;
-    padding:25px 0;
-  }
-
-  .story-photo{
-    height:250px;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-  }
-
-  .stat{
-    border:none;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
+  .hero-grid{
+    min-height:400px;
   }
 
 }
@@ -617,17 +1005,25 @@ footer h3{
 </style>
 </head>
 
+
 <body>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
 <div class="container navbar">
 
+
 <div class="brand">
 
-<div class="logo">CK</div>
+<div class="logo">
+CK
+</div>
 
 <div>
+
 <div class="brand-name">
 Chef Kassem Taha
 </div>
@@ -635,496 +1031,230 @@ Chef Kassem Taha
 <span class="brand-subtitle">
 Executive Chef | Consultant | Trainer
 </span>
+
 </div>
 
 </div>
+
 
 <nav>
 
-<a class="active" href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="academy.html">Academy</a>
-<a href="recipes.html">Recipes</a>
-<a href="blog.html">Blog</a>
-<a href="projects.html">Projects</a>
-<a href="store.html">Store</a>
-<a href="contact.html">Contact</a>
+<a class="active"
+href="index.html">
+Home
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="services.html">
+Services
+</a>
+
+<a href="academy.html">
+Academy
+</a>
+
+<a href="recipes.html">
+Recipes
+</a>
+
+<a href="blog.html">
+Blog
+</a>
+
+<a href="projects.html">
+Projects
+</a>
+
+<a href="store.html">
+Store
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </nav>
 
+
 <div class="languages">
-<span class="language">EN</span>
-<span class="language">AR</span>
+
+<span class="language">
+EN
+</span>
+
+<span class="language">
+AR
+</span>
+
 </div>
 
-<div class="menu-button">☰</div>
+
+<div class="menu-button">
+☰
+</div>
+
 
 </div>
 
 </header>
 
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
 <div class="container hero-grid">
 
+
 <div class="hero-content">
 
+
 <div class="welcome">
+
 Welcome to Chef Kassem Taha
+
 </div>
+
 
 <h1>
-From World Cuisines<br>
+
+From World Cuisines
+<br>
+
 to Your Table
+
 </h1>
 
+
 <div class="hero-arabic">
+
 من مطابخ العالم إلى مائدتكم
+
 </div>
+
 
 <p class="intro">
 
-A professional chef, consultant and hospitality expert
-with over 33 years of experience in restaurants,
-hotels, central kitchens and food business development.
+A professional chef, consultant and hospitality
+expert with over 33 years of experience in
+restaurants, hotels, central kitchens and food
+business development.
 
 </p>
 
 
+
 <div class="hero-services">
 
-<div class="hero-service">
-<div class="hero-icon">♨</div>
-<strong>33+ Years</strong>
-<small>Experience</small>
-</div>
 
 <div class="hero-service">
-<div class="hero-icon">✦</div>
-<strong>Consulting</strong>
-<small>Services</small>
+
+<div class="hero-icon">
+♨
 </div>
+
+<strong>
+33+ Years
+</strong>
+
+<small>
+Experience
+</small>
+
+</div>
+
+
 
 <div class="hero-service">
-<div class="hero-icon">◇</div>
-<strong>Training</strong>
-<small>& Academy</small>
+
+<div class="hero-icon">
+✦
 </div>
+
+<strong>
+Consulting
+</strong>
+
+<small>
+Services
+</small>
+
+</div>
+
+
 
 <div class="hero-service">
-<div class="hero-icon">⌂</div>
-<strong>Restaurant</strong>
-<small>& Hotel Setup</small>
+
+<div class="hero-icon">
+◇
 </div>
+
+<strong>
+Training
+</strong>
+
+<small>
+& Academy
+</small>
+
+</div>
+
+
 
 <div class="hero-service">
-<div class="hero-icon">◉</div>
-<strong>Menu Design</strong>
-<small>& Development</small>
+
+<div class="hero-icon">
+⌂
 </div>
 
+<strong>
+Restaurant
+</strong>
+
+<small>
+& Hotel Setup
+</small>
+
 </div>
+
+
+
+<div class="hero-service">
+
+<div class="hero-icon">
+◉
+</div>
+
+<strong>
+Menu Design
+</strong>
+
+<small>
+& Development
+</small>
+
+</div>
+
+
+</div>
+
 
 
 <div class="buttons">
 
-<a class="button button-gold"
+
+<a
+class="button button-gold"
 href="services.html">
 
 Explore My Services →
 
 </a>
 
-<a class="button button-black"
-href="#">
 
-▶ Watch Video
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-photo">
-
-<!-- صورتك الأصلية -->
-
-<img
-src="chef-kassem.jpg"
-alt="Chef Kassem Taha">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CUISINES -->
-
-<section class="food-section">
-
-<div class="container food-grid">
-
-<div class="food-card">
-
-<div class="food-image">🍽️</div>
-
-<h3>International Cuisine</h3>
-
-<div class="arabic">
-المطابخ العالمية
-</div>
-
-<p>
-A unique selection of dishes
-from around the world.
-</p>
-
-</div>
-
-
-<div class="food-card">
-
-<div class="food-image">🧆</div>
-
-<h3>
-Middle Eastern Cuisine
-</h3>
-
-<div class="arabic">
-المطبخ الشرقي
-</div>
-
-<p>
-Authentic recipes with a modern touch.
-</p>
-
-</div>
-
-
-<div class="food-card">
-
-<div class="food-image">🔥</div>
-
-<h3>
-Grills & Barbecue
-</h3>
-
-<div class="arabic">
-المشاوي
-</div>
-
-<p>
-Premium grilled dishes with rich flavors.
-</p>
-
-</div>
-
-
-<div class="food-card">
-
-<div class="food-image">🍝</div>
-
-<h3>
-Pasta & Italian
-</h3>
-
-<div class="arabic">
-المأكولات الإيطالية
-</div>
-
-<p>
-Classic and modern Italian favorites.
-</p>
-
-</div>
-
-
-<div class="food-card">
-
-<div class="food-image">🥗</div>
-
-<h3>
-Healthy & Diet
-</h3>
-
-<div class="arabic">
-الأكل الصحي
-</div>
-
-<p>
-Delicious and balanced options
-for a healthier lifestyle.
-</p>
-
-</div>
-
-
-<div class="food-card">
-
-<div class="food-image">🍰</div>
-
-<h3>
-Desserts
-</h3>
-
-<div class="arabic">
-الحلويات
-</div>
-
-<p>
-A sweet ending with unforgettable taste.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STORY -->
-
-<section class="story">
-
-<div class="container story-grid">
-
-<div class="story-left">
-
-<h2>
-Good Food<br>
-Brings People Together
-</h2>
-
-<div class="arabic">
-الطعام الجيد يجمع الناس
-</div>
-
-<a class="button button-gold"
-href="about.html">
-
-Discover My Story →
-
-</a>
-
-</div>
-
-
-<div class="story-photo">
-
-<img
-src="chef-kassem.jpg"
-alt="Chef Kassem Taha">
-
-</div>
-
-
-<div class="story-quote">
-
-“My mission is to create memorable
-food experiences that bring people together.”
-
-<div class="signature">
-Chef Kassem Taha
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- STATS -->
-
-<section class="statistics">
-
-<div class="container stats-grid">
-
-<div class="stat">
-
-<div class="stat-icon">♨</div>
-
-<strong>33+</strong>
-
-<div>
-Years Experience
-</div>
-
-<div class="arabic">
-سنوات خبرة
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-icon">◎</div>
-
-<strong>
-International
-</strong>
-
-<div>
-Professional Experience
-</div>
-
-<div class="arabic">
-خبرة مهنية دولية
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-icon">♟</div>
-
-<strong>
-Training
-</strong>
-
-<div>
-Hospitality Teams
-</div>
-
-<div class="arabic">
-تدريب فرق الضيافة
-</div>
-
-</div>
-
-
-<div class="stat">
-
-<div class="stat-icon">↗</div>
-
-<strong>
-Complete Solutions
-</strong>
-
-<div>
-From concept to operation
-</div>
-
-<div class="arabic">
-حلول متكاملة
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-
-<div>
-
-<div class="footer-brand">
-Chef Kassem Taha
-</div>
-
-<div class="footer-text">
-
-Executive Chef |
-Consultant |
-Trainer
-
-<br><br>
-
-From World Cuisines
-to Your Table
-
-<br>
-
-<span class="gold-text">
-من مطابخ العالم إلى مائدتكم
-</span>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>
-Quick Links
-</h3>
-
-<div class="quick-links">
-
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-
-<a href="about.html">About</a>
-<a href="projects.html">Projects</a>
-
-<a href="services.html">Services</a>
-<a href="store.html">Store</a>
-
-<a href="academy.html">Academy</a>
-<a href="contact.html">Contact</a>
-
-<a href="recipes.html">Recipes</a>
-
-</div>
-
-</div>
-
-
-<div>
-
-<h3>
-Contact Me
-</h3>
-
-<div class="contact-line">
-☎ +855 71 522 2672
-</div>
-
-<div class="contact-line">
-WhatsApp:
-+971 50 778 4185
-</div>
-
-<div class="contact-line">
-📍 Phnom Penh, Cambodia
-</div>
-
-</div>
-
-
-</div>
-
-
-<div class="copyright">
-
-© 2026 Chef Kassem Taha.
-All rights reserved.
-
-</div>
-
-</div>
-
-</footer>
-
-</body>
-</html>
+<a
+class="button
