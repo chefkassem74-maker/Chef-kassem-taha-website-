@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
 
 <title>Chef Kassem Taha | Executive Chef & Consultant</title>
 
 <style>
-
 :root{
-  --black:#070707;
-  --gold:#c88a19;
-  --gold-light:#efb942;
-  --white:#ffffff;
-  --cream:#faf8f2;
-  --text:#171717;
+  --black:#080808;
+  --black2:#121212;
+  --gold:#c99532;
+  --gold-light:#e7b957;
+  --cream:#f8f5ed;
+  --white:#fff;
+  --text:#161616;
+  --muted:#666;
 }
 
 *{
@@ -32,1229 +34,1480 @@ body{
   background:#fff;
   color:var(--text);
   font-family:Arial,Tahoma,sans-serif;
+  overflow-x:hidden;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+body.rtl{
+  direction:rtl;
 }
 
 img{
-  display:block;
   max-width:100%;
+  display:block;
 }
 
-.container{
-  width:min(1180px,94%);
-  margin:auto;
+button,
+a{
+  font:inherit;
 }
 
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
 /* =========================
    HEADER
 ========================= */
 
-header{
-  background:#050505;
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#080808;
   color:#fff;
-  border-bottom:3px solid var(--gold);
-  position:relative;
-  z-index:20;
+  border-bottom:2px solid var(--gold);
 }
 
-.navbar{
-  min-height:82px;
+.nav{
+  width:94%;
+  max-width:1250px;
+  min-height:72px;
+  margin:auto;
   display:flex;
   align-items:center;
-  gap:22px;
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  flex-shrink:0;
+  gap:18px;
 }
 
 .logo{
-  width:56px;
-  height:56px;
+  width:48px;
+  height:48px;
   border:2px solid var(--gold-light);
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
   color:var(--gold-light);
-  font-family:Georgia,serif;
-  font-size:27px;
+  font:700 22px Georgia,serif;
+  flex-shrink:0;
+}
+
+.brand{
+  line-height:1.1;
+  flex-shrink:0;
 }
 
 .brand-name{
   color:var(--gold-light);
-  font-family:Georgia,serif;
-  font-size:22px;
+  font:700 20px Georgia,serif;
 }
 
-.brand-subtitle{
-  display:block;
-  margin-top:3px;
-  color:#eee;
-  font-size:10px;
+.brand-title{
+  color:#ccc;
+  font-size:9px;
+  margin-top:4px;
 }
 
-nav{
+.nav-links{
   margin-left:auto;
   display:flex;
   align-items:center;
-  gap:17px;
-  font-size:12px;
-}
-
-nav a{
-  color:#fff;
-  padding:8px 0;
-}
-
-nav a:hover,
-nav a.active{
-  color:var(--gold-light);
-}
-
-nav a.active{
-  border-bottom:2px solid var(--gold-light);
-}
-
-.languages{
-  display:flex;
-  gap:5px;
-}
-
-.language{
-  border:1px solid var(--gold);
-  color:var(--gold-light);
-  padding:8px 11px;
-  border-radius:7px;
+  gap:15px;
   font-size:11px;
 }
 
-.menu-button{
-  display:none;
+body.rtl .nav-links{
+  margin-left:0;
+  margin-right:auto;
 }
 
+.nav-links a{
+  color:#eee;
+  white-space:nowrap;
+}
+
+.nav-links a:hover{
+  color:var(--gold-light);
+}
+
+.actions{
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+
+.lang{
+  border:1px solid var(--gold);
+  color:var(--gold-light);
+  background:#111;
+  border-radius:6px;
+  padding:7px 10px;
+  cursor:pointer;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.menu{
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid var(--gold);
+  border-radius:6px;
+  background:#111;
+  color:var(--gold-light);
+  cursor:pointer;
+  font-size:22px;
+}
+
+/* MOBILE MENU */
+
+.mobile-nav{
+  display:none;
+  background:#080808;
+  border-top:1px solid #333;
+  border-bottom:2px solid var(--gold);
+}
+
+.mobile-nav.open{
+  display:block;
+}
+
+.mobile-links{
+  width:94%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  padding:8px 0 14px;
+}
+
+.mobile-links a{
+  color:#fff;
+  padding:11px 7px;
+  border-bottom:1px solid #292929;
+  font-size:13px;
+}
+
+.mobile-links a:hover{
+  color:var(--gold-light);
+}
 
 /* =========================
    HERO
 ========================= */
 
 .hero{
-  overflow:hidden;
-
   background:
-  linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #ffffff 43%,
-    #faf5e9 60%,
-    #e7cf9f 100%
-  );
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #ffffff 48%,
+      #f7ecd8 75%,
+      #d7ad61 100%
+    );
 }
 
-.hero-grid{
+.hero-inner{
+  width:94%;
+  max-width:1250px;
+  min-height:515px;
+  margin:auto;
   display:grid;
-  grid-template-columns:54% 46%;
-  min-height:550px;
+  grid-template-columns:56% 44%;
   align-items:center;
 }
 
 .hero-content{
+  padding:40px 20px 35px 0;
   position:relative;
-  z-index:2;
-  padding:40px 15px 35px 0;
+  z-index:3;
+}
+
+body.rtl .hero-content{
+  padding:40px 0 35px 20px;
 }
 
 .welcome{
-  color:#a66a08;
-  font-size:11px;
-  letter-spacing:2.5px;
-  text-transform:uppercase;
-  margin-bottom:14px;
+  color:#a46c13;
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:12px;
 }
 
 .hero h1{
-  color:#111;
-  font-family:Georgia,serif;
-  font-size:59px;
-  line-height:1.02;
-  margin-bottom:11px;
+  font:700 55px/1 Georgia,serif;
+  color:#101010;
+  max-width:700px;
 }
 
-.hero-arabic{
-  color:#a66a08;
-  font-size:33px;
+.ar-title{
+  color:#a66d10;
+  font-size:29px;
+  line-height:1.25;
   font-weight:700;
+  margin:12px 0 14px;
   direction:rtl;
-  text-align:left;
-  margin-bottom:17px;
 }
 
-.intro{
-  max-width:610px;
-  font-family:Georgia,serif;
-  font-size:18px;
-  line-height:1.48;
+.hero-description{
+  max-width:590px;
+  font:16px/1.55 Georgia,serif;
+  color:#292929;
 }
 
-
-/* =========================
-   HERO SERVICES
-========================= */
-
-.hero-services{
+.hero-features{
+  margin-top:25px;
   display:grid;
   grid-template-columns:repeat(5,1fr);
   max-width:680px;
-  margin-top:27px;
 }
 
-.hero-service{
+.feature{
   text-align:center;
-  padding:5px 8px;
+  min-height:70px;
   border-right:1px solid #ddd;
+  padding:0 7px;
 }
 
-.hero-service:last-child{
-  border-right:none;
+body.rtl .feature{
+  border-right:0;
+  border-left:1px solid #ddd;
 }
 
-.hero-icon{
+.feature:last-child{
+  border:0;
+}
+
+.feature-icon{
   color:var(--gold);
-  font-size:28px;
+  font-size:24px;
   margin-bottom:4px;
 }
 
-.hero-service strong{
+.feature strong{
   display:block;
-  font-family:Georgia,serif;
-  font-size:14px;
+  font:700 12px Georgia,serif;
 }
 
-.hero-service small{
+.feature span{
   display:block;
-  margin-top:4px;
-  font-size:10px;
+  font-size:9px;
+  margin-top:3px;
+  direction:rtl;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons{
+.hero-buttons{
   display:flex;
-  gap:12px;
-  margin-top:23px;
+  gap:10px;
+  margin-top:20px;
 }
 
-.button{
+.btn{
   display:inline-flex;
-  justify-content:center;
   align-items:center;
-  padding:15px 21px;
-  min-width:180px;
-  border-radius:7px;
-  font-weight:700;
-  font-size:14px;
+  justify-content:center;
+  min-height:43px;
+  padding:10px 18px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.button-gold{
+.btn-gold{
+  background:linear-gradient(90deg,#d79520,#f2c65d);
   color:#111;
-  background:
-  linear-gradient(
-    90deg,
-    #d5911d,
-    #ffd36b
-  );
 }
 
-.button-black{
-  color:#fff;
-  background:#050505;
+.btn-black{
+  background:#080808;
   border:1px solid var(--gold);
+  color:#fff;
 }
-
 
 /* =========================
-   CHEF PHOTO
+   ORIGINAL CHEF PHOTO
 ========================= */
 
-.hero-photo{
-  height:550px;
+.chef-area{
+  height:515px;
   display:flex;
-  justify-content:center;
   align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
   position:relative;
 }
 
-.hero-photo::before{
+.chef-area::before{
   content:"";
   position:absolute;
-  inset:30px 0 0;
-
-  background:
-  radial-gradient(
-    circle at 50% 35%,
-    rgba(236,178,65,.28),
-    transparent 58%
-  );
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  right:10%;
+  bottom:20px;
 }
 
-.hero-photo img{
+.chef-photo{
   position:relative;
-  z-index:1;
-
+  z-index:2;
   width:100%;
   height:100%;
-
   object-fit:contain;
   object-position:center bottom;
-}
 
+  /*
+    The uploaded photo has a white background.
+    Multiply removes the visual white box while
+    preserving the original face and clothing.
+  */
+  mix-blend-mode:multiply;
+}
 
 /* =========================
    CUISINE CARDS
 ========================= */
 
 .cuisines{
-  padding:16px 0 26px;
   background:#fff;
+  padding:14px 0 20px;
 }
 
-.food-grid{
+.cuisine-grid{
+  width:94%;
+  max-width:1250px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(6,1fr);
-  gap:12px;
+  gap:9px;
 }
 
-.food-card{
+.cuisine{
+  border:1px solid #ded8ca;
+  background:#fff;
+  border-radius:6px;
   overflow:hidden;
   text-align:center;
-
-  background:#fff;
-  border:1px solid #e4dfd5;
-  border-radius:7px;
-
-  box-shadow:
-  0 4px 15px rgba(0,0,0,.05);
+  box-shadow:0 2px 9px rgba(0,0,0,.06);
 }
 
-.food-image{
-  height:125px;
-
+.cuisine-image{
+  height:105px;
   display:flex;
-  justify-content:center;
   align-items:center;
-
-  font-size:49px;
-
+  justify-content:center;
   background:
-  linear-gradient(
-    135deg,
-    #321a05,
-    #c88927
-  );
+    linear-gradient(
+      135deg,
+      #2c1605,
+      #b87b21
+    );
+  font-size:42px;
 }
 
-.food-card h3{
-  padding:9px 5px 3px;
-
-  font-family:Georgia,serif;
-  font-size:15px;
+.cuisine h3{
+  font:700 12px Georgia,serif;
+  padding:8px 4px 2px;
 }
 
-.arabic{
+.cuisine-ar{
+  color:#a36a0e;
+  font-weight:bold;
+  font-size:11px;
   direction:rtl;
 }
 
-.food-card .arabic{
-  color:#a66a08;
-  font-size:14px;
-  font-weight:700;
+.cuisine p{
+  color:#555;
+  font:10px/1.35 Georgia,serif;
+  padding:4px 6px 9px;
 }
-
-.food-card p{
-  padding:7px 9px 14px;
-
-  font-family:Georgia,serif;
-  font-size:12px;
-  line-height:1.4;
-}
-
 
 /* =========================
-   STORY
+   BLACK STORY BAND
 ========================= */
 
 .story{
+  background:#080808;
   color:#fff;
-  background:#070707;
-
   border-top:2px solid var(--gold);
   border-bottom:2px solid var(--gold);
 }
 
-.story-grid{
-  min-height:205px;
-
+.story-inner{
+  width:94%;
+  max-width:1250px;
+  min-height:180px;
+  margin:auto;
   display:grid;
-  grid-template-columns:1fr .8fr 1fr;
-
+  grid-template-columns:1fr .7fr 1fr;
   align-items:center;
   gap:20px;
 }
 
-.story-left{
-  padding:22px 0;
+.story-title{
+  color:var(--gold-light);
+  font:700 27px/1.15 Georgia,serif;
 }
 
-.story-left h2{
+.story-ar{
   color:var(--gold-light);
-
-  font-family:Georgia,serif;
-  font-size:29px;
-  line-height:1.15;
-}
-
-.story-left .arabic{
-  color:var(--gold-light);
-
-  margin:8px 0 20px;
-
-  font-size:22px;
-  font-weight:700;
-
-  text-align:left;
+  font-size:18px;
+  font-weight:bold;
+  direction:rtl;
+  margin:7px 0 13px;
 }
 
 .story-photo{
-  height:205px;
-
+  height:180px;
   display:flex;
-  align-items:flex-end;
   justify-content:center;
-
+  align-items:flex-end;
   overflow:hidden;
 }
 
 .story-photo img{
-  height:205px;
+  height:180px;
+  width:auto;
   object-fit:contain;
+  mix-blend-mode:normal;
 }
 
-.story-quote{
-  font-family:Georgia,serif;
-  font-size:16px;
-  line-height:1.5;
+.story-text{
+  font:14px/1.55 Georgia,serif;
 }
 
 .signature{
-  margin-top:12px;
-
   color:var(--gold-light);
-
-  font-family:Georgia,serif;
-  font-style:italic;
-  font-size:26px;
+  font:italic 22px Georgia,serif;
+  margin-top:8px;
 }
-
 
 /* =========================
    STATS
 ========================= */
 
-.statistics{
-  padding:25px 0;
+.stats{
   background:#fff;
+  padding:22px 0;
 }
 
 .stats-grid{
+  width:94%;
+  max-width:1250px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
 }
 
 .stat{
   text-align:center;
-  padding:5px 17px;
-
   border-right:1px solid #ddd;
+  padding:3px 12px;
+}
+
+body.rtl .stat{
+  border-right:0;
+  border-left:1px solid #ddd;
 }
 
 .stat:last-child{
-  border-right:none;
+  border:0;
 }
 
 .stat-icon{
   color:var(--gold);
-  font-size:32px;
-}
-
-.stat strong{
-  display:block;
-
-  margin:3px 0;
-
-  font-family:Georgia,serif;
   font-size:27px;
 }
 
-.stat-title{
-  font-size:13px;
+.stat-number{
+  display:block;
+  font:700 24px Georgia,serif;
+  margin:3px 0;
 }
 
-.stat .arabic{
-  margin-top:4px;
-  font-size:12px;
+.stat-label{
+  font-size:11px;
 }
 
+.stat-ar{
+  direction:rtl;
+  color:#75501a;
+  font-size:10px;
+  margin-top:3px;
+}
 
 /* =========================
    FOOTER
 ========================= */
 
-footer{
-  padding:27px 0 15px;
-
+.footer{
+  background:#070707;
   color:#fff;
-  background:#050505;
-
   border-top:3px solid var(--gold);
+  padding:25px 0 12px;
 }
 
-.footer-grid{
+.footer-inner{
+  width:94%;
+  max-width:1250px;
+  margin:auto;
   display:grid;
-  grid-template-columns:1.2fr .9fr 1.25fr;
-
-  gap:35px;
+  grid-template-columns:1.2fr .9fr 1.1fr;
+  gap:30px;
 }
 
 .footer-brand{
   color:var(--gold-light);
-
-  font-family:Georgia,serif;
-  font-size:23px;
+  font:700 21px Georgia,serif;
 }
 
-.footer-text{
-  margin-top:10px;
-
-  font-size:13px;
-  line-height:1.7;
+.footer-sub{
+  color:#ccc;
+  font-size:9px;
+  margin-top:4px;
 }
 
-footer h3{
-  margin-bottom:11px;
+.footer-desc{
+  font-size:11px;
+  line-height:1.6;
+  margin-top:9px;
+}
 
+.footer h3{
   color:var(--gold-light);
-  font-size:15px;
+  font-size:13px;
+  margin-bottom:10px;
 }
 
-.quick-links{
+.footer-links{
   display:grid;
   grid-template-columns:1fr 1fr;
-
-  gap:7px;
-
-  font-size:12px;
+  gap:6px;
+  font-size:10px;
 }
 
-.contact-line{
-  margin-bottom:9px;
-  font-size:12px;
-}
-
-.gold-text{
+.footer-links a:hover{
   color:var(--gold-light);
+}
+
+.contact{
+  font-size:10px;
+  line-height:1.8;
 }
 
 .copyright{
-  margin-top:22px;
-  padding-top:13px;
-
+  width:94%;
+  max-width:1250px;
+  margin:18px auto 0;
+  padding-top:10px;
   border-top:1px solid #333;
-
   color:#aaa;
-  font-size:11px;
+  font-size:9px;
 }
 
-
-/* ==================================================
-   MOBILE — IMPORTANT
-================================================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
-  .container{
-    width:94%;
-  }
-
-
-  /* HEADER */
-
-  .navbar{
+  .nav{
     min-height:62px;
     gap:8px;
   }
 
   .logo{
-    width:42px;
-    height:42px;
-
-    font-size:20px;
-  }
-
-  .brand{
-    gap:7px;
+    width:40px;
+    height:40px;
+    font-size:18px;
   }
 
   .brand-name{
-    font-size:16px;
+    font-size:15px;
   }
 
-  .brand-subtitle{
+  .brand-title{
     display:none;
   }
 
-  nav,
-  .languages{
+  .nav-links{
     display:none;
   }
 
-  .menu-button{
-    display:block;
-
+  .actions{
     margin-left:auto;
-
-    color:var(--gold-light);
-
-    font-size:27px;
   }
 
-
-  /* HERO */
-
-  .hero{
-    background:
-    linear-gradient(
-      90deg,
-      #fff 0%,
-      #fff 50%,
-      #f3e4c8 100%
-    );
+  body.rtl .actions{
+    margin-left:0;
+    margin-right:auto;
   }
 
-  .hero-grid{
-    min-height:430px;
-
-    display:grid;
-
-    grid-template-columns:
-    minmax(0,55%)
-    minmax(0,45%);
-
-    align-items:end;
+  .menu{
+    display:block;
   }
 
+  /* HERO MOBILE */
+
+  .hero-inner{
+    width:100%;
+    min-height:0;
+    grid-template-columns:55% 45%;
+    align-items:stretch;
+  }
 
   .hero-content{
-    padding:
-    25px 0
-    18px 0;
+    padding:25px 8px 20px 15px;
   }
 
+  body.rtl .hero-content{
+    padding:25px 15px 20px 8px;
+  }
 
   .welcome{
-    font-size:7px;
-
-    letter-spacing:1.2px;
-
-    margin-bottom:7px;
+    font-size:6px;
+    letter-spacing:1px;
+    margin-bottom:6px;
   }
-
 
   .hero h1{
-    font-size:29px;
+    font-size:28px;
     line-height:1.02;
-
-    margin-bottom:7px;
   }
 
-
-  .hero-arabic{
-    font-size:18px;
-
-    line-height:1.25;
-
-    margin-bottom:9px;
-
-    text-align:left;
+  .ar-title{
+    font-size:16px;
+    margin:7px 0;
   }
 
-
-  .intro{
+  .hero-description{
     font-size:10px;
-    line-height:1.4;
+    line-height:1.45;
   }
 
-
-  /* PORTRAIT */
-
-  .hero-photo{
-    height:430px;
-
-    align-self:end;
+  .hero-features{
+    margin-top:13px;
+    grid-template-columns:repeat(5,1fr);
   }
 
+  .feature{
+    min-height:55px;
+    padding:0 2px;
+  }
 
-  .hero-photo img{
+  .feature-icon{
+    font-size:17px;
+    margin-bottom:2px;
+  }
+
+  .feature strong{
+    font-size:7px;
+  }
+
+  .feature span{
+    font-size:6px;
+    line-height:1.1;
+  }
+
+  .hero-buttons{
+    margin-top:12px;
+    gap:5px;
+  }
+
+  .btn{
+    min-height:34px;
+    padding:7px 9px;
+    font-size:8px;
+  }
+
+  .chef-area{
+    height:350px;
+  }
+
+  .chef-area::before{
+    width:280px;
+    height:280px;
+    right:-30px;
+    bottom:10px;
+  }
+
+  .chef-photo{
     width:100%;
     height:100%;
-
     object-fit:contain;
     object-position:center bottom;
   }
 
-
-  /* SERVICES */
-
-  .hero-services{
-    width:181%;
-
-    margin-top:15px;
-
-    grid-template-columns:
-    repeat(5,1fr);
-  }
-
-
-  .hero-service{
-    padding:5px 2px;
-  }
-
-
-  .hero-icon{
-    font-size:17px;
-  }
-
-
-  .hero-service strong{
-    font-size:9px;
-  }
-
-
-  .hero-service small{
-    font-size:7px;
-  }
-
-
-  /* BUTTONS */
-
-  .buttons{
-    width:181%;
-
-    margin-top:10px;
-
-    gap:6px;
-  }
-
-
-  .button{
-    min-width:0;
-
-    padding:10px 11px;
-
-    font-size:9px;
-  }
-
-
-  /* FOOD CARDS */
+  /* CUISINES */
 
   .cuisines{
-    padding:10px 0 15px;
+    padding:8px 0 12px;
   }
 
-
-  .food-grid{
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:6px;
+  .cuisine-grid{
+    width:94%;
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
   }
 
-
-  .food-image{
+  .cuisine-image{
     height:72px;
-
-    font-size:29px;
+    font-size:28px;
   }
 
-
-  .food-card h3{
-    padding:
-    6px 3px 2px;
-
-    font-size:10px;
+  .cuisine h3{
+    font-size:8px;
+    padding:5px 2px 1px;
   }
 
-
-  .food-card .arabic{
-    font-size:9px;
-  }
-
-
-  .food-card p{
-    padding:
-    4px 4px 8px;
-
+  .cuisine-ar{
     font-size:7px;
-
-    line-height:1.35;
   }
 
+  .cuisine p{
+    font-size:7px;
+    padding:3px 3px 6px;
+  }
 
   /* STORY */
 
-  .story-grid{
-    min-height:145px;
-
-    grid-template-columns:
-    39% 28% 33%;
-
-    gap:4px;
+  .story-inner{
+    min-height:125px;
+    grid-template-columns:1fr .7fr 1fr;
+    gap:5px;
   }
 
-
-  .story-left{
-    padding:12px 0;
+  .story-title{
+    font-size:15px;
   }
 
-
-  .story-left h2{
-    font-size:16px;
+  .story-ar{
+    font-size:10px;
+    margin:4px 0 6px;
   }
 
-
-  .story-left .arabic{
-    margin:
-    4px 0 10px;
-
-    font-size:12px;
-  }
-
-
-  .story-left .button{
-    padding:7px 8px;
-
+  .story-text{
     font-size:8px;
-  }
-
-
-  .story-photo{
-    height:145px;
-  }
-
-
-  .story-photo img{
-    height:145px;
-  }
-
-
-  .story-quote{
-    font-size:8px;
-
     line-height:1.4;
   }
 
+  .story-photo{
+    height:125px;
+  }
+
+  .story-photo img{
+    height:125px;
+  }
 
   .signature{
-    margin-top:6px;
-
-    font-size:14px;
+    font-size:12px;
   }
 
+  /* STATS */
 
-  /* STATISTICS */
-
-  .statistics{
-    padding:14px 0;
+  .stats{
+    padding:12px 0;
   }
-
 
   .stats-grid{
-    grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
   }
-
 
   .stat{
-    padding:3px;
-
-    border-right:1px solid #ddd;
+    padding:2px 3px;
   }
-
 
   .stat-icon{
     font-size:18px;
   }
 
-
-  .stat strong{
+  .stat-number{
     font-size:14px;
   }
 
-
-  .stat-title{
+  .stat-label{
     font-size:7px;
   }
 
-
-  .stat .arabic{
-    font-size:7px;
+  .stat-ar{
+    font-size:6px;
   }
-
 
   /* FOOTER */
 
-  footer{
-    padding:
-    16px 0 10px;
+  .footer{
+    padding:18px 0 10px;
   }
 
-
-  .footer-grid{
-    grid-template-columns:
-    1.1fr .8fr 1.1fr;
-
-    gap:9px;
+  .footer-inner{
+    grid-template-columns:1fr 1fr;
+    gap:15px;
   }
-
 
   .footer-brand{
-    font-size:13px;
+    font-size:15px;
   }
 
-
-  .footer-text{
+  .footer-sub{
     font-size:7px;
-    line-height:1.5;
   }
 
+  .footer-desc{
+    font-size:8px;
+  }
 
-  footer h3{
+  .footer h3{
     font-size:9px;
-
-    margin-bottom:6px;
   }
 
-
-  .quick-links{
+  .footer-links{
+    font-size:7px;
     gap:4px;
-
-    font-size:7px;
   }
 
-
-  .contact-line{
-    margin-bottom:5px;
-
+  .contact{
     font-size:7px;
   }
-
 
   .copyright{
-    margin-top:10px;
-
-    padding-top:8px;
-
-    font-size:7px;
+    font-size:6px;
+    margin-top:12px;
   }
-
 }
 
-
-/* EXTRA SMALL PHONE */
+/* EXTRA SMALL PHONES */
 
 @media(max-width:390px){
 
   .hero h1{
-    font-size:26px;
+    font-size:24px;
   }
 
-  .hero-arabic{
-    font-size:16px;
+  .ar-title{
+    font-size:14px;
   }
 
-  .hero-photo{
-    height:400px;
+  .hero-description{
+    font-size:9px;
   }
 
-  .hero-grid{
-    min-height:400px;
+  .chef-area{
+    height:310px;
   }
 
+  .feature strong{
+    font-size:6px;
+  }
+
+  .feature span{
+    font-size:5px;
+  }
+
+  .btn{
+    font-size:7px;
+    padding:6px 7px;
+  }
 }
-
 </style>
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header class="header">
 
-<div class="container navbar">
+  <div class="nav">
 
+    <div class="logo">CK</div>
 
-<div class="brand">
+    <div class="brand">
+      <div class="brand-name" data-en="Chef Kassem Taha">
+        Chef Kassem Taha
+      </div>
 
-<div class="logo">
-CK
-</div>
+      <div class="brand-title"
+           data-en="Executive Chef | Consultant | Trainer"
+           data-ar="شيف تنفيذي | مستشار | مدرب">
+        Executive Chef | Consultant | Trainer
+      </div>
+    </div>
 
-<div>
+    <nav class="nav-links">
+      <a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="about.html" data-en="About" data-ar="من أنا">About</a>
+      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="academy.html" data-en="Academy" data-ar="الأكاديمية">Academy</a>
+      <a href="recipes.html" data-en="Recipes" data-ar="الوصفات">Recipes</a>
+      <a href="blog.html" data-en="Blog" data-ar="المدونة">Blog</a>
+      <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="store.html" data-en="Store" data-ar="المتجر">Store</a>
+      <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
 
-<div class="brand-name">
-Chef Kassem Taha
-</div>
+    <div class="actions">
 
-<span class="brand-subtitle">
-Executive Chef | Consultant | Trainer
-</span>
+      <button class="lang" id="languageButton">AR</button>
 
-</div>
+      <button class="menu" id="menuButton" aria-label="Menu">
+        ☰
+      </button>
 
-</div>
+    </div>
 
+  </div>
 
-<nav>
+  <div class="mobile-nav" id="mobileNav">
 
-<a class="active"
-href="index.html">
-Home
-</a>
+    <div class="mobile-links">
 
-<a href="about.html">
-About
-</a>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="about.html" data-en="About" data-ar="من أنا">About</a>
+      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="academy.html" data-en="Academy" data-ar="الأكاديمية">Academy</a>
+      <a href="recipes.html" data-en="Recipes" data-ar="الوصفات">Recipes</a>
+      <a href="blog.html" data-en="Blog" data-ar="المدونة">Blog</a>
+      <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
+      <a href="store.html" data-en="Store" data-ar="المتجر">Store</a>
+      <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
 
-<a href="services.html">
-Services
-</a>
+    </div>
 
-<a href="academy.html">
-Academy
-</a>
-
-<a href="recipes.html">
-Recipes
-</a>
-
-<a href="blog.html">
-Blog
-</a>
-
-<a href="projects.html">
-Projects
-</a>
-
-<a href="store.html">
-Store
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-</nav>
-
-
-<div class="languages">
-
-<span class="language">
-EN
-</span>
-
-<span class="language">
-AR
-</span>
-
-</div>
-
-
-<div class="menu-button">
-☰
-</div>
-
-
-</div>
+  </div>
 
 </header>
-
 
 
 <!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="container hero-grid">
+  <div class="hero-inner">
+
+    <div class="hero-content">
+
+      <div class="welcome"
+           data-en="WELCOME TO CHEF KASSEM TAHA"
+           data-ar="مرحباً بكم في عالم الشيف قاسم طه">
+        WELCOME TO CHEF KASSEM TAHA
+      </div>
 
+      <h1>
+        <span data-en="From World Cuisines<br>to Your Table"
+              data-ar="من مطابخ العالم<br>إلى مائدتكم">
+          From World Cuisines<br>
+          to Your Table
+        </span>
+      </h1>
+
+      <div class="ar-title"
+           data-en="From World Cuisines to Your Table"
+           data-ar="من مطابخ العالم إلى مائدتكم">
+        من مطابخ العالم إلى مائدتكم
+      </div>
+
+      <p class="hero-description"
+         data-en="A professional chef, consultant and hospitality expert with over 33 years of experience in restaurants, hotels, central kitchens and food business development."
+         data-ar="طاهٍ محترف ومستشار وخبير في مجال الضيافة، يتمتع بخبرة تزيد عن 33 عاماً في المطاعم والفنادق والمطابخ المركزية وتطوير أعمال الأغذية.">
+        A professional chef, consultant and hospitality expert
+        with over 33 years of experience in restaurants,
+        hotels, central kitchens and food business development.
+      </p>
+
+      <div class="hero-features">
+
+        <div class="feature">
+          <div class="feature-icon">♨</div>
+          <strong data-en="33+ Years" data-ar="33+ عاماً">33+ Years</strong>
+          <span data-en="Experience" data-ar="خبرة">Experience</span>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">✦</div>
+          <strong data-en="Consulting" data-ar="استشارات">Consulting</strong>
+          <span data-en="Services" data-ar="خدمات">Services</span>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">◇</div>
+          <strong data-en="Training" data-ar="تدريب">Training</strong>
+          <span data-en="& Academy" data-ar="والأكاديمية">& Academy</span>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">⌂</div>
+          <strong data-en="Restaurant" data-ar="مطعم">Restaurant</strong>
+          <span data-en="& Hotel Setup" data-ar="والفنادق">& Hotel Setup</span>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">◉</div>
+          <strong data-en="Menu Design" data-ar="تصميم قوائم">Menu Design</strong>
+          <span data-en="& Development" data-ar="وتطوير">& Development</span>
+        </div>
+
+      </div>
+
+      <div class="hero-buttons">
+
+        <a class="btn btn-gold"
+           href="services.html"
+           data-en="Explore My Services →"
+           data-ar="اكتشف خدماتي ←">
+          Explore My Services →
+        </a>
+
+        <a class="btn btn-black"
+           href="videos.html"
+           data-en="▶ Watch Video"
+           data-ar="▶ شاهد الفيديو">
+          ▶ Watch Video
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ORIGINAL USER PHOTO -->
+
+    <div class="chef-area">
+
+      <img
+        class="chef-photo"
+        src="assets/chef-kassem.jpg"
+        alt="Chef Kassem Taha"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CUISINES ================= -->
+
+<section class="cuisines">
+
+  <div class="cuisine-grid">
+
+    <article class="cuisine">
+      <div class="cuisine-image">🍲</div>
+      <h3 data-en="International Cuisine"
+          data-ar="المطابخ العالمية">
+        International Cuisine
+      </h3>
+      <div class="cuisine-ar">المطابخ العالمية</div>
+      <p data-en="A selection of dishes from around the world."
+         data-ar="مجموعة مختارة من أطباق العالم.">
+        A selection of dishes from around the world.
+      </p>
+    </article>
+
+    <article class="cuisine">
+      <div class="cuisine-image">🥘</div>
+      <h3 data-en="Middle Eastern Cuisine"
+          data-ar="المطبخ الشرقي">
+        Middle Eastern Cuisine
+      </h3>
+      <div class="cuisine-ar">المطبخ الشرقي</div>
+      <p data-en="Authentic recipes with a modern touch."
+         data-ar="وصفات أصيلة بلمسة عصرية.">
+        Authentic recipes with a modern touch.
+      </p>
+    </article>
+
+    <article class="cuisine">
+      <div class="cuisine-image">🍢</div>
+      <h3 data-en="Grills & Barbecue"
+          data-ar="المشاوي">
+        Grills & Barbecue
+      </h3>
+      <div class="cuisine-ar">المشاوي</div>
+      <p data-en="Premium grilled dishes with rich flavors."
+         data-ar="أطباق مشوية بنكهات غنية.">
+        Premium grilled dishes with rich flavors.
+      </p>
+    </article>
+
+    <article class="cuisine">
+      <div class="cuisine-image">🍝</div>
+      <h3 data-en="Pasta & Italian"
+          data-ar="المأكولات الإيطالية">
+        Pasta & Italian
+      </h3>
+      <div class="cuisine-ar">المأكولات الإيطالية</div>
+      <p data-en="Classic and modern Italian favorites."
+         data-ar="أشهر الأطباق الإيطالية الكلاسيكية والعصرية.">
+        Classic and modern Italian favorites.
+      </p>
+    </article>
+
+    <article class="cuisine">
+      <div class="cuisine-image">🥗</div>
+      <h3 data-en="Healthy & Diet"
+          data-ar="الأكل الصحي">
+        Healthy & Diet
+      </h3>
+      <div class="cuisine-ar">الأكل الصحي</div>
+      <p data-en="Balanced options for a healthier lifestyle."
+         data-ar="خيارات متوازنة لحياة أكثر صحة.">
+        Balanced options for a healthier lifestyle.
+      </p>
+    </article>
+
+    <article class="cuisine">
+      <div class="cuisine-image">🍰</div>
+      <h3 data-en="Desserts"
+          data-ar="الحلويات">
+        Desserts
+      </h3>
+      <div class="cuisine-ar">الحلويات</div>
+      <p data-en="A sweet ending with unforgettable taste."
+         data-ar="نهاية حلوة بطعم لا يُنسى.">
+        A sweet ending with unforgettable taste.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story">
+
+  <div class="story-inner">
+
+    <div>
+
+      <div class="story-title"
+           data-en="Good Food<br>Brings People Together"
+           data-ar="الطعام الجيد<br>يجمع الناس">
+        Good Food<br>
+        Brings People Together
+      </div>
+
+      <div class="story-ar">
+        الطعام الجيد يجمع الناس
+      </div>
+
+      <a href="about.html"
+         class="btn btn-gold"
+         data-en="Discover My Story →"
+         data-ar="اكتشف قصتي ←">
+        Discover My Story →
+      </a>
+
+    </div>
+
+    <div class="story-photo">
+
+      <!-- Same original photo -->
+      <img
+        src="assets/chef-kassem.jpg"
+        alt="Chef Kassem Taha"
+      >
+
+    </div>
+
+    <div>
+
+      <div class="story-text"
+           data-en="My mission is to create memorable food experiences that bring people together."
+           data-ar="رسالتي هي تقديم تجارب غذائية مميزة تجمع الناس معاً.">
+        My mission is to create memorable food experiences
+        that bring people together.
+      </div>
+
+      <div class="signature">
+        Chef Kassem Taha
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+  <div class="stats-grid">
+
+    <div class="stat">
+      <div class="stat-icon">♨</div>
+      <span class="stat-number">33+</span>
+      <div class="stat-label"
+           data-en="Years Experience"
+           data-ar="سنوات خبرة">
+        Years Experience
+      </div>
+      <div class="stat-ar">سنوات خبرة</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-icon">◎</div>
+      <span class="stat-number"
+            data-en="Global"
+            data-ar="دولية">
+        Global
+      </span>
+      <div class="stat-label"
+           data-en="Professional Experience"
+           data-ar="خبرة مهنية دولية">
+        Professional Experience
+      </div>
+      <div class="stat-ar">خبرة مهنية دولية</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-icon">♟</div>
+      <span class="stat-number"
+            data-en="Training"
+            data-ar="تدريب">
+        Training
+      </span>
+      <div class="stat-label"
+           data-en="Hospitality Teams"
+           data-ar="فرق الضيافة">
+        Hospitality Teams
+      </div>
+      <div class="stat-ar">تدريب فرق الضيافة</div>
+    </div>
+
+    <div class="stat">
+      <div class="stat-icon">↗</div>
+      <span class="stat-number"
+            data-en="Complete"
+            data-ar="حلول">
+        Complete
+      </span>
+      <div class="stat-label"
+           data-en="From Concept to Operation"
+           data-ar="من الفكرة إلى التشغيل">
+        From Concept to Operation
+      </div>
+      <div class="stat-ar">من الفكرة إلى التشغيل</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-brand">
+        Chef Kassem Taha
+      </div>
+
+      <div class="footer-sub"
+           data-en="Executive Chef | Consultant | Trainer"
+           data-ar="شيف تنفيذي | مستشار | مدرب">
+        Executive Chef | Consultant | Trainer
+      </div>
+
+      <div class="footer-desc"
+           data-en="From World Cuisines to Your Table"
+           data-ar="من مطابخ العالم إلى مائدتكم">
+        From World Cuisines to Your Table
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3 data-en="Quick Links" data-ar="روابط سريعة">
+        Quick Links
+      </h3>
+
+      <div class="footer-links">
+
+        <a href="index.html"
+           data-en="Home"
+           data-ar="الرئيسية">Home</a>
+
+        <a href="about.html"
+           data-en="About"
+           data-ar="من أنا">About</a>
+
+        <a href="services.html"
+           data-en="Services"
+           data-ar="الخدمات">Services</a>
+
+        <a href="academy.html"
+           data-en="Academy"
+           data-ar="الأكاديمية">Academy</a>
+
+        <a href="recipes.html"
+           data-en="Recipes"
+           data-ar="الوصفات">Recipes</a>
+
+        <a href="blog.html"
+           data-en="Blog"
+           data-ar="المدونة">Blog</a>
+
+        <a href="projects.html"
+           data-en="Projects"
+           data-ar="المشاريع">Projects</a>
+
+        <a href="store.html"
+           data-en="Store"
+           data-ar="المتجر">Store</a>
+
+        <a href="contact.html"
+           data-en="Contact"
+           data-ar="تواصل معنا">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3 data-en="Contact Me" data-ar="تواصل معي">
+        Contact Me
+      </h3>
+
+      <div class="contact">
+        📞 +855 71 522 2672<br>
+        WhatsApp: +971 50 778 4185<br>
+        📍 Phnom Penh, Cambodia
+      </div>
+
+    </div>
 
-<div class="hero-content">
+  </div>
+
+  <div class="copyright">
+    © 2026 Chef Kassem Taha. All rights reserved.
+  </div>
 
+</footer>
 
-<div class="welcome">
 
-Welcome to Chef Kassem Taha
+<script>
 
-</div>
+/* =========================
+   LANGUAGE SWITCH
+========================= */
 
+const languageButton =
+  document.getElementById("languageButton");
 
-<h1>
+let currentLanguage =
+  localStorage.getItem("chefLanguage") || "en";
 
-From World Cuisines
-<br>
+function setLanguage(language){
 
-to Your Table
+  currentLanguage = language;
 
-</h1>
+  document.documentElement.lang = language;
 
+  document.documentElement.dir =
+    language === "ar" ? "rtl" : "ltr";
 
-<div class="hero-arabic">
+  document.body.classList.toggle(
+    "rtl",
+    language === "ar"
+  );
 
-من مطابخ العالم إلى مائدتكم
+  document.querySelectorAll("[data-en]").forEach(el => {
 
-</div>
+    const value =
+      el.getAttribute(
+        language === "ar" ? "data-ar" : "data-en"
+      );
 
+    if(value){
+      el.innerHTML = value;
+    }
 
-<p class="intro">
+  });
 
-A professional chef, consultant and hospitality
-expert with over 33 years of experience in
-restaurants, hotels, central kitchens and food
-business development.
+  languageButton.textContent =
+    language === "ar" ? "EN" : "AR";
 
-</p>
+  localStorage.setItem(
+    "chefLanguage",
+    language
+  );
+}
 
+languageButton.addEventListener(
+  "click",
+  function(){
+    setLanguage(
+      currentLanguage === "en" ? "ar" : "en"
+    );
+  }
+);
 
 
-<div class="hero-services">
+/* =========================
+   MOBILE MENU
+========================= */
 
+const menuButton =
+  document.getElementById("menuButton");
 
-<div class="hero-service">
+const mobileNav =
+  document.getElementById("mobileNav");
 
-<div class="hero-icon">
-♨
-</div>
+menuButton.addEventListener(
+  "click",
+  function(){
 
-<strong>
-33+ Years
-</strong>
+    mobileNav.classList.toggle("open");
 
-<small>
-Experience
-</small>
+    menuButton.textContent =
+      mobileNav.classList.contains("open")
+      ? "×"
+      : "☰";
 
-</div>
+  }
+);
 
 
+/* CLOSE MOBILE MENU AFTER CLICK */
 
-<div class="hero-service">
+document
+  .querySelectorAll(".mobile-links a")
+  .forEach(link => {
 
-<div class="hero-icon">
-✦
-</div>
+    link.addEventListener(
+      "click",
+      function(){
 
-<strong>
-Consulting
-</strong>
+        mobileNav.classList.remove("open");
 
-<small>
-Services
-</small>
+        menuButton.textContent = "☰";
 
-</div>
+      }
+    );
 
+  });
 
 
-<div class="hero-service">
+/* INITIAL LANGUAGE */
 
-<div class="hero-icon">
-◇
-</div>
+setLanguage(currentLanguage);
 
-<strong>
-Training
-</strong>
+</script>
 
-<small>
-& Academy
-</small>
-
-</div>
-
-
-
-<div class="hero-service">
-
-<div class="hero-icon">
-⌂
-</div>
-
-<strong>
-Restaurant
-</strong>
-
-<small>
-& Hotel Setup
-</small>
-
-</div>
-
-
-
-<div class="hero-service">
-
-<div class="hero-icon">
-◉
-</div>
-
-<strong>
-Menu Design
-</strong>
-
-<small>
-& Development
-</small>
-
-</div>
-
-
-</div>
-
-
-
-<div class="buttons">
-
-
-<a
-class="button button-gold"
-href="services.html">
-
-Explore My Services →
-
-</a>
-
-
-<a
-class="button
+</body>
+</html>
