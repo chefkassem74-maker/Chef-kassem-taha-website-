@@ -1,1513 +1,185 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-
-<title>Chef Kassem Taha | Executive Chef & Consultant</title>
-
-<style>
-:root{
-  --black:#080808;
-  --black2:#121212;
-  --gold:#c99532;
-  --gold-light:#e7b957;
-  --cream:#f8f5ed;
-  --white:#fff;
-  --text:#161616;
-  --muted:#666;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  background:#fff;
-  color:var(--text);
-  font-family:Arial,Tahoma,sans-serif;
-  overflow-x:hidden;
-}
-
-body.rtl{
-  direction:rtl;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-button,
-a{
-  font:inherit;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#080808;
-  color:#fff;
-  border-bottom:2px solid var(--gold);
-}
-
-.nav{
-  width:94%;
-  max-width:1250px;
-  min-height:72px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.logo{
-  width:48px;
-  height:48px;
-  border:2px solid var(--gold-light);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--gold-light);
-  font:700 22px Georgia,serif;
-  flex-shrink:0;
-}
-
-.brand{
-  line-height:1.1;
-  flex-shrink:0;
-}
-
-.brand-name{
-  color:var(--gold-light);
-  font:700 20px Georgia,serif;
-}
-
-.brand-title{
-  color:#ccc;
-  font-size:9px;
-  margin-top:4px;
-}
-
-.nav-links{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  gap:15px;
-  font-size:11px;
-}
-
-body.rtl .nav-links{
-  margin-left:0;
-  margin-right:auto;
-}
-
-.nav-links a{
-  color:#eee;
-  white-space:nowrap;
-}
-
-.nav-links a:hover{
-  color:var(--gold-light);
-}
-
-.actions{
-  display:flex;
-  gap:6px;
-  align-items:center;
-}
-
-.lang{
-  border:1px solid var(--gold);
-  color:var(--gold-light);
-  background:#111;
-  border-radius:6px;
-  padding:7px 10px;
-  cursor:pointer;
-  font-size:11px;
-  font-weight:bold;
-}
-
-.menu{
-  display:none;
-  width:42px;
-  height:42px;
-  border:1px solid var(--gold);
-  border-radius:6px;
-  background:#111;
-  color:var(--gold-light);
-  cursor:pointer;
-  font-size:22px;
-}
-
-/* MOBILE MENU */
-
-.mobile-nav{
-  display:none;
-  background:#080808;
-  border-top:1px solid #333;
-  border-bottom:2px solid var(--gold);
-}
-
-.mobile-nav.open{
-  display:block;
-}
-
-.mobile-links{
-  width:94%;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  padding:8px 0 14px;
-}
-
-.mobile-links a{
-  color:#fff;
-  padding:11px 7px;
-  border-bottom:1px solid #292929;
-  font-size:13px;
-}
-
-.mobile-links a:hover{
-  color:var(--gold-light);
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  background:
-    linear-gradient(
-      90deg,
-      #ffffff 0%,
-      #ffffff 48%,
-      #f7ecd8 75%,
-      #d7ad61 100%
-    );
-}
-
-.hero-inner{
-  width:94%;
-  max-width:1250px;
-  min-height:515px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:56% 44%;
-  align-items:center;
-}
-
-.hero-content{
-  padding:40px 20px 35px 0;
-  position:relative;
-  z-index:3;
-}
-
-body.rtl .hero-content{
-  padding:40px 0 35px 20px;
-}
-
-.welcome{
-  color:#a46c13;
-  font-size:10px;
-  letter-spacing:2px;
-  margin-bottom:12px;
-}
-
-.hero h1{
-  font:700 55px/1 Georgia,serif;
-  color:#101010;
-  max-width:700px;
-}
-
-.ar-title{
-  color:#a66d10;
-  font-size:29px;
-  line-height:1.25;
-  font-weight:700;
-  margin:12px 0 14px;
-  direction:rtl;
-}
-
-.hero-description{
-  max-width:590px;
-  font:16px/1.55 Georgia,serif;
-  color:#292929;
-}
-
-.hero-features{
-  margin-top:25px;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  max-width:680px;
-}
-
-.feature{
-  text-align:center;
-  min-height:70px;
-  border-right:1px solid #ddd;
-  padding:0 7px;
-}
-
-body.rtl .feature{
-  border-right:0;
-  border-left:1px solid #ddd;
-}
-
-.feature:last-child{
-  border:0;
-}
-
-.feature-icon{
-  color:var(--gold);
-  font-size:24px;
-  margin-bottom:4px;
-}
-
-.feature strong{
-  display:block;
-  font:700 12px Georgia,serif;
-}
-
-.feature span{
-  display:block;
-  font-size:9px;
-  margin-top:3px;
-  direction:rtl;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:10px;
-  margin-top:20px;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:43px;
-  padding:10px 18px;
-  border-radius:6px;
-  font-size:12px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.btn-gold{
-  background:linear-gradient(90deg,#d79520,#f2c65d);
-  color:#111;
-}
-
-.btn-black{
-  background:#080808;
-  border:1px solid var(--gold);
-  color:#fff;
-}
-
-/* =========================
-   ORIGINAL CHEF PHOTO
-========================= */
-
-.chef-area{
-  height:515px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  overflow:hidden;
-  position:relative;
-}
-
-.chef-area::before{
-  content:"";
-  position:absolute;
-  width:450px;
-  height:450px;
-  border-radius:50%;
-  background:rgba(255,255,255,.18);
-  right:10%;
-  bottom:20px;
-}
-
-.chef-photo{
-  position:relative;
-  z-index:2;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center bottom;
-
-  /*
-    The uploaded photo has a white background.
-    Multiply removes the visual white box while
-    preserving the original face and clothing.
-  */
-  mix-blend-mode:multiply;
-}
-
-/* =========================
-   CUISINE CARDS
-========================= */
-
-.cuisines{
-  background:#fff;
-  padding:14px 0 20px;
-}
-
-.cuisine-grid{
-  width:94%;
-  max-width:1250px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:9px;
-}
-
-.cuisine{
-  border:1px solid #ded8ca;
-  background:#fff;
-  border-radius:6px;
-  overflow:hidden;
-  text-align:center;
-  box-shadow:0 2px 9px rgba(0,0,0,.06);
-}
-
-.cuisine-image{
-  height:105px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    linear-gradient(
-      135deg,
-      #2c1605,
-      #b87b21
-    );
-  font-size:42px;
-}
-
-.cuisine h3{
-  font:700 12px Georgia,serif;
-  padding:8px 4px 2px;
-}
-
-.cuisine-ar{
-  color:#a36a0e;
-  font-weight:bold;
-  font-size:11px;
-  direction:rtl;
-}
-
-.cuisine p{
-  color:#555;
-  font:10px/1.35 Georgia,serif;
-  padding:4px 6px 9px;
-}
-
-/* =========================
-   BLACK STORY BAND
-========================= */
-
-.story{
-  background:#080808;
-  color:#fff;
-  border-top:2px solid var(--gold);
-  border-bottom:2px solid var(--gold);
-}
-
-.story-inner{
-  width:94%;
-  max-width:1250px;
-  min-height:180px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr .7fr 1fr;
-  align-items:center;
-  gap:20px;
-}
-
-.story-title{
-  color:var(--gold-light);
-  font:700 27px/1.15 Georgia,serif;
-}
-
-.story-ar{
-  color:var(--gold-light);
-  font-size:18px;
-  font-weight:bold;
-  direction:rtl;
-  margin:7px 0 13px;
-}
-
-.story-photo{
-  height:180px;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-  overflow:hidden;
-}
-
-.story-photo img{
-  height:180px;
-  width:auto;
-  object-fit:contain;
-  mix-blend-mode:normal;
-}
-
-.story-text{
-  font:14px/1.55 Georgia,serif;
-}
-
-.signature{
-  color:var(--gold-light);
-  font:italic 22px Georgia,serif;
-  margin-top:8px;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-  background:#fff;
-  padding:22px 0;
-}
-
-.stats-grid{
-  width:94%;
-  max-width:1250px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-  text-align:center;
-  border-right:1px solid #ddd;
-  padding:3px 12px;
-}
-
-body.rtl .stat{
-  border-right:0;
-  border-left:1px solid #ddd;
-}
-
-.stat:last-child{
-  border:0;
-}
-
-.stat-icon{
-  color:var(--gold);
-  font-size:27px;
-}
-
-.stat-number{
-  display:block;
-  font:700 24px Georgia,serif;
-  margin:3px 0;
-}
-
-.stat-label{
-  font-size:11px;
-}
-
-.stat-ar{
-  direction:rtl;
-  color:#75501a;
-  font-size:10px;
-  margin-top:3px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-  background:#070707;
-  color:#fff;
-  border-top:3px solid var(--gold);
-  padding:25px 0 12px;
-}
-
-.footer-inner{
-  width:94%;
-  max-width:1250px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.2fr .9fr 1.1fr;
-  gap:30px;
-}
-
-.footer-brand{
-  color:var(--gold-light);
-  font:700 21px Georgia,serif;
-}
-
-.footer-sub{
-  color:#ccc;
-  font-size:9px;
-  margin-top:4px;
-}
-
-.footer-desc{
-  font-size:11px;
-  line-height:1.6;
-  margin-top:9px;
-}
-
-.footer h3{
-  color:var(--gold-light);
-  font-size:13px;
-  margin-bottom:10px;
-}
-
-.footer-links{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:6px;
-  font-size:10px;
-}
-
-.footer-links a:hover{
-  color:var(--gold-light);
-}
-
-.contact{
-  font-size:10px;
-  line-height:1.8;
-}
-
-.copyright{
-  width:94%;
-  max-width:1250px;
-  margin:18px auto 0;
-  padding-top:10px;
-  border-top:1px solid #333;
-  color:#aaa;
-  font-size:9px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:800px){
-
-  .nav{
-    min-height:62px;
-    gap:8px;
-  }
-
-  .logo{
-    width:40px;
-    height:40px;
-    font-size:18px;
-  }
-
-  .brand-name{
-    font-size:15px;
-  }
-
-  .brand-title{
-    display:none;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .actions{
-    margin-left:auto;
-  }
-
-  body.rtl .actions{
-    margin-left:0;
-    margin-right:auto;
-  }
-
-  .menu{
-    display:block;
-  }
-
-  /* HERO MOBILE */
-
-  .hero-inner{
-    width:100%;
-    min-height:0;
-    grid-template-columns:55% 45%;
-    align-items:stretch;
-  }
-
-  .hero-content{
-    padding:25px 8px 20px 15px;
-  }
-
-  body.rtl .hero-content{
-    padding:25px 15px 20px 8px;
-  }
-
-  .welcome{
-    font-size:6px;
-    letter-spacing:1px;
-    margin-bottom:6px;
-  }
-
-  .hero h1{
-    font-size:28px;
-    line-height:1.02;
-  }
-
-  .ar-title{
-    font-size:16px;
-    margin:7px 0;
-  }
-
-  .hero-description{
-    font-size:10px;
-    line-height:1.45;
-  }
-
-  .hero-features{
-    margin-top:13px;
-    grid-template-columns:repeat(5,1fr);
-  }
-
-  .feature{
-    min-height:55px;
-    padding:0 2px;
-  }
-
-  .feature-icon{
-    font-size:17px;
-    margin-bottom:2px;
-  }
-
-  .feature strong{
-    font-size:7px;
-  }
-
-  .feature span{
-    font-size:6px;
-    line-height:1.1;
-  }
-
-  .hero-buttons{
-    margin-top:12px;
-    gap:5px;
-  }
-
-  .btn{
-    min-height:34px;
-    padding:7px 9px;
-    font-size:8px;
-  }
-
-  .chef-area{
-    height:350px;
-  }
-
-  .chef-area::before{
-    width:280px;
-    height:280px;
-    right:-30px;
-    bottom:10px;
-  }
-
-  .chef-photo{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    object-position:center bottom;
-  }
-
-  /* CUISINES */
-
-  .cuisines{
-    padding:8px 0 12px;
-  }
-
-  .cuisine-grid{
-    width:94%;
-    grid-template-columns:repeat(3,1fr);
-    gap:5px;
-  }
-
-  .cuisine-image{
-    height:72px;
-    font-size:28px;
-  }
-
-  .cuisine h3{
-    font-size:8px;
-    padding:5px 2px 1px;
-  }
-
-  .cuisine-ar{
-    font-size:7px;
-  }
-
-  .cuisine p{
-    font-size:7px;
-    padding:3px 3px 6px;
-  }
-
-  /* STORY */
-
-  .story-inner{
-    min-height:125px;
-    grid-template-columns:1fr .7fr 1fr;
-    gap:5px;
-  }
-
-  .story-title{
-    font-size:15px;
-  }
-
-  .story-ar{
-    font-size:10px;
-    margin:4px 0 6px;
-  }
-
-  .story-text{
-    font-size:8px;
-    line-height:1.4;
-  }
-
-  .story-photo{
-    height:125px;
-  }
-
-  .story-photo img{
-    height:125px;
-  }
-
-  .signature{
-    font-size:12px;
-  }
-
-  /* STATS */
-
-  .stats{
-    padding:12px 0;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .stat{
-    padding:2px 3px;
-  }
-
-  .stat-icon{
-    font-size:18px;
-  }
-
-  .stat-number{
-    font-size:14px;
-  }
-
-  .stat-label{
-    font-size:7px;
-  }
-
-  .stat-ar{
-    font-size:6px;
-  }
-
-  /* FOOTER */
-
-  .footer{
-    padding:18px 0 10px;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-  }
-
-  .footer-brand{
-    font-size:15px;
-  }
-
-  .footer-sub{
-    font-size:7px;
-  }
-
-  .footer-desc{
-    font-size:8px;
-  }
-
-  .footer h3{
-    font-size:9px;
-  }
-
-  .footer-links{
-    font-size:7px;
-    gap:4px;
-  }
-
-  .contact{
-    font-size:7px;
-  }
-
-  .copyright{
-    font-size:6px;
-    margin-top:12px;
-  }
-}
-
-/* EXTRA SMALL PHONES */
-
-@media(max-width:390px){
-
-  .hero h1{
-    font-size:24px;
-  }
-
-  .ar-title{
-    font-size:14px;
-  }
-
-  .hero-description{
-    font-size:9px;
-  }
-
-  .chef-area{
-    height:310px;
-  }
-
-  .feature strong{
-    font-size:6px;
-  }
-
-  .feature span{
-    font-size:5px;
-  }
-
-  .btn{
-    font-size:7px;
-    padding:6px 7px;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشيف قاسم طه | Chef Kassem Taha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
-
-<header class="header">
-
-  <div class="nav">
-
-    <div class="logo">CK</div>
-
-    <div class="brand">
-      <div class="brand-name" data-en="Chef Kassem Taha">
-        Chef Kassem Taha
-      </div>
-
-      <div class="brand-title"
-           data-en="Executive Chef | Consultant | Trainer"
-           data-ar="شيف تنفيذي | مستشار | مدرب">
-        Executive Chef | Consultant | Trainer
-      </div>
-    </div>
-
-    <nav class="nav-links">
-      <a href="index.html" class="active" data-en="Home" data-ar="الرئيسية">Home</a>
-      <a href="about.html" data-en="About" data-ar="من أنا">About</a>
-      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
-      <a href="academy.html" data-en="Academy" data-ar="الأكاديمية">Academy</a>
-      <a href="recipes.html" data-en="Recipes" data-ar="الوصفات">Recipes</a>
-      <a href="blog.html" data-en="Blog" data-ar="المدونة">Blog</a>
-      <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
-      <a href="store.html" data-en="Store" data-ar="المتجر">Store</a>
-      <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Chef Kassem <span>GROUP</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">خدماتنا</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+                <a href="contact.html" class="nav-cta">احجز استشارة</a>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
     </nav>
 
-    <div class="actions">
+    <!-- القسم الرئيسي (Hero) -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">
+                        <i class="fas fa-star"></i> شيف عالمي معتمد
+                    </span>
+                    <h1 class="hero-title">
+                        من مطابخ العالم
+                        <span class="highlight">إلى مائدتك</span>
+                    </h1>
+                    <p class="hero-description">
+                        خبرة تمتد لأكثر من 33 عاماً في عالم الطهي الاحترافي، إدارة المطاعم، 
+                        وتطوير المشاريع الغذائية. نقدم لك تجارب استثنائية تجمع بين الأصالة والإبداع.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="33">0</span>
+                            <span class="stat-label">سنة خبرة</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">دولة</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="500">0</span>
+                            <span class="stat-label">مشروع</span>
+                        </div>
+                    </div>
 
-      <button class="lang" id="languageButton">AR</button>
+                    <div class="hero-buttons">
+                        <a href="services.html" class="btn btn-primary">
+                            <i class="fas fa-utensils"></i>
+                            اكتشف خدماتنا
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">
+                            <i class="fas fa-user"></i>
+                            تعرف علينا
+                        </a>
+                    </div>
+                </div>
 
-      <button class="menu" id="menuButton" aria-label="Menu">
-        ☰
-      </button>
-
-    </div>
-
-  </div>
-
-  <div class="mobile-nav" id="mobileNav">
-
-    <div class="mobile-links">
-
-      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
-      <a href="about.html" data-en="About" data-ar="من أنا">About</a>
-      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
-      <a href="academy.html" data-en="Academy" data-ar="الأكاديمية">Academy</a>
-      <a href="recipes.html" data-en="Recipes" data-ar="الوصفات">Recipes</a>
-      <a href="blog.html" data-en="Blog" data-ar="المدونة">Blog</a>
-      <a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a>
-      <a href="store.html" data-en="Store" data-ar="المتجر">Store</a>
-      <a href="contact.html" data-en="Contact" data-ar="تواصل معنا">Contact</a>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-  <div class="hero-inner">
-
-    <div class="hero-content">
-
-      <div class="welcome"
-           data-en="WELCOME TO CHEF KASSEM TAHA"
-           data-ar="مرحباً بكم في عالم الشيف قاسم طه">
-        WELCOME TO CHEF KASSEM TAHA
-      </div>
-
-      <h1>
-        <span data-en="From World Cuisines<br>to Your Table"
-              data-ar="من مطابخ العالم<br>إلى مائدتكم">
-          From World Cuisines<br>
-          to Your Table
-        </span>
-      </h1>
-
-      <div class="ar-title"
-           data-en="From World Cuisines to Your Table"
-           data-ar="من مطابخ العالم إلى مائدتكم">
-        من مطابخ العالم إلى مائدتكم
-      </div>
-
-      <p class="hero-description"
-         data-en="A professional chef, consultant and hospitality expert with over 33 years of experience in restaurants, hotels, central kitchens and food business development."
-         data-ar="طاهٍ محترف ومستشار وخبير في مجال الضيافة، يتمتع بخبرة تزيد عن 33 عاماً في المطاعم والفنادق والمطابخ المركزية وتطوير أعمال الأغذية.">
-        A professional chef, consultant and hospitality expert
-        with over 33 years of experience in restaurants,
-        hotels, central kitchens and food business development.
-      </p>
-
-      <div class="hero-features">
-
-        <div class="feature">
-          <div class="feature-icon">♨</div>
-          <strong data-en="33+ Years" data-ar="33+ عاماً">33+ Years</strong>
-          <span data-en="Experience" data-ar="خبرة">Experience</span>
+                <div class="hero-image">
+                    <div class="chef-image-wrapper">
+                        <img src="images/chef.jpg" alt="الشيف قاسم طه">
+                    </div>
+                    <div class="floating-card">
+                        <p class="quote">"الطعام الجيد يجمع الناس"</p>
+                        <p class="author">- الشيف قاسم</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="feature">
-          <div class="feature-icon">✦</div>
-          <strong data-en="Consulting" data-ar="استشارات">Consulting</strong>
-          <span data-en="Services" data-ar="خدمات">Services</span>
+    <!-- قسم التخصصات -->
+    <section class="specialties">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Our Specialties</p>
+                <h2 class="section-title">تخصصاتنا <span class="gold">المميزة</span></h2>
+                <p class="section-description">
+                    مجموعة متنوعة من الخدمات الاحترافية في عالم الطهي والضيافة
+                </p>
+            </div>
+
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="specialty-title">تطوير قوائم الطعام</h3>
+                    <p class="specialty-desc">تصميم قوائم مبتكرة تناسب هوية مطعمك وتلبي أذواق عملائك</p>
+                </div>
+
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="specialty-title">تأسيس المطاعم</h3>
+                    <p class="specialty-desc">من الفكرة إلى الافتتاح، نرافقك في كل خطوة لبناء مطعم ناجح</p>
+                </div>
+
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="specialty-title">التدريب والتأهيل</h3>
+                    <p class="specialty-desc">برامج تدريبية احترافية لرفع كفاءة فريقك في المطبخ</p>
+                </div>
+
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="specialty-title">سلامة الغذاء</h3>
+                    <p class="specialty-desc">تطبيق معايير HACCP لضمان أعلى مستويات الجودة والسلامة</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="feature">
-          <div class="feature-icon">◇</div>
-          <strong data-en="Training" data-ar="تدريب">Training</strong>
-          <span data-en="& Academy" data-ar="والأكاديمية">& Academy</span>
+    <!-- قسم التواصل السريع -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2>جاهز لبدء مشروعك؟</h2>
+                    <p>تواصل معنا اليوم للحصول على استشارة مجانية</p>
+                </div>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    تواصل معنا الآن
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="feature">
-          <div class="feature-icon">⌂</div>
-          <strong data-en="Restaurant" data-ar="مطعم">Restaurant</strong>
-          <span data-en="& Hotel Setup" data-ar="والفنادق">& Hotel Setup</span>
+    <!-- الفوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Chef Kassem <span>GROUP</span></h2>
+                    <p>Taste Creates Opportunities</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <p><i class="fas fa-phone"></i> +855 71 522 2672</p>
+                    <p><i class="fas fa-envelope"></i> info@chefkassem.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Phnom Penh, Cambodia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Chef Kassem Group. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="feature">
-          <div class="feature-icon">◉</div>
-          <strong data-en="Menu Design" data-ar="تصميم قوائم">Menu Design</strong>
-          <span data-en="& Development" data-ar="وتطوير">& Development</span>
-        </div>
-
-      </div>
-
-      <div class="hero-buttons">
-
-        <a class="btn btn-gold"
-           href="services.html"
-           data-en="Explore My Services →"
-           data-ar="اكتشف خدماتي ←">
-          Explore My Services →
-        </a>
-
-        <a class="btn btn-black"
-           href="videos.html"
-           data-en="▶ Watch Video"
-           data-ar="▶ شاهد الفيديو">
-          ▶ Watch Video
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- ORIGINAL USER PHOTO -->
-
-    <div class="chef-area">
-
-      <img
-        class="chef-photo"
-        src="assets/chef-kassem.jpg"
-        alt="Chef Kassem Taha"
-      >
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= CUISINES ================= -->
-
-<section class="cuisines">
-
-  <div class="cuisine-grid">
-
-    <article class="cuisine">
-      <div class="cuisine-image">🍲</div>
-      <h3 data-en="International Cuisine"
-          data-ar="المطابخ العالمية">
-        International Cuisine
-      </h3>
-      <div class="cuisine-ar">المطابخ العالمية</div>
-      <p data-en="A selection of dishes from around the world."
-         data-ar="مجموعة مختارة من أطباق العالم.">
-        A selection of dishes from around the world.
-      </p>
-    </article>
-
-    <article class="cuisine">
-      <div class="cuisine-image">🥘</div>
-      <h3 data-en="Middle Eastern Cuisine"
-          data-ar="المطبخ الشرقي">
-        Middle Eastern Cuisine
-      </h3>
-      <div class="cuisine-ar">المطبخ الشرقي</div>
-      <p data-en="Authentic recipes with a modern touch."
-         data-ar="وصفات أصيلة بلمسة عصرية.">
-        Authentic recipes with a modern touch.
-      </p>
-    </article>
-
-    <article class="cuisine">
-      <div class="cuisine-image">🍢</div>
-      <h3 data-en="Grills & Barbecue"
-          data-ar="المشاوي">
-        Grills & Barbecue
-      </h3>
-      <div class="cuisine-ar">المشاوي</div>
-      <p data-en="Premium grilled dishes with rich flavors."
-         data-ar="أطباق مشوية بنكهات غنية.">
-        Premium grilled dishes with rich flavors.
-      </p>
-    </article>
-
-    <article class="cuisine">
-      <div class="cuisine-image">🍝</div>
-      <h3 data-en="Pasta & Italian"
-          data-ar="المأكولات الإيطالية">
-        Pasta & Italian
-      </h3>
-      <div class="cuisine-ar">المأكولات الإيطالية</div>
-      <p data-en="Classic and modern Italian favorites."
-         data-ar="أشهر الأطباق الإيطالية الكلاسيكية والعصرية.">
-        Classic and modern Italian favorites.
-      </p>
-    </article>
-
-    <article class="cuisine">
-      <div class="cuisine-image">🥗</div>
-      <h3 data-en="Healthy & Diet"
-          data-ar="الأكل الصحي">
-        Healthy & Diet
-      </h3>
-      <div class="cuisine-ar">الأكل الصحي</div>
-      <p data-en="Balanced options for a healthier lifestyle."
-         data-ar="خيارات متوازنة لحياة أكثر صحة.">
-        Balanced options for a healthier lifestyle.
-      </p>
-    </article>
-
-    <article class="cuisine">
-      <div class="cuisine-image">🍰</div>
-      <h3 data-en="Desserts"
-          data-ar="الحلويات">
-        Desserts
-      </h3>
-      <div class="cuisine-ar">الحلويات</div>
-      <p data-en="A sweet ending with unforgettable taste."
-         data-ar="نهاية حلوة بطعم لا يُنسى.">
-        A sweet ending with unforgettable taste.
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- ================= STORY ================= -->
-
-<section class="story">
-
-  <div class="story-inner">
-
-    <div>
-
-      <div class="story-title"
-           data-en="Good Food<br>Brings People Together"
-           data-ar="الطعام الجيد<br>يجمع الناس">
-        Good Food<br>
-        Brings People Together
-      </div>
-
-      <div class="story-ar">
-        الطعام الجيد يجمع الناس
-      </div>
-
-      <a href="about.html"
-         class="btn btn-gold"
-         data-en="Discover My Story →"
-         data-ar="اكتشف قصتي ←">
-        Discover My Story →
-      </a>
-
-    </div>
-
-    <div class="story-photo">
-
-      <!-- Same original photo -->
-      <img
-        src="assets/chef-kassem.jpg"
-        alt="Chef Kassem Taha"
-      >
-
-    </div>
-
-    <div>
-
-      <div class="story-text"
-           data-en="My mission is to create memorable food experiences that bring people together."
-           data-ar="رسالتي هي تقديم تجارب غذائية مميزة تجمع الناس معاً.">
-        My mission is to create memorable food experiences
-        that bring people together.
-      </div>
-
-      <div class="signature">
-        Chef Kassem Taha
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-  <div class="stats-grid">
-
-    <div class="stat">
-      <div class="stat-icon">♨</div>
-      <span class="stat-number">33+</span>
-      <div class="stat-label"
-           data-en="Years Experience"
-           data-ar="سنوات خبرة">
-        Years Experience
-      </div>
-      <div class="stat-ar">سنوات خبرة</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-icon">◎</div>
-      <span class="stat-number"
-            data-en="Global"
-            data-ar="دولية">
-        Global
-      </span>
-      <div class="stat-label"
-           data-en="Professional Experience"
-           data-ar="خبرة مهنية دولية">
-        Professional Experience
-      </div>
-      <div class="stat-ar">خبرة مهنية دولية</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-icon">♟</div>
-      <span class="stat-number"
-            data-en="Training"
-            data-ar="تدريب">
-        Training
-      </span>
-      <div class="stat-label"
-           data-en="Hospitality Teams"
-           data-ar="فرق الضيافة">
-        Hospitality Teams
-      </div>
-      <div class="stat-ar">تدريب فرق الضيافة</div>
-    </div>
-
-    <div class="stat">
-      <div class="stat-icon">↗</div>
-      <span class="stat-number"
-            data-en="Complete"
-            data-ar="حلول">
-        Complete
-      </span>
-      <div class="stat-label"
-           data-en="From Concept to Operation"
-           data-ar="من الفكرة إلى التشغيل">
-        From Concept to Operation
-      </div>
-      <div class="stat-ar">من الفكرة إلى التشغيل</div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-  <div class="footer-inner">
-
-    <div>
-
-      <div class="footer-brand">
-        Chef Kassem Taha
-      </div>
-
-      <div class="footer-sub"
-           data-en="Executive Chef | Consultant | Trainer"
-           data-ar="شيف تنفيذي | مستشار | مدرب">
-        Executive Chef | Consultant | Trainer
-      </div>
-
-      <div class="footer-desc"
-           data-en="From World Cuisines to Your Table"
-           data-ar="من مطابخ العالم إلى مائدتكم">
-        From World Cuisines to Your Table
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <h3 data-en="Quick Links" data-ar="روابط سريعة">
-        Quick Links
-      </h3>
-
-      <div class="footer-links">
-
-        <a href="index.html"
-           data-en="Home"
-           data-ar="الرئيسية">Home</a>
-
-        <a href="about.html"
-           data-en="About"
-           data-ar="من أنا">About</a>
-
-        <a href="services.html"
-           data-en="Services"
-           data-ar="الخدمات">Services</a>
-
-        <a href="academy.html"
-           data-en="Academy"
-           data-ar="الأكاديمية">Academy</a>
-
-        <a href="recipes.html"
-           data-en="Recipes"
-           data-ar="الوصفات">Recipes</a>
-
-        <a href="blog.html"
-           data-en="Blog"
-           data-ar="المدونة">Blog</a>
-
-        <a href="projects.html"
-           data-en="Projects"
-           data-ar="المشاريع">Projects</a>
-
-        <a href="store.html"
-           data-en="Store"
-           data-ar="المتجر">Store</a>
-
-        <a href="contact.html"
-           data-en="Contact"
-           data-ar="تواصل معنا">Contact</a>
-
-      </div>
-
-    </div>
-
-
-    <div>
-
-      <h3 data-en="Contact Me" data-ar="تواصل معي">
-        Contact Me
-      </h3>
-
-      <div class="contact">
-        📞 +855 71 522 2672<br>
-        WhatsApp: +971 50 778 4185<br>
-        📍 Phnom Penh, Cambodia
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © 2026 Chef Kassem Taha. All rights reserved.
-  </div>
-
-</footer>
-
-
-<script>
-
-/* =========================
-   LANGUAGE SWITCH
-========================= */
-
-const languageButton =
-  document.getElementById("languageButton");
-
-let currentLanguage =
-  localStorage.getItem("chefLanguage") || "en";
-
-function setLanguage(language){
-
-  currentLanguage = language;
-
-  document.documentElement.lang = language;
-
-  document.documentElement.dir =
-    language === "ar" ? "rtl" : "ltr";
-
-  document.body.classList.toggle(
-    "rtl",
-    language === "ar"
-  );
-
-  document.querySelectorAll("[data-en]").forEach(el => {
-
-    const value =
-      el.getAttribute(
-        language === "ar" ? "data-ar" : "data-en"
-      );
-
-    if(value){
-      el.innerHTML = value;
-    }
-
-  });
-
-  languageButton.textContent =
-    language === "ar" ? "EN" : "AR";
-
-  localStorage.setItem(
-    "chefLanguage",
-    language
-  );
-}
-
-languageButton.addEventListener(
-  "click",
-  function(){
-    setLanguage(
-      currentLanguage === "en" ? "ar" : "en"
-    );
-  }
-);
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const menuButton =
-  document.getElementById("menuButton");
-
-const mobileNav =
-  document.getElementById("mobileNav");
-
-menuButton.addEventListener(
-  "click",
-  function(){
-
-    mobileNav.classList.toggle("open");
-
-    menuButton.textContent =
-      mobileNav.classList.contains("open")
-      ? "×"
-      : "☰";
-
-  }
-);
-
-
-/* CLOSE MOBILE MENU AFTER CLICK */
-
-document
-  .querySelectorAll(".mobile-links a")
-  .forEach(link => {
-
-    link.addEventListener(
-      "click",
-      function(){
-
-        mobileNav.classList.remove("open");
-
-        menuButton.textContent = "☰";
-
-      }
-    );
-
-  });
-
-
-/* INITIAL LANGUAGE */
-
-setLanguage(currentLanguage);
-
-</script>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
