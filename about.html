@@ -1,708 +1,2023 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About | Chef Kassem Taha</title>
+  <title>About Chef Kassem Taha | Global Culinary & Hospitality Expert</title>
 
-<meta
-name="description"
-content="About Chef Kassem Taha - Executive Chef, Hospitality Consultant and F&B Professional with more than 33 years of experience.">
+  <meta
+    name="description"
+    content="Discover the professional journey, philosophy, expertise and hospitality approach of Chef Kassem Taha, a Global Culinary & Hospitality Expert."
+  >
 
-<link rel="stylesheet" href="style.css">
+  <meta name="author" content="Chef Kassem Taha">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       CHEF KASSEM TAHA
+       ABOUT PAGE
+       ========================================================= */
+
+    :root {
+      --black: #0b0b0b;
+      --charcoal: #151515;
+      --dark-soft: #202020;
+
+      --white: #ffffff;
+      --ivory: #f5f1e8;
+      --light: #faf9f6;
+
+      --gold: #c9a45c;
+      --gold-light: #ddc38a;
+
+      --text-dark: #171717;
+      --text-light: #eeeeee;
+      --muted: #8e8e8e;
+
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --arabic: "Cairo", Arial, sans-serif;
+
+      --container: 1240px;
+      --transition: 0.35s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--white);
+      color: var(--text-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--container));
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 11, 11, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201, 164, 92, 0.15);
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      background: rgba(11, 11, 11, 0.97);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: var(--serif);
+      color: var(--white);
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .language-btn {
+      border: 1px solid rgba(201, 164, 92, 0.55);
+      background: transparent;
+      color: var(--gold-light);
+      padding: 8px 13px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(201, 164, 92, 0.4);
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 1.3rem;
+    }
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 28px;
+      border: 1px solid var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-light);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--black);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .about-hero {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 75% 45%, rgba(201, 164, 92, 0.10), transparent 28%),
+        var(--black);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      order: 1;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 6vw, 6.8rem);
+      line-height: 0.98;
+      font-weight: 600;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .hero-title span {
+      color: var(--gold-light);
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #d7d7d7;
+      max-width: 620px;
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-image-wrap {
+      order: 2;
+      position: relative;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      padding: 16px;
+      border: 1px solid rgba(201, 164, 92, 0.55);
+    }
+
+    .hero-image-frame::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(201, 164, 92, 0.18);
+      pointer-events: none;
+    }
+
+    .hero-image {
+      width: 100%;
+      min-height: 620px;
+      object-fit: cover;
+      object-position: center;
+      background: #222;
+    }
+
+    /* =========================================================
+       SECTION BASICS
+       ========================================================= */
+
+    section {
+      position: relative;
+    }
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(2.3rem, 4vw, 4.4rem);
+      line-height: 1.08;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .section-text {
+      color: #686868;
+      max-width: 720px;
+      font-size: 1.02rem;
+    }
+
+    /* =========================================================
+       STORY
+       ========================================================= */
+
+    .story {
+      background: var(--ivory);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 90px;
+    }
+
+    .story-heading {
+      position: sticky;
+      top: 130px;
+      height: fit-content;
+    }
+
+    .story-content {
+      border-left: 1px solid rgba(201, 164, 92, 0.55);
+      padding-left: 55px;
+    }
+
+    .story-item {
+      padding-bottom: 58px;
+      margin-bottom: 58px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .story-item:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .story-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .story-item h3 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .story-item p {
+      color: #646464;
+      max-width: 700px;
+    }
+
+    /* =========================================================
+       PROFESSIONAL IDENTITY
+       ========================================================= */
+
+    .identity {
+      background: var(--white);
+    }
+
+    .identity-header {
+      max-width: 780px;
+      margin-bottom: 65px;
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+    }
+
+    .identity-item {
+      min-height: 120px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      transition: var(--transition);
+    }
+
+    .identity-item:hover {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .identity-item span {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+    }
+
+    /* =========================================================
+       PHILOSOPHY
+       ========================================================= */
+
+    .philosophy {
+      background: var(--charcoal);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .philosophy::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(201, 164, 92, 0.15);
+      border-radius: 50%;
+      right: -220px;
+      top: -180px;
+    }
+
+    .philosophy-inner {
+      text-align: center;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .philosophy-quote {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.2vw, 4.5rem);
+      line-height: 1.12;
+      color: var(--white);
+      margin: 30px auto 60px;
+    }
+
+    .philosophy-quote span {
+      color: var(--gold-light);
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(201, 164, 92, 0.3);
+    }
+
+    .principle {
+      padding: 35px 25px;
+      border-right: 1px solid rgba(201, 164, 92, 0.2);
+    }
+
+    .principle:last-child {
+      border-right: 0;
+    }
+
+    .principle h3 {
+      color: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .principle p {
+      color: #bdbdbd;
+      font-size: 0.9rem;
+    }
+
+    /* =========================================================
+       METHOD
+       ========================================================= */
+
+    .method {
+      background: var(--light);
+    }
+
+    .method-header {
+      max-width: 800px;
+      margin-bottom: 65px;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: #d9d9d9;
+    }
+
+    .method-item {
+      background: var(--white);
+      padding: 45px 30px;
+      min-height: 270px;
+      transition: var(--transition);
+    }
+
+    .method-item:hover {
+      background: var(--charcoal);
+      color: var(--white);
+      transform: translateY(-6px);
+    }
+
+    .method-number {
+      font-family: var(--serif);
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+    }
+
+    .method-item h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .method-item p {
+      color: #727272;
+      font-size: 0.92rem;
+    }
+
+    .method-item:hover p {
+      color: #cfcfcf;
+    }
+
+    /* =========================================================
+       EXPERTISE
+       ========================================================= */
+
+    .expertise {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .expertise-header {
+      max-width: 750px;
+      margin-bottom: 70px;
+    }
+
+    .expertise-title {
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 1;
+    }
+
+    .expertise-list {
+      border-top: 1px solid rgba(201, 164, 92, 0.35);
+    }
+
+    .expertise-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      transition: var(--transition);
+    }
+
+    .expertise-row:hover {
+      padding-left: 18px;
+      padding-right: 18px;
+      background: rgba(201, 164, 92, 0.05);
+    }
+
+    .expertise-row h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 2vw, 2rem);
+      font-weight: 500;
+    }
+
+    .expertise-arrow {
+      color: var(--gold);
+      font-size: 1.3rem;
+    }
+
+    /* =========================================================
+       VALUES
+       ========================================================= */
+
+    .values {
+      background: var(--ivory);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 35px;
+      margin-top: 60px;
+    }
+
+    .value {
+      border-top: 1px solid var(--gold);
+      padding-top: 25px;
+    }
+
+    .value h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .value p {
+      color: #666;
+      font-size: 0.92rem;
+    }
+
+    /* =========================================================
+       TODAY
+       ========================================================= */
+
+    .today {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    .today-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 650px;
+      align-items: stretch;
+    }
+
+    .today-image {
+      min-height: 650px;
+      overflow: hidden;
+    }
+
+    .today-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .today-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+      background: var(--black);
+    }
+
+    .today-content .section-title {
+      color: var(--white);
+    }
+
+    .today-content p {
+      color: #bdbdbd;
+      max-width: 600px;
+      margin-bottom: 35px;
+    }
+
+    .today-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px 30px;
+      margin-bottom: 40px;
+    }
+
+    .today-list div {
+      border-bottom: 1px solid rgba(201, 164, 92, 0.25);
+      padding: 10px 0;
+      color: #ddd;
+    }
+
+    /* =========================================================
+       BRAND STATEMENT
+       ========================================================= */
+
+    .brand-statement {
+      background: var(--white);
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .brand-statement h2 {
+      font-family: var(--serif);
+      font-size: clamp(4rem, 10vw, 10rem);
+      line-height: 0.9;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 35px;
+    }
+
+    .brand-statement h2 span {
+      color: var(--gold);
+    }
+
+    .brand-statement p {
+      max-width: 650px;
+      margin: auto;
+      color: #666;
+      font-size: 1.05rem;
+    }
+
+    /* =========================================================
+       CTA
+       ========================================================= */
+
+    .final-cta {
+      background:
+        linear-gradient(rgba(11,11,11,0.93), rgba(11,11,11,0.93)),
+        radial-gradient(circle at center, rgba(201,164,92,0.18), transparent 55%);
+      color: var(--white);
+      text-align: center;
+      padding: 130px 20px;
+    }
+
+    .final-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .final-cta p {
+      color: #bdbdbd;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: #070707;
+      color: #aaa;
+      border-top: 1px solid rgba(201,164,92,0.2);
+      padding: 55px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand {
+      max-width: 430px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--serif);
+      color: var(--white);
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand h3 span {
+      color: var(--gold);
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+    }
+
+    .footer-contact {
+      text-align: right;
+    }
+
+    .footer-contact a {
+      display: block;
+      margin-bottom: 8px;
+      transition: var(--transition);
+    }
+
+    .footer-contact a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 25px;
+      font-size: 0.78rem;
+    }
+
+    /* =========================================================
+       SCROLL REVEAL
+       ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 1000px) {
+
+      .nav-links {
+        gap: 18px;
+      }
+
+      .hero-grid {
+        gap: 45px;
+      }
+
+      .hero-image {
+        min-height: 520px;
+      }
+
+      .story-grid {
+        gap: 50px;
+      }
+
+      .principles,
+      .method-grid,
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .principle:nth-child(2) {
+        border-right: 0;
+      }
+
+      .today-content {
+        padding: 55px;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      header {
+        background: rgba(11, 11, 11, 0.96);
+      }
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 5%;
+        background: #0b0b0b;
+        border-top: 1px solid rgba(201,164,92,0.15);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 0.85rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-grid,
+      .story-grid,
+      .today-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        order: 1;
+      }
+
+      .hero-image-wrap {
+        order: 2;
+      }
+
+      .about-hero {
+        padding-top: 125px;
+      }
+
+      .hero-image {
+        min-height: 480px;
+      }
+
+      .story-heading {
+        position: static;
+      }
+
+      .story-content {
+        border-left: 0;
+        border-top: 1px solid rgba(201,164,92,0.55);
+        padding-left: 0;
+        padding-top: 40px;
+      }
+
+      .identity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .principles,
+      .method-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .principle {
+        border-right: 0;
+        border-bottom: 1px solid rgba(201,164,92,0.2);
+      }
+
+      .principle:last-child {
+        border-bottom: 0;
+      }
+
+      .today-image {
+        min-height: 480px;
+      }
+
+      .today-content {
+        padding: 55px 25px;
+      }
+
+      .today-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .footer-contact {
+        text-align: left;
+      }
+
+      .section {
+        padding: 85px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .logo {
+        font-size: 1rem;
+      }
+
+      .nav-actions {
+        gap: 7px;
+      }
+
+      .language-btn {
+        padding: 7px 9px;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.98rem;
+      }
+
+      .hero-buttons,
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        min-height: 400px;
+      }
+
+      .brand-statement {
+        padding: 100px 20px;
+      }
+
+      .brand-statement h2 {
+        font-size: 4.2rem;
+      }
+    }
+
+  </style>
 </head>
-
 
 <body>
 
-<header>
+  <!-- =======================================================
+       HEADER
+       ======================================================= -->
 
-<div class="wrap nav">
+  <header id="siteHeader">
 
-<a class="brand" href="index.html">
-Chef Kassem Taha
-<small>CULINARY & HOSPITALITY</small>
-</a>
+    <div class="container nav">
 
+      <a href="index.html" class="logo">
+        CHEF <span>KASSEM TAHA</span>
+      </a>
 
-<nav class="links">
+      <ul class="nav-links" id="navLinks">
 
-<a href="index.html">
-<span data-lang="en">Home</span>
-<span data-lang="ar">الرئيسية</span>
-</a>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
 
-<a href="about.html">
-<span data-lang="en">About</span>
-<span data-lang="ar">من أنا</span>
-</a>
+        <li>
+          <a href="about.html" class="active">About</a>
+        </li>
 
-<a href="services.html">
-<span data-lang="en">Services</span>
-<span data-lang="ar">الخدمات</span>
-</a>
+        <li>
+          <a href="services.html">Services</a>
+        </li>
 
-<a href="academy.html">
-<span data-lang="en">Academy</span>
-<span data-lang="ar">الأكاديمية</span>
-</a>
+        <li>
+          <a href="academy.html">Academy</a>
+        </li>
 
-<a href="recipes.html">
-<span data-lang="en">Recipes</span>
-<span data-lang="ar">الوصفات</span>
-</a>
+        <li>
+          <a href="recipes.html">Recipes</a>
+        </li>
 
-<a href="videos.html">
-<span data-lang="en">Videos</span>
-<span data-lang="ar">الفيديوهات</span>
-</a>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
 
-<a href="blog.html">
-<span data-lang="en">Blog</span>
-<span data-lang="ar">المقالات</span>
-</a>
+        <li>
+          <a href="store.html">Store</a>
+        </li>
 
-<a href="projects.html">
-<span data-lang="en">Projects</span>
-<span data-lang="ar">المشاريع</span>
-</a>
+        <li>
+          <a href="blog.html">Blog</a>
+        </li>
 
-<a href="contact.html">
-<span data-lang="en">Contact</span>
-<span data-lang="ar">تواصل معي</span>
-</a>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
 
-<a href="store.html">
-<span data-lang="en">Store</span>
-<span data-lang="ar">المتجر</span>
-</a>
+      </ul>
 
-</nav>
+      <div class="nav-actions">
 
+        <button
+          class="language-btn"
+          id="languageBtn"
+          type="button"
+          aria-label="Change language"
+        >
+          AR
+        </button>
 
-<button class="lang" type="button">AR</button>
-<button class="menu" type="button">☰</button>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
 
-</div>
+      </div>
 
-</header>
+    </div>
 
+  </header>
 
 
-<main>
+  <main>
 
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-<!-- ABOUT HERO -->
+    <section class="about-hero">
 
-<section class="hero wrap">
+      <div class="container hero-grid">
 
-<div class="hero-copy">
+        <div class="hero-copy reveal">
 
-<div class="eyebrow">
-CHEF KASSEM TAHA
-</div>
+          <div class="eyebrow">
+            About Chef Kassem Taha
+          </div>
 
+          <h1 class="hero-title">
+            Experience Behind
+            <span>Every Decision.</span>
+          </h1>
 
-<h1>
+          <p class="hero-subtitle">
+            Global Culinary & Hospitality Expert combining culinary
+            expertise, hospitality operations, business development,
+            systems and team development.
+          </p>
 
-<span data-lang="en">
-Experience.<br>
-Leadership.<br>
-Hospitality.
-</span>
+          <div class="hero-buttons">
 
-<span data-lang="ar">
-خبرة.<br>
-قيادة.<br>
-ضيافة.
-</span>
+            <a href="contact.html" class="btn btn-gold">
+              Work With Chef Kassem
+            </a>
 
-</h1>
+            <a href="#story" class="btn btn-outline">
+              Discover The Journey
+            </a>
 
+          </div>
 
-<p class="lead">
+        </div>
 
-<span data-lang="en">
-Executive Chef, hospitality professional and consultant
-with more than 33 years of experience in culinary operations,
-restaurant and hotel management, central kitchens,
-food safety, training and business development.
-</span>
 
+        <div class="hero-image-wrap reveal">
 
-<span data-lang="ar">
-شيف تنفيذي ومتخصص في قطاع الضيافة والاستشارات،
-بخبرة مهنية تزيد عن 33 عاماً في عمليات الطهي،
-وإدارة وتشغيل المطاعم والفنادق، والمطابخ المركزية،
-وسلامة الغذاء، والتدريب وتطوير الأعمال.
-</span>
+          <div class="hero-image-frame">
 
-</p>
+            <!--
+              IMPORTANT:
+              Use the approved Chef Kassem photograph.
+              Do not replace or alter the image.
+            -->
 
+            <img
+              src="images/chef-kassem.jpg"
+              alt="Chef Kassem Taha"
+              class="hero-image"
+            >
 
-<div class="actions">
+          </div>
 
-<a class="btn" href="services.html">
+        </div>
 
-<span data-lang="en">
-Explore My Services
-</span>
+      </div>
 
-<span data-lang="ar">
-اكتشف خدماتي
-</span>
+    </section>
 
-</a>
 
+    <!-- =====================================================
+         STORY
+         ===================================================== -->
 
-<a class="btn outline" href="contact.html">
+    <section class="section story" id="story">
 
-<span data-lang="en">
-Contact Me
-</span>
+      <div class="container story-grid">
 
-<span data-lang="ar">
-تواصل معي
-</span>
+        <div class="story-heading reveal">
 
-</a>
+          <div class="section-label">
+            The Journey
+          </div>
 
-</div>
+          <h2 class="section-title">
+            A Journey Built Through Experience
+          </h2>
 
-</div>
+          <p class="section-text">
+            A professional journey shaped by kitchens, hospitality,
+            operations, leadership and continuous development.
+          </p>
 
+        </div>
 
 
-<div class="portrait">
+        <div class="story-content">
 
-<img
-src="Screenshot_٢٠٢٦١٠٠١_٢٣٠٦٠٨_Gallery.jpg"
-alt="Chef Kassem Taha"
-fetchpriority="high">
+          <article class="story-item reveal">
 
-</div>
+            <div class="story-number">01</div>
 
-</section>
+            <h3>Early Culinary Experience</h3>
 
+            <p>
+              The foundation began inside professional kitchens,
+              learning the discipline, precision, teamwork and
+              standards required to deliver consistent food and service.
+            </p>
 
+          </article>
 
-<!-- EXPERIENCE STRIP -->
 
-<section class="feature-strip">
+          <article class="story-item reveal">
 
-<div class="wrap features">
+            <div class="story-number">02</div>
 
+            <h3>Professional Growth</h3>
 
-<div class="feature">
+            <p>
+              Culinary experience developed into broader responsibility,
+              covering menu development, kitchen organization, food
+              production and the practical realities of hospitality.
+            </p>
 
-<b>33+ Years</b>
+          </article>
 
-<span>
 
-<span data-lang="en">
-Professional Experience
-</span>
+          <article class="story-item reveal">
 
-<span data-lang="ar">
-خبرة مهنية
-</span>
+            <div class="story-number">03</div>
 
-</span>
+            <h3>Hospitality & Operations</h3>
 
-</div>
+            <p>
+              The role expanded beyond the kitchen into restaurant,
+              hotel, catering and food-service operations, connecting
+              culinary quality with business performance.
+            </p>
 
+          </article>
 
 
-<div class="feature">
+          <article class="story-item reveal">
 
-<b>Executive Chef</b>
+            <div class="story-number">04</div>
 
-<span>
+            <h3>Leadership & Development</h3>
 
-<span data-lang="en">
-Culinary Leadership
-</span>
+            <p>
+              Leadership became centered on building teams, developing
+              systems, improving workflows and creating standards that
+              allow operations to perform consistently.
+            </p>
 
-<span data-lang="ar">
-قيادة الطهي
-</span>
+          </article>
 
-</span>
 
-</div>
+          <article class="story-item reveal">
 
+            <div class="story-number">05</div>
 
+            <h3>Consulting & Transformation</h3>
 
-<div class="feature">
+            <p>
+              Today, the focus extends across culinary development,
+              hospitality consulting, operations, restructuring,
+              training and the implementation of practical systems.
+            </p>
 
-<b>F&amp;B</b>
+          </article>
 
-<span>
+        </div>
 
-<span data-lang="en">
-Operations & Management
-</span>
+      </div>
 
-<span data-lang="ar">
-الإدارة والتشغيل
-</span>
+    </section>
 
-</span>
 
-</div>
+    <!-- =====================================================
+         PROFESSIONAL IDENTITY
+         ===================================================== -->
 
+    <section class="section identity">
 
+      <div class="container">
 
-<div class="feature">
+        <div class="identity-header reveal">
 
-<b>Consulting</b>
+          <div class="section-label">
+            Professional Identity
+          </div>
 
-<span>
+          <h2 class="section-title">
+            More Than a Chef.
+          </h2>
 
-<span data-lang="en">
-Hospitality Development
-</span>
+          <p class="section-text">
+            A multidisciplinary hospitality professional working across
+            culinary, operational, commercial and development functions.
+          </p>
 
-<span data-lang="ar">
-تطوير مشاريع الضيافة
-</span>
+        </div>
 
-</span>
 
-</div>
+        <div class="identity-grid">
 
+          <div class="identity-item reveal">
+            <span>Executive Chef</span>
+          </div>
 
+          <div class="identity-item reveal">
+            <span>F&amp;B Consultant</span>
+          </div>
 
-<div class="feature">
+          <div class="identity-item reveal">
+            <span>Restaurant Consultant</span>
+          </div>
 
-<b>Training</b>
+          <div class="identity-item reveal">
+            <span>Hotel F&amp;B Consultant</span>
+          </div>
 
-<span>
+          <div class="identity-item reveal">
+            <span>Restaurant &amp; Hotel Development Specialist</span>
+          </div>
 
-<span data-lang="en">
-Team Development
-</span>
+          <div class="identity-item reveal">
+            <span>Business Restructuring Consultant</span>
+          </div>
 
-<span data-lang="ar">
-تطوير فرق العمل
-</span>
+          <div class="identity-item reveal">
+            <span>F&amp;B Operations Specialist</span>
+          </div>
 
-</span>
+          <div class="identity-item reveal">
+            <span>Central Kitchen Specialist</span>
+          </div>
 
-</div>
+          <div class="identity-item reveal">
+            <span>Menu Development Specialist</span>
+          </div>
 
+          <div class="identity-item reveal">
+            <span>Recipe Developer</span>
+          </div>
 
-</div>
+          <div class="identity-item reveal">
+            <span>SOP Specialist</span>
+          </div>
 
-</section>
+          <div class="identity-item reveal">
+            <span>Food Safety Specialist</span>
+          </div>
 
+          <div class="identity-item reveal">
+            <span>Cost Control Specialist</span>
+          </div>
 
+          <div class="identity-item reveal">
+            <span>Purchasing &amp; Stores Specialist</span>
+          </div>
 
-<!-- PROFESSIONAL PROFILE -->
+          <div class="identity-item reveal">
+            <span>Culinary Trainer</span>
+          </div>
 
-<section class="section">
+          <div class="identity-item reveal">
+            <span>F&amp;B Team Development Specialist</span>
+          </div>
 
-<div class="wrap">
+        </div>
 
+      </div>
 
-<div class="section-head">
+    </section>
 
-<h2>
 
-<span data-lang="en">
-Professional Profile
-</span>
+    <!-- =====================================================
+         PHILOSOPHY
+         ===================================================== -->
 
-<span data-lang="ar">
-الملف المهني
-</span>
+    <section class="section philosophy">
 
-</h2>
+      <div class="container">
 
-</div>
+        <div class="philosophy-inner reveal">
 
+          <div class="section-label">
+            The Philosophy
+          </div>
 
+          <div class="philosophy-quote">
 
-<div class="grid">
+            “Great hospitality is not built by one person.
+            It is built by a <span>system</span> that allows
+            every person to perform.”
 
+          </div>
 
-<article class="card">
 
-<h3>
+          <div class="principles">
 
-<span data-lang="en">
-Culinary Leadership
-</span>
+            <div class="principle">
+              <h3>People</h3>
+              <p>
+                Develop capable people and strong teams.
+              </p>
+            </div>
 
-<span data-lang="ar">
-القيادة في فنون الطهي
-</span>
+            <div class="principle">
+              <h3>Systems</h3>
+              <p>
+                Build systems that support consistent performance.
+              </p>
+            </div>
 
-</h3>
+            <div class="principle">
+              <h3>Standards</h3>
+              <p>
+                Define clear standards for every operation.
+              </p>
+            </div>
 
+            <div class="principle">
+              <h3>Execution</h3>
+              <p>
+                Turn plans into practical results.
+              </p>
+            </div>
 
-<p>
+          </div>
 
-<span data-lang="en">
-Extensive professional experience in kitchen operations,
-menu development, recipe standardization,
-production systems and culinary team management.
-</span>
+        </div>
 
-<span data-lang="ar">
-خبرة مهنية واسعة في تشغيل المطابخ،
-وتطوير قوائم الطعام، وتوحيد الوصفات،
-وأنظمة الإنتاج وإدارة فرق الطهي.
-</span>
+      </div>
 
-</p>
+    </section>
 
-</article>
 
+    <!-- =====================================================
+         METHOD
+         ===================================================== -->
 
+    <section class="section method">
 
-<article class="card">
+      <div class="container">
 
-<h3>
+        <div class="method-header reveal">
 
-<span data-lang="en">
-Restaurant & Hotel Operations
-</span>
+          <div class="section-label">
+            The Method
+          </div>
 
-<span data-lang="ar">
-تشغيل المطاعم والفنادق
-</span>
+          <h2 class="section-title">
+            From Culinary Creativity
+            to Business Performance
+          </h2>
 
-</h3>
+          <p class="section-text">
+            Every project begins with understanding the real situation,
+            then moves through structured development and practical
+            implementation.
+          </p>
 
+        </div>
 
-<p>
 
-<span data-lang="en">
-Experience in establishing, operating and developing
-restaurants and hospitality businesses,
-from concept through daily operations.
-</span>
+        <div class="method-grid">
 
-<span data-lang="ar">
-خبرة في تأسيس وتشغيل وتطوير المطاعم
-ومشاريع الضيافة، من مرحلة الفكرة
-وحتى الإدارة والتشغيل اليومي.
-</span>
+          <article class="method-item reveal">
 
-</p>
+            <div class="method-number">01</div>
 
-</article>
+            <h3>Understand</h3>
 
+            <p>
+              Understand the concept, operation, people, challenges,
+              market and business objectives.
+            </p>
 
+          </article>
 
-<article class="card">
 
-<h3>
+          <article class="method-item reveal">
 
-<span data-lang="en">
-Central Kitchens
-</span>
+            <div class="method-number">02</div>
 
-<span data-lang="ar">
-المطابخ المركزية
-</span>
+            <h3>Design</h3>
 
-</h3>
+            <p>
+              Design the right concept, products, menus, systems,
+              workflows and operational structure.
+            </p>
 
+          </article>
 
-<p>
 
-<span data-lang="en">
-Planning and development of central kitchen systems,
-production flow, operational procedures,
-food safety and logistics.
-</span>
+          <article class="method-item reveal">
 
-<span data-lang="ar">
-تخطيط وتطوير أنظمة المطابخ المركزية،
-وتدفق الإنتاج، وإجراءات التشغيل،
-وسلامة الغذاء والخدمات اللوجستية.
-</span>
+            <div class="method-number">03</div>
 
-</p>
+            <h3>Implement</h3>
 
-</article>
+            <p>
+              Transform strategy into practical systems, procedures,
+              training and daily operational execution.
+            </p>
 
+          </article>
 
 
-<article class="card">
+          <article class="method-item reveal">
 
-<h3>
+            <div class="method-number">04</div>
 
-<span data-lang="en">
-SOP & HACCP
-</span>
+            <h3>Improve</h3>
 
-<span data-lang="ar">
-أنظمة SOP وHACCP
-</span>
+            <p>
+              Measure performance, identify weaknesses and continuously
+              improve the operation.
+            </p>
 
-</h3>
+          </article>
 
+        </div>
 
-<p>
+      </div>
 
-<span data-lang="en">
-Development of standard operating procedures,
-food safety systems and practical operational controls.
-</span>
+    </section>
 
-<span data-lang="ar">
-تطوير إجراءات التشغيل القياسية،
-وأنظمة سلامة الغذاء،
-وآليات الرقابة العملية على التشغيل.
-</span>
 
-</p>
+    <!-- =====================================================
+         EXPERTISE
+         ===================================================== -->
 
-</article>
+    <section class="section expertise">
 
+      <div class="container">
 
+        <div class="expertise-header reveal">
 
-<article class="card">
+          <div class="section-label">
+            Areas of Expertise
+          </div>
 
-<h3>
+          <h2 class="expertise-title">
+            Where Culinary
+            Meets Business.
+          </h2>
 
-<span data-lang="en">
-Cost & Supply Management
-</span>
+        </div>
 
-<span data-lang="ar">
-إدارة التكاليف وسلسلة التوريد
-</span>
 
-</h3>
+        <div class="expertise-list">
 
+          <div class="expertise-row reveal">
+            <h3>Culinary Development</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<p>
+          <div class="expertise-row reveal">
+            <h3>Restaurant Operations</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<span data-lang="en">
-Cost control, purchasing, inventory,
-stores, supply chain management
-and operational logistics.
-</span>
+          <div class="expertise-row reveal">
+            <h3>Hotel F&amp;B</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<span data-lang="ar">
-ضبط التكاليف والمشتريات والمخزون
-والمستودعات وإدارة سلسلة التوريد
-والخدمات اللوجستية التشغيلية.
-</span>
+          <div class="expertise-row reveal">
+            <h3>Central Kitchens</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-</p>
+          <div class="expertise-row reveal">
+            <h3>Menu Development</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-</article>
+          <div class="expertise-row reveal">
+            <h3>Food Safety</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
+          <div class="expertise-row reveal">
+            <h3>Cost Control</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
+          <div class="expertise-row reveal">
+            <h3>Purchasing &amp; Stores</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<article class="card">
+          <div class="expertise-row reveal">
+            <h3>SOP Systems</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<h3>
+          <div class="expertise-row reveal">
+            <h3>Team Development</h3>
+            <span class="expertise-arrow">→</span>
+          </div>
 
-<span data-lang="en">
-Training & Development
-</span>
+        </div>
 
-<span data-lang="ar">
-التدريب والتطوير
-</span>
+      </div>
 
-</h3>
+    </section>
 
 
-<p>
+    <!-- =====================================================
+         VALUES
+         ===================================================== -->
 
-<span data-lang="en">
-Building professional teams through structured training,
-clear responsibilities, operational standards
-and continuous development.
-</span>
+    <section class="section values">
 
-<span data-lang="ar">
-بناء فرق عمل مهنية من خلال التدريب المنظم،
-وتحديد المسؤوليات، ووضع معايير التشغيل،
-والتطوير المستمر.
-</span>
+      <div class="container">
 
-</p>
+        <div class="reveal">
 
-</article>
+          <div class="section-label">
+            Professional Values
+          </div>
 
+          <h2 class="section-title">
+            The Standards Behind
+            the Work.
+          </h2>
 
+        </div>
 
-<article class="card">
 
-<h3>
+        <div class="values-grid">
 
-<span data-lang="en">
-Arabic, Eastern & International Cuisine
-</span>
+          <article class="value reveal">
 
-<span data-lang="ar">
-المطابخ العربية والشرقية والعالمية
-</span>
+            <h3>Quality</h3>
 
-</h3>
+            <p>
+              Protecting product quality and the guest experience
+              through clear standards.
+            </p>
 
+          </article>
 
-<p>
 
-<span data-lang="en">
-Professional culinary experience across Arabic,
-Eastern and international cuisines,
-combining tradition with modern operational standards.
-</span>
+          <article class="value reveal">
 
-<span data-lang="ar">
-خبرة مهنية في المطابخ العربية
-والشرقية والعالمية، مع الجمع بين
-أصالة المطبخ ومعايير التشغيل الحديثة.
-</span>
+            <h3>Consistency</h3>
 
-</p>
+            <p>
+              Creating systems that make quality repeatable rather
+              than dependent on individuals.
+            </p>
 
-</article>
+          </article>
 
 
+          <article class="value reveal">
 
-<article class="card">
+            <h3>Efficiency</h3>
 
-<h3>
+            <p>
+              Improving the use of people, products, time and
+              resources throughout the operation.
+            </p>
 
-<span data-lang="en">
-Business Development
-</span>
+          </article>
 
-<span data-lang="ar">
-تطوير الأعمال
-</span>
 
-</h3>
+          <article class="value reveal">
 
+            <h3>Development</h3>
 
-<p>
+            <p>
+              Building people, systems and operations through
+              continuous improvement.
+            </p>
 
-<span data-lang="en">
-Supporting hospitality projects through operational
-assessment, restructuring, system development
-and practical improvement plans.
-</span>
+          </article>
 
-<span data-lang="ar">
-دعم مشاريع الضيافة من خلال تقييم التشغيل،
-وإعادة الهيكلة، وتطوير الأنظمة،
-ووضع خطط عملية للتحسين والتطوير.
-</span>
+        </div>
 
-</p>
+      </div>
 
-</article>
+    </section>
 
 
-</div>
+    <!-- =====================================================
+         TODAY
+         ===================================================== -->
 
-</div>
+    <section class="today">
 
-</section>
+      <div class="container today-grid">
 
+        <div class="today-image reveal">
 
+          <img
+            src="images/chef-kassem.jpg"
+            alt="Chef Kassem Taha in a professional kitchen"
+          >
 
-<!-- PROFESSIONAL PHILOSOPHY -->
+        </div>
 
-<section class="section">
 
-<div class="wrap">
+        <div class="today-content reveal">
 
-<div class="section-head">
+          <div class="section-label">
+            Chef Kassem Today
+          </div>
 
-<h2>
+          <h2 class="section-title">
+            Building Better
+            Hospitality.
+          </h2>
 
-<span data-lang="en">
-My Professional Philosophy
-</span>
+          <p>
+            The focus today is on helping hospitality businesses,
+            restaurants, hotels and food operations develop stronger
+            concepts, systems, teams and operational performance.
+          </p>
 
-<span data-lang="ar">
-فلسفتي المهنية
-</span>
 
-</h2>
+          <div class="today-list">
 
-</div>
+            <div>Hospitality Consulting</div>
 
+            <div>Restaurant Development</div>
 
-<article class="card">
+            <div>F&amp;B Operations</div>
 
-<h3>
+            <div>Culinary Training</div>
 
-<span data-lang="en">
-From Concept to Operation and Development
-</span>
+            <div>Food Safety</div>
 
-<span data-lang="ar">
-من الفكرة إلى التشغيل والتطوير
-</span>
+            <div>Business Restructuring</div>
 
-</h3>
+          </div>
 
 
-<p>
+          <div>
 
-<span data-lang="en">
-Successful hospitality businesses require more than good food.
-They require a complete operating system:
-the right concept, the right menu, trained people,
-food safety, purchasing controls, cost management,
-clear procedures and continuous development.
-My work focuses on connecting these elements
-into one practical and sustainable operation.
-</span>
+            <a href="services.html" class="btn btn-gold">
+              Explore Services
+            </a>
 
+          </div>
 
-<span data-lang="ar">
-نجاح مشاريع الضيافة لا يعتمد على الطعام الجيد فقط،
-بل يحتاج إلى نظام تشغيل متكامل يبدأ بالفكرة الصحيحة،
-وقائمة الطعام المناسبة، وفريق العمل المدرّب،
-وسلامة الغذاء، وضبط المشتريات والتكاليف،
-وإجراءات التشغيل الواضحة، والتطوير المستمر.
-ويرتكز عملي على ربط هذه العناصر ضمن نظام عملي
-متكامل وقابل للاستمرار والتطوير.
-</span>
+        </div>
 
-</p>
+      </div>
 
-</article>
+    </section>
 
-</div>
 
-</section>
+    <!-- =====================================================
+         BRAND STATEMENT
+         ===================================================== -->
 
+    <section class="brand-statement">
 
-</main>
+      <div class="container reveal">
 
+        <h2>
+          Build <span>Better</span>
+          Hospitality.
+        </h2>
 
+        <p>
+          Creating stronger concepts, stronger teams and stronger
+          hospitality operations through experience, systems,
+          creativity and execution.
+        </p>
 
-<footer>
+      </div>
 
-<span data-lang="en">
-© 2026 Chef Kassem Taha · Culinary & Hospitality
-</span>
+    </section>
 
-<span data-lang="ar">
-© 2026 Chef Kassem Taha · الطهي والضيافة
-</span>
 
-</footer>
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
 
+    <section class="final-cta">
 
-<script src="script.js"></script>
+      <div class="container reveal">
+
+        <div class="section-label">
+          Let's Talk
+        </div>
+
+        <h2>
+          Have a Hospitality Project?
+        </h2>
+
+        <p>
+          Let's discuss the idea, the challenge and the opportunity.
+        </p>
+
+
+        <div class="cta-buttons">
+
+          <a href="contact.html" class="btn btn-gold">
+            Start a Conversation
+          </a>
+
+          <a href="services.html" class="btn btn-outline">
+            Explore Services
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h3>
+            CHEF <span>KASSEM TAHA</span>
+          </h3>
+
+          <p>
+            Global Culinary &amp; Hospitality Expert.
+          </p>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <a href="tel:+855715222672">
+            +855 71 522 2672
+          </a>
+
+          <a href="https://wa.me/971507784185" target="_blank" rel="noopener">
+            WhatsApp: +971 50 778 4185
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © <span id="year"></span> Chef Kassem Taha.
+          All Rights Reserved.
+        </div>
+
+        <div>
+          Global Culinary &amp; Hospitality Expert
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    /* Header */
+
+    const header = document.getElementById("siteHeader");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+
+      navLinks.classList.toggle("open");
+
+      if (navLinks.classList.contains("open")) {
+        menuToggle.textContent = "×";
+      } else {
+        menuToggle.textContent = "☰";
+      }
+
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* Reveal animation */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            revealObserver.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* Language button */
+
+    const languageBtn = document.getElementById("languageBtn");
+
+    languageBtn.addEventListener("click", () => {
+
+      const currentLanguage =
+        document.documentElement.getAttribute("lang");
+
+      if (currentLanguage === "en") {
+
+        document.documentElement.setAttribute("lang", "ar");
+        languageBtn.textContent = "EN";
+
+      } else {
+
+        document.documentElement.setAttribute("lang", "en");
+        languageBtn.textContent = "AR";
+
+      }
+
+    });
+
+
+    /* Current year */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
-
-  </html>
+</html>
