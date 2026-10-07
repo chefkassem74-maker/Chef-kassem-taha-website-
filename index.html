@@ -3,681 +3,1642 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070707">
 
-<title>Chef Kassem Taha | Executive Chef & Consultant</title>
+<title>Chef Kassem Taha | Global Culinary & Hospitality Expert</title>
+
+<meta name="description"
+content="Chef Kassem Taha — Global Culinary & Hospitality Expert. Executive Chef, F&B Consultant, Restaurant Consultant, Hotel F&B Consultant and Hospitality Operations Specialist.">
+
+<meta name="keywords"
+content="Chef Kassem Taha, F&B Consultant, Restaurant Consultant, Hotel F&B Consultant, Restaurant Setup, Central Kitchen, Menu Engineering, SOP, HACCP, Hospitality Consultant">
+
+<meta property="og:title" content="Chef Kassem Taha | Global Culinary & Hospitality Expert">
+<meta property="og:description" content="From World Cuisines to Your Table">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --black:#070707;
-  --black2:#111111;
-  --gold:#c99025;
-  --gold2:#efbd59;
-  --cream:#faf7f0;
-  --white:#ffffff;
-  --text:#181818;
-  --muted:#666;
+
+/* =========================================================
+   CHEF KASSEM TAHA
+   HOME PAGE
+   MASTER BLACK / GOLD DESIGN
+========================================================= */
+
+:root {
+    --black: #050505;
+    --black-soft: #0d0d0d;
+    --black-light: #151515;
+
+    --gold: #c99632;
+    --gold-light: #e2b85b;
+    --gold-dark: #8e671e;
+
+    --ivory: #f5f1e8;
+    --white: #ffffff;
+
+    --text-dark: #181818;
+    --text-light: #e8e3d8;
+
+    --border: rgba(201,150,50,.65);
+
+    --container: 1180px;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  background:#fff;
-  color:var(--text);
-  font-family:Arial,Tahoma,sans-serif;
-  overflow-x:hidden;
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "Inter", Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-body.rtl{
-  direction:rtl;
+body[dir="rtl"] {
+    font-family: "Noto Kufi Arabic", Arial, sans-serif;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+img {
+    max-width: 100%;
+    display: block;
 }
 
-button{
-  font:inherit;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-img{
-  display:block;
-  max-width:100%;
+button {
+    font-family: inherit;
 }
 
-.container{
-  width:min(1180px,94%);
-  margin:auto;
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.container {
+    width: min(92%, var(--container));
+    margin: auto;
 }
 
-/* =========================
+.gold {
+    color: var(--gold-light);
+}
+
+.section-title {
+    color: var(--gold);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.section-subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.gold-line {
+    width: 70px;
+    height: 1px;
+    background: var(--gold);
+    margin: 15px 0 25px;
+}
+
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
-.site-header{
-  background:#070707;
-  border-bottom:2px solid var(--gold);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5,5,5,.96);
+    border-bottom: 1px solid var(--gold-dark);
+    backdrop-filter: blur(10px);
 }
 
-.navbar{
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  gap:18px;
+.navbar {
+    width: min(94%, 1250px);
+    min-height: 72px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  flex-shrink:0;
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    white-space: nowrap;
 }
 
-.logo{
-  width:52px;
-  height:52px;
-  border:2px solid var(--gold2);
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:var(--gold2);
-  font:700 24px Georgia,serif;
+.logo-main {
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
 }
 
-.brand-copy{
-  line-height:1.15;
+.logo-sub {
+    color: #d7d7d7;
+    font-size: 7px;
+    letter-spacing: 1.8px;
+    margin-top: 5px;
 }
 
-.brand-name{
-  color:var(--gold2);
-  font:700 20px Georgia,serif;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    list-style: none;
 }
 
-.brand-subtitle{
-  color:#ddd;
-  font-size:9px;
-  margin-top:4px;
+.nav-links a {
+    color: #ddd;
+    font-size: 12px;
+    transition: .3s ease;
 }
 
-.desktop-nav{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  gap:15px;
-  font-size:11px;
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold-light);
 }
 
-body.rtl .desktop-nav{
-  margin-left:0;
-  margin-right:auto;
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.desktop-nav a{
-  color:#fff;
-  padding:9px 0;
+.language {
+    background: transparent;
+    border: 1px solid var(--gold-dark);
+    color: var(--gold-light);
+    border-radius: 30px;
+    padding: 7px 11px;
+    cursor: pointer;
+    font-size: 11px;
 }
 
-.desktop-nav a:hover,
-.desktop-nav a.active{
-  color:var(--gold2);
+.menu-btn {
+    display: none;
+    background: transparent;
+    color: var(--gold-light);
+    border: 1px solid var(--gold-dark);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
-.desktop-nav a.active{
-  border-bottom:2px solid var(--gold2);
-}
-
-.header-actions{
-  display:flex;
-  align-items:center;
-  gap:7px;
-}
-
-.lang-btn,
-.menu-btn{
-  border:1px solid var(--gold);
-  background:#111;
-  color:var(--gold2);
-  border-radius:7px;
-  cursor:pointer;
-}
-
-.lang-btn{
-  padding:8px 11px;
-  font-size:11px;
-  font-weight:700;
-}
-
-.menu-btn{
-  width:42px;
-  height:42px;
-  display:none;
-  font-size:23px;
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu{
-  display:none;
-  background:#0a0a0a;
-  border-top:1px solid #2c2c2c;
-  border-bottom:2px solid var(--gold);
-}
-
-.mobile-menu.open{
-  display:block;
-}
-
-.mobile-menu-inner{
-  width:94%;
-  margin:auto;
-  padding:10px 0 15px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5px;
-}
-
-.mobile-menu a{
-  color:#fff;
-  border-bottom:1px solid #252525;
-  padding:11px 8px;
-  font-size:13px;
-}
-
-.mobile-menu a.active{
-  color:var(--gold2);
-}
-
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
-.hero{
-  background:
-    linear-gradient(
-      90deg,
-      #ffffff 0%,
-      #ffffff 44%,
-      #f7f0e2 66%,
-      #e6c98d 100%
-    );
-  overflow:hidden;
+.hero {
+    position: relative;
+    min-height: 590px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.94) 0%,
+            rgba(0,0,0,.82) 35%,
+            rgba(0,0,0,.30) 70%,
+            rgba(0,0,0,.88) 100%
+        ),
+        url("images/hero-kitchen.jpg") center/cover no-repeat;
+
+    border-bottom: 1px solid var(--gold);
 }
 
-.hero-grid{
-  min-height:500px;
-  display:grid;
-  grid-template-columns:55% 45%;
-  align-items:center;
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 1px solid var(--gold);
+    opacity: .55;
 }
 
-.hero-copy{
-  padding:35px 12px 30px 0;
-  position:relative;
-  z-index:2;
+.hero::before {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
 }
 
-body.rtl .hero-copy{
-  padding:35px 0 30px 12px;
+.hero::after {
+    right: 0;
+    bottom: 0;
+    border-left: 0;
+    border-top: 0;
 }
 
-.eyebrow{
-  color:#9b680e;
-  font-size:10px;
-  letter-spacing:2.4px;
-  text-transform:uppercase;
-  margin-bottom:11px;
+.hero-inner {
+    width: min(92%, var(--container));
+    min-height: 590px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-.hero h1{
-  font:700 54px/1.02 Georgia,serif;
-  color:#111;
-  margin-bottom:10px;
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 60px 0;
 }
 
-.hero-ar{
-  color:#a56d10;
-  direction:rtl;
-  font-size:29px;
-  font-weight:700;
-  margin-bottom:14px;
-  text-align:left;
+.hero-kicker {
+    color: var(--gold-light);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
-body.rtl .hero-ar{
-  text-align:right;
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--gold-light);
+    font-size: clamp(52px, 6vw, 78px);
+    line-height: .9;
+    margin-bottom: 14px;
 }
 
-.intro{
-  max-width:610px;
-  font:16px/1.5 Georgia,serif;
+.hero-arabic {
+    font-family: "Noto Kufi Arabic", sans-serif;
+    color: white;
+    font-size: clamp(22px, 3vw, 34px);
+    margin-bottom: 12px;
 }
 
-/* HERO FEATURES */
-
-.hero-features{
-  margin-top:23px;
-  max-width:670px;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
+.hero-position {
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: #eee;
+    font-weight: 500;
 }
 
-.feature{
-  text-align:center;
-  padding:5px 7px;
-  border-right:1px solid #ddd;
+.hero-slogan {
+    margin-top: 28px;
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-body.rtl .feature{
-  border-right:0;
-  border-left:1px solid #ddd;
+.hero-slogan-ar {
+    color: #eee;
+    font-size: 16px;
+    margin-top: 6px;
 }
 
-.feature:last-child{
-  border-right:0;
-  border-left:0;
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 28px;
+    padding: 12px 22px;
+
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    color: var(--gold-light);
+    background: rgba(0,0,0,.35);
+
+    font-size: 12px;
+    transition: .3s ease;
 }
 
-.feature-icon{
-  color:var(--gold);
-  font-size:25px;
-  margin-bottom:4px;
+.hero-button:hover {
+    background: var(--gold);
+    color: #000;
 }
 
-.feature strong{
-  display:block;
-  font:700 13px Georgia,serif;
+.experience {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+
+    color: var(--gold-light);
+    text-align: center;
 }
 
-.feature small{
-  display:block;
-  font-size:9px;
-  margin-top:3px;
+.experience-number {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: .8;
 }
 
-/* BUTTONS */
-
-.hero-buttons{
-  display:flex;
-  gap:10px;
-  margin-top:20px;
-}
-
-.btn{
-  min-height:43px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:11px 18px;
-  border-radius:6px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.btn-gold{
-  color:#111;
-  background:linear-gradient(90deg,#d59422,#ffd16a);
-}
-
-.btn-dark{
-  background:#080808;
-  color:#fff;
-  border:1px solid var(--gold);
+.experience-text {
+    display: block;
+    width: 150px;
+    margin-top: 12px;
+    color: #eee;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 /* CHEF PHOTO */
 
-.hero-photo{
-  height:500px;
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+.hero-chef {
+    position: relative;
+    align-self: end;
+    height: 100%;
+    min-height: 590px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.hero-photo::before{
-  content:"";
-  position:absolute;
-  inset:35px 0 0;
-  background:
-    radial-gradient(
-      circle at 50% 40%,
-      rgba(218,160,53,.27),
-      transparent 60%
-    );
+.hero-chef img {
+    position: relative;
+    z-index: 2;
+
+    height: 570px;
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: bottom center;
+
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,.65));
 }
 
-.hero-photo img{
-  position:relative;
-  z-index:1;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center bottom;
+/* =========================================================
+   EXPERTISE
+========================================================= */
+
+.expertise {
+    background: var(--ivory);
+    color: var(--text-dark);
+    padding: 55px 0;
+    border-bottom: 1px solid var(--gold);
 }
 
-/* =========================
-   CUISINES
-========================= */
-
-.cuisines{
-  padding:15px 0 22px;
-  background:#fff;
+.expertise-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.food-grid{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:10px;
+.expertise-header .section-title {
+    font-size: 38px;
 }
 
-.food-card{
-  background:#fff;
-  border:1px solid #e1ddd3;
-  border-radius:6px;
-  overflow:hidden;
-  text-align:center;
-  box-shadow:0 3px 12px rgba(0,0,0,.05);
+.expertise-header .gold-line {
+    margin: 15px auto;
 }
 
-.food-photo{
-  height:110px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:43px;
-  background:
-    linear-gradient(
-      135deg,
-      #311903,
-      #c78827
-    );
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
 }
 
-.food-card h3{
-  font:700 13px Georgia,serif;
-  padding:8px 5px 3px;
+.expertise-card {
+    min-height: 130px;
+    padding: 18px 8px;
+
+    border: 1px solid rgba(201,150,50,.4);
+    background: rgba(255,255,255,.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: .3s ease;
 }
 
-.food-ar{
-  direction:rtl;
-  color:#a66d10;
-  font-size:12px;
-  font-weight:700;
+.expertise-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
 
-.food-card p{
-  font:10px/1.4 Georgia,serif;
-  padding:5px 7px 11px;
+.expertise-icon {
+    color: var(--gold);
+    font-size: 30px;
+    margin-bottom: 13px;
 }
 
-/* =========================
-   STORY
-========================= */
-
-.story{
-  background:#070707;
-  color:#fff;
-  border-top:2px solid var(--gold);
-  border-bottom:2px solid var(--gold);
+.expertise-card h3 {
+    font-size: 11px;
+    line-height: 1.4;
 }
 
-.story-grid{
-  min-height:190px;
-  display:grid;
-  grid-template-columns:1fr .75fr 1fr;
-  align-items:center;
-  gap:18px;
+/* =========================================================
+   SYSTEM SECTION
+========================================================= */
+
+.system-section {
+    background: var(--black-soft);
+    border-bottom: 1px solid var(--gold);
+    padding: 70px 0;
 }
 
-.story-left h2{
-  color:var(--gold2);
-  font:700 26px/1.15 Georgia,serif;
+.system-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.3fr .8fr;
+    min-height: 360px;
 }
 
-.story-ar{
-  direction:rtl;
-  color:var(--gold2);
-  font-size:19px;
-  font-weight:700;
-  margin:7px 0 16px;
-  text-align:left;
-}
-
-body.rtl .story-ar{
-  text-align:right;
-}
-
-.story-photo{
-  height:190px;
-  overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-}
-
-.story-photo img{
-  height:190px;
-  object-fit:contain;
-}
-
-.story-quote{
-  font:14px/1.5 Georgia,serif;
-}
-
-.signature{
-  margin-top:9px;
-  color:var(--gold2);
-  font:italic 22px Georgia,serif;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.statistics{
-  background:#fff;
-  padding:21px 0;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.stat{
-  text-align:center;
-  padding:4px 13px;
-  border-right:1px solid #ddd;
-}
-
-body.rtl .stat{
-  border-right:0;
-  border-left:1px solid #ddd;
-}
-
-.stat:last-child{
-  border:0;
-}
-
-.stat-icon{
-  color:var(--gold);
-  font-size:28px;
-}
-
-.stat strong{
-  display:block;
-  margin:3px 0;
-  font:700 23px Georgia,serif;
-}
-
-.stat-label{
-  font-size:11px;
-}
-
-.stat-ar{
-  direction:rtl;
-  color:#765319;
-  margin-top:3px;
-  font-size:10px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#050505;
-  color:#fff;
-  border-top:3px solid var(--gold);
-  padding:23px 0 12px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.2fr .9fr 1.2fr;
-  gap:28px;
-}
-
-.footer-brand{
-  color:var(--gold2);
-  font:700 20px Georgia,serif;
-}
-
-.footer-text{
-  margin-top:8px;
-  font-size:11px;
-  line-height:1.6;
-}
-
-footer h3{
-  color:var(--gold2);
-  font-size:13px;
-  margin-bottom:8px;
-}
-
-.quick-links{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5px;
-  font-size:10px;
-}
-
-.contact-line{
-  font-size:10px;
-  margin-bottom:7px;
-}
-
-.copyright{
-  margin-top:17px;
-  padding-top:10px;
-  border-top:1px solid #333;
-  color:#aaa;
-  font-size:9px;
-}
-
-/* ============================================
-   MOBILE
-============================================ */
-
-@media(max-width:800px){
-
-  .container{
-    width:94%;
-  }
-
-  /* HEADER */
-
-  .navbar{
-    min-height:61px;
-  }
-
-  .logo{
-    width:41px;
-    height:41px;
-    font-size:19px;
-  }
-
-  .brand-name{
-    font-size:15px;
-  }
-
-  .brand-subtitle{
-    display:none;
-  }
-
-  .desktop-nav{
-    display:none;
-  }
-
-  .lang-btn{
-    padding:7px 9px;
-    font-size:10px;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  /* HERO */
-
-  .hero{
+.system-image {
+    min-height: 360px;
     background:
-      linear-gradient(
-        90deg,
-        #fff 0%,
-        #fff 47%,
-        #f5ead4 100%
-      );
-  }
+        linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.35)),
+        url("images/dish-1.jpg") center/cover no-repeat;
+}
 
-  .hero-grid{
-    min-height:0;
-    display:grid;
-    grid-template-columns:56% 44%;
-    align-items:stretch;
-  }
+.system-content {
+    padding: 45px 50px;
+    border-left: 1px solid var(--gold-dark);
+    border-right: 1px solid var(--gold-dark);
+}
 
-  .hero-copy{
-    padding:23px 0 14px;
-  }
+.system-content h2 {
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 31px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
 
-  body.rtl .hero-copy{
-    padding:23px 0 14px;
-  }
+.system-content p {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.9;
+}
 
-  .eyebrow{
-    font-size:6px;
-    letter-spacing:1px;
-    margin-bottom:6px;
-  }
+.system-list {
+    padding: 40px 30px;
+}
 
-  .hero h1{
-    font-size:27px;
-    line-height:1.03;
-    margin-bottom:6px;
-  }
+.system-list ul {
+    list-style: none;
+}
 
-  .hero-ar{
-    font-size:16px;
-    line-height:1.2;
-    margin-bottom:7px;
-  }
+.system-list li {
+    color: #eee;
+    font-size: 13px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(201,150,50,.2);
+}
 
-  .
+.system-list li::before {
+    content: "◆";
+    color: var(--gold);
+    margin-right: 12px;
+    font-size: 8px;
+}
+
+.small-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+    padding: 10px 18px;
+
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    color: var(--gold-light);
+    font-size: 11px;
+}
+
+/* =========================================================
+   RECIPES
+========================================================= */
+
+.recipes {
+    background: var(--ivory);
+    color: var(--text-dark);
+    padding: 60px 0;
+}
+
+.recipes-layout {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+}
+
+.recipes-main {
+    padding-right: 30px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.recipe-card {
+    background: #fff;
+    border: 1px solid #ded8cc;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 12px;
+}
+
+.recipe-info h3 {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.recipe-info p {
+    color: #777;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 25px;
+
+    border: 1px solid var(--gold);
+    border-radius: 25px;
+    padding: 10px 18px;
+
+    color: #222;
+    font-size: 11px;
+}
+
+.heritage-box {
+    min-height: 370px;
+    padding: 40px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.9)
+        ),
+        url("images/heritage.jpg") center/cover no-repeat;
+
+    border-left: 1px solid var(--gold);
+}
+
+.heritage-box p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.signature {
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/* =========================================================
+   CONSULTATION
+========================================================= */
+
+.consultation {
+    background: var(--black);
+    padding: 45px 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+
+.consultation-grid {
+    display: grid;
+    grid-template-columns: 1.5fr .8fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.consultation h2 {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--gold-light);
+    font-size: 30px;
+}
+
+.consultation p {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+.consultation-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px 22px;
+
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    color: var(--gold-light);
+    font-size: 11px;
+    transition: .3s;
+}
+
+.consultation-button:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-info a {
+    color: #ddd;
+    font-size: 12px;
+}
+
+.contact-info span {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #020202;
+    border-top: 1px solid var(--gold-dark);
+    padding: 25px 0 18px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: var(--gold-light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--gold-dark);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gold-light);
+    font-size: 11px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 20px;
+    padding-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #777;
+    font-size: 9px;
+}
+
+/* =========================================================
+   RTL
+========================================================= */
+
+body[dir="rtl"] .system-content {
+    border-left: 0;
+    border-right: 1px solid var(--gold-dark);
+}
+
+body[dir="rtl"] .system-list li::before {
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+body[dir="rtl"] .recipes-main {
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+body[dir="rtl"] .heritage-box {
+    border-left: 0;
+    border-right: 1px solid var(--gold);
+}
+
+body[dir="rtl"] .contact-info span {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-menu {
+    display: none;
+    background: #080808;
+    border-top: 1px solid var(--gold-dark);
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px 6%;
+    border-bottom: 1px solid #222;
+    color: #ddd;
+    font-size: 13px;
+}
+
+.mobile-menu a:hover {
+    color: var(--gold-light);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .expertise-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .system-grid {
+        grid-template-columns: 1fr 1.4fr;
+    }
+
+    .system-list {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 60px 0 20px;
+    }
+
+    .hero-kicker {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-position {
+        font-size: 13px;
+    }
+
+    .hero-slogan {
+        font-size: 21px;
+    }
+
+    .experience {
+        position: static;
+        margin-top: 25px;
+    }
+
+    .experience-number {
+        font-size: 55px;
+    }
+
+    .experience-text {
+        margin: 8px auto 0;
+    }
+
+    .hero-chef {
+        min-height: 420px;
+        height: 420px;
+    }
+
+    .hero-chef img {
+        height: 420px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .system-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .system-image {
+        min-height: 280px;
+    }
+
+    .system-content {
+        border: 0;
+        border-top: 1px solid var(--gold-dark);
+        border-bottom: 1px solid var(--gold-dark);
+        padding: 35px 25px;
+    }
+
+    .system-list {
+        grid-column: auto;
+    }
+
+    .recipes-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .recipes-main {
+        padding: 0;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .heritage-box {
+        margin-top: 30px;
+        border-left: 0;
+        border-top: 1px solid var(--gold);
+    }
+
+    .consultation-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+
+    .footer-main,
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo-main {
+        font-size: 23px;
+    }
+
+    .logo-sub {
+        font-size: 6px;
+    }
+
+    .hero-content {
+        padding-top: 45px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-arabic {
+        font-size: 20px;
+    }
+
+    .hero-position {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .hero-slogan {
+        font-size: 18px;
+    }
+
+    .hero-chef {
+        height: 350px;
+        min-height: 350px;
+    }
+
+    .hero-chef img {
+        height: 350px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .expertise {
+        padding: 40px 0;
+    }
+
+    .expertise-card {
+        min-height: 115px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recipe-card img {
+        height: 110px;
+    }
+
+    .heritage-box {
+        min-height: 300px;
+        padding: 25px;
+    }
+
+    .heritage-box p {
+        font-size: 19px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <span class="logo-main">Chef Kassem Taha</span>
+        <span class="logo-sub">
+            GLOBAL CULINARY & HOSPITALITY EXPERT
+        </span>
+    </a>
+
+    <ul class="nav-links">
+
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+    <div class="nav-actions">
+
+        <button class="language" onclick="toggleLanguage()">
+            عربي
+        </button>
+
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            ☰
+        </button>
+
+    </div>
+
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="academy.html">Academy</a>
+    <a href="recipes.html">Recipes</a>
+    <a href="blog.html">Blog</a>
+    <a href="projects.html">Projects</a>
+    <a href="store.html">Store</a>
+    <a href="contact.html">Contact</a>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Global Culinary & Hospitality Expert
+        </div>
+
+        <h1>
+            Chef Kassem Taha
+        </h1>
+
+        <div class="hero-arabic">
+            الشيف قاسم طه
+        </div>
+
+        <div class="hero-position">
+            GLOBAL CULINARY & HOSPITALITY EXPERT
+        </div>
+
+        <div class="gold-line"></div>
+
+        <div class="hero-slogan">
+            FROM WORLD CUISINES TO YOUR TABLE
+        </div>
+
+        <div class="hero-slogan-ar">
+            من مطابخ العالم إلى مائدتكم
+        </div>
+
+        <a href="services.html" class="hero-button">
+            Discover More
+            <span>→</span>
+        </a>
+
+        <div class="experience">
+
+            <span class="experience-number">
+                33+
+            </span>
+
+            <span class="experience-text">
+                YEARS OF PROFESSIONAL
+                EXPERIENCE
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-chef">
+
+        <!--
+        IMPORTANT:
+        Use Chef Kassem's original supplied photograph.
+        Do not replace it with an AI-generated portrait.
+        -->
+
+        <img
+            src="images/chef-kassem.jpg"
+            alt="Chef Kassem Taha"
+        >
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERTISE
+===================================================== -->
+
+<section class="expertise">
+
+<div class="container">
+
+    <div class="expertise-header">
+
+        <h2 class="section-title">
+            OUR EXPERTISE
+        </h2>
+
+        <p class="section-subtitle">
+            Comprehensive Solutions for the Hospitality & Food Industry
+        </p>
+
+        <div class="gold-line"></div>
+
+    </div>
+
+
+    <div class="expertise-grid">
+
+        <div class="expertise-card">
+            <div class="expertise-icon">↗</div>
+            <h3>Consulting</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">▦</div>
+            <h3>Development</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">⚙</div>
+            <h3>Operations</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">◇</div>
+            <h3>Training</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">♢</div>
+            <h3>Food Safety</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">▤</div>
+            <h3>Menu Development</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">♨</div>
+            <h3>Central Kitchen</h3>
+        </div>
+
+        <div class="expertise-card">
+            <div class="expertise-icon">↗</div>
+            <h3>Business Restructuring</h3>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     BUSINESS SYSTEM
+===================================================== -->
+
+<section class="system-section">
+
+<div class="container">
+
+    <div class="system-grid">
+
+        <div class="system-image"></div>
+
+
+        <div class="system-content">
+
+            <h2>
+                THE BUSINESS MUST DEPEND
+                ON THE SYSTEM —
+                NOT ON ONE PERSON.
+            </h2>
+
+            <p>
+                Chef Kassem Taha focuses on practical systems
+                that help hospitality businesses operate with
+                consistency, structure and accountability.
+            </p>
+
+            <p style="margin-top:15px;">
+                From SOP development and training to operational
+                control and team development, the objective is
+                to create systems that support sustainable
+                business performance.
+            </p>
+
+            <a href="services.html" class="small-button">
+                Our Services →
+            </a>
+
+        </div>
+
+
+        <div class="system-list">
+
+            <ul>
+
+                <li>SOP Development</li>
+                <li>Staff Training</li>
+                <li>Cross-Training</li>
+                <li>Quality Control</li>
+                <li>Performance Evaluation</li>
+                <li>Operational Systems</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURED RECIPES
+===================================================== -->
+
+<section class="recipes">
+
+<div class="container">
+
+    <div class="recipes-layout">
+
+        <div class="recipes-main">
+
+            <h2 class="section-title">
+                FEATURED RECIPES
+            </h2>
+
+            <p class="section-subtitle">
+                Authentic Flavors from Around the World
+            </p>
+
+            <div class="recipe-grid">
+
+
+                <article class="recipe-card">
+
+                    <img
+                        src="images/dish-1.jpg"
+                        alt="Featured culinary dish"
+                    >
+
+                    <div class="recipe-info">
+
+                        <h3>
+                            Traditional Arabic Dish
+                        </h3>
+
+                        <p>
+                            طبق عربي تقليدي
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="recipe-card">
+
+                    <img
+                        src="images/dish-2.jpg"
+                        alt="Mediterranean dish"
+                    >
+
+                    <div class="recipe-info">
+
+                        <h3>
+                            Mediterranean Salad
+                        </h3>
+
+                        <p>
+                            سلطة متوسطية
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="recipe-card">
+
+                    <img
+                        src="images/dish-3.jpg"
+                        alt="Grilled meat dish"
+                    >
+
+                    <div class="recipe-info">
+
+                        <h3>
+                            Grilled Meat
+                        </h3>
+
+                        <p>
+                            مشويات
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="recipe-card">
+
+                    <img
+                        src="images/dish-4.jpg"
+                        alt="Seafood dish"
+                    >
+
+                    <div class="recipe-info">
+
+                        <h3>
+                            Seafood Delight
+                        </h3>
+
+                        <p>
+                            مأكولات بحرية
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="recipe-card">
+
+                    <img
+                        src="images/dish-5.jpg"
+                        alt="Chocolate dessert"
+                    >
+
+                    <div class="recipe-info">
+
+                        <h3>
+                            Chocolate Dessert
+                        </h3>
+
+                        <p>
+                            حلوى الشوكولاتة
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+            <a href="recipes.html" class="view-all">
+                View All Recipes →
+            </a>
+
+        </div>
+
+
+        <div class="heritage-box">
+
+            <p>
+                Good food is not just
+                about taste, it's about
+                people, culture and
+                creating memorable
+                experiences.
+            </p>
+
+            <div class="signature">
+                Chef Kassem Taha
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CONSULTATION
+===================================================== -->
+
+<section class="consultation">
+
+<div class="container">
+
+    <div class="consultation-grid">
+
+
+        <div>
+
+            <h2>
+                GET IN TOUCH
+            </h2>
+
+            <p>
+                For Business Consultation
+            </p>
+
+            <p>
+                Let's discuss your project and
+                find the right solution for your
+                restaurant, hotel or food business.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <a
+                href="contact.html"
+                class="consultation-button"
+            >
+                REQUEST A CONSULTATION →
+            </a>
+
+        </div>
+
+
+        <div class="contact-info">
+
+            <a href="tel:+855715222672">
+                <span>☎</span>
+                +855 71 522 2672
+            </a>
+
+            <a href="https://wa.me/971507784185" target="_blank">
+                <span>◉</span>
+                +971 50 778 4185
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+    <div class="footer-main">
+
+        <div class="footer-logo">
+            Chef Kassem Taha
+        </div>
+
+        <div class="social">
+
+            <a
+                href="https://www.instagram.com/chefkassemtaha"
+                target="_blank"
+                aria-label="Instagram"
+            >
+                IG
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/kassem-taha-a40669a0"
+                target="_blank"
+                aria-label="LinkedIn"
+            >
+                IN
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Chef Kassem Taha. All rights reserved.
+        </span>
+
+        <span>
+            Privacy Policy &nbsp; | &nbsp; Terms of Use
+        </span>
+
+        <span>
+            EN &nbsp; | &nbsp; عربي
+        </span>
+
+    </div>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function toggleMenu() {
+
+    const menu = document.getElementById("mobileMenu");
+
+    menu.classList.toggle("active");
+
+}
+
+
+function toggleLanguage() {
+
+    const body = document.body;
+    const button = document.querySelector(".language");
+
+    if (body.dir === "rtl") {
+
+        body.dir = "ltr";
+        body.lang = "en";
+
+        button.textContent = "عربي";
+
+    } else {
+
+        body.dir = "rtl";
+        body.lang = "ar";
+
+        button.textContent = "English";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
