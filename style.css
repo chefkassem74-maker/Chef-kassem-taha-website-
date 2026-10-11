@@ -1696,3 +1696,20 @@ html[dir="rtl"] .image-card-content {
   }
 
    }
+
+/* PHONE & WHATSAPP NUMBER FIX */
+
+.ltr-contact,
+a[href^="tel:"],
+a[href*="wa.me"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+.contact-buttons a[href^="tel:"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
