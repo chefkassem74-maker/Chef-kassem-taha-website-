@@ -1,7 +1,7 @@
 "use strict";
 
 /* =========================================================
-   CHEF KASSEM TAHA WEBSITE
+   CHEF KASSEM TAHA
    LANGUAGE + MOBILE MENU
 ========================================================= */
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainNav = document.getElementById("mainNav");
   const yearElement = document.getElementById("year");
 
-  const translatableElements =
+  const bilingualElements =
     document.querySelectorAll("[data-en][data-ar]");
 
 
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.dir = isArabic ? "rtl" : "ltr";
 
 
-    translatableElements.forEach(function (element) {
+    bilingualElements.forEach(function (element) {
 
       const text = isArabic
         ? element.getAttribute("data-ar")
@@ -41,50 +41,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    /* Button shows the OTHER available language */
+
     if (languageButton) {
-
-      /*
-        If page is Arabic:
-        button shows English.
-
-        If page is English:
-        button shows العربية.
-      */
-
-      languageButton.textContent =
-        isArabic ? "English" : "العربية";
+      languageButton.textContent = isArabic ? "EN" : "AR";
 
       languageButton.setAttribute(
         "aria-label",
         isArabic
-          ? "Switch website to English"
-          : "تحويل الموقع إلى العربية"
+          ? "Switch to English"
+          : "التبديل إلى العربية"
       );
-
     }
 
 
-    /*
-      Phone numbers must ALWAYS remain LTR,
-      even when the website is Arabic.
-    */
+    /* Keep phone numbers left-to-right */
 
-    const phoneElements = document.querySelectorAll(
-      '.ltr-contact, a[href^="tel:"], a[href*="wa.me"]'
-    );
+    document
+      .querySelectorAll(
+        '.ltr-contact, a[href^="tel:"], a[href*="wa.me"]'
+      )
+      .forEach(function (element) {
 
-    phoneElements.forEach(function (element) {
+        element.setAttribute("dir", "ltr");
 
-      element.style.direction = "ltr";
-      element.style.unicodeBidi = "isolate";
-
-    });
+      });
 
 
     try {
-      localStorage.setItem("chefKassemLanguage", language);
+      localStorage.setItem(
+        "chefKassemLanguage",
+        language
+      );
     } catch (error) {
-      /* Website still works if storage is unavailable */
+      /* Website continues even if storage is unavailable */
     }
 
   }
@@ -112,17 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /*
-    Load saved language when page opens.
-  */
-
-  setLanguage(getSavedLanguage());
-
-
-  /*
-    Language button
-  */
-
   if (languageButton) {
 
     languageButton.addEventListener(
@@ -130,13 +109,16 @@ document.addEventListener("DOMContentLoaded", function () {
       function () {
 
         const currentLanguage =
-          document.documentElement.lang;
+          document.documentElement.lang === "ar"
+            ? "ar"
+            : "en";
 
-        if (currentLanguage === "ar") {
-          setLanguage("en");
-        } else {
-          setLanguage("ar");
-        }
+        const newLanguage =
+          currentLanguage === "ar"
+            ? "en"
+            : "ar";
+
+        setLanguage(newLanguage);
 
         closeMobileMenu();
 
@@ -166,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     document.body.classList.add("menu-open");
-
   }
 
 
@@ -186,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     document.body.classList.remove("menu-open");
-
   }
 
 
@@ -221,10 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /*
-    Close menu after selecting a navigation link.
-  */
-
   if (mainNav) {
 
     const navLinks =
@@ -246,19 +222,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /*
-    Close menu when tapping outside.
-  */
+  /* Close menu when clicking outside */
 
   document.addEventListener(
     "click",
     function (event) {
 
-      if (!mainNav || !menuButton) {
-        return;
-      }
-
-      if (!mainNav.classList.contains("open")) {
+      if (
+        !mainNav ||
+        !menuButton ||
+        !mainNav.classList.contains("open")
+      ) {
         return;
       }
 
@@ -279,9 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 
-  /*
-    Close mobile menu if screen becomes desktop size.
-  */
+  /* Close mobile menu when screen becomes desktop */
 
   window.addEventListener(
     "resize",
@@ -296,14 +268,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =======================================================
-     COPYRIGHT YEAR
+     CURRENT YEAR
   ======================================================= */
 
   if (yearElement) {
-
     yearElement.textContent =
       new Date().getFullYear();
-
   }
+
+
+  /* =======================================================
+     INITIALIZE WEBSITE
+  ======================================================= */
+
+  const savedLanguage =
+    getSavedLanguage();
+
+  setLanguage(savedLanguage);
 
 });
