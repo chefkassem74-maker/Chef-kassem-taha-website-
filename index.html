@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
 
@@ -7,553 +8,931 @@
         content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Chef Kassem Taha - Culinary and Hospitality Consulting, Restaurant Development, Central Kitchens, Training and Food Safety.">
+        content="Chef Kassem Taha - Culinary and Hospitality Consulting, Restaurant Development, Central Kitchens, Menu Engineering, Training and Food Safety.">
 
   <title>Chef Kassem Taha | Culinary & Hospitality</title>
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
-  <header class="site-header">
+<!-- ======================================================
+     HEADER
+====================================================== -->
 
-    <div class="container header-inner">
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-logo">CK</span>
+
+      <span class="brand-copy">
+
+        <strong>Chef Kassem Taha</strong>
+
+        <small
+          data-en="Executive Chef | Consultant | Trainer"
+          data-ar="شيف تنفيذي | مستشار | مدرب">
+          Executive Chef | Consultant | Trainer
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav" id="mainNav">
 
       <a href="index.html"
-         class="brand"
-         aria-label="Chef Kassem Taha">
-
-        <span class="brand-logo">CK</span>
-
-        <span class="brand-name">
-          <strong>CHEF KASSEM TAHA</strong>
-
-          <small data-en="CULINARY & HOSPITALITY"
-                 data-ar="فنون الطهي والضيافة">
-            CULINARY & HOSPITALITY
-          </small>
-        </span>
-
+         class="active"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <a href="#story"
+         data-en="About"
+         data-ar="من نحن">
+        About
+      </a>
 
-        <a href="index.html"
-           class="active"
-           data-en="Home"
-           data-ar="الرئيسية">
-          Home
-        </a>
+      <a href="#services"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
 
-        <a href="#about"
-           data-en="About"
-           data-ar="من نحن">
-          About
-        </a>
+      <a href="#academy"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="#cuisines"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="#contact"
+         data-en="Contact"
+         data-ar="تواصل معنا">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        aria-label="Switch language">
+        AR
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-grid">
+
+    <div class="hero-content">
+
+      <p class="eyebrow"
+         data-en="WELCOME TO CHEF KASSEM TAHA"
+         data-ar="مرحباً بكم مع الشيف قاسم طه">
+        WELCOME TO CHEF KASSEM TAHA
+      </p>
+
+
+      <h1>
+
+        <span data-en="From World Cuisines"
+              data-ar="من مطابخ العالم">
+          From World Cuisines
+        </span>
+
+        <strong data-en="to Your Table"
+                data-ar="إلى مائدتكم">
+          to Your Table
+        </strong>
+
+      </h1>
+
+
+      <h2
+        data-en="Global Culinary & Hospitality Expertise"
+        data-ar="خبرة عالمية في فنون الطهي والضيافة">
+        Global Culinary & Hospitality Expertise
+      </h2>
+
+
+      <p class="hero-description"
+         data-en="More than 33 years of professional experience in culinary arts, hospitality, restaurant and hotel operations, central kitchens, food safety, training and business development."
+         data-ar="أكثر من 33 عاماً من الخبرة المهنية في فنون الطهي والضيافة وتشغيل المطاعم والفنادق والمطابخ المركزية وسلامة الغذاء والتدريب وتطوير الأعمال.">
+
+        More than 33 years of professional experience in
+        culinary arts, hospitality, restaurant and hotel
+        operations, central kitchens, food safety, training
+        and business development.
+
+      </p>
+
+
+      <div class="hero-buttons">
 
         <a href="#services"
-           data-en="Services"
-           data-ar="الخدمات">
-          Services
+           class="btn btn-gold"
+           data-en="Explore My Services"
+           data-ar="اكتشف خدماتي">
+          Explore My Services
         </a>
 
-        <a href="#academy"
-           data-en="Academy"
-           data-ar="الأكاديمية">
-          Academy
+        <a href="#story"
+           class="btn btn-dark"
+           data-en="Discover My Story"
+           data-ar="اكتشف قصتي">
+          Discover My Story
         </a>
-
-        <a href="#contact"
-           data-en="Contact"
-           data-ar="تواصل معنا">
-          Contact
-        </a>
-
-      </nav>
-
-      <div class="header-actions">
-
-        <button
-          class="language-button"
-          id="languageButton"
-          type="button">
-          العربية
-        </button>
-
-        <button
-          class="menu-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false">
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </button>
 
       </div>
 
     </div>
 
-  </header>
 
+    <div class="hero-portrait">
 
-  <main>
+      <img
+        src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
+        alt="Chef Kassem Taha">
 
-    <!-- =========================
-         HERO
-    ========================== -->
-    <section class="hero">
+    </div>
 
-      <div class="container hero-grid">
+  </div>
 
-        <div class="hero-content">
+</section>
 
-          <p class="eyebrow"
-             data-en="GLOBAL CULINARY & HOSPITALITY EXPERT"
-             data-ar="خبير عالمي في فنون الطهي والضيافة">
-            GLOBAL CULINARY & HOSPITALITY EXPERT
-          </p>
 
-          <h1>
 
-            <span data-en="CHEF"
-                  data-ar="الشيف">
-              CHEF
-            </span>
+<!-- ======================================================
+     EXPERIENCE STRIP
+====================================================== -->
 
-            <strong>KASSEM</strong>
+<section class="experience-strip">
 
-            <span>TAHA</span>
+  <div class="container experience-grid">
 
-          </h1>
 
-          <h2
-            data-en="From World Cuisines to Your Table"
-            data-ar="من مطابخ العالم إلى مائدتكم">
-            From World Cuisines to Your Table
-          </h2>
+    <article class="experience-item">
 
-          <p class="hero-description"
-             data-en="More than 33 years of professional experience in culinary arts, hospitality, restaurant and hotel operations, central kitchens, food safety, training and business development."
-             data-ar="أكثر من 33 عاماً من الخبرة المهنية في فنون الطهي والضيافة وتشغيل المطاعم والفنادق والمطابخ المركزية وسلامة الغذاء والتدريب وتطوير الأعمال.">
+      <span class="experience-icon">33+</span>
 
-            More than 33 years of professional experience in
-            culinary arts, hospitality, restaurant and hotel
-            operations, central kitchens, food safety, training
-            and business development.
+      <h3
+        data-en="Years Experience"
+        data-ar="سنوات خبرة">
+        Years Experience
+      </h3>
 
-          </p>
+    </article>
 
-          <div class="hero-buttons">
 
-            <a href="#services"
-               class="btn btn-gold"
-               data-en="Explore Services"
-               data-ar="استكشف خدماتنا">
-              Explore Services
-            </a>
+    <article class="experience-item">
 
-            <a href="#contact"
-               class="btn btn-outline"
-               data-en="Business Consultation"
-               data-ar="استشارة أعمال">
-              Business Consultation
-            </a>
+      <span class="experience-icon">✦</span>
 
-          </div>
+      <h3
+        data-en="Consulting Services"
+        data-ar="خدمات استشارية">
+        Consulting Services
+      </h3>
 
-          <div class="experience">
+    </article>
 
-            <strong>33+</strong>
 
-            <span
-              data-en="Years of Professional Experience"
-              data-ar="عاماً من الخبرة المهنية">
-              Years of Professional Experience
-            </span>
+    <article class="experience-item">
 
-          </div>
+      <span class="experience-icon">◎</span>
 
-        </div>
+      <h3
+        data-en="Training & Academy"
+        data-ar="التدريب والأكاديمية">
+        Training & Academy
+      </h3>
 
+    </article>
 
-        <!-- ORIGINAL PHOTO ONLY -->
-        <div class="hero-photo">
 
-          <div class="photo-frame">
+    <article class="experience-item">
 
-            <img
-              src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
-              alt="Chef Kassem Taha"
-            >
+      <span class="experience-icon">⌂</span>
 
-          </div>
+      <h3
+        data-en="Restaurant & Hotel Setup"
+        data-ar="تأسيس المطاعم والفنادق">
+        Restaurant & Hotel Setup
+      </h3>
 
-        </div>
+    </article>
 
-      </div>
 
-    </section>
+    <article class="experience-item">
 
+      <span class="experience-icon">≡</span>
 
-    <!-- =========================
-         EXPERTISE
-    ========================== -->
-    <section class="expertise" id="services">
+      <h3
+        data-en="Menu Development"
+        data-ar="تصميم وتطوير القوائم">
+        Menu Development
+      </h3>
 
-      <div class="container">
+    </article>
 
-        <div class="section-heading">
 
-          <p class="eyebrow"
-             data-en="EXPERTISE"
-             data-ar="مجالات الخبرة">
-            EXPERTISE
-          </p>
-
-          <h2
-            data-en="Professional Hospitality Solutions"
-            data-ar="حلول احترافية لقطاع الضيافة">
-            Professional Hospitality Solutions
-          </h2>
+    <article class="experience-item">
 
-        </div>
+      <span class="experience-icon">◇</span>
 
-
-        <div class="expertise-grid">
+      <h3
+        data-en="Food Safety"
+        data-ar="سلامة الغذاء">
+        Food Safety
+      </h3>
 
-          <article class="expertise-card">
-            <span>01</span>
-
-            <h3
-              data-en="Restaurant & Hotel Development"
-              data-ar="تأسيس وتطوير المطاعم والفنادق">
-              Restaurant & Hotel Development
-            </h3>
-
-            <p
-              data-en="From concept and planning to opening and operational development."
-              data-ar="من الفكرة والتخطيط إلى الافتتاح وتطوير العمليات التشغيلية.">
-              From concept and planning to opening and
-              operational development.
-            </p>
-          </article>
+    </article>
 
+  </div>
 
-          <article class="expertise-card">
-            <span>02</span>
+</section>
 
-            <h3
-              data-en="Central Kitchens"
-              data-ar="المطابخ المركزية">
-              Central Kitchens
-            </h3>
 
-            <p
-              data-en="Designing production systems, workflow, purchasing, storage and operational controls."
-              data-ar="تصميم أنظمة الإنتاج وسير العمل والمشتريات والتخزين والرقابة التشغيلية.">
-              Designing production systems, workflow,
-              purchasing, storage and operational controls.
-            </p>
-          </article>
 
+<!-- ======================================================
+     SERVICES
+====================================================== -->
 
-          <article class="expertise-card">
-            <span>03</span>
+<section class="services-section" id="services">
 
-            <h3
-              data-en="Menu Engineering"
-              data-ar="هندسة قوائم الطعام">
-              Menu Engineering
-            </h3>
+  <div class="container">
 
-            <p
-              data-en="Menu development, recipe standardization, costing and practical culinary solutions."
-              data-ar="تطوير القوائم وتوحيد الوصفات وحساب التكاليف وتقديم حلول عملية لفنون الطهي.">
-              Menu development, recipe standardization,
-              costing and practical culinary solutions.
-            </p>
-          </article>
-
-
-          <article class="expertise-card">
-            <span>04</span>
-
-            <h3
-              data-en="SOP & Food Safety"
-              data-ar="إجراءات التشغيل وسلامة الغذاء">
-              SOP & Food Safety
-            </h3>
-
-            <p
-              data-en="Clear operating procedures, HACCP principles and food safety systems."
-              data-ar="إجراءات تشغيل واضحة ومبادئ الهاسب وأنظمة سلامة الغذاء.">
-              Clear operating procedures, HACCP principles
-              and food safety systems.
-            </p>
-          </article>
-
-
-          <article class="expertise-card">
-            <span>05</span>
-
-            <h3
-              data-en="Cost Control"
-              data-ar="ضبط التكاليف">
-              Cost Control
-            </h3>
-
-            <p
-              data-en="Food cost, purchasing, inventory and operational cost management."
-              data-ar="إدارة تكلفة الطعام والمشتريات والمخزون والتكاليف التشغيلية.">
-              Food cost, purchasing, inventory and
-              operational cost management.
-            </p>
-          </article>
-
-
-          <article class="expertise-card" id="academy">
-            <span>06</span>
-
-            <h3
-              data-en="Training & Academy"
-              data-ar="التدريب والأكاديمية">
-              Training & Academy
-            </h3>
-
-            <p
-              data-en="Practical staff training and continuous team development."
-              data-ar="تدريب عملي للموظفين وتطوير مستمر لفريق العمل.">
-              Practical staff training and continuous
-              team development.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT / SYSTEM
-    ========================== -->
-    <section class="system-section" id="about">
-
-      <div class="container system-grid">
-
-        <div>
-
-          <p class="eyebrow"
-             data-en="OUR PHILOSOPHY"
-             data-ar="فلسفة العمل">
-            OUR PHILOSOPHY
-          </p>
-
-          <h2
-            data-en="Build the system. Train the team. Protect the business."
-            data-ar="ابنِ النظام. درّب الفريق. واحمِ استمرارية العمل.">
-            Build the system. Train the team.
-            Protect the business.
-          </h2>
-
-        </div>
-
-        <blockquote
-          data-en="The business must depend on the system — not on one person."
-          data-ar="يجب أن يعتمد العمل على النظام، وليس على شخص واحد.">
-          The business must depend on the system —
-          not on one person.
-        </blockquote>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROCESS
-    ========================== -->
-    <section class="process">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <p class="eyebrow"
-             data-en="CONSULTING PROCESS"
-             data-ar="منهجية الاستشارات">
-            CONSULTING PROCESS
-          </p>
-
-          <h2
-            data-en="From Assessment to Continuous Improvement"
-            data-ar="من التقييم إلى التحسين المستمر">
-            From Assessment to Continuous Improvement
-          </h2>
-
-        </div>
-
-        <div class="process-list">
-
-          <span data-en="Discover" data-ar="اكتشاف الاحتياجات">
-            Discover
-          </span>
-
-          <span data-en="Audit" data-ar="التقييم">
-            Audit
-          </span>
-
-          <span data-en="Design" data-ar="التصميم">
-            Design
-          </span>
-
-          <span data-en="Implement" data-ar="التنفيذ">
-            Implement
-          </span>
-
-          <span data-en="Train" data-ar="التدريب">
-            Train
-          </span>
-
-          <span data-en="Control" data-ar="الرقابة">
-            Control
-          </span>
-
-          <span data-en="Improve" data-ar="التحسين">
-            Improve
-          </span>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT CTA
-    ========================== -->
-    <section class="contact-section" id="contact">
-
-      <div class="container contact-box">
-
-        <div>
-
-          <p class="eyebrow"
-             data-en="BUSINESS CONSULTATION"
-             data-ar="استشارات الأعمال">
-            BUSINESS CONSULTATION
-          </p>
-
-          <h2
-            data-en="Ready to develop your hospitality business?"
-            data-ar="هل أنت مستعد لتطوير مشروعك في قطاع الضيافة؟">
-            Ready to develop your hospitality business?
-          </h2>
-
-        </div>
-
-        <div class="contact-actions">
-
-          <a
-            href="tel:+855715222672"
-            class="btn btn-outline-light">
-            +855 71 522 2672
-          </a>
-
-          <a
-            href="https://wa.me/971507784185"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-gold">
-            WhatsApp
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="site-footer">
-
-    <div class="container footer-inner">
+    <div class="section-intro">
 
       <div>
 
-        <strong>CHEF KASSEM TAHA</strong>
-
-        <p
-          data-en="Culinary & Hospitality Consulting"
-          data-ar="استشارات فنون الطهي والضيافة">
-          Culinary & Hospitality Consulting
+        <p class="eyebrow"
+           data-en="OUR CORE SERVICES"
+           data-ar="خدماتنا الرئيسية">
+          OUR CORE SERVICES
         </p>
 
-      </div>
-
-      <div class="footer-contact">
-
-        <span>Phnom Penh, Cambodia</span>
-
-        <a href="tel:+855715222672">
-          +855 71 522 2672
-        </a>
-
-        <a
-          href="https://wa.me/971507784185"
-          target="_blank"
-          rel="noopener noreferrer">
-          WhatsApp +971 50 778 4185
-        </a>
+        <h2
+          data-en="Complete Solutions for Your F&B Business"
+          data-ar="حلول متكاملة لأعمال المطاعم والفنادق">
+          Complete Solutions for Your F&B Business
+        </h2>
 
       </div>
+
+
+      <p
+        data-en="From concept to operation, practical professional solutions designed to support sustainable hospitality businesses."
+        data-ar="من الفكرة إلى التشغيل، نقدم حلولاً عملية ومهنية تساعد على بناء وتشغيل مشاريع ضيافة مستدامة.">
+
+        From concept to operation, practical professional
+        solutions designed to support sustainable hospitality
+        businesses.
+
+      </p>
 
     </div>
 
-    <div class="container copyright">
 
-      <span>
-        © <span id="year"></span> Chef Kassem Taha
+
+    <div class="services-grid">
+
+
+      <article class="image-card">
+
+        <img src="service-restaurant.jpg"
+             alt="Restaurant Development">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="Restaurant Setup"
+            data-ar="تأسيس المطاعم">
+            Restaurant Setup
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="image-card">
+
+        <img src="service-hotel.jpg"
+             alt="Hotel Development">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="Hotel Development"
+            data-ar="تطوير الفنادق">
+            Hotel Development
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="image-card">
+
+        <img src="service-central-kitchen.jpg"
+             alt="Central Kitchens">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="Central Kitchens"
+            data-ar="المطابخ المركزية">
+            Central Kitchens
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="image-card">
+
+        <img src="service-menu.jpg"
+             alt="Menu Development">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="Menu Development"
+            data-ar="تطوير القوائم">
+            Menu Development
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="image-card" id="academy">
+
+        <img src="service-training.jpg"
+             alt="Training and Academy">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="Training & Academy"
+            data-ar="التدريب والأكاديمية">
+            Training & Academy
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="image-card">
+
+        <img src="service-food-safety.jpg"
+             alt="Food Safety">
+
+        <div class="image-card-content">
+
+          <h3
+            data-en="SOP & HACCP"
+            data-ar="إجراءات التشغيل وسلامة الغذاء">
+            SOP & HACCP
+          </h3>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CUISINES
+====================================================== -->
+
+<section class="cuisines-section" id="cuisines">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <p class="eyebrow"
+         data-en="EXPLORE OUR CUISINES"
+         data-ar="استكشف مطابخنا">
+        EXPLORE OUR CUISINES
+      </p>
+
+      <h2
+        data-en="Discover Dishes from World Cuisines"
+        data-ar="استمتع بأشهى الأطباق من مطابخ العالم">
+        Discover Dishes from World Cuisines
+      </h2>
+
+    </div>
+
+
+
+    <div class="cuisine-grid">
+
+
+      <article class="cuisine-card">
+
+        <img src="food-international.jpg"
+             alt="International Cuisine">
+
+        <div>
+
+          <h3
+            data-en="International Cuisine"
+            data-ar="المطابخ العالمية">
+            International Cuisine
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="cuisine-card">
+
+        <img src="food-middle-eastern.jpg"
+             alt="Middle Eastern Cuisine">
+
+        <div>
+
+          <h3
+            data-en="Middle Eastern Cuisine"
+            data-ar="المطبخ الشرقي">
+            Middle Eastern Cuisine
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="cuisine-card">
+
+        <img src="food-grill.jpg"
+             alt="Grills and Barbecue">
+
+        <div>
+
+          <h3
+            data-en="Grills & Barbecue"
+            data-ar="المشاوي">
+            Grills & Barbecue
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="cuisine-card">
+
+        <img src="food-pasta.jpg"
+             alt="Pasta and Italian Cuisine">
+
+        <div>
+
+          <h3
+            data-en="Pasta & Italian"
+            data-ar="المأكولات الإيطالية">
+            Pasta & Italian
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="cuisine-card">
+
+        <img src="food-healthy.jpg"
+             alt="Healthy Food">
+
+        <div>
+
+          <h3
+            data-en="Healthy & Diet"
+            data-ar="الأكل الصحي">
+            Healthy & Diet
+          </h3>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="cuisine-card">
+
+        <img src="food-dessert.jpg"
+             alt="Desserts">
+
+        <div>
+
+          <h3
+            data-en="Desserts"
+            data-ar="الحلويات">
+            Desserts
+          </h3>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     STORY
+====================================================== -->
+
+<section class="story-section" id="story">
+
+  <div class="container story-grid">
+
+
+    <div class="story-image">
+
+      <img
+        src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
+        alt="Chef Kassem Taha">
+
+    </div>
+
+
+    <div class="story-content">
+
+      <p class="eyebrow"
+         data-en="MY PHILOSOPHY"
+         data-ar="فلسفتي">
+        MY PHILOSOPHY
+      </p>
+
+      <h2
+        data-en="Good Food Brings People Together"
+        data-ar="الطعام الجيد يجمع الناس">
+        Good Food Brings People Together
+      </h2>
+
+
+      <blockquote
+        data-en="The business must depend on the system — not on one person."
+        data-ar="يجب أن يعتمد العمل على النظام، وليس على شخص واحد.">
+
+        The business must depend on the system —
+        not on one person.
+
+      </blockquote>
+
+
+      <a href="#contact"
+         class="btn btn-gold"
+         data-en="Business Consultation"
+         data-ar="استشارة أعمال">
+        Business Consultation
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CONSULTING PROCESS
+====================================================== -->
+
+<section class="process-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="eyebrow"
+         data-en="CONSULTING PROCESS"
+         data-ar="منهجية الاستشارات">
+        CONSULTING PROCESS
+      </p>
+
+      <h2
+        data-en="From Assessment to Continuous Improvement"
+        data-ar="من التقييم إلى التحسين المستمر">
+        From Assessment to Continuous Improvement
+      </h2>
+
+    </div>
+
+
+    <div class="process-grid">
+
+      <span data-en="Discover"
+            data-ar="اكتشاف الاحتياجات">
+        Discover
       </span>
 
-      <span
+      <span data-en="Audit"
+            data-ar="التقييم">
+        Audit
+      </span>
+
+      <span data-en="Design"
+            data-ar="التصميم">
+        Design
+      </span>
+
+      <span data-en="Implement"
+            data-ar="التنفيذ">
+        Implement
+      </span>
+
+      <span data-en="Train"
+            data-ar="التدريب">
+        Train
+      </span>
+
+      <span data-en="Control"
+            data-ar="الرقابة">
+        Control
+      </span>
+
+      <span data-en="Improve"
+            data-ar="التحسين">
+        Improve
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     CONTACT
+====================================================== -->
+
+<section class="contact-section" id="contact">
+
+  <div class="container contact-grid">
+
+    <div>
+
+      <p class="eyebrow"
+         data-en="BUSINESS CONSULTATION"
+         data-ar="استشارات الأعمال">
+        BUSINESS CONSULTATION
+      </p>
+
+      <h2
+        data-en="Ready to Develop Your Hospitality Business?"
+        data-ar="هل أنت مستعد لتطوير مشروعك في قطاع الضيافة؟">
+        Ready to Develop Your Hospitality Business?
+      </h2>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+      <a
+        class="btn btn-outline-light"
+        href="tel:+855715222672">
+        +855 71 522 2672
+      </a>
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/971507784185"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-en="WhatsApp"
+        data-ar="واتساب">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+
+    <div class="footer-brand">
+
+      <div class="footer-brand-title">
+
+        <span class="brand-logo">CK</span>
+
+        <div>
+
+          <strong>Chef Kassem Taha</strong>
+
+          <small
+            data-en="Culinary & Hospitality"
+            data-ar="فنون الطهي والضيافة">
+            Culinary & Hospitality
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <p
         data-en="From World Cuisines to Your Table"
         data-ar="من مطابخ العالم إلى مائدتكم">
         From World Cuisines to Your Table
+      </p>
+
+    </div>
+
+
+
+    <div class="footer-links">
+
+      <h3
+        data-en="Quick Links"
+        data-ar="روابط سريعة">
+        Quick Links
+      </h3>
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="#story"
+         data-en="About"
+         data-ar="من نحن">
+        About
+      </a>
+
+      <a href="#services"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
+
+      <a href="#academy"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="#cuisines"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+    </div>
+
+
+
+    <div class="footer-contact">
+
+      <h3
+        data-en="Contact Information"
+        data-ar="معلومات التواصل">
+        Contact Information
+      </h3>
+
+      <a class="ltr-contact"
+         href="tel:+855715222672">
+        +855 71 522 2672
+      </a>
+
+      <a class="ltr-contact"
+         href="https://wa.me/971507784185"
+         target="_blank"
+         rel="noopener noreferrer">
+        +971 50 778 4185
+      </a>
+
+      <span
+        data-en="Phnom Penh, Cambodia"
+        data-ar="بنوم بنه، كمبوديا">
+        Phnom Penh, Cambodia
       </span>
 
     </div>
 
-  </footer>
+  </div>
 
 
-  <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> Chef Kassem Taha.
+      <span data-en="All rights reserved."
+            data-ar="جميع الحقوق محفوظة.">
+        All rights reserved.
+      </span>
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
-</html>
+        </html>
