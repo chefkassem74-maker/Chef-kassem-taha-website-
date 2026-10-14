@@ -20,7 +20,210 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+/* =========================================================
+   FINAL MOBILE COMPACT DESIGN
+   Chef Kassem Taha - About Page
+========================================================= */
 
+@media (max-width: 520px) {
+
+  /* ---------- PROFESSIONAL JOURNEY ---------- */
+
+  .journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .journey-card {
+    min-height: 230px;
+    padding: 22px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .journey-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 6px);
+    justify-self: center;
+  }
+
+  .journey-code {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 14px;
+    font-size: 24px;
+    border-width: 1px;
+  }
+
+  .journey-card h3 {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .journey-card p {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+
+  /* ---------- BEYOND THE KITCHEN ---------- */
+
+  .expertise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .expertise-card {
+    min-height: 190px;
+    padding: 20px 10px;
+  }
+
+  .expertise-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .expertise-card h3 {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .expertise-card p {
+    margin-top: 9px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .expertise-section .about-section-title {
+    font-size: 38px;
+  }
+
+  .expertise-section .about-section-subtitle {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .expertise-description {
+    margin: 22px 0 30px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  /* ---------- MY PHILOSOPHY ---------- */
+
+  .philosophy-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .philosophy-heading h2 {
+    font-size: 40px;
+  }
+
+  .philosophy-heading > p {
+    margin-top: 13px;
+    font-size: 14px;
+  }
+
+  .philosophy-quote {
+    margin-top: 27px;
+  }
+
+  .philosophy-quote blockquote {
+    max-width: 570px;
+    margin-inline: auto;
+    font-size: 27px;
+    line-height: 1.22;
+  }
+
+  .philosophy-quote p {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .philosophy-values {
+    margin-top: 30px;
+  }
+
+  .philosophy-value {
+    min-height: 82px;
+    grid-template-columns: 48px 1fr;
+    gap: 13px;
+    padding: 13px 0;
+  }
+
+  .value-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .philosophy-value h3 {
+    font-size: 14px;
+  }
+
+  .philosophy-value p {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+
+
+  /* ---------- FINAL CTA ---------- */
+
+  .about-cta {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .about-cta h2 {
+    max-width: 500px;
+    margin-inline: auto;
+    font-size: 37px;
+    line-height: 1.05;
+  }
+
+  .about-cta p {
+    max-width: 600px;
+    margin: 22px auto 28px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-cta .btn {
+    min-height: 56px;
+  }
+
+
+  /* ---------- ARABIC MOBILE ---------- */
+
+  html[dir="rtl"] .expertise-section .about-section-title {
+    font-size: 31px;
+    line-height: 1.35;
+  }
+
+  html[dir="rtl"] .philosophy-heading h2 {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  html[dir="rtl"] .philosophy-quote blockquote {
+    font-size: 22px;
+    line-height: 1.65;
+  }
+
+  html[dir="rtl"] .about-cta h2 {
+    font-size: 31px;
+    line-height: 1.4;
+  }
+
+}
   <style>
 
     /* =====================================================
