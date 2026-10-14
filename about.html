@@ -3,9 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
         content="About Chef Kassem Taha - Global Culinary and Hospitality Expert with more than 33 years of professional experience.">
@@ -20,215 +18,11 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-/* =========================================================
-   FINAL MOBILE COMPACT DESIGN
-   Chef Kassem Taha - About Page
-========================================================= */
 
-@media (max-width: 520px) {
-
-  /* ---------- PROFESSIONAL JOURNEY ---------- */
-
-  .journey-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .journey-card {
-    min-height: 230px;
-    padding: 22px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .journey-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 6px);
-    justify-self: center;
-  }
-
-  .journey-code {
-    width: 68px;
-    height: 68px;
-    margin: 0 auto 14px;
-    font-size: 24px;
-    border-width: 1px;
-  }
-
-  .journey-card h3 {
-    font-size: 13px;
-    line-height: 1.3;
-  }
-
-  .journey-card p {
-    margin-top: 10px;
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-
-  /* ---------- BEYOND THE KITCHEN ---------- */
-
-  .expertise-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-
-  .expertise-card {
-    min-height: 190px;
-    padding: 20px 10px;
-  }
-
-  .expertise-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-
-  .expertise-card h3 {
-    font-size: 13px;
-    line-height: 1.35;
-  }
-
-  .expertise-card p {
-    margin-top: 9px;
-    font-size: 11px;
-    line-height: 1.45;
-  }
-
-  .expertise-section .about-section-title {
-    font-size: 38px;
-  }
-
-  .expertise-section .about-section-subtitle {
-    font-size: 14px;
-    line-height: 1.55;
-  }
-
-  .expertise-description {
-    margin: 22px 0 30px;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-
-  /* ---------- MY PHILOSOPHY ---------- */
-
-  .philosophy-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .philosophy-heading h2 {
-    font-size: 40px;
-  }
-
-  .philosophy-heading > p {
-    margin-top: 13px;
-    font-size: 14px;
-  }
-
-  .philosophy-quote {
-    margin-top: 27px;
-  }
-
-  .philosophy-quote blockquote {
-    max-width: 570px;
-    margin-inline: auto;
-    font-size: 27px;
-    line-height: 1.22;
-  }
-
-  .philosophy-quote p {
-    margin-top: 20px;
-    font-size: 13px;
-    line-height: 1.65;
-  }
-
-  .philosophy-values {
-    margin-top: 30px;
-  }
-
-  .philosophy-value {
-    min-height: 82px;
-    grid-template-columns: 48px 1fr;
-    gap: 13px;
-    padding: 13px 0;
-  }
-
-  .value-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 16px;
-  }
-
-  .philosophy-value h3 {
-    font-size: 14px;
-  }
-
-  .philosophy-value p {
-    margin-top: 4px;
-    font-size: 11px;
-  }
-
-
-  /* ---------- FINAL CTA ---------- */
-
-  .about-cta {
-    padding-top: 52px;
-    padding-bottom: 52px;
-  }
-
-  .about-cta h2 {
-    max-width: 500px;
-    margin-inline: auto;
-    font-size: 37px;
-    line-height: 1.05;
-  }
-
-  .about-cta p {
-    max-width: 600px;
-    margin: 22px auto 28px;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .about-cta .btn {
-    min-height: 56px;
-  }
-
-
-  /* ---------- ARABIC MOBILE ---------- */
-
-  html[dir="rtl"] .expertise-section .about-section-title {
-    font-size: 31px;
-    line-height: 1.35;
-  }
-
-  html[dir="rtl"] .philosophy-heading h2 {
-    font-size: 32px;
-    line-height: 1.4;
-  }
-
-  html[dir="rtl"] .philosophy-quote blockquote {
-    font-size: 22px;
-    line-height: 1.65;
-  }
-
-  html[dir="rtl"] .about-cta h2 {
-    font-size: 31px;
-    line-height: 1.4;
-  }
-
-}
   <style>
 
     /* =====================================================
        ABOUT PAGE
-       Uses the approved Chef Kassem black / gold identity
     ===================================================== */
 
     .about-page {
@@ -246,7 +40,7 @@
 
 
     /* =====================================================
-       ABOUT HERO
+       HERO
     ===================================================== */
 
     .about-hero {
@@ -266,7 +60,6 @@
         );
 
       color: #ffffff;
-
       border-bottom: 2px solid #9d6d18;
     }
 
@@ -282,15 +75,12 @@
       align-items: center;
 
       gap: 65px;
-
       padding-top: 55px;
     }
 
     .about-hero-image {
       position: relative;
-
       align-self: end;
-
       overflow: hidden;
 
       max-width: 540px;
@@ -323,9 +113,7 @@
 
       font-size: 13px;
       font-weight: 800;
-
       letter-spacing: 4px;
-
       text-transform: uppercase;
     }
 
@@ -337,20 +125,17 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(58px, 7vw, 90px);
       line-height: .9;
-
       font-weight: 600;
     }
 
     .about-role {
       max-width: 690px;
-
       margin-top: 30px;
 
       color: #e1ad43;
 
       font-size: clamp(24px, 3vw, 38px);
       font-weight: 800;
-
       line-height: 1.35;
 
       text-transform: uppercase;
@@ -378,7 +163,6 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 92px;
       line-height: .85;
-
       font-weight: 600;
     }
 
@@ -439,7 +223,6 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(48px, 5vw, 68px);
       line-height: .98;
-
       font-weight: 600;
     }
 
@@ -450,7 +233,6 @@
 
       font-size: 18px;
       font-weight: 800;
-
       line-height: 1.55;
     }
 
@@ -718,7 +500,6 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(52px, 6vw, 78px);
       line-height: 1;
-
       font-weight: 600;
     }
 
@@ -747,7 +528,6 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(36px, 4vw, 54px);
       line-height: 1.18;
-
       font-weight: 500;
     }
 
@@ -852,7 +632,6 @@
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(48px, 6vw, 70px);
       line-height: 1;
-
       font-weight: 600;
     }
 
@@ -924,16 +703,12 @@
         width: 92%;
       }
 
-
-      /* HERO */
-
       .about-hero-grid {
         min-height: auto;
 
         grid-template-columns: 1fr;
 
         gap: 0;
-
         padding-top: 0;
       }
 
@@ -970,7 +745,6 @@
         margin-bottom: 15px;
 
         font-size: 11px;
-
         letter-spacing: 3px;
       }
 
@@ -1027,9 +801,6 @@
         font-size: 12px;
       }
 
-
-      /* STORY */
-
       .about-story {
         padding: 60px 0;
       }
@@ -1074,9 +845,6 @@
         max-height: 520px;
       }
 
-
-      /* JOURNEY */
-
       .journey-section {
         padding: 60px 0;
       }
@@ -1115,9 +883,6 @@
       .journey-card p {
         font-size: 12px;
       }
-
-
-      /* EXPERTISE */
 
       .expertise-section {
         padding: 60px 0;
@@ -1159,9 +924,6 @@
       .expertise-card p {
         font-size: 12px;
       }
-
-
-      /* PHILOSOPHY */
 
       .philosophy-section {
         padding: 60px 0;
@@ -1237,9 +999,6 @@
         font-size: 13px;
       }
 
-
-      /* CTA */
-
       .about-cta {
         padding: 60px 0;
       }
@@ -1270,7 +1029,7 @@
 
 
     /* =====================================================
-       SMALL MOBILE
+       SMALL MOBILE - FINAL COMPACT VERSION
     ===================================================== */
 
     @media (max-width: 520px) {
@@ -1322,52 +1081,242 @@
         font-size: 42px;
       }
 
-      .journey-grid,
-      .expertise-grid {
-        grid-template-columns: 1fr;
+
+      /* JOURNEY - TWO CARDS PER ROW */
+
+      .journey-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
       }
 
       .journey-card {
-        padding: 25px 18px;
+        min-height: 230px;
+
+        padding: 22px 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .journey-card:last-child {
+        grid-column: 1 / -1;
+
+        width: calc(50% - 6px);
+
+        justify-self: center;
       }
 
       .journey-code {
-        width: 82px;
-        height: 82px;
+        width: 68px;
+        height: 68px;
+
+        margin: 0 auto 14px;
+
+        font-size: 24px;
+
+        border-width: 1px;
+      }
+
+      .journey-card h3 {
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
+      .journey-card p {
+        margin-top: 10px;
+
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+
+      /* EXPERTISE - TWO CARDS PER ROW */
+
+      .expertise-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
       }
 
       .expertise-card {
-        min-height: 185px;
+        min-height: 190px;
+
+        padding: 20px 10px;
+      }
+
+      .expertise-icon {
+        width: 52px;
+        height: 52px;
+
+        margin-bottom: 15px;
+
+        font-size: 18px;
+      }
+
+      .expertise-card h3 {
+        font-size: 13px;
+        line-height: 1.35;
+      }
+
+      .expertise-card p {
+        margin-top: 9px;
+
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .expertise-section .about-section-title {
+        font-size: 38px;
+      }
+
+      .expertise-section .about-section-subtitle {
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .expertise-description {
+        margin: 22px 0 30px;
+
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+
+      /* PHILOSOPHY */
+
+      .philosophy-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
 
       .philosophy-heading h2 {
-        font-size: 46px;
+        font-size: 40px;
       }
 
       .philosophy-heading > p {
-        font-size: 16px;
+        margin-top: 13px;
+
+        font-size: 14px;
+      }
+
+      .philosophy-quote {
+        margin-top: 27px;
       }
 
       .philosophy-quote blockquote {
-        font-size: 31px;
+        max-width: 570px;
+
+        margin-inline: auto;
+
+        font-size: 27px;
+        line-height: 1.22;
+      }
+
+      .philosophy-quote p {
+        margin-top: 20px;
+
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .philosophy-values {
+        margin-top: 30px;
+      }
+
+      .philosophy-value {
+        min-height: 82px;
+
+        grid-template-columns: 48px 1fr;
+
+        gap: 13px;
+
+        padding: 13px 0;
+      }
+
+      .value-icon {
+        width: 44px;
+        height: 44px;
+
+        font-size: 16px;
+      }
+
+      .philosophy-value h3 {
+        font-size: 14px;
+      }
+
+      .philosophy-value p {
+        margin-top: 4px;
+
+        font-size: 11px;
+      }
+
+
+      /* CTA */
+
+      .about-cta {
+        padding-top: 52px;
+        padding-bottom: 52px;
       }
 
       .about-cta h2 {
-        font-size: 44px;
+        max-width: 500px;
+
+        margin-inline: auto;
+
+        font-size: 37px;
+        line-height: 1.05;
+      }
+
+      .about-cta p {
+        max-width: 600px;
+
+        margin: 22px auto 28px;
+
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .about-cta .btn {
+        min-height: 56px;
+      }
+
+
+      /* ARABIC */
+
+      html[dir="rtl"] .expertise-section .about-section-title {
+        font-size: 31px;
+        line-height: 1.35;
+      }
+
+      html[dir="rtl"] .philosophy-heading h2 {
+        font-size: 32px;
+        line-height: 1.4;
+      }
+
+      html[dir="rtl"] .philosophy-quote blockquote {
+        font-size: 22px;
+        line-height: 1.65;
+      }
+
+      html[dir="rtl"] .about-cta h2 {
+        font-size: 31px;
+        line-height: 1.4;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body class="about-page">
 
-
-<!-- ======================================================
-     HEADER
-====================================================== -->
 
 <header class="site-header">
 
@@ -1409,7 +1358,7 @@
 
       <a href="index.html#services"
          data-en="Services"
-         data-ar="خدماتنا">
+         data-ar="الخدمات">
         Services
       </a>
 
@@ -1466,10 +1415,6 @@
 
 <main>
 
-
-<!-- ======================================================
-     ABOUT HERO
-====================================================== -->
 
 <section class="about-hero">
 
@@ -1532,10 +1477,6 @@
 </section>
 
 
-<!-- ======================================================
-     FROM THE KITCHEN TO BUSINESS LEADERSHIP
-====================================================== -->
-
 <section class="about-story">
 
   <div class="about-container about-story-grid">
@@ -1593,10 +1534,6 @@
 </section>
 
 
-<!-- ======================================================
-     PROFESSIONAL JOURNEY
-====================================================== -->
-
 <section class="journey-section">
 
   <div class="about-container">
@@ -1626,14 +1563,11 @@
 
     <div class="journey-grid">
 
-
       <article class="journey-card">
 
         <div class="journey-code">SY</div>
 
-        <h3
-          data-en="SYRIA"
-          data-ar="سوريا">
+        <h3 data-en="SYRIA" data-ar="سوريا">
           SYRIA
         </h3>
 
@@ -1650,9 +1584,7 @@
 
         <div class="journey-code">JO</div>
 
-        <h3
-          data-en="JORDAN"
-          data-ar="الأردن">
+        <h3 data-en="JORDAN" data-ar="الأردن">
           JORDAN
         </h3>
 
@@ -1669,9 +1601,7 @@
 
         <div class="journey-code">UAE</div>
 
-        <h3
-          data-en="UAE"
-          data-ar="الإمارات">
+        <h3 data-en="UAE" data-ar="الإمارات">
           UAE
         </h3>
 
@@ -1709,9 +1639,7 @@
 
         <div class="journey-code">KH</div>
 
-        <h3
-          data-en="CAMBODIA"
-          data-ar="كمبوديا">
+        <h3 data-en="CAMBODIA" data-ar="كمبوديا">
           CAMBODIA
         </h3>
 
@@ -1730,10 +1658,6 @@
 
 </section>
 
-
-<!-- ======================================================
-     BEYOND THE KITCHEN
-====================================================== -->
 
 <section class="expertise-section">
 
@@ -1767,7 +1691,6 @@
 
 
     <div class="expertise-grid">
-
 
       <article class="expertise-card">
 
@@ -1889,14 +1812,9 @@
 </section>
 
 
-<!-- ======================================================
-     PHILOSOPHY
-====================================================== -->
-
 <section class="philosophy-section">
 
   <div class="about-container">
-
 
     <div class="philosophy-heading">
 
@@ -1936,22 +1854,19 @@
 
     <div class="philosophy-values">
 
-
       <article class="philosophy-value">
 
         <div class="value-icon">⚙</div>
 
         <div>
 
-          <h3
-            data-en="Build Systems"
-            data-ar="بناء الأنظمة">
+          <h3 data-en="Build Systems"
+              data-ar="بناء الأنظمة">
             Build Systems
           </h3>
 
-          <p
-            data-en="Operational structure"
-            data-ar="هيكل تشغيلي واضح">
+          <p data-en="Operational structure"
+             data-ar="هيكل تشغيلي واضح">
             Operational structure
           </p>
 
@@ -1966,15 +1881,13 @@
 
         <div>
 
-          <h3
-            data-en="Develop People"
-            data-ar="تطوير الأشخاص">
+          <h3 data-en="Develop People"
+              data-ar="تطوير الأشخاص">
             Develop People
           </h3>
 
-          <p
-            data-en="Continuous team development"
-            data-ar="تطوير مستمر لفريق العمل">
+          <p data-en="Continuous team development"
+             data-ar="تطوير مستمر لفريق العمل">
             Continuous team development
           </p>
 
@@ -2035,10 +1948,6 @@
 </section>
 
 
-<!-- ======================================================
-     CTA
-====================================================== -->
-
 <section class="about-cta">
 
   <div class="about-container about-cta-inner">
@@ -2073,14 +1982,9 @@
 </main>
 
 
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
 <footer class="site-footer">
 
   <div class="container footer-grid">
-
 
     <div class="footer-brand">
 
@@ -2113,9 +2017,8 @@
 
     <div class="footer-links">
 
-      <h3
-        data-en="Quick Links"
-        data-ar="روابط سريعة">
+      <h3 data-en="Quick Links"
+          data-ar="روابط سريعة">
         Quick Links
       </h3>
 
@@ -2133,7 +2036,7 @@
 
       <a href="index.html#services"
          data-en="Services"
-         data-ar="خدماتنا">
+         data-ar="الخدمات">
         Services
       </a>
 
@@ -2202,4 +2105,4 @@
 <script src="script.js"></script>
 
 </body>
-        </html>
+  </html>
