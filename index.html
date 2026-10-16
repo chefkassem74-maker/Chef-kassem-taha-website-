@@ -22,9 +22,125 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+
     /* =====================================================
-       BLOG SECTION
-       Added without changing existing website images/design
+       PROJECTS
+    ===================================================== */
+
+    .projects-section {
+      padding: 78px 0;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(213, 164, 60, .10),
+          transparent 28%
+        ),
+        #f8f1e5;
+      border-top: 1px solid rgba(157, 109, 24, .18);
+      border-bottom: 1px solid rgba(157, 109, 24, .18);
+    }
+
+    .projects-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+      gap: 45px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+
+    .projects-heading h2 {
+      margin: 0;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(35px, 4vw, 54px);
+      line-height: 1;
+    }
+
+    .projects-heading > p {
+      margin: 0;
+      color: #655a4c;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 460px;
+      border: 1px solid rgba(157, 109, 24, .35);
+      border-radius: 7px;
+      background: #080604;
+      box-shadow: 0 15px 35px rgba(30, 20, 8, .15);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(4, 3, 2, .96) 0%,
+          rgba(4, 3, 2, .70) 28%,
+          rgba(4, 3, 2, .08) 68%,
+          transparent 100%
+        );
+    }
+
+    .project-content {
+      position: absolute;
+      z-index: 2;
+      left: 28px;
+      right: 28px;
+      bottom: 27px;
+    }
+
+    .project-label {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: #f0c96a;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .project-content h3 {
+      margin: 0 0 9px;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      line-height: 1.05;
+    }
+
+    .project-content p {
+      max-width: 520px;
+      margin: 0;
+      color: #e5dac9;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       BLOG
     ===================================================== */
 
     .blog-section {
@@ -117,34 +233,59 @@
       font-weight: 800;
     }
 
-    .blog-card a:hover {
-      color: #ffffff;
-    }
-
     .blog-more {
       display: flex;
       justify-content: center;
       margin-top: 30px;
     }
 
+
+    /* =====================================================
+       RTL FOR NEW SECTIONS
+    ===================================================== */
+
+    html[dir="rtl"] .projects-heading,
+    html[dir="rtl"] .project-content,
     html[dir="rtl"] .blog-heading,
     html[dir="rtl"] .blog-card {
       text-align: right;
     }
 
+    html[dir="rtl"] .projects-heading h2,
+    html[dir="rtl"] .project-content h3,
     html[dir="rtl"] .blog-heading h2,
     html[dir="rtl"] .blog-card h3 {
       font-family: "Cairo", Arial, sans-serif;
     }
 
+
+    /* =====================================================
+       MOBILE FOR NEW SECTIONS
+    ===================================================== */
+
     @media (max-width: 820px) {
+
+      .projects-section,
       .blog-section {
         padding: 55px 0;
       }
 
+      .projects-heading,
       .blog-heading {
         grid-template-columns: 1fr;
         gap: 14px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        min-height: 390px;
+      }
+
+      .project-card img {
+        height: 390px;
       }
 
       .blog-grid {
@@ -153,13 +294,34 @@
     }
 
     @media (max-width: 520px) {
+
+      .projects-heading h2,
       .blog-heading h2 {
         font-size: 32px;
       }
 
+      html[dir="rtl"] .projects-heading h2,
       html[dir="rtl"] .blog-heading h2 {
         font-size: 28px;
         line-height: 1.4;
+      }
+
+      .project-card {
+        min-height: 350px;
+      }
+
+      .project-card img {
+        height: 350px;
+      }
+
+      .project-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      .project-content h3 {
+        font-size: 25px;
       }
 
       .blog-grid {
@@ -170,8 +332,10 @@
         min-height: 250px;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -201,6 +365,7 @@
 
     </a>
 
+
     <nav class="main-nav" id="mainNav">
 
       <a href="index.html"
@@ -222,6 +387,12 @@
         Services
       </a>
 
+      <a href="#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
       <a href="#academy"
          data-en="Academy"
          data-ar="الأكاديمية">
@@ -234,7 +405,6 @@
         Recipes
       </a>
 
-      <!-- BLOG ADDED -->
       <a href="#blog"
          data-en="Blog"
          data-ar="المدونة">
@@ -248,6 +418,7 @@
       </a>
 
     </nav>
+
 
     <div class="header-actions">
 
@@ -350,9 +521,9 @@
 
     </div>
 
+
     <div class="hero-portrait">
 
-      <!-- ORIGINAL IMAGE PRESERVED -->
       <img
         src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
         alt="Chef Kassem Taha">
@@ -365,7 +536,7 @@
 
 
 <!-- ======================================================
-     EXPERIENCE STRIP
+     EXPERIENCE
 ====================================================== -->
 
 <section class="experience-strip">
@@ -436,6 +607,7 @@
     <div class="section-intro">
 
       <div>
+
         <p class="eyebrow"
            data-en="OUR CORE SERVICES"
            data-ar="خدماتنا الرئيسية">
@@ -447,6 +619,7 @@
           data-ar="حلول متكاملة لأعمال المطاعم والفنادق">
           Complete Solutions for Your F&B Business
         </h2>
+
       </div>
 
       <p
@@ -459,72 +632,108 @@
 
     </div>
 
+
     <div class="services-grid">
 
       <article class="image-card">
+
         <img src="service-restaurant.jpg"
              alt="Restaurant Development">
+
         <div class="image-card-content">
+
           <h3 data-en="Restaurant Setup"
               data-ar="تأسيس المطاعم">
             Restaurant Setup
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="image-card">
+
         <img src="service-hotel.jpg"
              alt="Hotel Development">
+
         <div class="image-card-content">
+
           <h3 data-en="Hotel Development"
               data-ar="تطوير الفنادق">
             Hotel Development
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="image-card">
+
         <img src="service-central-kitchen.jpg"
              alt="Central Kitchens">
+
         <div class="image-card-content">
+
           <h3 data-en="Central Kitchens"
               data-ar="المطابخ المركزية">
             Central Kitchens
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="image-card">
+
         <img src="service-menu.jpg"
              alt="Menu Development">
+
         <div class="image-card-content">
+
           <h3 data-en="Menu Development"
               data-ar="تطوير القوائم">
             Menu Development
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="image-card" id="academy">
+
         <img src="service-training.jpg"
              alt="Training and Academy">
+
         <div class="image-card-content">
+
           <h3 data-en="Training & Academy"
               data-ar="التدريب والأكاديمية">
             Training & Academy
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="image-card">
+
         <img src="service-food-safety.jpg"
              alt="Food Safety">
+
         <div class="image-card-content">
+
           <h3 data-en="SOP & HACCP"
               data-ar="إجراءات التشغيل وسلامة الغذاء">
             SOP & HACCP
           </h3>
+
         </div>
+
       </article>
 
     </div>
@@ -535,7 +744,122 @@
 
 
 <!-- ======================================================
-     RECIPES PREVIEW
+     PROJECTS
+====================================================== -->
+
+<section class="projects-section" id="projects">
+
+  <div class="container">
+
+    <div class="projects-heading">
+
+      <div>
+
+        <p class="eyebrow"
+           data-en="FEATURED PROJECTS"
+           data-ar="مشاريع مختارة">
+          FEATURED PROJECTS
+        </p>
+
+        <h2
+          data-en="Concepts & Businesses"
+          data-ar="مشاريع وكونسبتات">
+          Concepts & Businesses
+        </h2>
+
+      </div>
+
+      <p
+        data-en="Selected hospitality and restaurant projects reflecting practical experience in concept development, operations, culinary identity and brand building."
+        data-ar="مجموعة مختارة من مشاريع المطاعم والضيافة التي تعكس الخبرة العملية في تطوير المفاهيم والتشغيل والهوية الغذائية وبناء العلامة التجارية.">
+        Selected hospitality and restaurant projects
+        reflecting practical experience in concept development,
+        operations, culinary identity and brand building.
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+      <!-- FINE DINING RESTAURANT -->
+
+      <article class="project-card">
+
+        <img
+          src="project-fine-dining.jpg"
+          alt="Chef Kassem Fine Dining Restaurant">
+
+        <div class="project-content">
+
+          <span class="project-label"
+                data-en="RESTAURANT PROJECT"
+                data-ar="مشروع مطعم">
+            RESTAURANT PROJECT
+          </span>
+
+          <h3
+            data-en="Chef Kassem’s Fine Dining Restaurant"
+            data-ar="مطعم الشيف قاسم للمأكولات الراقية">
+            Chef Kassem’s Fine Dining Restaurant
+          </h3>
+
+          <p
+            data-en="A fine dining restaurant concept combining culinary identity, hospitality, restaurant operations and guest experience."
+            data-ar="مشروع مطعم راقٍ يجمع بين الهوية الغذائية والضيافة والتشغيل الاحترافي وتجربة الضيف.">
+            A fine dining restaurant concept combining
+            culinary identity, hospitality, restaurant
+            operations and guest experience.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- COFFEE SHOP -->
+
+      <article class="project-card">
+
+        <img
+          src="project-coffee-shop.jpg"
+          alt="Chef Kassem Coffee Shop">
+
+        <div class="project-content">
+
+          <span class="project-label"
+                data-en="COFFEE SHOP CONCEPT"
+                data-ar="كونسبت كوفي شوب">
+            COFFEE SHOP CONCEPT
+          </span>
+
+          <h3
+            data-en="Chef Kassem Coffee Shop"
+            data-ar="شيف قاسم كوفي شوب">
+            Chef Kassem Coffee Shop
+          </h3>
+
+          <p
+            data-en="A modern coffee shop concept developed around Chef Kassem’s brand identity, combining coffee, bakery, desserts and a welcoming hospitality experience."
+            data-ar="كونسبت كوفي شوب عصري مبني حول هوية الشيف قاسم، يجمع بين القهوة والمخبوزات والحلويات وتجربة ضيافة مميزة.">
+            A modern coffee shop concept developed around
+            Chef Kassem’s brand identity, combining coffee,
+            bakery, desserts and a welcoming hospitality experience.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     RECIPES
 ====================================================== -->
 
 <section class="cuisines-section" id="cuisines">
@@ -558,75 +882,112 @@
 
     </div>
 
+
     <div class="cuisine-grid">
 
       <article class="cuisine-card">
+
         <img src="food-syrian.png"
              alt="Syrian Cuisine">
+
         <div>
+
           <h3 data-en="Syrian Cuisine"
               data-ar="المطبخ السوري">
             Syrian Cuisine
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="cuisine-card">
+
         <img src="food-international.jpg"
              alt="International Cuisine">
+
         <div>
+
           <h3 data-en="International Cuisine"
               data-ar="المطبخ العالمي">
             International Cuisine
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="cuisine-card">
+
         <img src="food-grill.jpg"
              alt="Grills and Barbecue">
+
         <div>
+
           <h3 data-en="Grills & Barbecue"
               data-ar="المشاوي والباربكيو">
             Grills & Barbecue
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="cuisine-card">
+
         <img src="food-healthy.jpg"
              alt="Healthy and Diet Cuisine">
+
         <div>
+
           <h3 data-en="Healthy & Diet"
               data-ar="المطبخ الصحي والدايت">
             Healthy & Diet
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="cuisine-card">
+
         <img src="food-dessert.jpg"
              alt="Desserts">
+
         <div>
+
           <h3 data-en="Desserts"
               data-ar="الحلويات">
             Desserts
           </h3>
+
         </div>
+
       </article>
 
+
       <article class="cuisine-card">
+
         <img src="food-icecream-chocolate.jpg"
              alt="Ice Cream and Chocolate">
+
         <div>
+
           <h3 data-en="Ice Cream & Chocolate"
               data-ar="الآيس كريم والشوكولاتة">
             Ice Cream & Chocolate
           </h3>
+
         </div>
+
       </article>
 
     </div>
+
 
     <div class="recipes-more">
 
@@ -645,7 +1006,7 @@
 
 
 <!-- ======================================================
-     BLOG — NEW SECTION
+     BLOG
 ====================================================== -->
 
 <section class="blog-section" id="blog">
@@ -798,12 +1159,12 @@
 
     <div class="story-image">
 
-      <!-- ORIGINAL IMAGE PRESERVED -->
       <img
         src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
         alt="Chef Kassem Taha">
 
     </div>
+
 
     <div class="story-content">
 
@@ -863,6 +1224,7 @@
       </h2>
 
     </div>
+
 
     <div class="process-grid">
 
@@ -931,6 +1293,7 @@
       </h2>
 
     </div>
+
 
     <div class="contact-buttons">
 
@@ -1022,6 +1385,12 @@
         Services
       </a>
 
+      <a href="#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
       <a href="#academy"
          data-en="Academy"
          data-ar="الأكاديمية">
@@ -1034,7 +1403,6 @@
         Recipes
       </a>
 
-      <!-- BLOG ADDED TO FOOTER -->
       <a href="#blog"
          data-en="Blog"
          data-ar="المدونة">
@@ -1093,4 +1461,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+          </html>
