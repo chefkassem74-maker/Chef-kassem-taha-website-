@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Chef Kassem Taha Recipes - Syrian cuisine, international cuisine, grills, seafood, salads, healthy food, bread, pastries, spices, desserts, ice cream and chocolate.">
+
+  <title>Recipes | Chef Kassem Taha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =====================================================
+       RECIPES PAGE
+    ===================================================== */
+
+    .recipes-page {
+      background:
+        radial-gradient(
+          circle at 90% 5%,
+          rgba(213, 164, 60, .10),
+          transparent 28%
+        ),
+        #f8f1e5;
+      min-height: 100vh;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .recipes-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 78px;
+      background:
+        radial-gradient(
+          circle at 75% 20%,
+          rgba(213, 164, 60, .18),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #050403 0%,
+          #110c07 55%,
+          #1b1209 100%
+        );
+      border-bottom: 1px solid rgba(213, 164, 60, .45);
+    }
+
+    .recipes-hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(213, 164, 60, .12);
+      border-radius: 50%;
+      right: -170px;
+      top: -190px;
+    }
+
+    .recipes-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 850px;
+    }
+
+    .recipes-hero .eyebrow {
+      color: #d9a93d;
+    }
+
+    .recipes-hero h1 {
+      margin: 14px 0 20px;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .95;
+      font-weight: 700;
+    }
+
+    .recipes-hero h1 strong {
+      display: block;
+      color: #e4b84f;
+      font-weight: 700;
+    }
+
+    .recipes-hero p.hero-text {
+      max-width: 720px;
+      margin: 0;
+      color: #ded3c2;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .recipes-intro {
+      padding: 65px 0 25px;
+    }
+
+    .recipes-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
+      gap: 45px;
+      align-items: end;
+    }
+
+    .recipes-intro h2 {
+      margin: 8px 0 0;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+    }
+
+    .recipes-intro-text {
+      margin: 0;
+      color: #655a4c;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       CATEGORY GRID
+    ===================================================== */
+
+    .recipe-categories {
+      padding: 28px 0 85px;
+    }
+
+    .recipe-category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .recipe-category-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      border: 1px solid rgba(157, 109, 24, .30);
+      border-radius: 8px;
+      background: #090705;
+      box-shadow: 0 14px 32px rgba(36, 25, 12, .12);
+      isolation: isolate;
+    }
+
+    .recipe-category-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+      z-index: -3;
+    }
+
+    .recipe-category-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(4, 3, 2, .97) 0%,
+          rgba(4, 3, 2, .76) 26%,
+          rgba(4, 3, 2, .18) 62%,
+          rgba(4, 3, 2, .04) 100%
+        );
+      z-index: -2;
+    }
+
+    .recipe-category-card::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(235, 190, 89, .25);
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .recipe-category-card:hover img {
+      transform: scale(1.045);
+    }
+
+    .recipe-card-content {
+      position: absolute;
+      left: 27px;
+      right: 27px;
+      bottom: 27px;
+    }
+
+    .recipe-number {
+      display: block;
+      margin-bottom: 7px;
+      color: #e7b94e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .recipe-card-content h3 {
+      margin: 0 0 8px;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 31px;
+      line-height: 1.05;
+    }
+
+    .recipe-card-content p {
+      margin: 0;
+      color: #ddd2c1;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       FINAL CTA
+    ===================================================== */
+
+    .recipes-cta {
+      padding: 70px 0;
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(213, 164, 60, .16),
+          transparent 30%
+        ),
+        #080604;
+      border-top: 1px solid rgba(213, 164, 60, .38);
+    }
+
+    .recipes-cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .recipes-cta h2 {
+      margin: 7px 0 0;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(35px, 4vw, 50px);
+      line-height: 1.05;
+    }
+
+
+    /* =====================================================
+       RTL
+    ===================================================== */
+
+    html[dir="rtl"] .recipes-hero-content,
+    html[dir="rtl"] .recipes-intro,
+    html[dir="rtl"] .recipe-card-content,
+    html[dir="rtl"] .recipes-cta {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .recipes-hero h1,
+    html[dir="rtl"] .recipes-intro h2,
+    html[dir="rtl"] .recipe-card-content h3,
+    html[dir="rtl"] .recipes-cta h2 {
+      font-family: "Cairo", Arial, sans-serif;
+    }
+
+    html[dir="rtl"] .recipes-hero h1 {
+      line-height: 1.35;
+    }
+
+    html[dir="rtl"] .recipe-card-content h3 {
+      line-height: 1.35;
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 980px) {
+
+      .recipe-category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 820px) {
+
+      .recipes-hero {
+        padding: 68px 0 58px;
+      }
+
+      .recipes-intro {
+        padding-top: 50px;
+      }
+
+      .recipes-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .recipes-cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .main-nav.open {
+        max-height: 700px;
+        overflow-y: auto;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .recipes-hero {
+        padding: 55px 0 48px;
+      }
+
+      .recipes-hero h1 {
+        font-size: 46px;
+      }
+
+      html[dir="rtl"] .recipes-hero h1 {
+        font-size: 38px;
+      }
+
+      .recipe-category-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .recipe-category-card {
+        min-height: 390px;
+      }
+
+      .recipe-card-content {
+        left: 22px;
+        right: 22px;
+        bottom: 23px;
+      }
+
+      .recipe-card-content h3 {
+        font-size: 29px;
+      }
+
+      .recipes-intro h2 {
+        font-size: 38px;
+      }
+
+      html[dir="rtl"] .recipes-intro h2 {
+        font-size: 31px;
+        line-height: 1.4;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-logo">CK</span>
+
+      <span class="brand-copy">
+
+        <strong>Chef Kassem Taha</strong>
+
+        <small
+          data-en="Executive Chef | Consultant | Trainer"
+          data-ar="شيف تنفيذي | مستشار | مدرب">
+          Executive Chef | Consultant | Trainer
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav" id="mainNav">
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
+
+      <a href="index.html#services"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
+
+      <a href="index.html#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="index.html#academy"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="recipes.html"
+         class="active"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+      <a href="index.html#contact"
+         data-en="Contact"
+         data-ar="تواصل معنا">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        aria-label="Switch language">
+        AR
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main class="recipes-page">
+
+<!-- ======================================================
+     RECIPES HERO
+====================================================== -->
+
+<section class="recipes-hero">
+
+  <div class="container">
+
+    <div class="recipes-hero-content">
+
+      <p class="eyebrow"
+         data-en="CHEF KASSEM TAHA RECIPES"
+         data-ar="وصفات الشيف قاسم طه">
+        CHEF KASSEM TAHA RECIPES
+      </p>
+
+      <h1>
+
+        <span
+          data-en="From World Cuisines"
+          data-ar="من مطابخ العالم">
+          From World Cuisines
+        </span>
+
+        <strong
+          data-en="to Your Table"
+          data-ar="إلى مائدتكم">
+          to Your Table
+        </strong>
+
+      </h1>
+
+      <p class="hero-text"
+         data-en="Explore a growing collection of recipes and culinary categories built around professional kitchen experience, international cuisine and authentic flavors."
+         data-ar="اكتشف مجموعة متنامية من الوصفات والتصنيفات المبنية على الخبرة المهنية في المطابخ والنكهات الأصيلة والمطابخ العالمية.">
+        Explore a growing collection of recipes and culinary
+        categories built around professional kitchen experience,
+        international cuisine and authentic flavors.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+====================================================== -->
+
+<section class="recipes-intro">
+
+  <div class="container recipes-intro-grid">
+
+    <div>
+
+      <p class="eyebrow"
+         data-en="EXPLORE BY CATEGORY"
+         data-ar="استكشف حسب التصنيف">
+        EXPLORE BY CATEGORY
+      </p>
+
+      <h2
+        data-en="A World of Recipes"
+        data-ar="عالم من الوصفات">
+        A World of Recipes
+      </h2>
+
+    </div>
+
+    <p class="recipes-intro-text"
+       data-en="Choose a category and discover recipes ranging from traditional Syrian cuisine and international dishes to healthy food, bakery, seafood, spices and desserts."
+       data-ar="اختر التصنيف واكتشف وصفات متنوعة تبدأ من المطبخ السوري والمأكولات العالمية، وتمتد إلى الطعام الصحي والمخبوزات والأسماك والبهارات والحلويات.">
+      Choose a category and discover recipes ranging from
+      traditional Syrian cuisine and international dishes
+      to healthy food, bakery, seafood, spices and desserts.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     11 RECIPE CATEGORIES
+====================================================== -->
+
+<section class="recipe-categories">
+
+  <div class="container">
+
+    <div class="recipe-category-grid">
+
+
+      <!-- 01 SYRIAN -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-syrian.png"
+             alt="Syrian Cuisine">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">01</span>
+
+          <h3
+            data-en="Syrian Cuisine"
+            data-ar="المطبخ السوري">
+            Syrian Cuisine
+          </h3>
+
+          <p
+            data-en="Traditional dishes and authentic flavors inspired by Syria's rich culinary heritage."
+            data-ar="أطباق تقليدية ونكهات أصيلة مستوحاة من التراث الغني للمطبخ السوري.">
+            Traditional dishes and authentic flavors inspired
+            by Syria's rich culinary heritage.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 INTERNATIONAL -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-international.jpg"
+             alt="International Cuisine">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">02</span>
+
+          <h3
+            data-en="International Cuisine"
+            data-ar="المطبخ العالمي">
+            International Cuisine
+          </h3>
+
+          <p
+            data-en="Selected dishes and culinary ideas inspired by cuisines from around the world."
+            data-ar="أطباق وأفكار مختارة مستوحاة من مطابخ وثقافات مختلفة حول العالم.">
+            Selected dishes and culinary ideas inspired
+            by cuisines from around the world.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 03 GRILLS -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-grill.jpg"
+             alt="Grills and Barbecue">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">03</span>
+
+          <h3
+            data-en="Grills & Barbecue"
+            data-ar="المشاوي والباربكيو">
+            Grills & Barbecue
+          </h3>
+
+          <p
+            data-en="Meat, chicken and grilled specialties prepared with professional techniques and bold flavors."
+            data-ar="وصفات اللحوم والدجاج والمشاوي بتقنيات احترافية ونكهات غنية.">
+            Meat, chicken and grilled specialties prepared
+            with professional techniques and bold flavors.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 04 FISH -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-fish.jpg"
+             alt="Fish and Seafood">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">04</span>
+
+          <h3
+            data-en="Fish & Seafood"
+            data-ar="الأسماك والمأكولات البحرية">
+            Fish & Seafood
+          </h3>
+
+          <p
+            data-en="Fish and seafood recipes combining freshness, balanced seasoning and professional presentation."
+            data-ar="وصفات الأسماك والمأكولات البحرية التي تجمع بين الطزاجة والتتبيل المتوازن والتقديم الاحترافي.">
+            Fish and seafood recipes combining freshness,
+            balanced seasoning and professional presentation.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 05 SALADS -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-salads.jpg"
+             alt="Salads">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">05</span>
+
+          <h3
+            data-en="Salads"
+            data-ar="السلطات">
+            Salads
+          </h3>
+
+          <p
+            data-en="Fresh salads, classic combinations and creative recipes with balanced dressings and textures."
+            data-ar="سلطات طازجة ووصفات كلاسيكية ومبتكرة مع صلصات ونكهات متوازنة.">
+            Fresh salads, classic combinations and creative
+            recipes with balanced dressings and textures.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 06 HEALTHY -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-healthy.jpg"
+             alt="Healthy and Diet">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">06</span>
+
+          <h3
+            data-en="Healthy & Diet"
+            data-ar="الصحي والدايت">
+            Healthy & Diet
+          </h3>
+
+          <p
+            data-en="Balanced recipes created for healthier lifestyles while maintaining flavor and quality."
+            data-ar="وصفات متوازنة تناسب أنماط الحياة الصحية مع المحافظة على النكهة والجودة.">
+            Balanced recipes created for healthier lifestyles
+            while maintaining flavor and quality.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 07 BREAD -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-bread.jpg"
+             alt="Bread">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">07</span>
+
+          <h3
+            data-en="Bread"
+            data-ar="الخبز">
+            Bread
+          </h3>
+
+          <p
+            data-en="Traditional and international breads, dough techniques and professional baking methods."
+            data-ar="أنواع الخبز التقليدي والعالمي وتقنيات العجين وطرق الخَبز الاحترافية.">
+            Traditional and international breads,
+            dough techniques and professional baking methods.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 08 PASTRIES -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-pastries.jpg"
+             alt="Pastries and Bakery">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">08</span>
+
+          <h3
+            data-en="Pastries & Bakery"
+            data-ar="المعجنات والمخبوزات">
+            Pastries & Bakery
+          </h3>
+
+          <p
+            data-en="Savory pastries, bakery recipes, dough preparation and professional production techniques."
+            data-ar="معجنات ومخبوزات ووصفات العجين وأساليب التحضير والإنتاج الاحترافي.">
+            Savory pastries, bakery recipes, dough preparation
+            and professional production techniques.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 09 SPICES -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-spices.jpg"
+             alt="Spices and Seasonings">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">09</span>
+
+          <h3
+            data-en="Spices & Seasonings"
+            data-ar="البهارات والتوابل">
+            Spices & Seasonings
+          </h3>
+
+          <p
+            data-en="Spice blends, seasoning principles and flavor combinations for professional cooking."
+            data-ar="خلطات البهارات وأسس التتبيل وتوازن النكهات للاستخدام في الطهي الاحترافي.">
+            Spice blends, seasoning principles and flavor
+            combinations for professional cooking.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 10 DESSERTS -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-dessert.jpg"
+             alt="Desserts">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">10</span>
+
+          <h3
+            data-en="Desserts"
+            data-ar="الحلويات">
+            Desserts
+          </h3>
+
+          <p
+            data-en="Classic and modern desserts combining technique, presentation and refined flavor."
+            data-ar="حلويات كلاسيكية وعصرية تجمع بين التقنية والتقديم والنكهة المميزة.">
+            Classic and modern desserts combining technique,
+            presentation and refined flavor.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 11 ICE CREAM -->
+
+      <article class="recipe-category-card">
+
+        <img src="food-icecream-chocolate.jpg"
+             alt="Ice Cream and Chocolate">
+
+        <div class="recipe-card-content">
+
+          <span class="recipe-number">11</span>
+
+          <h3
+            data-en="Ice Cream & Chocolate"
+            data-ar="الآيس كريم والشوكولاتة">
+            Ice Cream & Chocolate
+          </h3>
+
+          <p
+            data-en="Ice cream, chocolate and specialty dessert creations for professional and creative kitchens."
+            data-ar="وصفات الآيس كريم والشوكولاتة وابتكارات الحلويات للمطابخ الاحترافية والإبداعية.">
+            Ice cream, chocolate and specialty dessert
+            creations for professional and creative kitchens.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     CTA
+====================================================== -->
+
+<section class="recipes-cta">
+
+  <div class="container recipes-cta-inner">
+
+    <div>
+
+      <p class="eyebrow"
+         data-en="CULINARY KNOWLEDGE"
+         data-ar="خبرة ومعرفة الطهي">
+        CULINARY KNOWLEDGE
+      </p>
+
+      <h2
+        data-en="Recipes Built on Professional Kitchen Experience"
+        data-ar="وصفات مبنية على خبرة مهنية في المطابخ">
+        Recipes Built on Professional Kitchen Experience
+      </h2>
+
+    </div>
+
+    <a href="index.html#contact"
+       class="btn btn-gold"
+       data-en="Contact Chef Kassem"
+       data-ar="تواصل مع الشيف قاسم">
+      Contact Chef Kassem
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <div class="footer-brand-title">
+
+        <span class="brand-logo">CK</span>
+
+        <div>
+
+          <strong>Chef Kassem Taha</strong>
+
+          <small
+            data-en="Culinary & Hospitality"
+            data-ar="فنون الطهي والضيافة">
+            Culinary & Hospitality
+          </small>
+
+        </div>
+
+      </div>
+
+      <p
+        data-en="From World Cuisines to Your Table"
+        data-ar="من مطابخ العالم إلى مائدتكم">
+        From World Cuisines to Your Table
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3
+        data-en="Quick Links"
+        data-ar="روابط سريعة">
+        Quick Links
+      </h3>
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
+
+      <a href="index.html#services"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
+
+      <a href="index.html#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="recipes.html"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3
+        data-en="Contact Information"
+        data-ar="معلومات التواصل">
+        Contact Information
+      </h3>
+
+      <a class="ltr-contact"
+         href="tel:+855715222672">
+        +855 71 522 2672
+      </a>
+
+      <a class="ltr-contact"
+         href="https://wa.me/971507784185"
+         target="_blank"
+         rel="noopener noreferrer">
+        +971 50 778 4185
+      </a>
+
+      <span
+        data-en="Phnom Penh, Cambodia"
+        data-ar="بنوم بنه، كمبوديا">
+        Phnom Penh, Cambodia
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> Chef Kassem Taha.
+      <span
+        data-en="All rights reserved."
+        data-ar="جميع الحقوق محفوظة.">
+        All rights reserved.
+      </span>
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+            </html>
