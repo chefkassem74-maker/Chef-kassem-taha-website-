@@ -20,6 +20,157 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =====================================================
+       BLOG SECTION
+       Added without changing existing website images/design
+    ===================================================== */
+
+    .blog-section {
+      padding: 78px 0;
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(213, 164, 60, .09),
+          transparent 26%
+        ),
+        #fffaf2;
+      border-top: 1px solid rgba(157, 109, 24, .18);
+    }
+
+    .blog-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+      gap: 45px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+
+    .blog-heading h2 {
+      margin: 0;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(35px, 4vw, 54px);
+      line-height: 1;
+    }
+
+    .blog-heading > p {
+      margin: 0;
+      color: #655a4c;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;
+      padding: 28px 24px;
+      border: 1px solid rgba(213, 164, 60, .38);
+      border-radius: 7px;
+      background:
+        radial-gradient(
+          circle at 100% 0%,
+          rgba(213, 164, 60, .14),
+          transparent 35%
+        ),
+        linear-gradient(145deg, #100c08, #050403);
+      box-shadow: 0 12px 28px rgba(30, 20, 8, .11);
+    }
+
+    .blog-card-number {
+      margin-bottom: 25px;
+      color: #f0c96a;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .blog-card h3 {
+      margin: 0 0 14px;
+      color: #f0c96a;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 25px;
+      line-height: 1.12;
+    }
+
+    .blog-card p {
+      margin: 0 0 24px;
+      color: #ded3c2;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .blog-card a {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid rgba(213, 164, 60, .22);
+      color: #f0c96a;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .blog-card a:hover {
+      color: #ffffff;
+    }
+
+    .blog-more {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    html[dir="rtl"] .blog-heading,
+    html[dir="rtl"] .blog-card {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .blog-heading h2,
+    html[dir="rtl"] .blog-card h3 {
+      font-family: "Cairo", Arial, sans-serif;
+    }
+
+    @media (max-width: 820px) {
+      .blog-section {
+        padding: 55px 0;
+      }
+
+      .blog-heading {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .blog-heading h2 {
+        font-size: 32px;
+      }
+
+      html[dir="rtl"] .blog-heading h2 {
+        font-size: 28px;
+        line-height: 1.4;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-card {
+        min-height: 250px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -81,6 +232,13 @@
          data-en="Recipes"
          data-ar="الوصفات">
         Recipes
+      </a>
+
+      <!-- BLOG ADDED -->
+      <a href="#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
       </a>
 
       <a href="#contact"
@@ -194,6 +352,7 @@
 
     <div class="hero-portrait">
 
+      <!-- ORIGINAL IMAGE PRESERVED -->
       <img
         src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
         alt="Chef Kassem Taha">
@@ -214,75 +373,51 @@
   <div class="container experience-grid">
 
     <article class="experience-item">
-
       <span class="experience-icon">33+</span>
-
-      <h3
-        data-en="Years Experience"
-        data-ar="سنوات خبرة">
+      <h3 data-en="Years Experience"
+          data-ar="سنوات خبرة">
         Years Experience
       </h3>
-
     </article>
 
     <article class="experience-item">
-
       <span class="experience-icon">✦</span>
-
-      <h3
-        data-en="Consulting Services"
-        data-ar="خدمات استشارية">
+      <h3 data-en="Consulting Services"
+          data-ar="خدمات استشارية">
         Consulting Services
       </h3>
-
     </article>
 
     <article class="experience-item">
-
       <span class="experience-icon">◎</span>
-
-      <h3
-        data-en="Training & Academy"
-        data-ar="التدريب والأكاديمية">
+      <h3 data-en="Training & Academy"
+          data-ar="التدريب والأكاديمية">
         Training & Academy
       </h3>
-
     </article>
 
     <article class="experience-item">
-
       <span class="experience-icon">⌂</span>
-
-      <h3
-        data-en="Restaurant & Hotel Setup"
-        data-ar="تأسيس المطاعم والفنادق">
+      <h3 data-en="Restaurant & Hotel Setup"
+          data-ar="تأسيس المطاعم والفنادق">
         Restaurant & Hotel Setup
       </h3>
-
     </article>
 
     <article class="experience-item">
-
       <span class="experience-icon">≡</span>
-
-      <h3
-        data-en="Menu Development"
-        data-ar="تصميم وتطوير القوائم">
+      <h3 data-en="Menu Development"
+          data-ar="تصميم وتطوير القوائم">
         Menu Development
       </h3>
-
     </article>
 
     <article class="experience-item">
-
       <span class="experience-icon">◇</span>
-
-      <h3
-        data-en="Food Safety"
-        data-ar="سلامة الغذاء">
+      <h3 data-en="Food Safety"
+          data-ar="سلامة الغذاء">
         Food Safety
       </h3>
-
     </article>
 
   </div>
@@ -301,7 +436,6 @@
     <div class="section-intro">
 
       <div>
-
         <p class="eyebrow"
            data-en="OUR CORE SERVICES"
            data-ar="خدماتنا الرئيسية">
@@ -313,17 +447,14 @@
           data-ar="حلول متكاملة لأعمال المطاعم والفنادق">
           Complete Solutions for Your F&B Business
         </h2>
-
       </div>
 
       <p
         data-en="From concept to operation, practical professional solutions designed to support sustainable hospitality businesses."
         data-ar="من الفكرة إلى التشغيل، نقدم حلولاً عملية ومهنية تساعد على بناء وتشغيل مشاريع ضيافة مستدامة.">
-
         From concept to operation, practical professional
         solutions designed to support sustainable hospitality
         businesses.
-
       </p>
 
     </div>
@@ -331,105 +462,69 @@
     <div class="services-grid">
 
       <article class="image-card">
-
         <img src="service-restaurant.jpg"
              alt="Restaurant Development">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="Restaurant Setup"
-            data-ar="تأسيس المطاعم">
+          <h3 data-en="Restaurant Setup"
+              data-ar="تأسيس المطاعم">
             Restaurant Setup
           </h3>
-
         </div>
-
       </article>
 
       <article class="image-card">
-
         <img src="service-hotel.jpg"
              alt="Hotel Development">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="Hotel Development"
-            data-ar="تطوير الفنادق">
+          <h3 data-en="Hotel Development"
+              data-ar="تطوير الفنادق">
             Hotel Development
           </h3>
-
         </div>
-
       </article>
 
       <article class="image-card">
-
         <img src="service-central-kitchen.jpg"
              alt="Central Kitchens">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="Central Kitchens"
-            data-ar="المطابخ المركزية">
+          <h3 data-en="Central Kitchens"
+              data-ar="المطابخ المركزية">
             Central Kitchens
           </h3>
-
         </div>
-
       </article>
 
       <article class="image-card">
-
         <img src="service-menu.jpg"
              alt="Menu Development">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="Menu Development"
-            data-ar="تطوير القوائم">
+          <h3 data-en="Menu Development"
+              data-ar="تطوير القوائم">
             Menu Development
           </h3>
-
         </div>
-
       </article>
 
       <article class="image-card" id="academy">
-
         <img src="service-training.jpg"
              alt="Training and Academy">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="Training & Academy"
-            data-ar="التدريب والأكاديمية">
+          <h3 data-en="Training & Academy"
+              data-ar="التدريب والأكاديمية">
             Training & Academy
           </h3>
-
         </div>
-
       </article>
 
       <article class="image-card">
-
         <img src="service-food-safety.jpg"
              alt="Food Safety">
-
         <div class="image-card-content">
-
-          <h3
-            data-en="SOP & HACCP"
-            data-ar="إجراءات التشغيل وسلامة الغذاء">
+          <h3 data-en="SOP & HACCP"
+              data-ar="إجراءات التشغيل وسلامة الغذاء">
             SOP & HACCP
           </h3>
-
         </div>
-
       </article>
 
     </div>
@@ -466,105 +561,69 @@
     <div class="cuisine-grid">
 
       <article class="cuisine-card">
-
         <img src="food-syrian.png"
              alt="Syrian Cuisine">
-
         <div>
-
-          <h3
-            data-en="Syrian Cuisine"
-            data-ar="المطبخ السوري">
+          <h3 data-en="Syrian Cuisine"
+              data-ar="المطبخ السوري">
             Syrian Cuisine
           </h3>
-
         </div>
-
       </article>
 
       <article class="cuisine-card">
-
         <img src="food-international.jpg"
              alt="International Cuisine">
-
         <div>
-
-          <h3
-            data-en="International Cuisine"
-            data-ar="المطبخ العالمي">
+          <h3 data-en="International Cuisine"
+              data-ar="المطبخ العالمي">
             International Cuisine
           </h3>
-
         </div>
-
       </article>
 
       <article class="cuisine-card">
-
         <img src="food-grill.jpg"
              alt="Grills and Barbecue">
-
         <div>
-
-          <h3
-            data-en="Grills & Barbecue"
-            data-ar="المشاوي والباربكيو">
+          <h3 data-en="Grills & Barbecue"
+              data-ar="المشاوي والباربكيو">
             Grills & Barbecue
           </h3>
-
         </div>
-
       </article>
 
       <article class="cuisine-card">
-
         <img src="food-healthy.jpg"
              alt="Healthy and Diet Cuisine">
-
         <div>
-
-          <h3
-            data-en="Healthy & Diet"
-            data-ar="المطبخ الصحي والدايت">
+          <h3 data-en="Healthy & Diet"
+              data-ar="المطبخ الصحي والدايت">
             Healthy & Diet
           </h3>
-
         </div>
-
       </article>
 
       <article class="cuisine-card">
-
         <img src="food-dessert.jpg"
              alt="Desserts">
-
         <div>
-
-          <h3
-            data-en="Desserts"
-            data-ar="الحلويات">
+          <h3 data-en="Desserts"
+              data-ar="الحلويات">
             Desserts
           </h3>
-
         </div>
-
       </article>
 
       <article class="cuisine-card">
-
         <img src="food-icecream-chocolate.jpg"
              alt="Ice Cream and Chocolate">
-
         <div>
-
-          <h3
-            data-en="Ice Cream & Chocolate"
-            data-ar="الآيس كريم والشوكولاتة">
+          <h3 data-en="Ice Cream & Chocolate"
+              data-ar="الآيس كريم والشوكولاتة">
             Ice Cream & Chocolate
           </h3>
-
         </div>
-
       </article>
 
     </div>
@@ -586,6 +645,150 @@
 
 
 <!-- ======================================================
+     BLOG — NEW SECTION
+====================================================== -->
+
+<section class="blog-section" id="blog">
+
+  <div class="container">
+
+    <div class="blog-heading">
+
+      <div>
+
+        <p class="eyebrow"
+           data-en="CHEF KASSEM TAHA BLOG"
+           data-ar="مدونة الشيف قاسم طه">
+          CHEF KASSEM TAHA BLOG
+        </p>
+
+        <h2
+          data-en="Hospitality Knowledge & Professional Insights"
+          data-ar="معرفة الضيافة وخبرات مهنية">
+          Hospitality Knowledge & Professional Insights
+        </h2>
+
+      </div>
+
+      <p
+        data-en="Professional articles about restaurant management, hospitality, food safety, operations, menu development, cost control, training and business development."
+        data-ar="مقالات مهنية متخصصة في إدارة المطاعم والضيافة وسلامة الغذاء والتشغيل وتطوير القوائم وضبط التكاليف والتدريب وتطوير الأعمال.">
+        Professional articles about restaurant management,
+        hospitality, food safety, operations, menu development,
+        cost control, training and business development.
+      </p>
+
+    </div>
+
+
+    <div class="blog-grid">
+
+      <article class="blog-card">
+
+        <span class="blog-card-number">01</span>
+
+        <h3
+          data-en="How to Start Your Restaurant from Zero"
+          data-ar="كيف تبدأ مطعمك من الصفر">
+          How to Start Your Restaurant from Zero
+        </h3>
+
+        <p
+          data-en="A professional approach to transforming a restaurant idea into a structured and operational business."
+          data-ar="منهج عملي واحترافي لتحويل فكرة المطعم إلى مشروع منظم وقابل للتشغيل.">
+          A professional approach to transforming a restaurant
+          idea into a structured and operational business.
+        </p>
+
+        <a href="https://blog.chefkassemtaha.com"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-en="Read Article →"
+           data-ar="اقرأ المقال ←">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <article class="blog-card">
+
+        <span class="blog-card-number">02</span>
+
+        <h3
+          data-en="Menu Design, Dish Selection & Pricing"
+          data-ar="تصميم القائمة واختيار الأطباق والتسعير">
+          Menu Design, Dish Selection & Pricing
+        </h3>
+
+        <p
+          data-en="How menu engineering, recipe costing, dish selection and pricing work together to support profitability."
+          data-ar="كيف تعمل هندسة القائمة وتكلفة الوصفات واختيار الأطباق والتسعير معاً لدعم الربحية.">
+          How menu engineering, recipe costing, dish selection
+          and pricing work together to support profitability.
+        </p>
+
+        <a href="https://blog.chefkassemtaha.com"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-en="Read Article →"
+           data-ar="اقرأ المقال ←">
+          Read Article →
+        </a>
+
+      </article>
+
+
+      <article class="blog-card">
+
+        <span class="blog-card-number">03</span>
+
+        <h3
+          data-en="Building a Professional Restaurant Team"
+          data-ar="بناء فريق عمل احترافي للمطعم">
+          Building a Professional Restaurant Team
+        </h3>
+
+        <p
+          data-en="Selecting the right people, defining responsibilities, training teams and building systems that continue beyond individual employees."
+          data-ar="اختيار الأشخاص المناسبين وتحديد المسؤوليات وتدريب الفريق وبناء نظام يستمر بعيداً عن الاعتماد على موظف واحد.">
+          Selecting the right people, defining responsibilities,
+          training teams and building systems that continue
+          beyond individual employees.
+        </p>
+
+        <a href="https://blog.chefkassemtaha.com"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-en="Read Article →"
+           data-ar="اقرأ المقال ←">
+          Read Article →
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <div class="blog-more">
+
+      <a href="https://blog.chefkassemtaha.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-gold"
+         data-en="View All Articles"
+         data-ar="عرض جميع المقالات">
+        View All Articles
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
      STORY
 ====================================================== -->
 
@@ -595,6 +798,7 @@
 
     <div class="story-image">
 
+      <!-- ORIGINAL IMAGE PRESERVED -->
       <img
         src="Screenshot_٢٠٢٦١٠٠٦_١٩١١٠٨_Files by Google.jpg"
         alt="Chef Kassem Taha">
@@ -618,10 +822,8 @@
       <blockquote
         data-en="The business must depend on the system — not on one person."
         data-ar="يجب أن يعتمد العمل على النظام، وليس على شخص واحد.">
-
         The business must depend on the system —
         not on one person.
-
       </blockquote>
 
       <a href="#contact"
@@ -793,6 +995,7 @@
 
     </div>
 
+
     <div class="footer-links">
 
       <h3
@@ -831,7 +1034,15 @@
         Recipes
       </a>
 
+      <!-- BLOG ADDED TO FOOTER -->
+      <a href="#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
     </div>
+
 
     <div class="footer-contact">
 
@@ -862,6 +1073,7 @@
     </div>
 
   </div>
+
 
   <div class="container footer-bottom">
 
