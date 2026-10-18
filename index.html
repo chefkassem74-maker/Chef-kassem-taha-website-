@@ -241,7 +241,7 @@
 
 
     /* =====================================================
-       RTL FOR NEW SECTIONS
+       RTL
     ===================================================== */
 
     html[dir="rtl"] .projects-heading,
@@ -260,7 +260,7 @@
 
 
     /* =====================================================
-       MOBILE FOR NEW SECTIONS
+       MOBILE
     ===================================================== */
 
     @media (max-width: 820px) {
@@ -290,6 +290,11 @@
 
       .blog-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .main-nav.open {
+        max-height: 700px;
+        overflow-y: auto;
       }
     }
 
@@ -338,10 +343,6 @@
 
 
 <body>
-
-<!-- ======================================================
-     HEADER
-====================================================== -->
 
 <header class="site-header">
 
@@ -399,7 +400,7 @@
         Academy
       </a>
 
-      <a href="#cuisines"
+      <a href="recipes.html"
          data-en="Recipes"
          data-ar="الوصفات">
         Recipes
@@ -451,10 +452,6 @@
 
 
 <main>
-
-<!-- ======================================================
-     HERO
-====================================================== -->
 
 <section class="hero">
 
@@ -535,58 +532,48 @@
 </section>
 
 
-<!-- ======================================================
-     EXPERIENCE
-====================================================== -->
-
 <section class="experience-strip">
 
   <div class="container experience-grid">
 
     <article class="experience-item">
       <span class="experience-icon">33+</span>
-      <h3 data-en="Years Experience"
-          data-ar="سنوات خبرة">
+      <h3 data-en="Years Experience" data-ar="سنوات خبرة">
         Years Experience
       </h3>
     </article>
 
     <article class="experience-item">
       <span class="experience-icon">✦</span>
-      <h3 data-en="Consulting Services"
-          data-ar="خدمات استشارية">
+      <h3 data-en="Consulting Services" data-ar="خدمات استشارية">
         Consulting Services
       </h3>
     </article>
 
     <article class="experience-item">
       <span class="experience-icon">◎</span>
-      <h3 data-en="Training & Academy"
-          data-ar="التدريب والأكاديمية">
+      <h3 data-en="Training & Academy" data-ar="التدريب والأكاديمية">
         Training & Academy
       </h3>
     </article>
 
     <article class="experience-item">
       <span class="experience-icon">⌂</span>
-      <h3 data-en="Restaurant & Hotel Setup"
-          data-ar="تأسيس المطاعم والفنادق">
+      <h3 data-en="Restaurant & Hotel Setup" data-ar="تأسيس المطاعم والفنادق">
         Restaurant & Hotel Setup
       </h3>
     </article>
 
     <article class="experience-item">
       <span class="experience-icon">≡</span>
-      <h3 data-en="Menu Development"
-          data-ar="تصميم وتطوير القوائم">
+      <h3 data-en="Menu Development" data-ar="تصميم وتطوير القوائم">
         Menu Development
       </h3>
     </article>
 
     <article class="experience-item">
       <span class="experience-icon">◇</span>
-      <h3 data-en="Food Safety"
-          data-ar="سلامة الغذاء">
+      <h3 data-en="Food Safety" data-ar="سلامة الغذاء">
         Food Safety
       </h3>
     </article>
@@ -595,10 +582,6 @@
 
 </section>
 
-
-<!-- ======================================================
-     SERVICES
-====================================================== -->
 
 <section class="services-section" id="services">
 
@@ -636,104 +619,57 @@
     <div class="services-grid">
 
       <article class="image-card">
-
-        <img src="service-restaurant.jpg"
-             alt="Restaurant Development">
-
+        <img src="service-restaurant.jpg" alt="Restaurant Development">
         <div class="image-card-content">
-
-          <h3 data-en="Restaurant Setup"
-              data-ar="تأسيس المطاعم">
+          <h3 data-en="Restaurant Setup" data-ar="تأسيس المطاعم">
             Restaurant Setup
           </h3>
-
         </div>
-
       </article>
 
-
       <article class="image-card">
-
-        <img src="service-hotel.jpg"
-             alt="Hotel Development">
-
+        <img src="service-hotel.jpg" alt="Hotel Development">
         <div class="image-card-content">
-
-          <h3 data-en="Hotel Development"
-              data-ar="تطوير الفنادق">
+          <h3 data-en="Hotel Development" data-ar="تطوير الفنادق">
             Hotel Development
           </h3>
-
         </div>
-
       </article>
 
-
       <article class="image-card">
-
-        <img src="service-central-kitchen.jpg"
-             alt="Central Kitchens">
-
+        <img src="service-central-kitchen.jpg" alt="Central Kitchens">
         <div class="image-card-content">
-
-          <h3 data-en="Central Kitchens"
-              data-ar="المطابخ المركزية">
+          <h3 data-en="Central Kitchens" data-ar="المطابخ المركزية">
             Central Kitchens
           </h3>
-
         </div>
-
       </article>
 
-
       <article class="image-card">
-
-        <img src="service-menu.jpg"
-             alt="Menu Development">
-
+        <img src="service-menu.jpg" alt="Menu Development">
         <div class="image-card-content">
-
-          <h3 data-en="Menu Development"
-              data-ar="تطوير القوائم">
+          <h3 data-en="Menu Development" data-ar="تطوير القوائم">
             Menu Development
           </h3>
-
         </div>
-
       </article>
-
 
       <article class="image-card" id="academy">
-
-        <img src="service-training.jpg"
-             alt="Training and Academy">
-
+        <img src="service-training.jpg" alt="Training and Academy">
         <div class="image-card-content">
-
-          <h3 data-en="Training & Academy"
-              data-ar="التدريب والأكاديمية">
+          <h3 data-en="Training & Academy" data-ar="التدريب والأكاديمية">
             Training & Academy
           </h3>
-
         </div>
-
       </article>
 
-
       <article class="image-card">
-
-        <img src="service-food-safety.jpg"
-             alt="Food Safety">
-
+        <img src="service-food-safety.jpg" alt="Food Safety">
         <div class="image-card-content">
-
-          <h3 data-en="SOP & HACCP"
-              data-ar="إجراءات التشغيل وسلامة الغذاء">
+          <h3 data-en="SOP & HACCP" data-ar="إجراءات التشغيل وسلامة الغذاء">
             SOP & HACCP
           </h3>
-
         </div>
-
       </article>
 
     </div>
@@ -742,10 +678,6 @@
 
 </section>
 
-
-<!-- ======================================================
-     PROJECTS
-====================================================== -->
 
 <section class="projects-section" id="projects">
 
@@ -782,8 +714,6 @@
 
     <div class="projects-grid">
 
-      <!-- FINE DINING RESTAURANT -->
-
       <article class="project-card">
 
         <img
@@ -816,8 +746,6 @@
 
       </article>
 
-
-      <!-- COFFEE SHOP -->
 
       <article class="project-card">
 
@@ -858,10 +786,6 @@
 </section>
 
 
-<!-- ======================================================
-     RECIPES
-====================================================== -->
-
 <section class="cuisines-section" id="cuisines">
 
   <div class="container">
@@ -887,16 +811,12 @@
 
       <article class="cuisine-card">
 
-        <img src="food-syrian.png"
-             alt="Syrian Cuisine">
+        <img src="food-syrian.png" alt="Syrian Cuisine">
 
         <div>
-
-          <h3 data-en="Syrian Cuisine"
-              data-ar="المطبخ السوري">
+          <h3 data-en="Syrian Cuisine" data-ar="المطبخ السوري">
             Syrian Cuisine
           </h3>
-
         </div>
 
       </article>
@@ -904,16 +824,12 @@
 
       <article class="cuisine-card">
 
-        <img src="food-international.jpg"
-             alt="International Cuisine">
+        <img src="food-international.jpg" alt="International Cuisine">
 
         <div>
-
-          <h3 data-en="International Cuisine"
-              data-ar="المطبخ العالمي">
+          <h3 data-en="International Cuisine" data-ar="المطبخ العالمي">
             International Cuisine
           </h3>
-
         </div>
 
       </article>
@@ -921,16 +837,12 @@
 
       <article class="cuisine-card">
 
-        <img src="food-grill.jpg"
-             alt="Grills and Barbecue">
+        <img src="food-grill.jpg" alt="Grills and Barbecue">
 
         <div>
-
-          <h3 data-en="Grills & Barbecue"
-              data-ar="المشاوي والباربكيو">
+          <h3 data-en="Grills & Barbecue" data-ar="المشاوي والباربكيو">
             Grills & Barbecue
           </h3>
-
         </div>
 
       </article>
@@ -938,16 +850,12 @@
 
       <article class="cuisine-card">
 
-        <img src="food-healthy.jpg"
-             alt="Healthy and Diet Cuisine">
+        <img src="food-healthy.jpg" alt="Healthy and Diet Cuisine">
 
         <div>
-
-          <h3 data-en="Healthy & Diet"
-              data-ar="المطبخ الصحي والدايت">
+          <h3 data-en="Healthy & Diet" data-ar="المطبخ الصحي والدايت">
             Healthy & Diet
           </h3>
-
         </div>
 
       </article>
@@ -955,16 +863,12 @@
 
       <article class="cuisine-card">
 
-        <img src="food-dessert.jpg"
-             alt="Desserts">
+        <img src="food-dessert.jpg" alt="Desserts">
 
         <div>
-
-          <h3 data-en="Desserts"
-              data-ar="الحلويات">
+          <h3 data-en="Desserts" data-ar="الحلويات">
             Desserts
           </h3>
-
         </div>
 
       </article>
@@ -972,16 +876,13 @@
 
       <article class="cuisine-card">
 
-        <img src="food-icecream-chocolate.jpg"
-             alt="Ice Cream and Chocolate">
+        <img src="food-icecream-chocolate.jpg" alt="Ice Cream and Chocolate">
 
         <div>
-
           <h3 data-en="Ice Cream & Chocolate"
               data-ar="الآيس كريم والشوكولاتة">
             Ice Cream & Chocolate
           </h3>
-
         </div>
 
       </article>
@@ -991,7 +892,7 @@
 
     <div class="recipes-more">
 
-      <a href="#"
+      <a href="recipes.html"
          class="btn btn-gold"
          data-en="Explore All Recipes"
          data-ar="استكشف جميع الوصفات">
@@ -1004,10 +905,6 @@
 
 </section>
 
-
-<!-- ======================================================
-     BLOG
-====================================================== -->
 
 <section class="blog-section" id="blog">
 
@@ -1149,10 +1046,6 @@
 </section>
 
 
-<!-- ======================================================
-     STORY
-====================================================== -->
-
 <section class="story-section" id="story">
 
   <div class="container story-grid">
@@ -1201,10 +1094,6 @@
 </section>
 
 
-<!-- ======================================================
-     CONSULTING PROCESS
-====================================================== -->
-
 <section class="process-section">
 
   <div class="container">
@@ -1228,38 +1117,31 @@
 
     <div class="process-grid">
 
-      <span data-en="Discover"
-            data-ar="اكتشاف الاحتياجات">
+      <span data-en="Discover" data-ar="اكتشاف الاحتياجات">
         Discover
       </span>
 
-      <span data-en="Audit"
-            data-ar="التقييم">
+      <span data-en="Audit" data-ar="التقييم">
         Audit
       </span>
 
-      <span data-en="Design"
-            data-ar="التصميم">
+      <span data-en="Design" data-ar="التصميم">
         Design
       </span>
 
-      <span data-en="Implement"
-            data-ar="التنفيذ">
+      <span data-en="Implement" data-ar="التنفيذ">
         Implement
       </span>
 
-      <span data-en="Train"
-            data-ar="التدريب">
+      <span data-en="Train" data-ar="التدريب">
         Train
       </span>
 
-      <span data-en="Control"
-            data-ar="الرقابة">
+      <span data-en="Control" data-ar="الرقابة">
         Control
       </span>
 
-      <span data-en="Improve"
-            data-ar="التحسين">
+      <span data-en="Improve" data-ar="التحسين">
         Improve
       </span>
 
@@ -1269,10 +1151,6 @@
 
 </section>
 
-
-<!-- ======================================================
-     CONTACT
-====================================================== -->
 
 <section class="contact-section" id="contact">
 
@@ -1322,10 +1200,6 @@
 </main>
 
 
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
 <footer class="site-footer">
 
   <div class="container footer-grid">
@@ -1361,9 +1235,7 @@
 
     <div class="footer-links">
 
-      <h3
-        data-en="Quick Links"
-        data-ar="روابط سريعة">
+      <h3 data-en="Quick Links" data-ar="روابط سريعة">
         Quick Links
       </h3>
 
@@ -1397,7 +1269,7 @@
         Academy
       </a>
 
-      <a href="#cuisines"
+      <a href="recipes.html"
          data-en="Recipes"
          data-ar="الوصفات">
         Recipes
@@ -1461,4 +1333,4 @@
 <script src="script.js"></script>
 
 </body>
-          </html>
+</html>
