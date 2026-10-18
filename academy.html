@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Chef Kassem Taha Academy - Professional culinary, hospitality and F&B operational training for individuals, restaurant teams, hotels and food businesses.">
+
+  <meta name="author" content="Chef Kassem Taha">
+
+  <title>Academy | Chef Kassem Taha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =====================================================
+       ACADEMY PAGE
+    ===================================================== */
+
+    .academy-page {
+      background: #fffaf2;
+    }
+
+    .academy-page main {
+      overflow: hidden;
+    }
+
+    .academy-container {
+      width: min(92%, 1240px);
+      margin-inline: auto;
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .academy-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 95px;
+
+      background:
+        radial-gradient(
+          circle at 82% 25%,
+          rgba(213, 164, 60, .18),
+          transparent 28%
+        ),
+        linear-gradient(
+          130deg,
+          #050403,
+          #171108
+        );
+
+      border-bottom: 2px solid #9d6d18;
+      color: #ffffff;
+    }
+
+    .academy-hero::before {
+      content: "";
+      position: absolute;
+      width: 460px;
+      height: 460px;
+      right: -170px;
+      top: -180px;
+      border: 1px solid rgba(213, 164, 60, .16);
+      border-radius: 50%;
+    }
+
+    .academy-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+
+    .academy-eyebrow {
+      margin: 0 0 20px;
+      color: #e1ad43;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .academy-hero h1 {
+      max-width: 850px;
+      margin: 0;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(58px, 7vw, 88px);
+      font-weight: 600;
+      line-height: .95;
+    }
+
+    .academy-hero h1 span {
+      color: #e0ad43;
+    }
+
+    .academy-hero-description {
+      max-width: 760px;
+      margin: 30px 0 0;
+      color: #ddd3c5;
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    .academy-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .academy-intro {
+      padding: 85px 0;
+      background: #fffaf2;
+    }
+
+    .academy-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 70px;
+      align-items: center;
+    }
+
+    .academy-section-title {
+      margin: 0;
+      color: #18110a;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(44px, 5vw, 65px);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .academy-gold-line {
+      width: 90px;
+      height: 3px;
+      margin-top: 25px;
+      background: #d5a43c;
+    }
+
+    .academy-intro-text p {
+      margin: 0 0 20px;
+      color: #655d53;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .academy-intro-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =====================================================
+       TRAINING AREAS
+    ===================================================== */
+
+    .training-section {
+      padding: 90px 0;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(213, 164, 60, .10),
+          transparent 25%
+        ),
+        #070604;
+
+      border-top: 1px solid #9d6d18;
+      border-bottom: 1px solid #9d6d18;
+    }
+
+    .training-heading {
+      max-width: 800px;
+      margin-bottom: 45px;
+    }
+
+    .training-heading .academy-section-title {
+      color: #ffffff;
+    }
+
+    .training-heading p:last-child {
+      max-width: 700px;
+      margin: 20px 0 0;
+      color: #cfc4b4;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .training-card {
+      position: relative;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      padding: 27px 22px;
+      overflow: hidden;
+
+      border: 1px solid rgba(213, 164, 60, .32);
+      border-radius: 7px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(213, 164, 60, .07),
+          rgba(255, 255, 255, .01)
+        );
+    }
+
+    .training-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 3px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #9d6d18,
+          #f0c96a,
+          #9d6d18
+        );
+    }
+
+    .training-number {
+      color: rgba(240, 201, 106, .55);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .training-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin: 22px 0;
+
+      border: 1px solid rgba(240, 201, 106, .55);
+      border-radius: 50%;
+
+      color: #f0c96a;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .training-card h3 {
+      margin: 0 0 12px;
+      color: #f0c96a;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 23px;
+      line-height: 1.1;
+    }
+
+    .training-card p {
+      margin: 0;
+      color: #d8cdbd;
+      font-size: 12.5px;
+      line-height: 1.7;
+    }
+
+    /* =====================================================
+       WHO IS IT FOR
+    ===================================================== */
+
+    .audience-section {
+      padding: 90px 0;
+      background: #f8f1e5;
+    }
+
+    .audience-heading {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .audience-heading > p:last-child {
+      margin: 20px 0 0;
+      color: #655d53;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .audience-card {
+      min-height: 210px;
+      padding: 30px 22px;
+
+      border: 1px solid rgba(157, 109, 24, .28);
+      border-radius: 7px;
+      background: rgba(255, 255, 255, .55);
+    }
+
+    .audience-card strong {
+      display: block;
+      margin-bottom: 18px;
+      color: #a87520;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 36px;
+    }
+
+    .audience-card h3 {
+      margin: 0 0 10px;
+      color: #18110a;
+      font-size: 17px;
+    }
+
+    .audience-card p {
+      margin: 0;
+      color: #6c6257;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    /* =====================================================
+       METHOD
+    ===================================================== */
+
+    .academy-method {
+      padding: 90px 0;
+      background: #fffaf2;
+    }
+
+    .method-heading {
+      max-width: 800px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .method-heading > p:last-child {
+      max-width: 700px;
+      margin: 20px auto 0;
+      color: #655d53;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .method-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      border: 1px solid rgba(157, 109, 24, .30);
+    }
+
+    .method-step {
+      min-height: 190px;
+      padding: 28px 18px;
+      text-align: center;
+      border-inline-end: 1px solid rgba(157, 109, 24, .20);
+    }
+
+    .method-step:last-child {
+      border-inline-end: 0;
+    }
+
+    .method-step strong {
+      display: block;
+      color: #a87520;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 34px;
+    }
+
+    .method-step h3 {
+      margin: 17px 0 10px;
+      color: #21170d;
+      font-size: 16px;
+    }
+
+    .method-step p {
+      margin: 0;
+      color: #6b6257;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* =====================================================
+       TRAINING FORMATS
+    ===================================================== */
+
+    .formats-section {
+      padding: 90px 0;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(213, 164, 60, .10),
+          transparent 25%
+        ),
+        #070604;
+
+      color: #ffffff;
+    }
+
+    .formats-heading {
+      max-width: 800px;
+      margin-bottom: 42px;
+    }
+
+    .formats-heading .academy-section-title {
+      color: #ffffff;
+    }
+
+    .formats-heading > p:last-child {
+      max-width: 700px;
+      margin: 20px 0 0;
+      color: #cfc4b4;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .format-card {
+      min-height: 250px;
+      padding: 32px 27px;
+
+      border: 1px solid rgba(213, 164, 60, .35);
+      border-radius: 7px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(213, 164, 60, .07),
+          rgba(255, 255, 255, .01)
+        );
+    }
+
+    .format-card span {
+      color: #f0c96a;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 38px;
+      font-weight: 700;
+    }
+
+    .format-card h3 {
+      margin: 22px 0 12px;
+      color: #ffffff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 27px;
+    }
+
+    .format-card p {
+      margin: 0;
+      color: #d3c8b8;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* =====================================================
+       PHILOSOPHY
+    ===================================================== */
+
+    .academy-philosophy {
+      padding: 80px 0;
+      background: #f8f1e5;
+      text-align: center;
+    }
+
+    .academy-philosophy blockquote {
+      max-width: 900px;
+      margin: 0 auto;
+
+      color: #20160d;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .academy-philosophy blockquote::before {
+      content: "“";
+      display: block;
+      height: 45px;
+      color: #d5a43c;
+      font-size: 75px;
+      line-height: .8;
+    }
+
+    .academy-philosophy p {
+      max-width: 700px;
+      margin: 25px auto 0;
+      color: #6c6257;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .academy-cta {
+      padding: 85px 0;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(213, 164, 60, .15),
+          transparent 30%
+        ),
+        #080604;
+
+      border-top: 1px solid #9d6d18;
+    }
+
+    .academy-cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 40px;
+      align-items: center;
+
+      padding: 42px;
+
+      border: 1px solid rgba(213, 164, 60, .45);
+      border-radius: 7px;
+    }
+
+    .academy-cta h2 {
+      max-width: 720px;
+      margin: 0;
+
+      color: #ffffff;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .academy-cta p {
+      max-width: 700px;
+      margin: 18px 0 0;
+      color: #d4c9b9;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    /* =====================================================
+       RTL
+    ===================================================== */
+
+    html[dir="rtl"] .academy-hero-content,
+    html[dir="rtl"] .academy-intro,
+    html[dir="rtl"] .training-section,
+    html[dir="rtl"] .audience-section,
+    html[dir="rtl"] .formats-section,
+    html[dir="rtl"] .academy-cta-inner {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .academy-hero h1,
+    html[dir="rtl"] .academy-section-title,
+    html[dir="rtl"] .training-card h3,
+    html[dir="rtl"] .format-card h3,
+    html[dir="rtl"] .academy-philosophy blockquote,
+    html[dir="rtl"] .academy-cta h2 {
+      font-family: "Cairo", Arial, sans-serif;
+    }
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 1050px) {
+
+      .training-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .method-step {
+        border-bottom: 1px solid rgba(157, 109, 24, .20);
+      }
+    }
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 820px) {
+
+      .academy-hero {
+        padding: 70px 0 65px;
+        text-align: center;
+      }
+
+      html[dir="rtl"] .academy-hero-content {
+        text-align: center;
+      }
+
+      .academy-hero-content {
+        margin-inline: auto;
+      }
+
+      .academy-hero h1 {
+        font-size: 55px;
+      }
+
+      html[dir="rtl"] .academy-hero h1 {
+        font-size: 40px;
+        line-height: 1.35;
+      }
+
+      .academy-hero-description {
+        margin-inline: auto;
+        font-size: 15px;
+      }
+
+      .academy-hero-actions {
+        justify-content: center;
+      }
+
+      .academy-intro {
+        padding: 60px 0;
+      }
+
+      .academy-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .academy-section-title {
+        font-size: 43px;
+      }
+
+      html[dir="rtl"] .academy-section-title {
+        font-size: 34px;
+        line-height: 1.4;
+      }
+
+      .training-section,
+      .audience-section,
+      .academy-method,
+      .formats-section {
+        padding: 60px 0;
+      }
+
+      .formats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .academy-cta {
+        padding: 60px 0;
+      }
+
+      .academy-cta-inner {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+        text-align: center;
+      }
+
+      html[dir="rtl"] .academy-cta-inner {
+        text-align: center;
+      }
+
+      .main-nav.open {
+        max-height: 700px;
+        overflow-y: auto;
+      }
+    }
+
+    /* =====================================================
+       SMALL MOBILE
+    ===================================================== */
+
+    @media (max-width: 520px) {
+
+      .academy-hero {
+        padding: 55px 0 50px;
+      }
+
+      .academy-hero h1 {
+        font-size: 43px;
+      }
+
+      html[dir="rtl"] .academy-hero h1 {
+        font-size: 32px;
+      }
+
+      .academy-hero-description {
+        font-size: 13px;
+        line-height: 1.75;
+      }
+
+      .academy-hero-actions {
+        flex-direction: column;
+      }
+
+      .academy-hero-actions .btn {
+        width: 100%;
+      }
+
+      .academy-intro {
+        padding: 50px 0;
+      }
+
+      .academy-section-title {
+        font-size: 37px;
+      }
+
+      html[dir="rtl"] .academy-section-title {
+        font-size: 29px;
+      }
+
+      .academy-intro-text p {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .training-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .training-card {
+        min-height: 300px;
+        padding: 20px 13px;
+      }
+
+      .training-number {
+        font-size: 22px;
+      }
+
+      .training-icon {
+        width: 46px;
+        height: 46px;
+        margin: 16px 0;
+        font-size: 14px;
+      }
+
+      .training-card h3 {
+        font-size: 17px;
+      }
+
+      html[dir="rtl"] .training-card h3 {
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .training-card p {
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .audience-card {
+        min-height: 210px;
+        padding: 22px 14px;
+      }
+
+      .audience-card strong {
+        font-size: 29px;
+      }
+
+      .audience-card h3 {
+        font-size: 14px;
+      }
+
+      .audience-card p {
+        font-size: 11px;
+      }
+
+      .method-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .method-step {
+        min-height: 170px;
+        padding: 22px 12px;
+      }
+
+      .method-step strong {
+        font-size: 28px;
+      }
+
+      .method-step h3 {
+        font-size: 14px;
+      }
+
+      .method-step p {
+        font-size: 11px;
+      }
+
+      .format-card {
+        min-height: 220px;
+        padding: 27px 22px;
+      }
+
+      .format-card h3 {
+        font-size: 23px;
+      }
+
+      .academy-philosophy {
+        padding: 55px 0;
+      }
+
+      .academy-philosophy blockquote {
+        font-size: 29px;
+      }
+
+      html[dir="rtl"] .academy-philosophy blockquote {
+        font-size: 23px;
+        line-height: 1.65;
+      }
+
+      .academy-cta h2 {
+        font-size: 35px;
+      }
+
+      html[dir="rtl"] .academy-cta h2 {
+        font-size: 29px;
+        line-height: 1.45;
+      }
+
+      .academy-cta .btn {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body class="academy-page">
+
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Chef Kassem Taha Home"
+    >
+
+      <span class="brand-logo">CK</span>
+
+      <span class="brand-copy">
+
+        <strong
+          data-en="Chef Kassem Taha"
+          data-ar="الشيف قاسم طه"
+        >
+          Chef Kassem Taha
+        </strong>
+
+        <small
+          data-en="GLOBAL CULINARY & HOSPITALITY EXPERT"
+          data-ar="خبير عالمي في الطهي والضيافة"
+        >
+          GLOBAL CULINARY &amp; HOSPITALITY EXPERT
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav
+      class="main-nav"
+      id="mainNav"
+      aria-label="Main Navigation"
+    >
+
+      <a
+        href="index.html"
+        data-en="Home"
+        data-ar="الرئيسية"
+      >
+        Home
+      </a>
+
+      <a
+        href="about.html"
+        data-en="About"
+        data-ar="من أنا"
+      >
+        About
+      </a>
+
+      <a
+        href="services.html"
+        data-en="Services"
+        data-ar="الخدمات"
+      >
+        Services
+      </a>
+
+      <a
+        href="index.html#projects"
+        data-en="Projects"
+        data-ar="المشاريع"
+      >
+        Projects
+      </a>
+
+      <a
+        href="academy.html"
+        class="active"
+        data-en="Academy"
+        data-ar="الأكاديمية"
+      >
+        Academy
+      </a>
+
+      <a
+        href="recipes.html"
+        data-en="Recipes"
+        data-ar="الوصفات"
+      >
+        Recipes
+      </a>
+
+      <a
+        href="index.html#blog"
+        data-en="Blog"
+        data-ar="المدونة"
+      >
+        Blog
+      </a>
+
+      <a
+        href="index.html#contact"
+        data-en="Contact"
+        data-ar="تواصل معنا"
+      >
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        aria-label="Switch language"
+      >
+        AR
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<section class="academy-hero">
+
+  <div class="academy-container">
+
+    <div class="academy-hero-content">
+
+      <p
+        class="academy-eyebrow"
+        data-en="CHEF KASSEM TAHA ACADEMY"
+        data-ar="أكاديمية الشيف قاسم طه"
+      >
+        CHEF KASSEM TAHA ACADEMY
+      </p>
+
+      <h1
+        data-en="Knowledge Into Practice."
+        data-ar="من المعرفة إلى التطبيق."
+      >
+        Knowledge Into <span>Practice.</span>
+      </h1>
+
+      <p
+        class="academy-hero-description"
+        data-en="Professional culinary, hospitality and F&B operational training designed to develop practical skills, stronger systems and more capable teams."
+        data-ar="تدريب احترافي في فنون الطهي والضيافة وعمليات الأغذية والمشروبات، مصمم لتطوير المهارات العملية وبناء أنظمة أقوى وفرق عمل أكثر كفاءة."
+      >
+        Professional culinary, hospitality and F&amp;B operational
+        training designed to develop practical skills, stronger
+        systems and more capable teams.
+      </p>
+
+      <div class="academy-hero-actions">
+
+        <a
+          href="#training"
+          class="btn btn-gold"
+          data-en="Explore Training"
+          data-ar="استكشف برامج التدريب"
+        >
+          Explore Training
+        </a>
+
+        <a
+          href="index.html#contact"
+          class="btn btn-outline"
+          data-en="Request Training"
+          data-ar="اطلب برنامجاً تدريبياً"
+        >
+          Request Training
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="academy-intro">
+
+  <div class="academy-container academy-intro-grid">
+
+    <div>
+
+      <p
+        class="academy-eyebrow"
+        data-en="PRACTICAL PROFESSIONAL DEVELOPMENT"
+        data-ar="تطوير مهني عملي"
+      >
+        PRACTICAL PROFESSIONAL DEVELOPMENT
+      </p>
+
+      <h2
+        class="academy-section-title"
+        data-en="Training Built Around Real Operations"
+        data-ar="تدريب مبني على واقع التشغيل"
+      >
+        Training Built Around Real Operations
+      </h2>
+
+      <div class="academy-gold-line"></div>
+
+    </div>
+
+
+    <div class="academy-intro-text">
+
+      <p
+        data-en="Professional training should not stop at theory. It should help people understand what to do, how to do it, why it matters and how to apply it consistently in daily operations."
+        data-ar="التدريب المهني لا يجب أن يتوقف عند الجانب النظري، بل يجب أن يساعد الأشخاص على فهم ما يجب القيام به، وكيفية تنفيذه، ولماذا هو مهم، وكيفية تطبيقه باستمرار في العمليات اليومية."
+      >
+        Professional training should not stop at theory.
+        It should help people understand what to do, how to do it,
+        why it matters and how to apply it consistently in daily operations.
+      </p>
+
+      <p
+        data-en="The Academy focuses on practical culinary and F&B knowledge, operational systems, food safety, cost awareness, team performance and continuous development."
+        data-ar="تركز الأكاديمية على المعرفة العملية في الطهي والأغذية والمشروبات وأنظمة التشغيل وسلامة الغذاء والوعي بالتكاليف وأداء فرق العمل والتطوير المستمر."
+      >
+        The Academy focuses on practical culinary and F&amp;B knowledge,
+        operational systems, food safety, cost awareness,
+        team performance and continuous development.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="training-section" id="training">
+
+  <div class="academy-container">
+
+    <div class="training-heading">
+
+      <p
+        class="academy-eyebrow"
+        data-en="TRAINING AREAS"
+        data-ar="مجالات التدريب"
+      >
+        TRAINING AREAS
+      </p>
+
+      <h2
+        class="academy-section-title"
+        data-en="Professional Training Programs"
+        data-ar="برامج تدريب احترافية"
+      >
+        Professional Training Programs
+      </h2>
+
+      <p
+        data-en="Training programs can be structured according to the operational needs, skill level and objectives of individuals, restaurants, hotels and F&B teams."
+        data-ar="يمكن تصميم البرامج التدريبية وفق الاحتياجات التشغيلية ومستوى المهارات والأهداف الخاصة بالأفراد والمطاعم والفنادق وفرق الأغذية والمشروبات."
+      >
+        Training programs can be structured according to the operational
+        needs, skill level and objectives of individuals, restaurants,
+        hotels and F&amp;B teams.
+      </p>
+
+    </div>
+
+
+    <div class="training-grid">
+
+
+      <article class="training-card">
+
+        <span class="training-number">01</span>
+        <div class="training-icon">CT</div>
+
+        <h3
+          data-en="Professional Culinary Training"
+          data-ar="التدريب الاحترافي في فنون الطهي"
+        >
+          Professional Culinary Training
+        </h3>
+
+        <p
+          data-en="Practical culinary skills, preparation methods, production discipline, kitchen organization and professional working standards."
+          data-ar="مهارات الطهي العملية وطرق التحضير والانضباط في الإنتاج وتنظيم المطبخ ومعايير العمل المهني."
+        >
+          Practical culinary skills, preparation methods,
+          production discipline, kitchen organization
+          and professional working standards.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">02</span>
+        <div class="training-icon">OP</div>
+
+        <h3
+          data-en="F&B Operations Training"
+          data-ar="التدريب على عمليات الأغذية والمشروبات"
+        >
+          F&amp;B Operations Training
+        </h3>
+
+        <p
+          data-en="Operational training covering kitchen, service, workflow, responsibilities, quality control and daily performance."
+          data-ar="تدريب تشغيلي يشمل المطبخ والخدمة وتدفق العمل والمسؤوليات وضبط الجودة والأداء اليومي."
+        >
+          Operational training covering kitchen, service,
+          workflow, responsibilities, quality control
+          and daily performance.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">03</span>
+        <div class="training-icon">FS</div>
+
+        <h3
+          data-en="Food Safety & HACCP"
+          data-ar="سلامة الغذاء والهاسب"
+        >
+          Food Safety &amp; HACCP
+        </h3>
+
+        <p
+          data-en="Practical food-safety training covering hygiene, receiving, storage, preparation, temperatures, sanitation and HACCP-based controls."
+          data-ar="تدريب عملي في سلامة الغذاء يشمل النظافة والاستلام والتخزين والتحضير ودرجات الحرارة والتعقيم والضوابط المبنية على نظام الهاسب."
+        >
+          Practical food-safety training covering hygiene,
+          receiving, storage, preparation, temperatures,
+          sanitation and HACCP-based controls.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">04</span>
+        <div class="training-icon">SOP</div>
+
+        <h3
+          data-en="SOP & Operational Systems"
+          data-ar="إجراءات التشغيل والأنظمة"
+        >
+          SOP &amp; Operational Systems
+        </h3>
+
+        <p
+          data-en="Training teams to understand and apply Standard Operating Procedures, checklists, responsibilities and operational controls."
+          data-ar="تدريب فرق العمل على فهم وتطبيق إجراءات التشغيل القياسية وقوائم التحقق والمسؤوليات والضوابط التشغيلية."
+        >
+          Training teams to understand and apply Standard Operating
+          Procedures, checklists, responsibilities
+          and operational controls.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">05</span>
+        <div class="training-icon">CC</div>
+
+        <h3
+          data-en="Cost Control"
+          data-ar="ضبط التكاليف"
+        >
+          Cost Control
+        </h3>
+
+        <p
+          data-en="Training in food cost, recipe costing, portion control, waste reduction, inventory awareness and operational cost discipline."
+          data-ar="تدريب على تكلفة الطعام وتكلفة الوصفات وضبط الحصص وتقليل الهدر والوعي بالمخزون والانضباط في التكاليف التشغيلية."
+        >
+          Training in food cost, recipe costing, portion control,
+          waste reduction, inventory awareness
+          and operational cost discipline.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">06</span>
+        <div class="training-icon">MD</div>
+
+        <h3
+          data-en="Menu & Recipe Development"
+          data-ar="تطوير القوائم والوصفات"
+        >
+          Menu &amp; Recipe Development
+        </h3>
+
+        <p
+          data-en="Training in dish selection, standardized recipes, portions, costing, menu structure and practical production planning."
+          data-ar="تدريب على اختيار الأطباق وتوحيد الوصفات والحصص والتكلفة وهيكلة القوائم والتخطيط العملي للإنتاج."
+        >
+          Training in dish selection, standardized recipes,
+          portions, costing, menu structure
+          and practical production planning.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">07</span>
+        <div class="training-icon">CK</div>
+
+        <h3
+          data-en="Central Kitchen Operations"
+          data-ar="عمليات المطابخ المركزية"
+        >
+          Central Kitchen Operations
+        </h3>
+
+        <p
+          data-en="Training for production flow, receiving, storage, preparation, cooking, packing, dispatch, hygiene and operational coordination."
+          data-ar="تدريب على تدفق الإنتاج والاستلام والتخزين والتحضير والطهي والتعبئة والتوزيع والنظافة والتنسيق التشغيلي."
+        >
+          Training for production flow, receiving, storage,
+          preparation, cooking, packing, dispatch,
+          hygiene and operational coordination.
+        </p>
+
+      </article>
+
+
+      <article class="training-card">
+
+        <span class="training-number">08</span>
+        <div class="training-icon">TD</div>
+
+        <h3
+          data-en="Team Development"
+          data-ar="تطوير فرق العمل"
+        >
+          Team Development
+        </h3>
+
+        <p
+          data-en="Developing responsibilities, communication, teamwork, professional standards, accountability and continuous performance improvement."
+          data-ar="تطوير المسؤوليات والتواصل والعمل الجماعي والمعايير المهنية والمساءلة والتحسين المستمر للأداء."
+        >
+          Developing responsibilities, communication,
+          teamwork, professional standards, accountability
+          and continuous performance improvement.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="audience-section">
+
+  <div class="academy-container">
+
+    <div class="audience-heading">
+
+      <p
+        class="academy-eyebrow"
+        data-en="WHO IS IT FOR?"
+        data-ar="لمن هذه البرامج؟"
+      >
+        WHO IS IT FOR?
+      </p>
+
+      <h2
+        class="academy-section-title"
+        data-en="Training for People and Businesses"
+        data-ar="تدريب للأفراد وقطاع الأعمال"
+      >
+        Training for People and Businesses
+      </h2>
+
+      <p
+        data-en="Programs can support both individual professional development and structured team development inside hospitality and F&B businesses."
+        data-ar="يمكن للبرامج دعم التطوير المهني للأفراد وكذلك التطوير المنظم لفرق العمل داخل مشاريع الضيافة والأغذية والمشروبات."
+      >
+        Programs can support both individual professional development
+        and structured team development inside hospitality
+        and F&amp;B businesses.
+      </p>
+
+    </div>
+
+
+    <div class="audience-grid">
+
+      <article class="audience-card">
+        <strong>01</strong>
+        <h3
+          data-en="Culinary Professionals"
+          data-ar="المحترفون في مجال الطهي"
+        >
+          Culinary Professionals
+        </h3>
+        <p
+          data-en="Chefs and culinary professionals seeking practical skill and operational development."
+          data-ar="الطهاة والمحترفون الراغبون في تطوير المهارات العملية والخبرة التشغيلية."
+        >
+          Chefs and culinary professionals seeking practical
+          skill and operational development.
+        </p>
+      </article>
+
+
+      <article class="audience-card">
+        <strong>02</strong>
+        <h3
+          data-en="Restaurant Teams"
+          data-ar="فرق المطاعم"
+        >
+          Restaurant Teams
+        </h3>
+        <p
+          data-en="Kitchen, service and operational teams requiring stronger standards and systems."
+          data-ar="فرق المطبخ والخدمة والتشغيل التي تحتاج إلى معايير وأنظمة أقوى."
+        >
+          Kitchen, service and operational teams requiring
+          stronger standards and systems.
+        </p>
+      </article>
+
+
+      <article class="audience-card">
+        <strong>03</strong>
+        <h3
+          data-en="Hotels & Hospitality"
+          data-ar="الفنادق والضيافة"
+        >
+          Hotels &amp; Hospitality
+        </h3>
+        <p
+          data-en="F&B departments and hospitality teams requiring practical operational development."
+          data-ar="أقسام الأغذية والمشروبات وفرق الضيافة التي تحتاج إلى تطوير تشغيلي عملي."
+        >
+          F&amp;B departments and hospitality teams requiring
+          practical operational development.
+        </p>
+      </article>
+
+
+      <article class="audience-card">
+        <strong>04</strong>
+        <h3
+          data-en="Owners & Managers"
+          data-ar="المالكون والمديرون"
+        >
+          Owners &amp; Managers
+        </h3>
+        <p
+          data-en="Business owners and managers who want a stronger understanding of F&B systems, costs and operations."
+          data-ar="أصحاب المشاريع والمديرون الراغبون في فهم أقوى لأنظمة وتكاليف وعمليات الأغذية والمشروبات."
+        >
+          Business owners and managers who want a stronger
+          understanding of F&amp;B systems, costs and operations.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="academy-method">
+
+  <div class="academy-container">
+
+    <div class="method-heading">
+
+      <p
+        class="academy-eyebrow"
+        data-en="TRAINING METHODOLOGY"
+        data-ar="منهجية التدريب"
+      >
+        TRAINING METHODOLOGY
+      </p>
+
+      <h2
+        class="academy-section-title"
+        data-en="Learn. Apply. Measure. Improve."
+        data-ar="تعلّم. طبّق. قِس. طوّر."
+      >
+        Learn. Apply. Measure. Improve.
+      </h2>
+
+      <p
+        data-en="A practical training process designed to connect knowledge directly with daily operational performance."
+        data-ar="منهجية تدريب عملية مصممة لربط المعرفة مباشرة بالأداء التشغيلي اليومي."
+      >
+        A practical training process designed to connect knowledge
+        directly with daily operational performance.
+      </p>
+
+    </div>
+
+
+    <div class="method-grid">
+
+      <article class="method-step">
+        <strong>01</strong>
+        <h3 data-en="Assess" data-ar="التقييم">Assess</h3>
+        <p
+          data-en="Understand current skills, gaps and operational needs."
+          data-ar="فهم المهارات الحالية والثغرات والاحتياجات التشغيلية."
+        >
+          Understand current skills, gaps and operational needs.
+        </p>
+      </article>
+
+
+      <article class="method-step">
+        <strong>02</strong>
+        <h3 data-en="Teach" data-ar="التعليم">Teach</h3>
+        <p
+          data-en="Explain the standards, principles and correct working methods."
+          data-ar="شرح المعايير والمبادئ وطرق العمل الصحيحة."
+        >
+          Explain the standards, principles and correct working methods.
+        </p>
+      </article>
+
+
+      <article class="method-step">
+        <strong>03</strong>
+        <h3 data-en="Practice" data-ar="التطبيق">Practice</h3>
+        <p
+          data-en="Turn knowledge into practical tasks and operational routines."
+          data-ar="تحويل المعرفة إلى مهام عملية وروتين تشغيلي."
+        >
+          Turn knowledge into practical tasks and operational routines.
+        </p>
+      </article>
+
+
+      <article class="method-step">
+        <strong>04</strong>
+        <h3 data-en="Measure" data-ar="القياس">Measure</h3>
+        <p
+          data-en="Review understanding, execution and performance."
+          data-ar="مراجعة الفهم والتنفيذ ومستوى الأداء."
+        >
+          Review understanding, execution and performance.
+        </p>
+      </article>
+
+
+      <article class="method-step">
+        <strong>05</strong>
+        <h3 data-en="Improve" data-ar="التحسين">Improve</h3>
+        <p
+          data-en="Correct gaps and continue developing skills and standards."
+          data-ar="تصحيح الثغرات والاستمرار في تطوير المهارات والمعايير."
+        >
+          Correct gaps and continue developing skills and standards.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="formats-section">
+
+  <div class="academy-container">
+
+    <div class="formats-heading">
+
+      <p
+        class="academy-eyebrow"
+        data-en="TRAINING FORMATS"
+        data-ar="أنواع التدريب"
+      >
+        TRAINING FORMATS
+      </p>
+
+      <h2
+        class="academy-section-title"
+        data-en="Flexible Training Solutions"
+        data-ar="حلول تدريب مرنة"
+      >
+        Flexible Training Solutions
+      </h2>
+
+      <p
+        data-en="Training can be structured according to the project, team and operational objective."
+        data-ar="يمكن تصميم التدريب وفق طبيعة المشروع والفريق والهدف التشغيلي."
+      >
+        Training can be structured according to the project,
+        team and operational objective.
+      </p>
+
+    </div>
+
+
+    <div class="formats-grid">
+
+      <article class="format-card">
+
+        <span>01</span>
+
+        <h3
+          data-en="Individual Development"
+          data-ar="التطوير الفردي"
+        >
+          Individual Development
+        </h3>
+
+        <p
+          data-en="Professional development programs focused on practical culinary, management and F&B operational knowledge."
+          data-ar="برامج تطوير مهني تركز على المعرفة العملية في الطهي والإدارة وعمليات الأغذية والمشروبات."
+        >
+          Professional development programs focused on practical
+          culinary, management and F&amp;B operational knowledge.
+        </p>
+
+      </article>
+
+
+      <article class="format-card">
+
+        <span>02</span>
+
+        <h3
+          data-en="Corporate Team Training"
+          data-ar="تدريب فرق الشركات"
+        >
+          Corporate Team Training
+        </h3>
+
+        <p
+          data-en="Structured training for restaurant, hotel, kitchen and F&B teams based on operational requirements."
+          data-ar="تدريب منظم لفرق المطاعم والفنادق والمطابخ والأغذية والمشروبات وفق الاحتياجات التشغيلية."
+        >
+          Structured training for restaurant, hotel, kitchen
+          and F&amp;B teams based on operational requirements.
+        </p>
+
+      </article>
+
+
+      <article class="format-card">
+
+        <span>03</span>
+
+        <h3
+          data-en="On-Site Operational Training"
+          data-ar="التدريب التشغيلي في موقع العمل"
+        >
+          On-Site Operational Training
+        </h3>
+
+        <p
+          data-en="Practical training delivered around the real workflow, systems and operational challenges of the business."
+          data-ar="تدريب عملي يتمحور حول تدفق العمل الحقيقي والأنظمة والتحديات التشغيلية داخل المشروع."
+        >
+          Practical training delivered around the real workflow,
+          systems and operational challenges of the business.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="academy-philosophy">
+
+  <div class="academy-container">
+
+    <blockquote
+      data-en="Training creates value when knowledge becomes consistent daily practice."
+      data-ar="يصنع التدريب قيمة حقيقية عندما تتحول المعرفة إلى ممارسة يومية ثابتة."
+    >
+      Training creates value when knowledge becomes
+      consistent daily practice.
+    </blockquote>
+
+    <p
+      data-en="The objective is not simply to transfer information, but to develop people who understand standards, follow systems and contribute to stronger operations."
+      data-ar="الهدف ليس مجرد نقل المعلومات، بل تطوير أشخاص يفهمون المعايير ويطبقون الأنظمة ويساهمون في بناء عمليات أقوى."
+    >
+      The objective is not simply to transfer information,
+      but to develop people who understand standards,
+      follow systems and contribute to stronger operations.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="academy-cta">
+
+  <div class="academy-container">
+
+    <div class="academy-cta-inner">
+
+      <div>
+
+        <p
+          class="academy-eyebrow"
+          data-en="TRAIN WITH CHEF KASSEM"
+          data-ar="تدرّب مع الشيف قاسم"
+        >
+          TRAIN WITH CHEF KASSEM
+        </p>
+
+        <h2
+          data-en="Develop Skills. Build Stronger Teams."
+          data-ar="طوّر المهارات. ابنِ فرقاً أقوى."
+        >
+          Develop Skills. Build Stronger Teams.
+        </h2>
+
+        <p
+          data-en="For individual professional development or customized training for restaurants, hotels and F&B teams, contact Chef Kassem Taha."
+          data-ar="للتطوير المهني الفردي أو لتصميم برامج تدريب مخصصة للمطاعم والفنادق وفرق الأغذية والمشروبات، تواصل مع الشيف قاسم طه."
+        >
+          For individual professional development or customized
+          training for restaurants, hotels and F&amp;B teams,
+          contact Chef Kassem Taha.
+        </p>
+
+      </div>
+
+      <a
+        href="index.html#contact"
+        class="btn btn-gold"
+        data-en="Request Training"
+        data-ar="اطلب التدريب"
+      >
+        Request Training
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <div class="footer-brand-title">
+
+        <span class="brand-logo">CK</span>
+
+        <div>
+
+          <strong
+            data-en="Chef Kassem Taha"
+            data-ar="الشيف قاسم طه"
+          >
+            Chef Kassem Taha
+          </strong>
+
+          <small
+            data-en="GLOBAL CULINARY & HOSPITALITY EXPERT"
+            data-ar="خبير عالمي في الطهي والضيافة"
+          >
+            GLOBAL CULINARY &amp; HOSPITALITY EXPERT
+          </small>
+
+        </div>
+
+      </div>
+
+      <p
+        data-en="From Concept to Excellence"
+        data-ar="من الفكرة إلى التميز"
+      >
+        From Concept to Excellence
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3
+        data-en="Quick Links"
+        data-ar="روابط سريعة"
+      >
+        Quick Links
+      </h3>
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
+
+      <a href="services.html"
+         data-en="Services"
+         data-ar="الخدمات">
+        Services
+      </a>
+
+      <a href="index.html#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="academy.html"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="recipes.html"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+      <a href="index.html#contact"
+         data-en="Contact"
+         data-ar="تواصل معنا">
+        Contact
+      </a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3
+        data-en="Contact"
+        data-ar="التواصل"
+      >
+        Contact
+      </h3>
+
+      <a
+        class="ltr-contact"
+        href="tel:+855715222672"
+      >
+        +855 71 522 2672
+      </a>
+
+      <a
+        class="ltr-contact"
+        href="https://wa.me/971507784185"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp: +971 50 778 4185
+      </a>
+
+      <span
+        data-en="Phnom Penh, Cambodia"
+        data-ar="بنوم بنه، كمبوديا"
+      >
+        Phnom Penh, Cambodia
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <div class="container">
+
+      <span>
+        © <span id="year"></span>
+      </span>
+
+      <span
+        data-en=" Chef Kassem Taha. All Rights Reserved."
+        data-ar=" الشيف قاسم طه. جميع الحقوق محفوظة."
+      >
+        Chef Kassem Taha. All Rights Reserved.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+          </html>
