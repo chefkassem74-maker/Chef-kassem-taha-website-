@@ -48,7 +48,6 @@
       background: #fffaf2;
     }
 
-
     /* =====================================================
        SERVICES HERO
     ===================================================== */
@@ -56,7 +55,6 @@
     .services-hero {
       position: relative;
       overflow: hidden;
-
       padding: 92px 0 78px;
 
       background:
@@ -77,24 +75,19 @@
 
     .services-hero::after {
       content: "";
-
       position: absolute;
       right: -110px;
       top: -150px;
-
       width: 390px;
       height: 390px;
-
       border: 1px solid rgba(213, 164, 60, .16);
       border-radius: 50%;
-
       pointer-events: none;
     }
 
     .services-hero-content {
       position: relative;
       z-index: 2;
-
       max-width: 850px;
     }
 
@@ -104,30 +97,22 @@
 
     .services-hero h1 {
       margin: 0;
-
       max-width: 800px;
-
       color: #171008;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(50px, 6vw, 78px);
       font-weight: 700;
       line-height: .95;
-
       letter-spacing: -1.5px;
     }
 
     .services-hero p {
       max-width: 720px;
-
       margin: 25px 0 0;
-
       color: #655a4c;
-
       font-size: 16px;
       line-height: 1.8;
     }
-
 
     /* =====================================================
        INTRO
@@ -135,27 +120,19 @@
 
     .services-intro {
       padding: 70px 0 35px;
-
       background: #fffaf2;
     }
 
     .services-intro-grid {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(280px, .7fr);
-
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr);
       gap: 55px;
-
       align-items: end;
     }
 
     .services-intro h2 {
       margin: 0;
-
       color: #21170d;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(38px, 4.5vw, 58px);
       line-height: 1;
@@ -163,13 +140,10 @@
 
     .services-intro p {
       margin: 0;
-
       color: #655a4c;
-
       font-size: 14px;
       line-height: 1.8;
     }
-
 
     /* =====================================================
        MAIN SERVICES
@@ -177,35 +151,24 @@
 
     .services-main {
       padding: 30px 0 85px;
-
       background: #fffaf2;
     }
 
     .service-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
 
     .service-card {
       position: relative;
-
       min-width: 0;
       min-height: 340px;
-
       display: flex;
       flex-direction: column;
-
       padding: 30px 26px 27px;
-
       overflow: hidden;
-
-      border:
-        1px solid rgba(213, 164, 60, .38);
-
+      border: 1px solid rgba(213, 164, 60, .38);
       border-radius: 7px;
 
       background:
@@ -220,8 +183,7 @@
           #050403
         );
 
-      box-shadow:
-        0 14px 35px rgba(32, 20, 7, .12);
+      box-shadow: 0 14px 35px rgba(32, 20, 7, .12);
 
       transition:
         transform .25s ease,
@@ -231,23 +193,16 @@
 
     .service-card:hover {
       transform: translateY(-4px);
-
-      border-color:
-        rgba(240, 201, 106, .75);
-
-      box-shadow:
-        0 18px 40px rgba(32, 20, 7, .18);
+      border-color: rgba(240, 201, 106, .75);
+      box-shadow: 0 18px 40px rgba(32, 20, 7, .18);
     }
 
     .service-card::before {
       content: "";
-
       position: absolute;
-
       top: 0;
       left: 0;
       right: 0;
-
       height: 3px;
 
       background:
@@ -263,39 +218,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 15px;
-
       margin-bottom: 25px;
     }
 
     .service-icon {
       width: 48px;
       height: 48px;
-
       flex: 0 0 48px;
-
       display: grid;
       place-items: center;
-
-      border:
-        1px solid rgba(240, 201, 106, .48);
-
+      border: 1px solid rgba(240, 201, 106, .48);
       border-radius: 50%;
-
       color: #f0c96a;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 22px;
       font-weight: 700;
-
-      background:
-        rgba(213, 164, 60, .07);
+      background: rgba(213, 164, 60, .07);
     }
 
     .service-number {
       color: rgba(240, 201, 106, .55);
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 22px;
       font-weight: 700;
@@ -303,9 +246,7 @@
 
     .service-card h3 {
       margin: 0 0 14px;
-
       color: #f4c967;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 25px;
       line-height: 1.08;
@@ -313,9 +254,7 @@
 
     .service-card p {
       margin: 0;
-
       color: #e5dac9;
-
       font-size: 13px;
       line-height: 1.72;
     }
@@ -327,21 +266,14 @@
 
     .service-result span {
       display: block;
-
       padding-top: 13px;
-
-      border-top:
-        1px solid rgba(213, 164, 60, .20);
-
+      border-top: 1px solid rgba(213, 164, 60, .20);
       color: #f0c96a;
-
       font-size: 11px;
       font-weight: 700;
       line-height: 1.5;
-
       letter-spacing: .25px;
     }
-
 
     /* =====================================================
        TURNAROUND
@@ -349,9 +281,7 @@
 
     .turnaround-section {
       position: relative;
-
       padding: 85px 0;
-
       overflow: hidden;
 
       background:
@@ -362,16 +292,12 @@
         ),
         #070604;
 
-      border-top:
-        1px solid #9d6d18;
-
-      border-bottom:
-        1px solid #9d6d18;
+      border-top: 1px solid #9d6d18;
+      border-bottom: 1px solid #9d6d18;
     }
 
     .turnaround-heading {
       max-width: 800px;
-
       margin-bottom: 45px;
     }
 
@@ -381,9 +307,7 @@
 
     .turnaround-heading h2 {
       margin: 0;
-
       color: #ffffff;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(40px, 5vw, 62px);
       line-height: 1;
@@ -391,34 +315,23 @@
 
     .turnaround-heading p {
       max-width: 720px;
-
       margin: 20px 0 0;
-
       color: #d9cebd;
-
       font-size: 14px;
       line-height: 1.8;
     }
 
     .turnaround-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(5, minmax(0, 1fr));
-
-      border:
-        1px solid rgba(213, 164, 60, .34);
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      border: 1px solid rgba(213, 164, 60, .34);
     }
 
     .turnaround-step {
       position: relative;
-
       min-height: 210px;
-
       padding: 25px 20px;
-
-      border-inline-end:
-        1px solid rgba(213, 164, 60, .20);
+      border-inline-end: 1px solid rgba(213, 164, 60, .20);
     }
 
     .turnaround-step:last-child {
@@ -427,20 +340,15 @@
 
     .turnaround-step strong {
       display: block;
-
       margin-bottom: 20px;
-
       color: #f0c96a;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 28px;
     }
 
     .turnaround-step h3 {
       margin: 0 0 10px;
-
       color: #ffffff;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 21px;
       line-height: 1.15;
@@ -448,75 +356,55 @@
 
     .turnaround-step p {
       margin: 0;
-
       color: #cfc3b1;
-
       font-size: 12px;
       line-height: 1.65;
     }
 
-
     /* =====================================================
-       SERVICE PROCESS
+       PROCESS
     ===================================================== */
 
     .service-process {
       padding: 85px 0;
-
       background: #f8f1e5;
     }
 
     .service-process-heading {
       margin-bottom: 35px;
-
       text-align: center;
     }
 
     .service-process-heading h2 {
       margin: 0;
-
       color: #21170d;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(38px, 4.5vw, 55px);
     }
 
     .service-process-heading p {
       max-width: 680px;
-
       margin: 14px auto 0;
-
       color: #655a4c;
-
       font-size: 14px;
     }
 
     .service-process-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(7, minmax(0, 1fr));
-
-      border:
-        1px solid rgba(157, 109, 24, .30);
-
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      border: 1px solid rgba(157, 109, 24, .30);
       background: #fffaf2;
     }
 
     .service-process-step {
       min-height: 145px;
-
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
       padding: 18px 10px;
-
       text-align: center;
-
-      border-inline-end:
-        1px solid rgba(157, 109, 24, .20);
+      border-inline-end: 1px solid rgba(157, 109, 24, .20);
     }
 
     .service-process-step:last-child {
@@ -525,20 +413,16 @@
 
     .service-process-step strong {
       color: #9d6d18;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 27px;
     }
 
     .service-process-step span {
       margin-top: 8px;
-
       color: #2b2117;
-
       font-size: 12px;
       font-weight: 800;
     }
-
 
     /* =====================================================
        PHILOSOPHY
@@ -546,19 +430,14 @@
 
     .service-philosophy {
       padding: 75px 0;
-
       text-align: center;
-
       background: #fffaf2;
     }
 
     .service-philosophy blockquote {
       max-width: 850px;
-
       margin: 0 auto;
-
       color: #21170d;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(30px, 4vw, 48px);
       font-weight: 600;
@@ -567,17 +446,12 @@
 
     .service-philosophy blockquote::before {
       content: "“";
-
       display: block;
-
       height: 45px;
-
       color: #d5a43c;
-
       font-size: 70px;
       line-height: .8;
     }
-
 
     /* =====================================================
        CTA
@@ -594,25 +468,16 @@
         ),
         #090705;
 
-      border-top:
-        1px solid rgba(213, 164, 60, .40);
+      border-top: 1px solid rgba(213, 164, 60, .40);
     }
 
     .services-cta-inner {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1fr)
-        auto;
-
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 40px;
-
       align-items: center;
-
       padding: 40px;
-
-      border:
-        1px solid rgba(213, 164, 60, .45);
+      border: 1px solid rgba(213, 164, 60, .45);
     }
 
     .services-cta .eyebrow {
@@ -621,19 +486,15 @@
 
     .services-cta h2 {
       max-width: 700px;
-
       margin: 0;
-
       color: #ffffff;
-
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(37px, 4vw, 53px);
       line-height: 1.05;
     }
 
-
     /* =====================================================
-       SERVICES RTL
+       RTL
     ===================================================== */
 
     html[dir="rtl"] .services-hero-content,
@@ -654,10 +515,8 @@
     html[dir="rtl"] .service-philosophy blockquote,
     html[dir="rtl"] .services-cta h2 {
       font-family: "Cairo", Arial, sans-serif;
-
       letter-spacing: 0;
     }
-
 
     /* =====================================================
        TABLET
@@ -666,32 +525,25 @@
     @media (max-width: 1080px) {
 
       .service-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .turnaround-grid {
-        grid-template-columns:
-          repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .turnaround-step {
-        border-bottom:
-          1px solid rgba(213, 164, 60, .20);
+        border-bottom: 1px solid rgba(213, 164, 60, .20);
       }
 
       .service-process-grid {
-        grid-template-columns:
-          repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
       .service-process-step {
-        border-bottom:
-          1px solid rgba(157, 109, 24, .20);
+        border-bottom: 1px solid rgba(157, 109, 24, .20);
       }
-
     }
-
 
     /* =====================================================
        MOBILE
@@ -701,7 +553,6 @@
 
       .services-hero {
         padding: 62px 0 55px;
-
         text-align: center;
       }
 
@@ -725,7 +576,6 @@
 
       .services-hero p {
         margin-inline: auto;
-
         font-size: 14px;
       }
 
@@ -735,7 +585,6 @@
 
       .services-intro-grid {
         grid-template-columns: 1fr;
-
         gap: 16px;
       }
 
@@ -754,7 +603,6 @@
 
       .service-card {
         min-height: 330px;
-
         padding: 24px 20px;
       }
 
@@ -767,8 +615,7 @@
       }
 
       .turnaround-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .service-process {
@@ -776,8 +623,7 @@
       }
 
       .service-process-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .services-cta {
@@ -786,9 +632,7 @@
 
       .services-cta-inner {
         grid-template-columns: 1fr;
-
         padding: 30px 22px;
-
         text-align: center;
       }
 
@@ -796,12 +640,14 @@
         text-align: center;
       }
 
+      .main-nav.open {
+        max-height: 700px;
+        overflow-y: auto;
+      }
     }
-
 
     /* =====================================================
        SMALL MOBILE
-       Keep two service cards per row
     ===================================================== */
 
     @media (max-width: 520px) {
@@ -824,8 +670,7 @@
       }
 
       .services-intro {
-        padding:
-          45px 0 25px;
+        padding: 45px 0 25px;
       }
 
       .services-intro h2 {
@@ -837,23 +682,17 @@
       }
 
       .services-main {
-        padding:
-          20px 0 50px;
+        padding: 20px 0 50px;
       }
 
       .service-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
       }
 
       .service-card {
         min-height: 325px;
-
-        padding:
-          18px 13px 17px;
-
+        padding: 18px 13px 17px;
         border-radius: 5px;
       }
 
@@ -864,9 +703,7 @@
       .service-icon {
         width: 38px;
         height: 38px;
-
         flex-basis: 38px;
-
         font-size: 17px;
       }
 
@@ -876,7 +713,6 @@
 
       .service-card h3 {
         margin-bottom: 10px;
-
         font-size: 18px;
         line-height: 1.15;
       }
@@ -902,7 +738,6 @@
 
       .service-result span {
         padding-top: 10px;
-
         font-size: 9.5px;
         line-height: 1.45;
       }
@@ -926,9 +761,7 @@
 
       .turnaround-step {
         min-height: 0;
-
         padding: 22px 19px;
-
         border-inline-end: 0;
       }
 
@@ -941,8 +774,7 @@
       }
 
       .service-process-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .service-process-step {
@@ -970,9 +802,7 @@
         font-size: 27px;
         line-height: 1.45;
       }
-
     }
-
 
     /* =====================================================
        VERY SMALL MOBILE
@@ -981,9 +811,7 @@
     @media (max-width: 370px) {
 
       .service-card {
-        padding:
-          16px 10px;
-
+        padding: 16px 10px;
         min-height: 340px;
       }
 
@@ -998,7 +826,6 @@
       .service-card p {
         font-size: 10.5px;
       }
-
     }
 
   </style>
@@ -1007,25 +834,962 @@
 
 <body class="services-page">
 
-  <!-- ===================================================
-       HEADER
-  ==================================================== -->
+<header class="site-header">
 
-  <header class="site-header">
+  <div class="container header-inner">
 
-    <div class="container header-inner">
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Chef Kassem Taha Home"
+    >
+
+      <span class="brand-logo">CK</span>
+
+      <span class="brand-copy">
+
+        <strong
+          data-en="Chef Kassem Taha"
+          data-ar="الشيف قاسم طه"
+        >
+          Chef Kassem Taha
+        </strong>
+
+        <small
+          data-en="GLOBAL CULINARY & HOSPITALITY EXPERT"
+          data-ar="خبير عالمي في الطهي والضيافة"
+        >
+          GLOBAL CULINARY &amp; HOSPITALITY EXPERT
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav
+      class="main-nav"
+      id="mainNav"
+      aria-label="Main Navigation"
+    >
 
       <a
-        class="brand"
         href="index.html"
-        aria-label="Chef Kassem Taha Home"
+        data-en="Home"
+        data-ar="الرئيسية"
       >
+        Home
+      </a>
 
-        <span class="brand-logo">
-          CK
-        </span>
+      <a
+        href="about.html"
+        data-en="About"
+        data-ar="من أنا"
+      >
+        About
+      </a>
 
-        <span class="brand-copy">
+      <a
+        href="services.html"
+        class="active"
+        data-en="Services"
+        data-ar="الخدمات"
+      >
+        Services
+      </a>
+
+      <a
+        href="index.html#projects"
+        data-en="Projects"
+        data-ar="المشاريع"
+      >
+        Projects
+      </a>
+
+      <a
+        href="index.html#academy"
+        data-en="Academy"
+        data-ar="الأكاديمية"
+      >
+        Academy
+      </a>
+
+      <a
+        href="recipes.html"
+        data-en="Recipes"
+        data-ar="الوصفات"
+      >
+        Recipes
+      </a>
+
+      <a
+        href="index.html#blog"
+        data-en="Blog"
+        data-ar="المدونة"
+      >
+        Blog
+      </a>
+
+      <a
+        href="index.html#contact"
+        data-en="Contact"
+        data-ar="تواصل معنا"
+      >
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        aria-label="Switch language"
+      >
+        AR
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <section class="services-hero">
+
+    <div class="container">
+
+      <div class="services-hero-content">
+
+        <p
+          class="eyebrow"
+          data-en="PROFESSIONAL F&B CONSULTING"
+          data-ar="استشارات احترافية في الأغذية والمشروبات"
+        >
+          PROFESSIONAL F&amp;B CONSULTING
+        </p>
+
+        <h1
+          data-en="Building Better F&B Businesses"
+          data-ar="نبني مشاريع أغذية ومشروبات أقوى"
+        >
+          Building Better F&amp;B Businesses
+        </h1>
+
+        <p
+          data-en="Practical consulting and operational development for restaurants, hotels, central kitchens and food businesses — from concept and systems to training, control and continuous improvement."
+          data-ar="استشارات عملية وتطوير تشغيلي للمطاعم والفنادق والمطابخ المركزية ومشاريع الأغذية والمشروبات، من الفكرة والأنظمة إلى التدريب والرقابة والتحسين المستمر."
+        >
+          Practical consulting and operational development
+          for restaurants, hotels, central kitchens and food
+          businesses — from concept and systems to training,
+          control and continuous improvement.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="services-intro">
+
+    <div class="container services-intro-grid">
+
+      <div>
+
+        <p
+          class="eyebrow"
+          data-en="FROM CONCEPT TO OPERATION"
+          data-ar="من الفكرة إلى التشغيل"
+        >
+          FROM CONCEPT TO OPERATION
+        </p>
+
+        <h2
+          data-en="Integrated Hospitality & F&B Solutions"
+          data-ar="حلول متكاملة للضيافة والأغذية والمشروبات"
+        >
+          Integrated Hospitality &amp; F&amp;B Solutions
+        </h2>
+
+      </div>
+
+      <p
+        data-en="Every project requires more than a good idea. It needs clear systems, controlled costs, trained people, food safety, operational discipline and continuous improvement."
+        data-ar="كل مشروع يحتاج إلى أكثر من فكرة جيدة. يحتاج إلى أنظمة واضحة، وتكاليف مضبوطة، وفريق مدرّب، وسلامة غذاء، وانضباط تشغيلي، وتحسين مستمر."
+      >
+        Every project requires more than a good idea.
+        It needs clear systems, controlled costs,
+        trained people, food safety, operational
+        discipline and continuous improvement.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="services-main">
+
+    <div class="container">
+
+      <div class="service-grid">
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">R</span>
+            <span class="service-number">01</span>
+          </div>
+
+          <h3
+            data-en="Restaurant Development"
+            data-ar="تطوير المطاعم"
+          >
+            Restaurant Development
+          </h3>
+
+          <p
+            data-en="Development of restaurant concepts, operational structure, kitchen workflow, service standards and systems designed for sustainable daily operations."
+            data-ar="تطوير مفهوم المطعم والهيكل التشغيلي وتدفق العمل داخل المطبخ ومعايير الخدمة والأنظمة اللازمة لتشغيل يومي مستدام."
+          >
+            Development of restaurant concepts,
+            operational structure, kitchen workflow,
+            service standards and systems designed
+            for sustainable daily operations.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: A stronger and more organized restaurant operation."
+              data-ar="النتيجة: تشغيل مطعم أقوى وأكثر تنظيماً."
+            >
+              RESULT: A stronger and more organized restaurant operation.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">H</span>
+            <span class="service-number">02</span>
+          </div>
+
+          <h3
+            data-en="Hotel F&B Consulting"
+            data-ar="استشارات الأغذية والمشروبات للفنادق"
+          >
+            Hotel F&amp;B Consulting
+          </h3>
+
+          <p
+            data-en="Operational consulting for hotel restaurants, kitchens, banqueting, breakfast operations, service standards, food cost and F&B team performance."
+            data-ar="استشارات تشغيلية لمطاعم ومطابخ الفنادق والحفلات وعمليات الإفطار ومعايير الخدمة وتكلفة الطعام وأداء فرق الأغذية والمشروبات."
+          >
+            Operational consulting for hotel restaurants,
+            kitchens, banqueting, breakfast operations,
+            service standards, food cost and F&amp;B
+            team performance.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Better control, consistency and guest experience."
+              data-ar="النتيجة: رقابة أفضل وثبات في الجودة وتجربة ضيف أقوى."
+            >
+              RESULT: Better control, consistency and guest experience.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">CK</span>
+            <span class="service-number">03</span>
+          </div>
+
+          <h3
+            data-en="Central Kitchen Development"
+            data-ar="تطوير المطابخ المركزية"
+          >
+            Central Kitchen Development
+          </h3>
+
+          <p
+            data-en="Planning central kitchen workflow, production areas, receiving, storage, preparation, cooking, packing, dispatch and food-safety controls."
+            data-ar="تخطيط تدفق العمل في المطبخ المركزي ومناطق الإنتاج والاستلام والتخزين والتحضير والطهي والتعبئة والتوزيع وضوابط سلامة الغذاء."
+          >
+            Planning central kitchen workflow,
+            production areas, receiving, storage,
+            preparation, cooking, packing, dispatch
+            and food-safety controls.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Efficient production with clear operational flow."
+              data-ar="النتيجة: إنتاج أكثر كفاءة مع تدفق تشغيلي واضح."
+            >
+              RESULT: Efficient production with clear operational flow.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">M</span>
+            <span class="service-number">04</span>
+          </div>
+
+          <h3
+            data-en="Menu Engineering & Recipe Development"
+            data-ar="هندسة القوائم وتطوير الوصفات"
+          >
+            Menu Engineering &amp; Recipe Development
+          </h3>
+
+          <p
+            data-en="Menu structure, dish selection, standardized recipes, portions, costing, pricing logic, production practicality and menu performance review."
+            data-ar="هيكلة قائمة الطعام واختيار الأطباق وتوحيد الوصفات والحصص والتكلفة ومنطق التسعير وسهولة الإنتاج ومراجعة أداء القائمة."
+          >
+            Menu structure, dish selection,
+            standardized recipes, portions, costing,
+            pricing logic, production practicality
+            and menu performance review.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: A practical menu built for quality and profitability."
+              data-ar="النتيجة: قائمة عملية مصممة للجودة والربحية."
+            >
+              RESULT: A practical menu built for quality and profitability.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">SOP</span>
+            <span class="service-number">05</span>
+          </div>
+
+          <h3
+            data-en="SOP & Operational Systems"
+            data-ar="إجراءات التشغيل والأنظمة"
+          >
+            SOP &amp; Operational Systems
+          </h3>
+
+          <p
+            data-en="Development of clear Standard Operating Procedures, responsibilities, checklists, workflows and control points for consistent daily execution."
+            data-ar="تطوير إجراءات تشغيل قياسية واضحة والمسؤوليات وقوائم التحقق وتدفقات العمل ونقاط الرقابة لضمان تنفيذ يومي ثابت."
+          >
+            Development of clear Standard Operating
+            Procedures, responsibilities, checklists,
+            workflows and control points for
+            consistent daily execution.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Operations that depend on systems, not individuals."
+              data-ar="النتيجة: تشغيل يعتمد على النظام وليس على الأفراد."
+            >
+              RESULT: Operations that depend on systems, not individuals.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">FS</span>
+            <span class="service-number">06</span>
+          </div>
+
+          <h3
+            data-en="Food Safety & HACCP"
+            data-ar="سلامة الغذاء ونظام الهاسب"
+          >
+            Food Safety &amp; HACCP
+          </h3>
+
+          <p
+            data-en="Food-safety systems covering receiving, storage, preparation, temperature control, hygiene, sanitation, traceability and HACCP-based operational controls."
+            data-ar="أنظمة سلامة غذاء تشمل الاستلام والتخزين والتحضير والتحكم بدرجات الحرارة والنظافة والتعقيم والتتبع والضوابط التشغيلية المبنية على الهاسب."
+          >
+            Food-safety systems covering receiving,
+            storage, preparation, temperature control,
+            hygiene, sanitation, traceability and
+            HACCP-based operational controls.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Safer food and stronger operational discipline."
+              data-ar="النتيجة: غذاء أكثر أماناً وانضباط تشغيلي أقوى."
+            >
+              RESULT: Safer food and stronger operational discipline.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">C</span>
+            <span class="service-number">07</span>
+          </div>
+
+          <h3
+            data-en="Cost Control"
+            data-ar="ضبط التكاليف"
+          >
+            Cost Control
+          </h3>
+
+          <p
+            data-en="Food-cost analysis, portion control, waste monitoring, recipe costing, inventory discipline and operational controls designed to protect profitability."
+            data-ar="تحليل تكلفة الطعام وضبط الحصص ومراقبة الهدر وتكلفة الوصفات وانضباط المخزون والرقابة التشغيلية لحماية الربحية."
+          >
+            Food-cost analysis, portion control,
+            waste monitoring, recipe costing,
+            inventory discipline and operational
+            controls designed to protect profitability.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Better visibility and stronger control of operating costs."
+              data-ar="النتيجة: رؤية أوضح وسيطرة أقوى على تكاليف التشغيل."
+            >
+              RESULT: Better visibility and stronger control of operating costs.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">P</span>
+            <span class="service-number">08</span>
+          </div>
+
+          <h3
+            data-en="Purchasing & Stores"
+            data-ar="المشتريات والمخازن"
+          >
+            Purchasing &amp; Stores
+          </h3>
+
+          <p
+            data-en="Supplier controls, purchasing procedures, receiving standards, stock organization, storage systems, issuing procedures and inventory monitoring."
+            data-ar="ضبط الموردين وإجراءات الشراء ومعايير الاستلام وتنظيم المخزون وأنظمة التخزين وإجراءات الصرف ومراقبة الجرد."
+          >
+            Supplier controls, purchasing procedures,
+            receiving standards, stock organization,
+            storage systems, issuing procedures
+            and inventory monitoring.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Controlled purchasing and organized inventory."
+              data-ar="النتيجة: مشتريات مضبوطة ومخزون منظم."
+            >
+              RESULT: Controlled purchasing and organized inventory.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">T</span>
+            <span class="service-number">09</span>
+          </div>
+
+          <h3
+            data-en="Staff Training & Team Development"
+            data-ar="تدريب وتطوير فرق العمل"
+          >
+            Staff Training &amp; Team Development
+          </h3>
+
+          <p
+            data-en="Practical training for kitchen, service and operational teams with clear responsibilities, performance standards and continuous development."
+            data-ar="تدريب عملي لفرق المطبخ والخدمة والتشغيل مع تحديد واضح للمسؤوليات ومعايير الأداء والتطوير المستمر."
+          >
+            Practical training for kitchen, service
+            and operational teams with clear
+            responsibilities, performance standards
+            and continuous development.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Stronger teams with clearer standards and responsibilities."
+              data-ar="النتيجة: فرق أقوى بمعايير ومسؤوليات أكثر وضوحاً."
+            >
+              RESULT: Stronger teams with clearer standards and responsibilities.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">BR</span>
+            <span class="service-number">10</span>
+          </div>
+
+          <h3
+            data-en="Business Restructuring"
+            data-ar="إعادة هيكلة المشاريع"
+          >
+            Business Restructuring
+          </h3>
+
+          <p
+            data-en="Operational assessment of underperforming restaurants and F&B businesses to identify root causes, correct systems and rebuild operational control."
+            data-ar="تقييم تشغيلي للمطاعم ومشاريع الأغذية والمشروبات المتعثرة لتحديد الأسباب الجذرية وتصحيح الأنظمة وإعادة بناء الرقابة التشغيلية."
+          >
+            Operational assessment of underperforming
+            restaurants and F&amp;B businesses to
+            identify root causes, correct systems
+            and rebuild operational control.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: A structured path from operational problems to measurable improvement."
+              data-ar="النتيجة: مسار منظم من المشاكل التشغيلية إلى تحسين قابل للقياس."
+            >
+              RESULT: A structured path from operational problems to measurable improvement.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">OP</span>
+            <span class="service-number">11</span>
+          </div>
+
+          <h3
+            data-en="F&B Operations Management"
+            data-ar="إدارة عمليات الأغذية والمشروبات"
+          >
+            F&amp;B Operations Management
+          </h3>
+
+          <p
+            data-en="Operational management systems covering kitchen, service, purchasing, stores, cost, quality, staffing, reporting and day-to-day performance."
+            data-ar="أنظمة إدارة تشغيلية تشمل المطبخ والخدمة والمشتريات والمخازن والتكلفة والجودة والموظفين والتقارير والأداء اليومي."
+          >
+            Operational management systems covering
+            kitchen, service, purchasing, stores,
+            cost, quality, staffing, reporting
+            and day-to-day performance.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: Better coordination, accountability and operational performance."
+              data-ar="النتيجة: تنسيق ومساءلة وأداء تشغيلي أفضل."
+            >
+              RESULT: Better coordination, accountability and operational performance.
+            </span>
+          </div>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <div class="service-top">
+            <span class="service-icon">NP</span>
+            <span class="service-number">12</span>
+          </div>
+
+          <h3
+            data-en="New Project Setup"
+            data-ar="تأسيس المشاريع الجديدة"
+          >
+            New Project Setup
+          </h3>
+
+          <p
+            data-en="Operational development for new restaurants, food businesses and hospitality projects from concept planning through systems, menu, staffing, training and opening preparation."
+            data-ar="تطوير تشغيلي للمطاعم ومشاريع الأغذية والضيافة الجديدة من تخطيط الفكرة إلى الأنظمة والقائمة والموظفين والتدريب والاستعداد للافتتاح."
+          >
+            Operational development for new restaurants,
+            food businesses and hospitality projects
+            from concept planning through systems,
+            menu, staffing, training and opening preparation.
+          </p>
+
+          <div class="service-result">
+            <span
+              data-en="RESULT: A structured project prepared for professional operation."
+              data-ar="النتيجة: مشروع منظم ومجهز للتشغيل الاحترافي."
+            >
+              RESULT: A structured project prepared for professional operation.
+            </span>
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="turnaround-section">
+
+    <div class="container">
+
+      <div class="turnaround-heading">
+
+        <p
+          class="eyebrow"
+          data-en="BUSINESS RESTRUCTURING"
+          data-ar="إعادة هيكلة المشاريع"
+        >
+          BUSINESS RESTRUCTURING
+        </p>
+
+        <h2
+          data-en="When a Business Needs Change"
+          data-ar="عندما يحتاج المشروع إلى التغيير"
+        >
+          When a Business Needs Change
+        </h2>
+
+        <p
+          data-en="A struggling restaurant is rarely suffering from one problem. The objective is to identify the root causes, rebuild the operating system, train the team and measure the results."
+          data-ar="المطعم المتعثر نادراً ما يعاني من مشكلة واحدة. الهدف هو تحديد الأسباب الجذرية وإعادة بناء نظام التشغيل وتدريب الفريق وقياس النتائج."
+        >
+          A struggling restaurant is rarely suffering
+          from one problem. The objective is to identify
+          the root causes, rebuild the operating system,
+          train the team and measure the results.
+        </p>
+
+      </div>
+
+
+      <div class="turnaround-grid">
+
+        <article class="turnaround-step">
+
+          <strong>01</strong>
+
+          <h3
+            data-en="Operational Assessment"
+            data-ar="التقييم التشغيلي"
+          >
+            Operational Assessment
+          </h3>
+
+          <p
+            data-en="Review operations, people, systems, costs, quality and workflow."
+            data-ar="مراجعة التشغيل والموظفين والأنظمة والتكاليف والجودة وتدفق العمل."
+          >
+            Review operations, people, systems,
+            costs, quality and workflow.
+          </p>
+
+        </article>
+
+
+        <article class="turnaround-step">
+
+          <strong>02</strong>
+
+          <h3
+            data-en="Identify Root Causes"
+            data-ar="تحديد الأسباب الجذرية"
+          >
+            Identify Root Causes
+          </h3>
+
+          <p
+            data-en="Separate visible symptoms from the real operational causes behind them."
+            data-ar="فصل الأعراض الظاهرة عن الأسباب التشغيلية الحقيقية التي تقف خلفها."
+          >
+            Separate visible symptoms from the real operational causes behind them.
+          </p>
+
+        </article>
+
+
+        <article class="turnaround-step">
+
+          <strong>03</strong>
+
+          <h3
+            data-en="Build Corrective Systems"
+            data-ar="بناء الأنظمة التصحيحية"
+          >
+            Build Corrective Systems
+          </h3>
+
+          <p
+            data-en="Create practical procedures, controls and responsibilities to correct the operation."
+            data-ar="إنشاء إجراءات وضوابط ومسؤوليات عملية لتصحيح التشغيل."
+          >
+            Create practical procedures, controls
+            and responsibilities to correct the operation.
+          </p>
+
+        </article>
+
+
+        <article class="turnaround-step">
+
+          <strong>04</strong>
+
+          <h3
+            data-en="Train & Implement"
+            data-ar="التدريب والتنفيذ"
+          >
+            Train &amp; Implement
+          </h3>
+
+          <p
+            data-en="Train the team and implement the new systems within daily operations."
+            data-ar="تدريب الفريق وتطبيق الأنظمة الجديدة ضمن التشغيل اليومي."
+          >
+            Train the team and implement the new systems within daily operations.
+          </p>
+
+        </article>
+
+
+        <article class="turnaround-step">
+
+          <strong>05</strong>
+
+          <h3
+            data-en="Measure & Improve"
+            data-ar="القياس والتحسين"
+          >
+            Measure &amp; Improve
+          </h3>
+
+          <p
+            data-en="Monitor results, correct gaps and continue improving performance."
+            data-ar="مراقبة النتائج وتصحيح الثغرات والاستمرار في تحسين الأداء."
+          >
+            Monitor results, correct gaps and continue improving performance.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="service-process">
+
+    <div class="container">
+
+      <div class="service-process-heading">
+
+        <p
+          class="eyebrow"
+          data-en="HOW I WORK"
+          data-ar="منهجية العمل"
+        >
+          HOW I WORK
+        </p>
+
+        <h2
+          data-en="From Assessment to Continuous Improvement"
+          data-ar="من التقييم إلى التحسين المستمر"
+        >
+          From Assessment to Continuous Improvement
+        </h2>
+
+        <p
+          data-en="A structured process designed to turn recommendations into practical operational systems."
+          data-ar="منهجية منظمة لتحويل التوصيات إلى أنظمة تشغيلية عملية قابلة للتطبيق."
+        >
+          A structured process designed to turn recommendations into practical operational systems.
+        </p>
+
+      </div>
+
+
+      <div class="service-process-grid">
+
+        <div class="service-process-step">
+          <strong>01</strong>
+          <span data-en="Discover" data-ar="الاكتشاف">Discover</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>02</strong>
+          <span data-en="Audit" data-ar="التدقيق">Audit</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>03</strong>
+          <span data-en="Design" data-ar="التصميم">Design</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>04</strong>
+          <span data-en="Implement" data-ar="التنفيذ">Implement</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>05</strong>
+          <span data-en="Train" data-ar="التدريب">Train</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>06</strong>
+          <span data-en="Control" data-ar="الرقابة">Control</span>
+        </div>
+
+        <div class="service-process-step">
+          <strong>07</strong>
+          <span data-en="Improve" data-ar="التحسين">Improve</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="service-philosophy">
+
+    <div class="container">
+
+      <blockquote
+        data-en="The business must depend on the system — not on one person."
+        data-ar="يجب أن يعتمد المشروع على النظام — وليس على شخص واحد."
+      >
+        The business must depend on the system — not on one person.
+      </blockquote>
+
+    </div>
+
+  </section>
+
+
+  <section class="services-cta">
+
+    <div class="container">
+
+      <div class="services-cta-inner">
+
+        <div>
+
+          <p
+            class="eyebrow"
+            data-en="LET'S WORK TOGETHER"
+            data-ar="لنعمل معاً"
+          >
+            LET'S WORK TOGETHER
+          </p>
+
+          <h2
+            data-en="Let’s Build a Stronger F&B Operation"
+            data-ar="لنبنِ معاً مشروع أغذية ومشروبات أقوى"
+          >
+            Let’s Build a Stronger F&amp;B Operation
+          </h2>
+
+        </div>
+
+        <a
+          class="btn btn-gold"
+          href="index.html#contact"
+          data-en="Start a Consultation"
+          data-ar="ابدأ الاستشارة"
+        >
+          Start a Consultation
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <div class="footer-brand-title">
+
+        <span class="brand-logo">CK</span>
+
+        <div>
 
           <strong
             data-en="Chef Kassem Taha"
@@ -1041,1292 +1805,140 @@
             GLOBAL CULINARY &amp; HOSPITALITY EXPERT
           </small>
 
-        </span>
+        </div>
 
+      </div>
+
+      <p
+        data-en="From Concept to Excellence"
+        data-ar="من الفكرة إلى التميز"
+      >
+        From Concept to Excellence
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3
+        data-en="Quick Links"
+        data-ar="روابط سريعة"
+      >
+        Quick Links
+      </h3>
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
       </a>
 
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
 
-      <nav
-        class="main-nav"
-        id="mainNav"
-        aria-label="Main Navigation"
+      <a href="services.html"
+         data-en="Services"
+         data-ar="الخدمات">
+        Services
+      </a>
+
+      <a href="index.html#projects"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="index.html#academy"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="recipes.html"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+      <a href="index.html#contact"
+         data-en="Contact"
+         data-ar="تواصل معنا">
+        Contact
+      </a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3
+        data-en="Contact"
+        data-ar="التواصل"
       >
+        Contact
+      </h3>
 
-        <a
-          href="index.html"
-          data-en="Home"
-          data-ar="الرئيسية"
-        >
-          Home
-        </a>
+      <a
+        class="ltr-contact"
+        href="tel:+855715222672"
+      >
+        +855 71 522 2672
+      </a>
 
-        <a
-          href="about.html"
-          data-en="About"
-          data-ar="من أنا"
-        >
-          About
-        </a>
+      <a
+        class="ltr-contact"
+        href="https://wa.me/971507784185"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp: +971 50 778 4185
+      </a>
 
-        <a
-          href="services.html"
-          class="active"
-          data-en="Services"
-          data-ar="الخدمات"
-        >
-          Services
-        </a>
-
-        <a
-          href="index.html#academy"
-          data-en="Academy"
-          data-ar="الأكاديمية"
-        >
-          Academy
-        </a>
-
-        <a
-          href="index.html#cuisines"
-          data-en="Recipes"
-          data-ar="الوصفات"
-        >
-          Recipes
-        </a>
-
-        <a
-          href="index.html#contact"
-          data-en="Contact"
-          data-ar="تواصل"
-        >
-          Contact
-        </a>
-
-      </nav>
-
-
-      <div class="header-actions">
-
-        <button
-          class="language-button"
-          id="languageButton"
-          type="button"
-          aria-label="التبديل إلى العربية"
-        >
-          AR
-        </button>
-
-        <button
-          class="menu-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-          aria-controls="mainNav"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
+      <span
+        data-en="Phnom Penh, Cambodia"
+        data-ar="بنوم بنه، كمبوديا"
+      >
+        Phnom Penh, Cambodia
+      </span>
 
     </div>
 
-  </header>
+  </div>
 
 
-  <main>
+  <div class="footer-bottom">
 
+    <div class="container">
 
-    <!-- =================================================
-         HERO
-    ================================================== -->
+      <span>
+        © <span id="year"></span>
+      </span>
 
-    <section class="services-hero">
-
-      <div class="container">
-
-        <div class="services-hero-content">
-
-          <p
-            class="eyebrow"
-            data-en="PROFESSIONAL F&B CONSULTING"
-            data-ar="استشارات احترافية في الأغذية والمشروبات"
-          >
-            PROFESSIONAL F&amp;B CONSULTING
-          </p>
-
-          <h1
-            data-en="Building Better F&B Businesses"
-            data-ar="نبني مشاريع أغذية ومشروبات أقوى"
-          >
-            Building Better F&amp;B Businesses
-          </h1>
-
-          <p
-            data-en="Practical consulting and operational development for restaurants, hotels, central kitchens and food businesses — from concept and systems to training, control and continuous improvement."
-            data-ar="استشارات عملية وتطوير تشغيلي للمطاعم والفنادق والمطابخ المركزية ومشاريع الأغذية والمشروبات، من الفكرة والأنظمة إلى التدريب والرقابة والتحسين المستمر."
-          >
-            Practical consulting and operational development
-            for restaurants, hotels, central kitchens and food
-            businesses — from concept and systems to training,
-            control and continuous improvement.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         INTRO
-    ================================================== -->
-
-    <section class="services-intro">
-
-      <div class="container services-intro-grid">
-
-        <div>
-
-          <p
-            class="eyebrow"
-            data-en="FROM CONCEPT TO OPERATION"
-            data-ar="من الفكرة إلى التشغيل"
-          >
-            FROM CONCEPT TO OPERATION
-          </p>
-
-          <h2
-            data-en="Integrated Hospitality & F&B Solutions"
-            data-ar="حلول متكاملة للضيافة والأغذية والمشروبات"
-          >
-            Integrated Hospitality &amp; F&amp;B Solutions
-          </h2>
-
-        </div>
-
-        <p
-          data-en="Every project requires more than a good idea. It needs clear systems, controlled costs, trained people, food safety, operational discipline and continuous improvement."
-          data-ar="كل مشروع يحتاج إلى أكثر من فكرة جيدة. يحتاج إلى أنظمة واضحة، وتكاليف مضبوطة، وفريق مدرّب، وسلامة غذاء، وانضباط تشغيلي، وتحسين مستمر."
-        >
-          Every project requires more than a good idea.
-          It needs clear systems, controlled costs,
-          trained people, food safety, operational
-          discipline and continuous improvement.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         12 SERVICES
-    ================================================== -->
-
-    <section class="services-main">
-
-      <div class="container">
-
-        <div class="service-grid">
-
-
-          <!-- 01 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                R
-              </span>
-
-              <span class="service-number">
-                01
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Restaurant Development"
-              data-ar="تطوير المطاعم"
-            >
-              Restaurant Development
-            </h3>
-
-            <p
-              data-en="Development of restaurant concepts, operational structure, kitchen workflow, service standards and systems designed for sustainable daily operations."
-              data-ar="تطوير مفهوم المطعم والهيكل التشغيلي وتدفق العمل داخل المطبخ ومعايير الخدمة والأنظمة اللازمة لتشغيل يومي مستدام."
-            >
-              Development of restaurant concepts,
-              operational structure, kitchen workflow,
-              service standards and systems designed
-              for sustainable daily operations.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: A stronger and more organized restaurant operation."
-                data-ar="النتيجة: تشغيل مطعم أقوى وأكثر تنظيماً."
-              >
-                RESULT: A stronger and more organized
-                restaurant operation.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 02 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                H
-              </span>
-
-              <span class="service-number">
-                02
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Hotel F&B Consulting"
-              data-ar="استشارات الأغذية والمشروبات للفنادق"
-            >
-              Hotel F&amp;B Consulting
-            </h3>
-
-            <p
-              data-en="Operational consulting for hotel restaurants, kitchens, banqueting, breakfast operations, service standards, food cost and F&B team performance."
-              data-ar="استشارات تشغيلية لمطاعم ومطابخ الفنادق والحفلات وعمليات الإفطار ومعايير الخدمة وتكلفة الطعام وأداء فرق الأغذية والمشروبات."
-            >
-              Operational consulting for hotel restaurants,
-              kitchens, banqueting, breakfast operations,
-              service standards, food cost and F&amp;B
-              team performance.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Better control, consistency and guest experience."
-                data-ar="النتيجة: رقابة أفضل وثبات في الجودة وتجربة ضيف أقوى."
-              >
-                RESULT: Better control, consistency
-                and guest experience.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 03 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                CK
-              </span>
-
-              <span class="service-number">
-                03
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Central Kitchen Development"
-              data-ar="تطوير المطابخ المركزية"
-            >
-              Central Kitchen Development
-            </h3>
-
-            <p
-              data-en="Planning central kitchen workflow, production areas, receiving, storage, preparation, cooking, packing, dispatch and food-safety controls."
-              data-ar="تخطيط تدفق العمل في المطبخ المركزي ومناطق الإنتاج والاستلام والتخزين والتحضير والطهي والتعبئة والتوزيع وضوابط سلامة الغذاء."
-            >
-              Planning central kitchen workflow,
-              production areas, receiving, storage,
-              preparation, cooking, packing, dispatch
-              and food-safety controls.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Efficient production with clear operational flow."
-                data-ar="النتيجة: إنتاج أكثر كفاءة مع تدفق تشغيلي واضح."
-              >
-                RESULT: Efficient production with
-                clear operational flow.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 04 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                M
-              </span>
-
-              <span class="service-number">
-                04
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Menu Engineering & Recipe Development"
-              data-ar="هندسة القوائم وتطوير الوصفات"
-            >
-              Menu Engineering &amp; Recipe Development
-            </h3>
-
-            <p
-              data-en="Menu structure, dish selection, standardized recipes, portions, costing, pricing logic, production practicality and menu performance review."
-              data-ar="هيكلة قائمة الطعام واختيار الأطباق وتوحيد الوصفات والحصص والتكلفة ومنطق التسعير وسهولة الإنتاج ومراجعة أداء القائمة."
-            >
-              Menu structure, dish selection,
-              standardized recipes, portions, costing,
-              pricing logic, production practicality
-              and menu performance review.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: A practical menu built for quality and profitability."
-                data-ar="النتيجة: قائمة عملية مصممة للجودة والربحية."
-              >
-                RESULT: A practical menu built
-                for quality and profitability.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 05 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                SOP
-              </span>
-
-              <span class="service-number">
-                05
-              </span>
-
-            </div>
-
-            <h3
-              data-en="SOP & Operational Systems"
-              data-ar="إجراءات التشغيل والأنظمة"
-            >
-              SOP &amp; Operational Systems
-            </h3>
-
-            <p
-              data-en="Development of clear Standard Operating Procedures, responsibilities, checklists, workflows and control points for consistent daily execution."
-              data-ar="تطوير إجراءات تشغيل قياسية واضحة والمسؤوليات وقوائم التحقق وتدفقات العمل ونقاط الرقابة لضمان تنفيذ يومي ثابت."
-            >
-              Development of clear Standard Operating
-              Procedures, responsibilities, checklists,
-              workflows and control points for
-              consistent daily execution.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Operations that depend on systems, not individuals."
-                data-ar="النتيجة: تشغيل يعتمد على النظام وليس على الأفراد."
-              >
-                RESULT: Operations that depend
-                on systems, not individuals.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 06 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                FS
-              </span>
-
-              <span class="service-number">
-                06
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Food Safety & HACCP"
-              data-ar="سلامة الغذاء ونظام الهاسب"
-            >
-              Food Safety &amp; HACCP
-            </h3>
-
-            <p
-              data-en="Food-safety systems covering receiving, storage, preparation, temperature control, hygiene, sanitation, traceability and HACCP-based operational controls."
-              data-ar="أنظمة سلامة غذاء تشمل الاستلام والتخزين والتحضير والتحكم بدرجات الحرارة والنظافة والتعقيم والتتبع والضوابط التشغيلية المبنية على الهاسب."
-            >
-              Food-safety systems covering receiving,
-              storage, preparation, temperature control,
-              hygiene, sanitation, traceability and
-              HACCP-based operational controls.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Safer food and stronger operational discipline."
-                data-ar="النتيجة: غذاء أكثر أماناً وانضباط تشغيلي أقوى."
-              >
-                RESULT: Safer food and stronger
-                operational discipline.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 07 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                C
-              </span>
-
-              <span class="service-number">
-                07
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Cost Control"
-              data-ar="ضبط التكاليف"
-            >
-              Cost Control
-            </h3>
-
-            <p
-              data-en="Food-cost analysis, portion control, waste monitoring, recipe costing, inventory discipline and operational controls designed to protect profitability."
-              data-ar="تحليل تكلفة الطعام وضبط الحصص ومراقبة الهدر وتكلفة الوصفات وانضباط المخزون والرقابة التشغيلية لحماية الربحية."
-            >
-              Food-cost analysis, portion control,
-              waste monitoring, recipe costing,
-              inventory discipline and operational
-              controls designed to protect profitability.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Better visibility and stronger control of operating costs."
-                data-ar="النتيجة: رؤية أوضح وسيطرة أقوى على تكاليف التشغيل."
-              >
-                RESULT: Better visibility and stronger
-                control of operating costs.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 08 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                P
-              </span>
-
-              <span class="service-number">
-                08
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Purchasing & Stores"
-              data-ar="المشتريات والمخازن"
-            >
-              Purchasing &amp; Stores
-            </h3>
-
-            <p
-              data-en="Supplier controls, purchasing procedures, receiving standards, stock organization, storage systems, issuing procedures and inventory monitoring."
-              data-ar="ضبط الموردين وإجراءات الشراء ومعايير الاستلام وتنظيم المخزون وأنظمة التخزين وإجراءات الصرف ومراقبة الجرد."
-            >
-              Supplier controls, purchasing procedures,
-              receiving standards, stock organization,
-              storage systems, issuing procedures
-              and inventory monitoring.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Controlled purchasing and organized inventory."
-                data-ar="النتيجة: مشتريات مضبوطة ومخزون منظم."
-              >
-                RESULT: Controlled purchasing
-                and organized inventory.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 09 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                T
-              </span>
-
-              <span class="service-number">
-                09
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Staff Training & Team Development"
-              data-ar="تدريب وتطوير فرق العمل"
-            >
-              Staff Training &amp; Team Development
-            </h3>
-
-            <p
-              data-en="Practical training for kitchen, service and operational teams with clear responsibilities, performance standards and continuous development."
-              data-ar="تدريب عملي لفرق المطبخ والخدمة والتشغيل مع تحديد واضح للمسؤوليات ومعايير الأداء والتطوير المستمر."
-            >
-              Practical training for kitchen, service
-              and operational teams with clear
-              responsibilities, performance standards
-              and continuous development.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Stronger teams with clearer standards and responsibilities."
-                data-ar="النتيجة: فرق أقوى بمعايير ومسؤوليات أكثر وضوحاً."
-              >
-                RESULT: Stronger teams with clearer
-                standards and responsibilities.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 10 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                BR
-              </span>
-
-              <span class="service-number">
-                10
-              </span>
-
-            </div>
-
-            <h3
-              data-en="Business Restructuring"
-              data-ar="إعادة هيكلة المشاريع"
-            >
-              Business Restructuring
-            </h3>
-
-            <p
-              data-en="Operational assessment of underperforming restaurants and F&B businesses to identify root causes, correct systems and rebuild operational control."
-              data-ar="تقييم تشغيلي للمطاعم ومشاريع الأغذية والمشروبات المتعثرة لتحديد الأسباب الجذرية وتصحيح الأنظمة وإعادة بناء الرقابة التشغيلية."
-            >
-              Operational assessment of underperforming
-              restaurants and F&amp;B businesses to
-              identify root causes, correct systems
-              and rebuild operational control.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: A structured path from operational problems to measurable improvement."
-                data-ar="النتيجة: مسار منظم من المشاكل التشغيلية إلى تحسين قابل للقياس."
-              >
-                RESULT: A structured path from
-                operational problems to measurable improvement.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 11 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                OP
-              </span>
-
-              <span class="service-number">
-                11
-              </span>
-
-            </div>
-
-            <h3
-              data-en="F&B Operations Management"
-              data-ar="إدارة عمليات الأغذية والمشروبات"
-            >
-              F&amp;B Operations Management
-            </h3>
-
-            <p
-              data-en="Operational management systems covering kitchen, service, purchasing, stores, cost, quality, staffing, reporting and day-to-day performance."
-              data-ar="أنظمة إدارة تشغيلية تشمل المطبخ والخدمة والمشتريات والمخازن والتكلفة والجودة والموظفين والتقارير والأداء اليومي."
-            >
-              Operational management systems covering
-              kitchen, service, purchasing, stores,
-              cost, quality, staffing, reporting
-              and day-to-day performance.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: Better coordination, accountability and operational performance."
-                data-ar="النتيجة: تنسيق ومساءلة وأداء تشغيلي أفضل."
-              >
-                RESULT: Better coordination,
-                accountability and operational performance.
-              </span>
-
-            </div>
-
-          </article>
-
-
-          <!-- 12 -->
-
-          <article class="service-card">
-
-            <div class="service-top">
-
-              <span class="service-icon">
-                NP
-              </span>
-
-              <span class="service-number">
-                12
-              </span>
-
-            </div>
-
-            <h3
-              data-en="New Project Setup"
-              data-ar="تأسيس المشاريع الجديدة"
-            >
-              New Project Setup
-            </h3>
-
-            <p
-              data-en="Operational development for new restaurants, food businesses and hospitality projects from concept planning through systems, menu, staffing, training and opening preparation."
-              data-ar="تطوير تشغيلي للمطاعم ومشاريع الأغذية والضيافة الجديدة من تخطيط الفكرة إلى الأنظمة والقائمة والموظفين والتدريب والاستعداد للافتتاح."
-            >
-              Operational development for new restaurants,
-              food businesses and hospitality projects
-              from concept planning through systems,
-              menu, staffing, training and opening preparation.
-            </p>
-
-            <div class="service-result">
-
-              <span
-                data-en="RESULT: A structured project prepared for professional operation."
-                data-ar="النتيجة: مشروع منظم ومجهز للتشغيل الاحترافي."
-              >
-                RESULT: A structured project prepared
-                for professional operation.
-              </span>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         BUSINESS TURNAROUND
-    ================================================== -->
-
-    <section class="turnaround-section">
-
-      <div class="container">
-
-        <div class="turnaround-heading">
-
-          <p
-            class="eyebrow"
-            data-en="BUSINESS RESTRUCTURING"
-            data-ar="إعادة هيكلة المشاريع"
-          >
-            BUSINESS RESTRUCTURING
-          </p>
-
-          <h2
-            data-en="When a Business Needs Change"
-            data-ar="عندما يحتاج المشروع إلى التغيير"
-          >
-            When a Business Needs Change
-          </h2>
-
-          <p
-            data-en="A struggling restaurant is rarely suffering from one problem. The objective is to identify the root causes, rebuild the operating system, train the team and measure the results."
-            data-ar="المطعم المتعثر نادراً ما يعاني من مشكلة واحدة. الهدف هو تحديد الأسباب الجذرية وإعادة بناء نظام التشغيل وتدريب الفريق وقياس النتائج."
-          >
-            A struggling restaurant is rarely suffering
-            from one problem. The objective is to identify
-            the root causes, rebuild the operating system,
-            train the team and measure the results.
-          </p>
-
-        </div>
-
-
-        <div class="turnaround-grid">
-
-
-          <article class="turnaround-step">
-
-            <strong>01</strong>
-
-            <h3
-              data-en="Operational Assessment"
-              data-ar="التقييم التشغيلي"
-            >
-              Operational Assessment
-            </h3>
-
-            <p
-              data-en="Review operations, people, systems, costs, quality and workflow."
-              data-ar="مراجعة التشغيل والموظفين والأنظمة والتكاليف والجودة وتدفق العمل."
-            >
-              Review operations, people, systems,
-              costs, quality and workflow.
-            </p>
-
-          </article>
-
-
-          <article class="turnaround-step">
-
-            <strong>02</strong>
-
-            <h3
-              data-en="Identify Root Causes"
-              data-ar="تحديد الأسباب الجذرية"
-            >
-              Identify Root Causes
-            </h3>
-
-            <p
-              data-en="Separate visible symptoms from the real operational causes behind them."
-              data-ar="فصل الأعراض الظاهرة عن الأسباب التشغيلية الحقيقية التي تقف خلفها."
-            >
-              Separate visible symptoms from the real
-              operational causes behind them.
-            </p>
-
-          </article>
-
-
-          <article class="turnaround-step">
-
-            <strong>03</strong>
-
-            <h3
-              data-en="Build Corrective Systems"
-              data-ar="بناء الأنظمة التصحيحية"
-            >
-              Build Corrective Systems
-            </h3>
-
-            <p
-              data-en="Create practical procedures, controls and responsibilities to correct the operation."
-              data-ar="إنشاء إجراءات وضوابط ومسؤوليات عملية لتصحيح التشغيل."
-            >
-              Create practical procedures, controls
-              and responsibilities to correct the operation.
-            </p>
-
-          </article>
-
-
-          <article class="turnaround-step">
-
-            <strong>04</strong>
-
-            <h3
-              data-en="Train & Implement"
-              data-ar="التدريب والتنفيذ"
-            >
-              Train &amp; Implement
-            </h3>
-
-            <p
-              data-en="Train the team and implement the new systems within daily operations."
-              data-ar="تدريب الفريق وتطبيق الأنظمة الجديدة ضمن التشغيل اليومي."
-            >
-              Train the team and implement the new
-              systems within daily operations.
-            </p>
-
-          </article>
-
-
-          <article class="turnaround-step">
-
-            <strong>05</strong>
-
-            <h3
-              data-en="Measure & Improve"
-              data-ar="القياس والتحسين"
-            >
-              Measure &amp; Improve
-            </h3>
-
-            <p
-              data-en="Monitor results, correct gaps and continue improving performance."
-              data-ar="مراقبة النتائج وتصحيح الثغرات والاستمرار في تحسين الأداء."
-            >
-              Monitor results, correct gaps
-              and continue improving performance.
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         PROCESS
-    ================================================== -->
-
-    <section class="service-process">
-
-      <div class="container">
-
-        <div class="service-process-heading">
-
-          <p
-            class="eyebrow"
-            data-en="HOW I WORK"
-            data-ar="منهجية العمل"
-          >
-            HOW I WORK
-          </p>
-
-          <h2
-            data-en="From Assessment to Continuous Improvement"
-            data-ar="من التقييم إلى التحسين المستمر"
-          >
-            From Assessment to Continuous Improvement
-          </h2>
-
-          <p
-            data-en="A structured process designed to turn recommendations into practical operational systems."
-            data-ar="منهجية منظمة لتحويل التوصيات إلى أنظمة تشغيلية عملية قابلة للتطبيق."
-          >
-            A structured process designed to turn
-            recommendations into practical operational systems.
-          </p>
-
-        </div>
-
-
-        <div class="service-process-grid">
-
-          <div class="service-process-step">
-            <strong>01</strong>
-            <span
-              data-en="Discover"
-              data-ar="الاكتشاف"
-            >
-              Discover
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>02</strong>
-            <span
-              data-en="Audit"
-              data-ar="التدقيق"
-            >
-              Audit
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>03</strong>
-            <span
-              data-en="Design"
-              data-ar="التصميم"
-            >
-              Design
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>04</strong>
-            <span
-              data-en="Implement"
-              data-ar="التنفيذ"
-            >
-              Implement
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>05</strong>
-            <span
-              data-en="Train"
-              data-ar="التدريب"
-            >
-              Train
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>06</strong>
-            <span
-              data-en="Control"
-              data-ar="الرقابة"
-            >
-              Control
-            </span>
-          </div>
-
-          <div class="service-process-step">
-            <strong>07</strong>
-            <span
-              data-en="Improve"
-              data-ar="التحسين"
-            >
-              Improve
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         PHILOSOPHY
-    ================================================== -->
-
-    <section class="service-philosophy">
-
-      <div class="container">
-
-        <blockquote
-          data-en="The business must depend on the system — not on one person."
-          data-ar="يجب أن يعتمد المشروع على النظام — وليس على شخص واحد."
-        >
-          The business must depend on the system —
-          not on one person.
-        </blockquote>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         CTA
-    ================================================== -->
-
-    <section class="services-cta">
-
-      <div class="container">
-
-        <div class="services-cta-inner">
-
-          <div>
-
-            <p
-              class="eyebrow"
-              data-en="LET'S WORK TOGETHER"
-              data-ar="لنعمل معاً"
-            >
-              LET'S WORK TOGETHER
-            </p>
-
-            <h2
-              data-en="Let’s Build a Stronger F&B Operation"
-              data-ar="لنبنِ معاً مشروع أغذية ومشروبات أقوى"
-            >
-              Let’s Build a Stronger F&amp;B Operation
-            </h2>
-
-          </div>
-
-          <a
-            class="btn btn-gold"
-            href="index.html#contact"
-            data-en="Start a Consultation"
-            data-ar="ابدأ الاستشارة"
-          >
-            Start a Consultation
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- ===================================================
-       FOOTER
-  ==================================================== -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-grid">
-
-
-      <div class="footer-brand">
-
-        <div class="footer-brand-title">
-
-          <span class="brand-logo">
-            CK
-          </span>
-
-          <div>
-
-            <strong
-              data-en="Chef Kassem Taha"
-              data-ar="الشيف قاسم طه"
-            >
-              Chef Kassem Taha
-            </strong>
-
-            <small
-              data-en="GLOBAL CULINARY & HOSPITALITY EXPERT"
-              data-ar="خبير عالمي في الطهي والضيافة"
-            >
-              GLOBAL CULINARY &amp; HOSPITALITY EXPERT
-            </small>
-
-          </div>
-
-        </div>
-
-        <p
-          data-en="From Concept to Excellence"
-          data-ar="من الفكرة إلى التميز"
-        >
-          From Concept to Excellence
-        </p>
-
-      </div>
-
-
-      <div class="footer-links">
-
-        <h3
-          data-en="Quick Links"
-          data-ar="روابط سريعة"
-        >
-          Quick Links
-        </h3>
-
-        <a
-          href="index.html"
-          data-en="Home"
-          data-ar="الرئيسية"
-        >
-          Home
-        </a>
-
-        <a
-          href="about.html"
-          data-en="About"
-          data-ar="من أنا"
-        >
-          About
-        </a>
-
-        <a
-          href="services.html"
-          data-en="Services"
-          data-ar="الخدمات"
-        >
-          Services
-        </a>
-
-        <a
-          href="index.html#academy"
-          data-en="Academy"
-          data-ar="الأكاديمية"
-        >
-          Academy
-        </a>
-
-        <a
-          href="index.html#cuisines"
-          data-en="Recipes"
-          data-ar="الوصفات"
-        >
-          Recipes
-        </a>
-
-        <a
-          href="index.html#contact"
-          data-en="Contact"
-          data-ar="تواصل"
-        >
-          Contact
-        </a>
-
-      </div>
-
-
-      <div class="footer-contact">
-
-        <h3
-          data-en="Contact"
-          data-ar="التواصل"
-        >
-          Contact
-        </h3>
-
-        <a
-          class="ltr-contact"
-          href="tel:+855715222672"
-        >
-          +855 71 522 2672
-        </a>
-
-        <a
-          class="ltr-contact"
-          href="https://wa.me/971507784185"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          WhatsApp: +971 50 778 4185
-        </a>
-
-        <span
-          data-en="Phnom Penh, Cambodia"
-          data-ar="بنوم بنه، كمبوديا"
-        >
-          Phnom Penh, Cambodia
-        </span>
-
-      </div>
-
+      <span
+        data-en=" Chef Kassem Taha. All Rights Reserved."
+        data-ar=" الشيف قاسم طه. جميع الحقوق محفوظة."
+      >
+        Chef Kassem Taha. All Rights Reserved.
+      </span>
 
     </div>
 
+  </div>
 
-    <div class="footer-bottom">
-
-      <div class="container">
-
-        <span>
-          © <span id="year"></span>
-        </span>
-
-        <span
-          data-en=" Chef Kassem Taha. All Rights Reserved."
-          data-ar=" الشيف قاسم طه. جميع الحقوق محفوظة."
-        >
-          Chef Kassem Taha. All Rights Reserved.
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
+</footer>
 
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
-  </html>
+            </html>
