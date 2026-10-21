@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Selected projects and business experience of Chef Kassem Taha across healthy nutrition, food production, central kitchens, hotels, restaurants, commercial kitchen development and hospitality operations.">
+
+  <title>Projects | Chef Kassem Taha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    :root {
+      --projects-black: #070604;
+      --projects-dark: #100c08;
+      --projects-dark-soft: #17110b;
+      --projects-gold: #d5a43c;
+      --projects-gold-light: #f0c96a;
+      --projects-cream: #f8f1e5;
+      --projects-cream-light: #fffaf2;
+      --projects-brown: #655a4c;
+      --projects-border: rgba(213, 164, 60, .28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--projects-cream-light);
+    }
+
+    img,
+    video {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .projects-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 95px;
+      background:
+        radial-gradient(
+          circle at 82% 20%,
+          rgba(213, 164, 60, .18),
+          transparent 27%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(213, 164, 60, .08),
+          transparent 30%
+        ),
+        linear-gradient(145deg, #100c08, #030302 72%);
+      border-bottom: 1px solid rgba(213, 164, 60, .35);
+    }
+
+    .projects-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background-image:
+        linear-gradient(
+          rgba(213, 164, 60, .12) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(213, 164, 60, .08) 1px,
+          transparent 1px
+        );
+      background-size: 70px 70px;
+      pointer-events: none;
+    }
+
+    .projects-hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 940px;
+    }
+
+    .projects-hero .eyebrow {
+      margin-bottom: 18px;
+      color: var(--projects-gold-light);
+    }
+
+    .projects-hero h1 {
+      max-width: 900px;
+      margin: 0 0 22px;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: -.8px;
+    }
+
+    .projects-hero h1 strong {
+      display: block;
+      color: var(--projects-gold-light);
+      font-weight: 600;
+    }
+
+    .projects-hero-description {
+      max-width: 760px;
+      margin: 0;
+      color: #ded3c2;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .hero-project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .hero-project-tags span {
+      padding: 9px 14px;
+      border: 1px solid rgba(213, 164, 60, .35);
+      border-radius: 100px;
+      color: #e9d9b5;
+      background: rgba(255, 255, 255, .025);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+
+
+    /* =====================================================
+       INTRO
+    ===================================================== */
+
+    .projects-intro {
+      padding: 75px 0;
+      background: var(--projects-cream-light);
+    }
+
+    .projects-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr);
+      gap: 60px;
+      align-items: end;
+    }
+
+    .projects-intro h2 {
+      max-width: 760px;
+      margin: 8px 0 0;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1;
+    }
+
+    .projects-intro-copy {
+      margin: 0;
+      color: var(--projects-brown);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+
+    /* =====================================================
+       SHARED
+    ===================================================== */
+
+    .project-section-heading {
+      margin-bottom: 35px;
+    }
+
+    .project-section-heading h2 {
+      margin: 7px 0 0;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+    }
+
+    .project-section-heading.light h2 {
+      color: #fff;
+    }
+
+    .project-section-heading.light p {
+      color: var(--projects-gold-light);
+    }
+
+    .project-role {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 15px 0 20px;
+    }
+
+    .project-role span {
+      padding: 7px 10px;
+      border: 1px solid rgba(213, 164, 60, .35);
+      border-radius: 4px;
+      color: #8b6217;
+      background: rgba(213, 164, 60, .08);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    .dark-role span {
+      color: var(--projects-gold-light);
+      background: rgba(213, 164, 60, .07);
+    }
+
+    .career-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 13px;
+      color: var(--projects-gold-light);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .career-label::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--projects-gold);
+    }
+
+    .project-location {
+      color: #978b7a;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       FLAGSHIP PROJECTS
+    ===================================================== */
+
+    .flagship-section {
+      padding: 85px 0;
+      background:
+        radial-gradient(
+          circle at 90% 5%,
+          rgba(213, 164, 60, .09),
+          transparent 24%
+        ),
+        #080604;
+    }
+
+    .flagship-grid {
+      display: grid;
+      gap: 35px;
+    }
+
+    .flagship-card {
+      overflow: hidden;
+      border: 1px solid rgba(213, 164, 60, .35);
+      border-radius: 9px;
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(213, 164, 60, .12),
+          transparent 32%
+        ),
+        linear-gradient(145deg, #15100b, #060504);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+    }
+
+    .flagship-card-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, .85fr);
+      min-height: 540px;
+    }
+
+    .flagship-content {
+      padding: 48px;
+    }
+
+    .flagship-content h3 {
+      margin: 0 0 7px;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(36px, 4vw, 52px);
+      line-height: 1;
+    }
+
+    .flagship-content > p {
+      color: #d9cdbb;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .flagship-content strong {
+      color: var(--projects-gold-light);
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .capability-item {
+      padding: 12px 13px;
+      border: 1px solid rgba(213, 164, 60, .18);
+      background: rgba(255, 255, 255, .025);
+      color: #e4d9c8;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .flagship-media {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(213, 164, 60, .15),
+          transparent 45%
+        ),
+        #030302;
+    }
+
+    .flagship-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      object-fit: cover;
+      opacity: .82;
+    }
+
+    .flagship-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(8, 6, 4, .7),
+          transparent 40%
+        );
+      pointer-events: none;
+    }
+
+    .media-placeholder {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      align-items: center;
+      justify-content: center;
+      padding: 35px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 50% 40%,
+          rgba(213, 164, 60, .18),
+          transparent 30%
+        ),
+        linear-gradient(145deg, #17110b, #050403);
+    }
+
+    .media-placeholder-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 300px;
+    }
+
+    .media-mark {
+      display: flex;
+      width: 94px;
+      height: 94px;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border: 1px solid rgba(213, 164, 60, .6);
+      border-radius: 50%;
+      color: var(--projects-gold-light);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .media-placeholder h4 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 29px;
+    }
+
+    .media-placeholder p {
+      margin: 0;
+      color: #c9bca9;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================================
+       HEALTHY COFFEE SHOP
+    ===================================================== */
+
+    .concept-box {
+      margin-top: 28px;
+      padding: 22px;
+      border-left: 3px solid var(--projects-gold);
+      background: rgba(213, 164, 60, .07);
+    }
+
+    .concept-box h4 {
+      margin: 0 0 9px;
+      color: var(--projects-gold-light);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 26px;
+    }
+
+    .concept-box p {
+      margin: 0;
+      color: #d9cdbb;
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+
+    /* =====================================================
+       VIDEO FEATURE
+    ===================================================== */
+
+    .video-feature {
+      padding: 85px 0;
+      background: #f8f1e5;
+    }
+
+    .video-feature-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .video-feature-copy h2 {
+      margin: 8px 0 15px;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+    }
+
+    .video-feature-copy p {
+      color: var(--projects-brown);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .video-frame {
+      overflow: hidden;
+      border: 1px solid rgba(157, 109, 24, .35);
+      border-radius: 8px;
+      background: #050403;
+      box-shadow: 0 18px 45px rgba(30, 20, 8, .18);
+    }
+
+    .video-frame video {
+      width: 100%;
+      max-height: 560px;
+      background: #000;
+    }
+
+    .video-note {
+      padding: 12px 15px;
+      color: #9b8c77;
+      background: #100c08;
+      font-size: 10px;
+      letter-spacing: .5px;
+    }
+
+
+    /* =====================================================
+       HOTEL PROJECTS
+    ===================================================== */
+
+    .hotel-section {
+      padding: 85px 0;
+      background: var(--projects-cream-light);
+    }
+
+    .project-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .project-detail-card {
+      overflow: hidden;
+      border: 1px solid rgba(157, 109, 24, .28);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 15px 35px rgba(30, 20, 8, .08);
+    }
+
+    .project-detail-media {
+      position: relative;
+      height: 330px;
+      overflow: hidden;
+      background: #090705;
+    }
+
+    .project-detail-media video,
+    .project-detail-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-detail-body {
+      padding: 28px;
+    }
+
+    .project-detail-body h3 {
+      margin: 0 0 7px;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 31px;
+      line-height: 1.05;
+    }
+
+    .project-detail-body p {
+      color: var(--projects-brown);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+
+    /* =====================================================
+       RESTAURANTS
+    ===================================================== */
+
+    .restaurant-projects {
+      padding: 85px 0;
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(213, 164, 60, .10),
+          transparent 25%
+        ),
+        #090705;
+    }
+
+    .restaurant-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .restaurant-card {
+      overflow: hidden;
+      border: 1px solid rgba(213, 164, 60, .3);
+      border-radius: 8px;
+      background: #100c08;
+    }
+
+    .restaurant-card-media {
+      height: 290px;
+      overflow: hidden;
+      background: #050403;
+    }
+
+    .restaurant-card-media img,
+    .restaurant-card-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .restaurant-card-body {
+      padding: 24px;
+    }
+
+    .restaurant-card-body h3 {
+      margin: 0 0 8px;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      line-height: 1.05;
+    }
+
+    .restaurant-card-body p {
+      color: #cfc2b0;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       AL FEKRA
+    ===================================================== */
+
+    .technical-section {
+      padding: 85px 0;
+      background: #f8f1e5;
+    }
+
+    .technical-grid {
+      display: grid;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 45px;
+      align-items: center;
+    }
+
+    .technical-copy h2 {
+      margin: 8px 0 8px;
+      color: #21170d;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 56px);
+      line-height: 1;
+    }
+
+    .technical-copy p {
+      color: var(--projects-brown);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .technical-capabilities {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .technical-capabilities span {
+      padding: 13px;
+      border: 1px solid rgba(157, 109, 24, .25);
+      background: #fffaf2;
+      color: #5e4a2e;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .technical-gallery {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      grid-template-rows: repeat(2, 230px);
+      gap: 10px;
+    }
+
+    .technical-gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .technical-gallery img:first-child {
+      grid-row: 1 / 3;
+    }
+
+
+    /* =====================================================
+       EXPERIENCE MAP
+    ===================================================== */
+
+    .experience-map {
+      padding: 75px 0;
+      background: #fffaf2;
+    }
+
+    .experience-map-grid {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      border: 1px solid rgba(157, 109, 24, .25);
+      background: #fff;
+    }
+
+    .experience-map-grid span {
+      position: relative;
+      padding: 25px 12px;
+      color: #493b2b;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .experience-map-grid span:not(:last-child) {
+      border-right: 1px solid rgba(157, 109, 24, .18);
+    }
+
+    .experience-map-grid span::before {
+      content: "◆";
+      display: block;
+      margin-bottom: 8px;
+      color: var(--projects-gold);
+      font-size: 10px;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .projects-cta {
+      padding: 85px 0;
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(213, 164, 60, .16),
+          transparent 25%
+        ),
+        linear-gradient(145deg, #100c08, #030302);
+      border-top: 1px solid rgba(213, 164, 60, .3);
+    }
+
+    .projects-cta-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .projects-cta h2 {
+      max-width: 760px;
+      margin: 8px 0 12px;
+      color: #fff;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+    }
+
+    .projects-cta p {
+      max-width: 700px;
+      margin: 0;
+      color: #cfc2b0;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .projects-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 210px;
+    }
+
+
+    /* =====================================================
+       RTL
+    ===================================================== */
+
+    html[dir="rtl"] .projects-hero,
+    html[dir="rtl"] .projects-intro,
+    html[dir="rtl"] .project-section-heading,
+    html[dir="rtl"] .flagship-content,
+    html[dir="rtl"] .video-feature-copy,
+    html[dir="rtl"] .project-detail-body,
+    html[dir="rtl"] .restaurant-card-body,
+    html[dir="rtl"] .technical-copy,
+    html[dir="rtl"] .projects-cta {
+      text-align: right;
+    }
+
+    html[dir="rtl"] .projects-hero h1,
+    html[dir="rtl"] .projects-intro h2,
+    html[dir="rtl"] .project-section-heading h2,
+    html[dir="rtl"] .flagship-content h3,
+    html[dir="rtl"] .concept-box h4,
+    html[dir="rtl"] .video-feature-copy h2,
+    html[dir="rtl"] .project-detail-body h3,
+    html[dir="rtl"] .restaurant-card-body h3,
+    html[dir="rtl"] .technical-copy h2,
+    html[dir="rtl"] .projects-cta h2 {
+      font-family: "Cairo", Arial, sans-serif;
+    }
+
+    html[dir="rtl"] .concept-box {
+      border-left: 0;
+      border-right: 3px solid var(--projects-gold);
+    }
+
+    html[dir="rtl"] .experience-map-grid span:not(:last-child) {
+      border-right: 0;
+      border-left: 1px solid rgba(157, 109, 24, .18);
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 950px) {
+
+      .flagship-card-inner,
+      .video-feature-grid,
+      .technical-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flagship-media,
+      .flagship-media img,
+      .media-placeholder {
+        min-height: 420px;
+      }
+
+      .restaurant-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .experience-map-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .experience-map-grid span {
+        border-bottom: 1px solid rgba(157, 109, 24, .18);
+      }
+    }
+
+
+    @media (max-width: 820px) {
+
+      .projects-hero {
+        padding: 75px 0 65px;
+      }
+
+      .projects-intro,
+      .flagship-section,
+      .video-feature,
+      .hotel-section,
+      .restaurant-projects,
+      .technical-section,
+      .experience-map,
+      .projects-cta {
+        padding: 58px 0;
+      }
+
+      .projects-intro-grid,
+      .project-cards-grid,
+      .projects-cta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-intro-grid {
+        gap: 20px;
+      }
+
+      .flagship-content {
+        padding: 32px 25px;
+      }
+
+      .projects-cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .main-nav.open {
+        max-height: 700px;
+        overflow-y: auto;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .projects-hero h1 {
+        font-size: 43px;
+        line-height: 1;
+      }
+
+      html[dir="rtl"] .projects-hero h1 {
+        font-size: 36px;
+        line-height: 1.35;
+      }
+
+      .projects-hero-description {
+        font-size: 14px;
+      }
+
+      .capability-grid,
+      .technical-capabilities,
+      .restaurant-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flagship-media,
+      .flagship-media img,
+      .media-placeholder {
+        min-height: 330px;
+      }
+
+      .project-detail-media,
+      .restaurant-card-media {
+        height: 280px;
+      }
+
+      .technical-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 230px);
+      }
+
+      .technical-gallery img:first-child {
+        grid-row: auto;
+      }
+
+      .experience-map-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .projects-cta-buttons {
+        flex-direction: column;
+      }
+
+      .projects-cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand">
+
+      <span class="brand-logo">CK</span>
+
+      <span class="brand-copy">
+
+        <strong>Chef Kassem Taha</strong>
+
+        <small
+          data-en="Executive Chef | Consultant | Trainer"
+          data-ar="شيف تنفيذي | مستشار | مدرب">
+          Executive Chef | Consultant | Trainer
+        </small>
+
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav" id="mainNav">
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
+
+      <a href="services.html"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
+
+      <a href="projects.html"
+         class="active"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="academy.html"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="recipes.html"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+      <a href="index.html#contact"
+         data-en="Contact"
+         data-ar="تواصل معنا">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+      <button
+        class="language-button"
+        id="languageButton"
+        type="button"
+        aria-label="Switch language">
+        AR
+      </button>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="projects-hero">
+
+  <div class="container projects-hero-inner">
+
+    <p class="eyebrow"
+       data-en="SELECTED PROJECTS & BUSINESS EXPERIENCE"
+       data-ar="مشاريع مختارة وخبرات عملية">
+      SELECTED PROJECTS & BUSINESS EXPERIENCE
+    </p>
+
+    <h1>
+      <span
+        data-en="Building Concepts."
+        data-ar="نبني الأفكار.">
+        Building Concepts.
+      </span>
+
+      <strong
+        data-en="Leading Operations."
+        data-ar="ونقود التشغيل.">
+        Leading Operations.
+      </strong>
+    </h1>
+
+    <p class="projects-hero-description"
+       data-en="A selection of real projects representing practical experience across healthy nutrition, central kitchens, food production, hotels, restaurants, commercial kitchen development and hospitality operations."
+       data-ar="مجموعة مختارة من المشاريع الحقيقية التي تمثل خبرة عملية في التغذية الصحية والمطابخ المركزية والإنتاج الغذائي والفنادق والمطاعم وتطوير المطابخ التجارية وتشغيل مشاريع الضيافة.">
+      A selection of real projects representing practical
+      experience across healthy nutrition, central kitchens,
+      food production, hotels, restaurants, commercial kitchen
+      development and hospitality operations.
+    </p>
+
+    <div class="hero-project-tags">
+
+      <span data-en="Restaurants"
+            data-ar="المطاعم">
+        Restaurants
+      </span>
+
+      <span data-en="Hotels"
+            data-ar="الفنادق">
+        Hotels
+      </span>
+
+      <span data-en="Central Kitchens"
+            data-ar="المطابخ المركزية">
+        Central Kitchens
+      </span>
+
+      <span data-en="Healthy Nutrition"
+            data-ar="التغذية الصحية">
+        Healthy Nutrition
+      </span>
+
+      <span data-en="Food Production"
+            data-ar="الإنتاج الغذائي">
+        Food Production
+      </span>
+
+      <span data-en="Kitchen Development"
+            data-ar="تطوير المطابخ">
+        Kitchen Development
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="projects-intro">
+
+  <div class="container projects-intro-grid">
+
+    <div>
+
+      <p class="eyebrow"
+         data-en="REAL OPERATIONAL EXPERIENCE"
+         data-ar="خبرة تشغيلية حقيقية">
+        REAL OPERATIONAL EXPERIENCE
+      </p>
+
+      <h2
+        data-en="From Concept Development to Full Operations"
+        data-ar="من تطوير الفكرة إلى التشغيل الكامل">
+        From Concept Development to Full Operations
+      </h2>
+
+    </div>
+
+    <p class="projects-intro-copy"
+       data-en="These projects reflect hands-on experience in developing businesses, building operational systems, managing teams, creating food concepts, developing central kitchens and leading hospitality and food-production operations."
+       data-ar="تعكس هذه المشاريع خبرة عملية مباشرة في تطوير الأعمال وبناء الأنظمة التشغيلية وإدارة الفرق وابتكار المفاهيم الغذائية وتطوير المطابخ المركزية وقيادة عمليات الضيافة والإنتاج الغذائي.">
+      These projects reflect hands-on experience in developing
+      businesses, building operational systems, managing teams,
+      creating food concepts, developing central kitchens and
+      leading hospitality and food-production operations.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FLAGSHIP PROJECTS
+===================================================== -->
+
+<section class="flagship-section">
+
+  <div class="container">
+
+    <div class="project-section-heading light">
+
+      <p class="eyebrow"
+         data-en="FLAGSHIP EXPERIENCE"
+         data-ar="أبرز الخبرات والمشاريع">
+        FLAGSHIP EXPERIENCE
+      </p>
+
+      <h2
+        data-en="Career-Defining Projects"
+        data-ar="مشاريع محورية في المسيرة المهنية">
+        Career-Defining Projects
+      </h2>
+
+    </div>
+
+
+    <div class="flagship-grid">
+
+
+      <!-- LIVELY -->
+
+      <article class="flagship-card">
+
+        <div class="flagship-card-inner">
+
+          <div class="flagship-content">
+
+            <span class="career-label"
+                  data-en="CAREER-DEFINING PROJECT"
+                  data-ar="مشروع محوري في المسيرة">
+              CAREER-DEFINING PROJECT
+            </span>
+
+            <h3>Lively</h3>
+
+            <span class="project-location"
+                  data-en="Healthy Nutrition & Central Kitchen Development"
+                  data-ar="التغذية الصحية وتطوير المطابخ المركزية">
+              Healthy Nutrition & Central Kitchen Development
+            </span>
+
+            <div class="project-role">
+
+              <span
+                data-en="Business Development"
+                data-ar="تطوير الأعمال">
+                Business Development
+              </span>
+
+              <span
+                data-en="Operations Management"
+                data-ar="إدارة العمليات">
+                Operations Management
+              </span>
+
+              <span
+                data-en="Central Kitchen Development"
+                data-ar="تطوير المطبخ المركزي">
+                Central Kitchen Development
+              </span>
+
+            </div>
+
+            <p
+              data-en="A major professional experience built around the development and management of central-kitchen operations, healthy meal production and structured diet programs. The operation connected nutrition services with food production, kitchen systems, quality control, food safety and continuous operational development."
+              data-ar="إحدى أهم الخبرات المهنية في تطوير وإدارة عمليات المطابخ المركزية وإنتاج الوجبات الصحية وبرامج الحمية الغذائية المنظمة. ربط المشروع بين خدمات التغذية والإنتاج الغذائي وأنظمة المطبخ وضبط الجودة وسلامة الغذاء والتطوير التشغيلي المستمر.">
+              A major professional experience built around the
+              development and management of central-kitchen
+              operations, healthy meal production and structured
+              diet programs.
+            </p>
+
+            <p
+              data-en="This experience represents more than fifteen years of practical work in central-kitchen development, healthy-food operations and diet-meal production."
+              data-ar="تمثل هذه التجربة أكثر من خمسة عشر عاماً من العمل العملي في تطوير المطابخ المركزية وتشغيل الغذاء الصحي وإنتاج وجبات الحمية الغذائية.">
+              This experience represents more than fifteen years
+              of practical work in central-kitchen development,
+              healthy-food operations and diet-meal production.
+            </p>
+
+
+            <div class="capability-grid">
+
+              <div class="capability-item"
+                   data-en="Central Kitchen Development"
+                   data-ar="تطوير المطابخ المركزية">
+                Central Kitchen Development
+              </div>
+
+              <div class="capability-item"
+                   data-en="Healthy Meal Production"
+                   data-ar="إنتاج الوجبات الصحية">
+                Healthy Meal Production
+              </div>
+
+              <div class="capability-item"
+                   data-en="Diet Programs"
+                   data-ar="برامج الحمية الغذائية">
+                Diet Programs
+              </div>
+
+              <div class="capability-item"
+                   data-en="Operational Systems"
+                   data-ar="الأنظمة التشغيلية">
+                Operational Systems
+              </div>
+
+              <div class="capability-item"
+                   data-en="Food Safety"
+                   data-ar="سلامة الغذاء">
+                Food Safety
+              </div>
+
+              <div class="capability-item"
+                   data-en="Product Development"
+                   data-ar="تطوير المنتجات">
+                Product Development
+              </div>
+
+            </div>
+
+
+            <div class="concept-box">
+
+              <h4
+                data-en="Healthy Coffee Shop Concept"
+                data-ar="مفهوم المقهى الصحي">
+                Healthy Coffee Shop Concept
+              </h4>
+
+              <p
+                data-en="A healthy-food concept developed to expand the nutrition operation beyond subscription diet programs. The concept combined healthy meals, low-carb and high-protein options, protein drinks, superfoods and specialized choices including low-fat, skimmed-milk, sugar-free and lactose-free products."
+                data-ar="مفهوم غذائي صحي تم تطويره لتوسيع منظومة التغذية إلى ما هو أبعد من برامج الوجبات بالاشتراك. جمع المفهوم بين الوجبات الصحية وخيارات قليلة الكربوهيدرات وعالية البروتين ومشروبات البروتين والسوبر فود وخيارات متخصصة مثل المنتجات قليلة الدسم والحليب منزوع الدسم والخالية من السكر والخالية من اللاكتوز.">
+                A healthy-food concept developed to expand the
+                nutrition operation beyond subscription diet programs.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="flagship-media">
+
+            <div class="media-placeholder">
+
+              <div class="media-placeholder-inner">
+
+                <div class="media-mark">L</div>
+
+                <h4>Lively</h4>
+
+                <p
+                  data-en="Healthy Nutrition • Central Kitchen • Diet Programs"
+                  data-ar="تغذية صحية • مطبخ مركزي • برامج حمية">
+                  Healthy Nutrition • Central Kitchen • Diet Programs
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- KANZ ALHOWM -->
+
+      <article class="flagship-card">
+
+        <div class="flagship-card-inner">
+
+          <div class="flagship-content">
+
+            <span class="career-label"
+                  data-en="CAREER-DEFINING PROJECT"
+                  data-ar="مشروع محوري في المسيرة">
+              CAREER-DEFINING PROJECT
+            </span>
+
+            <h3>KANZ ALHOWM</h3>
+
+            <span class="project-location"
+                  data-en="Foodstuff Supply Services • Ajman, United Arab Emirates"
+                  data-ar="خدمات تموين المواد الغذائية • عجمان، الإمارات العربية المتحدة">
+              Foodstuff Supply Services • Ajman, United Arab Emirates
+            </span>
+
+            <div class="project-role">
+
+              <span data-en="Owner"
+                    data-ar="مالك">
+                Owner
+              </span>
+
+              <span data-en="Founder"
+                    data-ar="مؤسس">
+                Founder
+              </span>
+
+              <span data-en="CEO"
+                    data-ar="الرئيس التنفيذي">
+                CEO
+              </span>
+
+            </div>
+
+            <p
+              data-en="KANZ ALHOWM FOODSTUFF SUPPLY SERVICES L.L.C. was developed as an integrated food-production and supply operation covering sourcing and importing, storage, production, processing, cutting, marination, packaging, purchasing and logistics."
+              data-ar="تم تطوير شركة كنز اللحوم لخدمات تموين المواد الغذائية ذ.م.م كمنظومة متكاملة للإنتاج والتوريد الغذائي تشمل التوريد والاستيراد والتخزين والإنتاج والتجهيز والتقطيع والتتبيل والتعبئة والمشتريات والخدمات اللوجستية.">
+              KANZ ALHOWM FOODSTUFF SUPPLY SERVICES L.L.C.
+              was developed as an integrated food-production
+              and supply operation.
+            </p>
+
+            <p
+              data-en="The operation handled different categories of beef, lamb and mutton, poultry and seafood, supported by professional storage, processing and packaging systems."
+              data-ar="تعاملت العمليات مع فئات متعددة من لحوم الأبقار والضأن والدواجن والمأكولات البحرية، مدعومة بأنظمة احترافية للتخزين والتجهيز والتعبئة.">
+              The operation handled different categories of beef,
+              lamb and mutton, poultry and seafood.
+            </p>
+
+
+            <div class="capability-grid">
+
+              <div class="capability-item"
+                   data-en="Food Production"
+                   data-ar="الإنتاج الغذائي">
+                Food Production
+              </div>
+
+              <div class="capability-item"
+                   data-en="Prime Cutting"
+                   data-ar="التقطيع الاحترافي">
+                Prime Cutting
+              </div>
+
+              <div class="capability-item"
+                   data-en="Marination"
+                   data-ar="التتبيل">
+                Marination
+              </div>
+
+              <div class="capability-item"
+                   data-en="Storage"
+                   data-ar="التخزين">
+                Storage
+              </div>
+
+              <div class="capability-item"
+                   data-en="Procurement"
+                   data-ar="المشتريات">
+                Procurement
+              </div>
+
+              <div class="capability-item"
+                   data-en="Logistics"
+                   data-ar="اللوجستيات">
+                Logistics
+              </div>
+
+              <div class="capability-item"
+                   data-en="Vacuum Packaging"
+                   data-ar="التعبئة بالتفريغ الهوائي">
+                Vacuum Packaging
+              </div>
+
+              <div class="capability-item"
+                   data-en="Shrink Packaging"
+                   data-ar="التغليف بالشرينك">
+                Shrink Packaging
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="flagship-media">
+
+            <div class="media-placeholder">
+
+              <div class="media-placeholder-inner">
+
+                <div class="media-mark">KA</div>
+
+                <h4>KANZ ALHOWM</h4>
+
+                <p
+                  data-en="Food Production • Processing • Supply • Logistics"
+                  data-ar="إنتاج غذائي • تصنيع • توريد • لوجستيات">
+                  Food Production • Processing • Supply • Logistics
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     KANZ VIDEO
+===================================================== -->
+
+<section class="video-feature">
+
+  <div class="container video-feature-grid">
+
+    <div class="video-feature-copy">
+
+      <p class="eyebrow"
+         data-en="INSIDE THE OPERATION"
+         data-ar="داخل العمليات">
+        INSIDE THE OPERATION
+      </p>
+
+      <h2
+        data-en="KANZ ALHOWM Production & Operations"
+        data-ar="إنتاج وعمليات كنز اللحوم">
+        KANZ ALHOWM Production & Operations
+      </h2>
+
+      <p
+        data-en="Real operational footage documenting food production, processing, central-kitchen activities, storage, purchasing, logistics, packaging and production management."
+        data-ar="لقطات حقيقية توثق عمليات الإنتاج الغذائي والتجهيز وأنشطة المطبخ المركزي والتخزين والمشتريات واللوجستيات والتعبئة وإدارة الإنتاج.">
+        Real operational footage documenting food production,
+        processing, central-kitchen activities, storage,
+        purchasing, logistics, packaging and production management.
+      </p>
+
+      <p
+        data-en="The operation was developed and managed under Chef Kassem Taha's leadership as Owner, Founder and CEO."
+        data-ar="تم تطوير وإدارة هذه العمليات تحت قيادة الشيف قاسم طه بصفته المالك والمؤسس والرئيس التنفيذي.">
+        The operation was developed and managed under
+        Chef Kassem Taha's leadership as Owner, Founder and CEO.
+      </p>
+
+    </div>
+
+
+    <div class="video-frame">
+
+      <!--
+        Upload the real KANZ ALHOWM factory video to GitHub
+        using this exact filename:
+
+        kanz-alhowm-production.mp4
+      -->
+
+      <video controls
+             preload="metadata"
+             playsinline>
+        <source src="kanz-alhowm-production.mp4"
+                type="video/mp4">
+      </video>
+
+      <div class="video-note"
+           data-en="REAL PROJECT FOOTAGE — KANZ ALHOWM"
+           data-ar="لقطات حقيقية من مشروع كنز اللحوم">
+        REAL PROJECT FOOTAGE — KANZ ALHOWM
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOTELS
+===================================================== -->
+
+<section class="hotel-section">
+
+  <div class="container">
+
+    <div class="project-section-heading">
+
+      <p class="eyebrow"
+         data-en="HOTEL & HOSPITALITY LEADERSHIP"
+         data-ar="قيادة الفنادق والضيافة">
+        HOTEL & HOSPITALITY LEADERSHIP
+      </p>
+
+      <h2
+        data-en="Hotel Management Experience"
+        data-ar="خبرة في إدارة الفنادق">
+        Hotel Management Experience
+      </h2>
+
+    </div>
+
+
+    <div class="project-cards-grid">
+
+
+      <article class="project-detail-card">
+
+        <div class="project-detail-media">
+
+          <!--
+            Upload hotel video with exact filename:
+            angkor-international-hotel.mp4
+          -->
+
+          <video controls
+                 preload="metadata"
+                 playsinline>
+            <source src="angkor-international-hotel.mp4"
+                    type="video/mp4">
+          </video>
+
+        </div>
+
+        <div class="project-detail-body">
+
+          <h3>Angkor International Hotel</h3>
+
+          <span class="project-location">
+            Phnom Penh, Cambodia
+          </span>
+
+          <div class="project-role">
+            <span>CEO</span>
+          </div>
+
+          <p
+            data-en="Hotel leadership and operational management experience in Phnom Penh, Cambodia."
+            data-ar="خبرة في قيادة وإدارة العمليات الفندقية في بنوم بنه، كمبوديا.">
+            Hotel leadership and operational management
+            experience in Phnom Penh, Cambodia.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="project-detail-card">
+
+        <div class="project-detail-media">
+
+          <!--
+            Upload hotel video with exact filename:
+            chaktomouk-mongkol-hotel.mp4
+          -->
+
+          <video controls
+                 preload="metadata"
+                 playsinline>
+            <source src="chaktomouk-mongkol-hotel.mp4"
+                    type="video/mp4">
+          </video>
+
+        </div>
+
+        <div class="project-detail-body">
+
+          <h3>Chaktomouk Mongkol Hotel</h3>
+
+          <span class="project-location">
+            Phnom Penh, Cambodia
+          </span>
+
+          <div class="project-role">
+            <span>CEO</span>
+          </div>
+
+          <p
+            data-en="Hotel leadership and operational management experience in Phnom Penh, Cambodia."
+            data-ar="خبرة في قيادة وإدارة العمليات الفندقية في بنوم بنه، كمبوديا.">
+            Hotel leadership and operational management
+            experience in Phnom Penh, Cambodia.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     RESTAURANTS
+===================================================== -->
+
+<section class="restaurant-projects">
+
+  <div class="container">
+
+    <div class="project-section-heading light">
+
+      <p class="eyebrow"
+         data-en="RESTAURANTS & CONCEPTS"
+         data-ar="المطاعم والمفاهيم">
+        RESTAURANTS & CONCEPTS
+      </p>
+
+      <h2
+        data-en="Restaurant Development & Brand Concepts"
+        data-ar="تطوير المطاعم والمفاهيم التجارية">
+        Restaurant Development & Brand Concepts
+      </h2>
+
+    </div>
+
+
+    <div class="restaurant-grid">
+
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-card-media">
+
+          <img src="project-fine-dining.jpg"
+               alt="Chef Kassem Fine Dining Restaurant">
+
+        </div>
+
+        <div class="restaurant-card-body">
+
+          <h3>Chef Kassem’s Fine Dining Restaurant</h3>
+
+          <span class="project-location">
+            Phnom Penh, Cambodia
+          </span>
+
+          <div class="project-role dark-role">
+
+            <span data-en="Owner"
+                  data-ar="مالك">
+              Owner
+            </span>
+
+            <span data-en="Executive Chef"
+                  data-ar="الشيف التنفيذي">
+              Executive Chef
+            </span>
+
+          </div>
+
+          <p
+            data-en="A restaurant project combining culinary identity, menu development, operations and guest experience."
+            data-ar="مشروع مطعم يجمع بين الهوية الغذائية وتطوير القائمة والتشغيل وتجربة الضيف.">
+            A restaurant project combining culinary identity,
+            menu development, operations and guest experience.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-card-media">
+
+          <!--
+            Upload Just Shawarma video with exact filename:
+            just-shawarma.mp4
+          -->
+
+          <video controls
+                 preload="metadata"
+                 playsinline>
+            <source src="just-shawarma.mp4"
+                    type="video/mp4">
+          </video>
+
+        </div>
+
+        <div class="restaurant-card-body">
+
+          <h3>Just Shawarma</h3>
+
+          <span class="project-location">
+            Cambodia
+          </span>
+
+          <div class="project-role dark-role">
+
+            <span data-en="Owner"
+                  data-ar="مالك">
+              Owner
+            </span>
+
+            <span data-en="Founder"
+                  data-ar="مؤسس">
+              Founder
+            </span>
+
+            <span data-en="Project Manager"
+                  data-ar="مدير المشروع">
+              Project Manager
+            </span>
+
+          </div>
+
+          <p
+            data-en="Restaurant concept developed and managed as an owner-led food and beverage project."
+            data-ar="مفهوم مطعم تم تأسيسه وتطويره وإدارته كمشروع في قطاع الأغذية والمشروبات.">
+            Restaurant concept developed and managed as an
+            owner-led food and beverage project.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="restaurant-card">
+
+        <div class="restaurant-card-media">
+
+          <img src="project-coffee-shop.jpg"
+               alt="Chef Kassem Coffee Shop Concept">
+
+        </div>
+
+        <div class="restaurant-card-body">
+
+          <h3>Chef Kassem Coffee Shop</h3>
+
+          <span class="project-location"
+                data-en="Brand & Concept Development"
+                data-ar="تطوير العلامة والمفهوم">
+            Brand & Concept Development
+          </span>
+
+          <div class="project-role dark-role">
+
+            <span data-en="Concept"
+                  data-ar="كونسبت">
+              Concept
+            </span>
+
+          </div>
+
+          <p
+            data-en="A coffee-shop brand concept developed around coffee, bakery, desserts and hospitality experience."
+            data-ar="مفهوم علامة تجارية للكوفي شوب يجمع بين القهوة والمخبوزات والحلويات وتجربة الضيافة.">
+            A coffee-shop brand concept developed around coffee,
+            bakery, desserts and hospitality experience.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     AL FEKRA
+===================================================== -->
+
+<section class="technical-section">
+
+  <div class="container technical-grid">
+
+    <div class="technical-copy">
+
+      <p class="eyebrow"
+         data-en="KITCHEN EQUIPMENT & TECHNICAL WORKS"
+         data-ar="معدات المطابخ والأعمال الفنية">
+        KITCHEN EQUIPMENT & TECHNICAL WORKS
+      </p>
+
+      <h2>Al Fekra Elmasiyyah Technical Works L.L.C.</h2>
+
+      <span class="project-location">
+        Dubai, United Arab Emirates
+      </span>
+
+      <div class="project-role">
+
+        <span data-en="Owner"
+              data-ar="مالك">
+          Owner
+        </span>
+
+        <span data-en="Founder"
+              data-ar="مؤسس">
+          Founder
+        </span>
+
+        <span data-en="CEO"
+              data-ar="الرئيس التنفيذي">
+          CEO
+        </span>
+
+      </div>
+
+      <p
+        data-en="A technical-services business focused on commercial kitchen development and supporting infrastructure for professional food-service operations."
+        data-ar="شركة خدمات فنية متخصصة في تطوير المطابخ التجارية والبنية التحتية الداعمة لعمليات خدمات الأغذية الاحترافية.">
+        A technical-services business focused on commercial
+        kitchen development and supporting infrastructure for
+        professional food-service operations.
+      </p>
+
+
+      <div class="technical-capabilities">
+
+        <span
+          data-en="Commercial Kitchen Design"
+          data-ar="تصميم المطابخ التجارية">
+          Commercial Kitchen Design
+        </span>
+
+        <span
+          data-en="Kitchen Equipment Supply"
+          data-ar="توريد معدات المطابخ">
+          Kitchen Equipment Supply
+        </span>
+
+        <span
+          data-en="Stainless-Steel Fabrication"
+          data-ar="تصنيع الستانلس ستيل">
+          Stainless-Steel Fabrication
+        </span>
+
+        <span
+          data-en="Cold & Freezer Rooms"
+          data-ar="غرف التبريد والتجميد">
+          Cold & Freezer Rooms
+        </span>
+
+        <span
+          data-en="Extraction & Ventilation"
+          data-ar="أنظمة الشفط والتهوية">
+          Extraction & Ventilation
+        </span>
+
+        <span
+          data-en="Installation & Maintenance"
+          data-ar="التركيب والصيانة">
+          Installation & Maintenance
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="technical-gallery">
+
+      <!--
+        These image names are placeholders for the real
+        Al Fekra project images you already provided.
+        Upload selected images later using these filenames.
+      -->
+
+      <img src="al-fekra-project-01.jpg"
+           alt="Al Fekra commercial kitchen project">
+
+      <img src="al-fekra-project-02.jpg"
+           alt="Al Fekra kitchen equipment project">
+
+      <img src="al-fekra-project-03.jpg"
+           alt="Al Fekra technical works project">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIENCE MAP
+===================================================== -->
+
+<section class="experience-map">
+
+  <div class="container">
+
+    <div class="project-section-heading">
+
+      <p class="eyebrow"
+         data-en="MULTIDISCIPLINARY EXPERIENCE"
+         data-ar="خبرة متعددة المجالات">
+        MULTIDISCIPLINARY EXPERIENCE
+      </p>
+
+      <h2
+        data-en="One Career. Multiple Operational Disciplines."
+        data-ar="مسيرة واحدة بخبرات تشغيلية متعددة">
+        One Career. Multiple Operational Disciplines.
+      </h2>
+
+    </div>
+
+
+    <div class="experience-map-grid">
+
+      <span data-en="Restaurants"
+            data-ar="المطاعم">
+        Restaurants
+      </span>
+
+      <span data-en="Hotels"
+            data-ar="الفنادق">
+        Hotels
+      </span>
+
+      <span data-en="Central Kitchens"
+            data-ar="المطابخ المركزية">
+        Central Kitchens
+      </span>
+
+      <span data-en="Healthy Nutrition"
+            data-ar="التغذية الصحية">
+        Healthy Nutrition
+      </span>
+
+      <span data-en="Food Production"
+            data-ar="الإنتاج الغذائي">
+        Food Production
+      </span>
+
+      <span data-en="Kitchen Equipment"
+            data-ar="معدات المطابخ">
+        Kitchen Equipment
+      </span>
+
+      <span data-en="Training & Consulting"
+            data-ar="التدريب والاستشارات">
+        Training & Consulting
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="projects-cta">
+
+  <div class="container projects-cta-grid">
+
+    <div>
+
+      <p class="eyebrow"
+         data-en="LET'S BUILD THE NEXT PROJECT"
+         data-ar="لنبدأ المشروع القادم">
+        LET'S BUILD THE NEXT PROJECT
+      </p>
+
+      <h2
+        data-en="Have a Project That Needs Development or Restructuring?"
+        data-ar="هل لديك مشروع يحتاج إلى تطوير أو إعادة هيكلة؟">
+        Have a Project That Needs Development or Restructuring?
+      </h2>
+
+      <p
+        data-en="From concept development and kitchen planning to operations, training, cost control and business restructuring."
+        data-ar="من تطوير الفكرة وتخطيط المطبخ إلى التشغيل والتدريب وضبط التكاليف وإعادة هيكلة الأعمال.">
+        From concept development and kitchen planning to
+        operations, training, cost control and business restructuring.
+      </p>
+
+    </div>
+
+
+    <div class="projects-cta-buttons">
+
+      <a href="index.html#contact"
+         class="btn btn-outline-light"
+         data-en="Request Consultation"
+         data-ar="اطلب استشارة">
+        Request Consultation
+      </a>
+
+      <a href="https://wa.me/971507784185"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-gold"
+         data-en="WhatsApp"
+         data-ar="واتساب">
+        WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <div class="footer-brand">
+
+      <div class="footer-brand-title">
+
+        <span class="brand-logo">CK</span>
+
+        <div>
+
+          <strong>Chef Kassem Taha</strong>
+
+          <small
+            data-en="Culinary & Hospitality"
+            data-ar="فنون الطهي والضيافة">
+            Culinary & Hospitality
+          </small>
+
+        </div>
+
+      </div>
+
+      <p
+        data-en="From World Cuisines to Your Table"
+        data-ar="من مطابخ العالم إلى مائدتكم">
+        From World Cuisines to Your Table
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <h3 data-en="Quick Links"
+          data-ar="روابط سريعة">
+        Quick Links
+      </h3>
+
+      <a href="index.html"
+         data-en="Home"
+         data-ar="الرئيسية">
+        Home
+      </a>
+
+      <a href="about.html"
+         data-en="About"
+         data-ar="من أنا">
+        About
+      </a>
+
+      <a href="services.html"
+         data-en="Services"
+         data-ar="خدماتنا">
+        Services
+      </a>
+
+      <a href="projects.html"
+         data-en="Projects"
+         data-ar="المشاريع">
+        Projects
+      </a>
+
+      <a href="academy.html"
+         data-en="Academy"
+         data-ar="الأكاديمية">
+        Academy
+      </a>
+
+      <a href="recipes.html"
+         data-en="Recipes"
+         data-ar="الوصفات">
+        Recipes
+      </a>
+
+      <a href="index.html#blog"
+         data-en="Blog"
+         data-ar="المدونة">
+        Blog
+      </a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <h3
+        data-en="Contact Information"
+        data-ar="معلومات التواصل">
+        Contact Information
+      </h3>
+
+      <a class="ltr-contact"
+         href="tel:+855715222672">
+        +855 71 522 2672
+      </a>
+
+      <a class="ltr-contact"
+         href="https://wa.me/971507784185"
+         target="_blank"
+         rel="noopener noreferrer">
+        +971 50 778 4185
+      </a>
+
+      <span
+        data-en="Phnom Penh, Cambodia"
+        data-ar="بنوم بنه، كمبوديا">
+        Phnom Penh, Cambodia
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="container footer-bottom">
+
+    <span>
+      © <span id="year"></span> Chef Kassem Taha.
+      <span
+        data-en="All rights reserved."
+        data-ar="جميع الحقوق محفوظة.">
+        All rights reserved.
+      </span>
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+  </html>
