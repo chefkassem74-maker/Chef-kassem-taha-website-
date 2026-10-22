@@ -429,6 +429,33 @@
 
 
     /* =====================================================
+       LIVELY PROJECT VIDEO
+    ===================================================== */
+
+    .lively-video-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 540px;
+      background: #000;
+    }
+
+    .lively-video-media::after {
+      display: none;
+    }
+
+    .lively-project-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+      max-height: 720px;
+      object-fit: contain;
+      background: #000;
+    }
+
+
+    /* =====================================================
        HEALTHY COFFEE SHOP
     ===================================================== */
 
@@ -834,6 +861,11 @@
         min-height: 420px;
       }
 
+      .lively-video-media,
+      .lively-project-video {
+        min-height: 420px;
+      }
+
       .restaurant-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -917,6 +949,22 @@
       .flagship-media img,
       .media-placeholder {
         min-height: 330px;
+      }
+
+      .lively-video-media {
+        width: 100%;
+        min-height: 0;
+        background: #000;
+      }
+
+      .lively-project-video {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #000;
       }
 
       .project-detail-media,
@@ -1328,25 +1376,21 @@
           </div>
 
 
-          <div class="flagship-media">
+          <div class="flagship-media lively-video-media">
 
-            <div class="media-placeholder">
+            <video
+              class="lively-project-video"
+              controls
+              preload="metadata"
+              playsinline>
 
-              <div class="media-placeholder-inner">
+              <source
+                src="lively-project.mp4"
+                type="video/mp4">
 
-                <div class="media-mark">L</div>
+              Your browser does not support the video tag.
 
-                <h4>Lively</h4>
-
-                <p
-                  data-en="Healthy Nutrition • Central Kitchen • Diet Programs"
-                  data-ar="تغذية صحية • مطبخ مركزي • برامج حمية">
-                  Healthy Nutrition • Central Kitchen • Diet Programs
-                </p>
-
-              </div>
-
-            </div>
+            </video>
 
           </div>
 
@@ -1542,13 +1586,6 @@
 
     <div class="video-frame">
 
-      <!--
-        Upload the real KANZ ALHOWM factory video to GitHub
-        using this exact filename:
-
-        kanz-alhowm-production.mp4
-      -->
-
       <video controls
              preload="metadata"
              playsinline>
@@ -1601,11 +1638,6 @@
 
         <div class="project-detail-media">
 
-          <!--
-            Upload hotel video with exact filename:
-            angkor-international-hotel.mp4
-          -->
-
           <video controls
                  preload="metadata"
                  playsinline>
@@ -1642,11 +1674,6 @@
       <article class="project-detail-card">
 
         <div class="project-detail-media">
-
-          <!--
-            Upload hotel video with exact filename:
-            chaktomouk-mongkol-hotel.mp4
-          -->
 
           <video controls
                  preload="metadata"
@@ -1761,11 +1788,6 @@
       <article class="restaurant-card">
 
         <div class="restaurant-card-media">
-
-          <!--
-            Upload Just Shawarma video with exact filename:
-            just-shawarma.mp4
-          -->
 
           <video controls
                  preload="metadata"
@@ -1955,12 +1977,6 @@
 
 
     <div class="technical-gallery">
-
-      <!--
-        These image names are placeholders for the real
-        Al Fekra project images you already provided.
-        Upload selected images later using these filenames.
-      -->
 
       <img src="al-fekra-project-01.jpg"
            alt="Al Fekra commercial kitchen project">
@@ -2242,4 +2258,4 @@
 <script src="script.js"></script>
 
 </body>
-  </html>
+      </html>
